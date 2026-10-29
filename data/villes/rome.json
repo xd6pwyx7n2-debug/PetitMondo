@@ -126,7 +126,8 @@
     "Ho fame",
     "o fa-mé"
    ]
-  ]
+  ],
+  "voix": "it-IT"
  },
  "bingo": [
   "casque-romain",
@@ -163,10 +164,6 @@
   }
  ],
  "conseils": [
-  {
-   "titre": "Pavés et poussette",
-   "texte": "Le centre historique est pavé (les sampietrini) et souvent en pente. Une poussette tout-terrain ou un porte-bébé change la journée."
-  },
   {
    "titre": "Chaleur et eau",
    "texte": "L'été, il fait très chaud dès la fin de matinée. Visitez tôt, faites la sieste, ressortez en fin d'après-midi. Remplissez les gourdes aux nasoni, ces fontaines d'eau potable."
@@ -669,6 +666,24 @@
    "conseil": "Une ville romaine entière, moins fréquentée que le Forum : rues, maisons, théâtre et boulangeries. À environ 25 km du centre, prévoyez une demi-journée.",
    "enfant": "Promène-toi dans une vraie ville romaine, avec son théâtre et ses toilettes antiques !",
    "excursion": true
+  }
+ ],
+ "poussette": [
+  {
+   "titre": "Pavés partout",
+   "texte": "Le centre historique est presque entièrement couvert de sampietrini, des pavés de basalte irréguliers. Une poussette à grandes roues ou un porte-bébé est vivement conseillé."
+  },
+  {
+   "titre": "Métro",
+   "texte": "La ligne C est accessible. Sur les lignes A et B, de nombreuses stations ont des ascenseurs, mais ils sont parfois en panne : gardez un plan B."
+  },
+  {
+   "titre": "Sites antiques",
+   "texte": "Forum et Palatin sont en terre battue, en pente et pavés : le porte-bébé y est bien plus confortable que la poussette."
+  },
+  {
+   "titre": "Ombre et pauses",
+   "texte": "Peu d'ombre l'été autour du Colisée et du Forum. Les grands parcs (Villa Borghese) sont les meilleurs endroits pour une sieste en poussette."
   }
  ]
 }

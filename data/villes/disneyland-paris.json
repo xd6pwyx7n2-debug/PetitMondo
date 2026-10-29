@@ -103,7 +103,8 @@
     "Restrooms",
     "rèst-roumz"
    ]
-  ]
+  ],
+  "voix": "en-GB"
  },
  "bingo": [
   "chateau",
@@ -149,16 +150,8 @@
    "texte": "L'entrée est gratuite pour les moins de 3 ans. Achetez les billets en ligne à l'avance et téléchargez l'application officielle : temps d'attente, horaires des spectacles et plan du parc."
   },
   {
-   "titre": "Rider Switch",
-   "texte": "Si un enfant est trop petit pour une attraction, un parent monte pendant que l'autre attend avec lui, puis échange sans refaire la file grâce au pass Rider Switch remis à la sortie. Demandez-le à l'entrée de l'attraction."
-  },
-  {
    "titre": "Bébés",
    "texte": "Un Baby Care Centre se trouve sur Main Street, U.S.A. dans Disneyland Park, un autre derrière Studio Services dans Disney Adventure World : tables à langer, coin repas et coin calme."
-  },
-  {
-   "titre": "Poussettes",
-   "texte": "Location possible près de l'entrée de chaque parc. Les poussettes se garent devant les attractions : notez bien où vous laissez la vôtre."
   },
   {
    "titre": "Taille minimale",
@@ -501,6 +494,24 @@
    ],
    "conseil": "Un aquarium dans le centre commercial voisin : une bonne demi-journée hors des parcs, au calme, quand il pleut ou quand les enfants saturent.",
    "enfant": "Des requins et des raies, dans un grand aquarium près du parc."
+  }
+ ],
+ "poussette": [
+  {
+   "titre": "Des parcs plats",
+   "texte": "Les deux parcs et Disney Village sont plats et entièrement praticables en poussette."
+  },
+  {
+   "titre": "Pas de poussette dans les files",
+   "texte": "Les poussettes ne vont pas dans les files d'attente : elles se garent devant chaque attraction, dans les zones prévues. Gardez les objets de valeur sur vous."
+  },
+  {
+   "titre": "Location sur place",
+   "texte": "Des poussettes se louent près de l'entrée de chaque parc, pratique si vous venez en train."
+  },
+  {
+   "titre": "Rider Switch",
+   "texte": "Pour les attractions interdites aux petits, un parent monte pendant que l'autre garde l'enfant, puis ils échangent sans refaire la file."
   }
  ]
 }

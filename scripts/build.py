@@ -23,11 +23,12 @@ e = html.escape
 PAGES = []
 PHOTOS = {}
 VILLES = []
+ACCES = {}
 
 INTERETS = {"animaux": "Animaux", "sciences": "Sciences", "aventure": "Aventure", "culture": "Culture",
             "parc": "Parcs", "plage": "Plage", "gourmand": "Gourmand"}
-CAT_ICO = {"toilettes": "toilettes", "aire_jeux": "jeux", "table_langer": "langer", "pharmacie": "pharmacie", "resto_enfants": "resto"}
-CAT_NOM = {"toilettes": "Toilettes", "aire_jeux": "Aire de jeux", "table_langer": "Table à langer", "pharmacie": "Pharmacie", "resto_enfants": "Restaurant équipé"}
+CAT_ICO = {"toilettes": "toilettes", "aire_jeux": "jeux", "table_langer": "langer", "pharmacie": "pharmacie", "resto_enfants": "resto", "eau": "eau", "station": "station"}
+CAT_NOM = {"toilettes": "Toilettes", "aire_jeux": "Aire de jeux", "table_langer": "Table à langer", "pharmacie": "Pharmacie", "resto_enfants": "Restaurant équipé", "eau": "Eau potable", "station": "Station"}
 VILLES_A_VENIR = [("Amsterdam", "Pays-Bas"), ("Lisbonne", "Portugal")]
 SEO = {
     "avec-un-bebe": "{n} avec un bébé : visites, tables à langer et conseils",
@@ -225,10 +226,37 @@ def badges(a):
     return "".join(b)
 
 
+FAUTEUIL = {"yes": "accès sans marche signalé", "limited": "accès partiel signalé", "no": "pas d'accès sans marche", "inconnu": "accessibilité non renseignée"}
+
+
+def poussette_details(v, a):
+    f = ACCES.get(v["id"], {}).get("lieux", {}).get(a["id"])
+    if not f:
+        return []
+    l = ["beaucoup de rues pavées autour" if f["paves"] >= 8 else "quelques rues pavées autour" if f["paves"] >= 3 else "peu ou pas de pavés signalés autour"]
+    if f["marches"] >= 5:
+        l.append("nombreux escaliers dans le quartier")
+    elif f["marches"] >= 1:
+        l.append(f"{f['marches']} escalier{'s' if f['marches'] > 1 else ''} signalé{'s' if f['marches'] > 1 else ''} à proximité")
+    if f.get("station"):
+        st = f["station"]
+        l.append(f"station la plus proche : {st['nom']}, à {fmt_dist(st['d'])}, {FAUTEUIL.get(st['fauteuil'], FAUTEUIL['inconnu'])}")
+    if f.get("ascenseurs"):
+        n = f["ascenseurs"]
+        l.append(f"{n} ascenseur{'s' if n > 1 else ''} public{'s' if n > 1 else ''} signalé{'s' if n > 1 else ''} à moins de 400 m")
+    return l
+
+
+def bloc_poussette(v, a, b):
+    note = {"facile": "Facile en poussette", "moyen": "Poussette possible, à anticiper", "difficile": "Porte-bébé conseillé"}[a["poussette"]]
+    det = poussette_details(v, a)
+    return f'<div class="poussette-fiche {a["poussette"]}">{ico("poussette", "i s", b)}<div><strong>{note}</strong>{(f"<span class=muted> · {e(" · ".join(det))}</span>") if det else ""}</div></div>'
+
+
 def carte_act(a, v, osm, b):
     site = f'<a href="{e(a["site"])}" target="_blank" rel="noopener">Site officiel</a>' if a.get("site") else ""
     li = []
-    for c in ("toilettes", "aire_jeux", "table_langer"):
+    for c in ("toilettes", "aire_jeux", "eau", "table_langer"):
         pr = proches(osm, a, c, 1, 600)
         if pr:
             li.append(f'<li>{ico(CAT_ICO[c], "i s", b)}{CAT_NOM[c]} à {fmt_dist(pr[0][1])}</li>')
@@ -240,7 +268,7 @@ def carte_act(a, v, osm, b):
   <div class="meta">Environ {duree(a["duree"])} · {e(v["zones"][a["zone"]]["nom"])}</div>
   <div class="badges">{badges(a)}</div>
   <p>{e(a["conseil"])}</p>
-  <p class="acces">{ico("carte", "i s", b)}<span><strong>{e(a["adresse"])}</strong><br>{e(a["transport"])}</span></p>{prox}
+  <p class="acces">{ico("carte", "i s", b)}<span><strong>{e(a["adresse"])}</strong><br>{e(a["transport"])}</span></p>{bloc_poussette(v, a, b)}{prox}
   <div class="liens"><a href="{maps(a["nom"], a["adresse"])}" target="_blank" rel="noopener">Voir sur la carte</a>{site}</div>
 </article>'''
 
@@ -263,6 +291,7 @@ def carte_section(titre, texte):
   <div class="tete-section"><div><h2>{titre}</h2><p>{texte}</p></div></div>
   <div class="filtres" id="calques"></div>
   <div id="map" aria-label="Carte interactive"></div>
+  <div id="autour" class="carte" hidden style="margin-top:18px"><h3>Autour de moi</h3><div id="autour-res"></div></div>
   <p class="note" id="osm-info" style="margin-top:16px">Chargement des données OpenStreetMap…</p>
 </div></section>'''
 
@@ -311,11 +340,13 @@ def pages_enfants(v, b, nb_journal=3):
   <div class="liste-mots">{lignes}</div>
 </section>'''
     else:
-        lignes = "".join(f'<div class="mot"><span class="fr">{e(fr)}</span><b>{e(loc)}</b><span class="pr">« {e(pr)} »</span></div>' for fr, loc, pr in k["mots"])
+        voix = k.get("voix")
+        bouton = lambda loc: (f'<button class="ecouter no-print" type="button" data-lang="{voix}" data-txt="{e(loc)}" aria-label="Écouter « {e(loc)} »"><svg aria-hidden="true"><use href="{b}assets/sprite.svg#i-son"/></svg></button>' if voix else "")
+        lignes = "".join(f'<div class="mot"><span class="fr">{e(fr)}</span><b>{e(loc)}</b><span class="pr">« {e(pr)} »</span>{bouton(loc)}</div>' for fr, loc, pr in k["mots"])
         bonus = f'<p class="pe-consigne" style="margin-top:14px">{e(k["mots_bonus"])}</p>' if k.get("mots_bonus") else ""
         decouvre += f'''<section class="page-enfant mots">
   <div class="pe-tete"><img src="{b}assets/mondo.svg" alt="" class="pe-mondo"><div><span class="etiquette"><i></i>Parle comme un habitant</span><h2>{e(k["mots_titre"])}</h2></div></div>
-  <p class="pe-consigne">Lis le mot en gras à voix haute, comme il est écrit entre guillemets. Essaie de le dire à quelqu'un pendant le voyage !</p>
+  <p class="pe-consigne">Lis le mot en gras à voix haute, comme il est écrit entre guillemets{", ou touche le haut-parleur pour l'écouter" if k.get("voix") else ""}. Essaie de le dire à quelqu'un pendant le voyage !</p>
   <div class="liste-mots">{lignes}</div>{bonus}
 </section>'''
     bingo = "".join(f"<div>{svg_picto(P[c][1])}<span>{e(P[c][0])}</span></div>" for c in v["bingo"])
@@ -370,7 +401,7 @@ def pages_ville(v, osm):
     if len(pluie) >= 3: themes.append(("quand-il-pleut", "pluie", "Quand il pleut", f"{len(pluie)} lieux couverts pour sauver la journée.", "ciel"))
     if len(gratuits) >= 4: themes.append(("gratuit", "gratuit", f"{n} gratuit", f"{len(gratuits)} sorties gratuites ou en partie gratuites.", "soleil"))
     if len(ados) >= 3: themes.append(("avec-des-ados", "ado", "Avec des ados", f"{noms(ados)} et d'autres idées pour les grands.", "menthe"))
-    if len(faciles) >= 3 and difficiles: themes.append(("poussette", "poussette", "En poussette", "Ce qui roule, ce qui coince, et les alternatives.", "lilas"))
+    if len(faciles) >= 3 and (difficiles or v.get("poussette")): themes.append(("poussette", "poussette", "En poussette", "Ce qui roule, ce qui coince, et les alternatives.", "lilas"))
     if compte.get("aire_jeux", 0) >= 20: themes.append(("aires-de-jeux", "jeux", "Aires de jeux", f"{compte['aire_jeux']} aires recensées, les plus proches de chaque lieu.", "menthe"))
     if compte.get("toilettes", 0) >= 20: themes.append(("toilettes-et-tables-a-langer", "langer", "Toilettes et tables à langer", "Où se changer et où trouver des toilettes.", "lilas"))
     if len(restos) >= 5: themes.append(("restaurants-enfants", "resto", "Restaurants équipés", "Table à langer, chaise haute ou coin enfants signalés.", "soleil"))
@@ -460,6 +491,8 @@ def pages_ville(v, osm):
     corps += f'''<section class="sable"><div class="wrap">
   <h2>Bon à savoir</h2>
   <div class="grille" style="margin-top:20px">{"".join(f'<div class="carte"><h3>{e(c["titre"])}</h3><p>{e(c["texte"])}</p></div>' for c in v["conseils"])}</div>
+  <h3 style="margin-top:30px">Avec une poussette</h3>
+  <div class="acces-ville" style="margin-top:14px">{"".join(f'<div class="carte lilas">{ico("poussette", "i", b1)}<h3>{e(c["titre"])}</h3><p>{e(c["texte"])}</p></div>' for c in v.get("poussette", []))}</div>
   <div class="grille g2" style="margin-top:24px">
     <div class="carte corail">{ico("urgence", "i", b1)}<h3>Urgences</h3>{"".join(f"<p><strong>{e(u['nom'])}</strong> : {e(u['detail'])}</p>" for u in v["urgences"])}</div>
     <div class="carte">{ico("valise", "i", b1)}<h3>Papiers</h3><p>{e(v["papiers"])}</p><p><a href="{b1}valise/"><strong>La valise complète des enfants</strong></a></p></div>
@@ -521,11 +554,21 @@ def pages_ville(v, osm):
               ados[:12], "Avec des adolescents, laissez-les choisir une activité par jour et gardez du temps libre en fin de journée." + (f" Pensez à réserver à l'avance : {', '.join(resa)}." if resa else ""),
               calques=["activite"], cta="j=2&a=12-15&r=intense" if parc else "j=4&a=12-15&r=intense&i=aventure-culture")
     if "poussette" in slugs:
-        astuce = f'<div class="carte" style="margin-top:24px">{ico("poussette", "i", b2)}<h3>{e(conseil_poussette["titre"])}</h3><p>{e(conseil_poussette["texte"])}</p></div>' if conseil_poussette else ""
+        conseils_p = "".join(f'<div class="carte">{ico("poussette", "i", b2)}<h3>{e(c["titre"])}</h3><p>{e(c["texte"])}</p></div>' for c in v.get("poussette", []))
+        lignes_st = []
+        for a in acts:
+            f = ACCES.get(vid, {}).get("lieux", {}).get(a["id"], {})
+            st = f.get("station")
+            cell = f'{e(st["nom"])} · {fmt_dist(st["d"])} · {FAUTEUIL.get(st["fauteuil"], FAUTEUIL["inconnu"])}' if st else '<span class="muted">Aucune station à moins de 900 m</span>'
+            terrain = (f'{f["paves"]} voie{"s" if f["paves"] > 1 else ""} pavée{"s" if f["paves"] > 1 else ""}, {f["marches"]} escalier{"s" if f["marches"] > 1 else ""}') if f else '<span class="muted">non calculé</span>'
+            lignes_st.append(f'<div class="fr">{e(a["nom"])}</div><div>{cell}</div><div>{terrain}</div>')
+        tableau_st = (f'<h2 style="margin-top:36px">Stations et terrain autour de chaque lieu</h2><p class="muted">Station la plus proche et son accessibilité, voies pavées et escaliers recensés à moins de 250 m, d\'après OpenStreetMap (non vérifié sur place). Les ascenseurs peuvent être en panne : vérifiez auprès de l\'exploitant le jour même.</p>'
+                      f'<div class="lex" style="margin-top:16px"><div class="t">Lieu</div><div class="t">Station la plus proche</div><div class="t">Autour (250 m)</div>{"".join(lignes_st)}</div>') if ACCES.get(vid) else ""
         theme("poussette", "en poussette", f'{e(n)} <span class="hl">en poussette</span>',
-              "Ce qui roule sans effort, ce qui demande un porte-bébé, et comment se déplacer.",
-              faciles, "Ces lieux se visitent sans difficulté avec une poussette. Plus bas, ceux où le porte-bébé sera bien plus confortable.",
-              extra=f'<section class="sable"><div class="wrap"><h2>Plutôt en porte-bébé</h2><div class="grille g-act" style="margin-top:20px">{"".join(carte_act(a, v, osm, b2) for a in difficiles)}</div>{astuce}</div></section>',
+              "Métro, bus, pavés, escaliers et ascenseurs : tout ce qu'il faut savoir pour circuler avec une poussette.",
+              faciles, "Ces lieux se visitent sans difficulté avec une poussette. Chaque fiche indique les pavés, les escaliers et la station la plus proche avec son accessibilité.",
+              extra=f'<section class="ciel"><div class="wrap"><h2>Se déplacer en poussette à {e(n)}</h2><div class="acces-ville" style="margin-top:18px">{conseils_p}</div>{tableau_st}</div></section>'
+                    + (f'<section class="sable"><div class="wrap"><h2>Plutôt en porte-bébé</h2><div class="grille g-act" style="margin-top:20px">{"".join(carte_act(a, v, osm, b2) for a in difficiles)}</div></div></section>' if difficiles else ""),
               calques=["activite", "toilettes"], cta="j=3&a=1&r=calme&p=1")
     if "aires-de-jeux" in slugs:
         jeux_proches = "".join(
@@ -568,6 +611,7 @@ def pages_ville(v, osm):
   <div class="visuel"><img src="{b2}{illu}" alt="" class="hero-illu"><img class="mondo" src="{b2}assets/mondo-coucou.svg" alt=""></div>
 </div></section>
 <section style="padding-top:0"><div class="wrap etroit">{dec_w}</div></section>'''
+    c += f'<script src="{b2}assets/ecouter.js"></script>'
     page(f"{vid}/decouvrir/", f"{n} expliqué aux enfants : pays, langue, premiers mots | PetitMondo",
          f"Préparer les enfants au voyage à {n} : le pays, la capitale, la langue, les mots à connaître et les secrets du lieu, à lire ou à imprimer.",
          c, 2, actif="jeux")
@@ -636,9 +680,9 @@ def accueil():
   <div class="tete-section"><div><h2>Un carnet, <span class="hl c">deux lecteurs</span></h2><p>Le PDF se partage en deux : une partie pour organiser, une partie pour que les enfants vivent le voyage.</p></div></div>
   <div class="grille g2">
     <div class="carte">{ico("parents", "i l", "")}<h3>Pour les parents</h3>
-      <ul class="liste-ok"><li>Programme jour par jour, horaires et temps de marche</li><li>Chaque lieu numéroté comme sur la carte, avec photo, adresse, transport et QR code vers l'itinéraire</li><li>Toilettes, aire de jeux et table à langer les plus proches</li><li>Un plan B couvert pour chaque journée</li><li>Checklist de départ, papiers, urgences</li><li>Carte à importer dans Google My Maps</li></ul></div>
+      <ul class="liste-ok"><li>Programme jour par jour, horaires et temps de marche</li><li>Chaque lieu numéroté comme sur la carte, avec photo, adresse, transport et QR code vers l'itinéraire</li><li>Toilettes, eau potable, aire de jeux et table à langer les plus proches, avec distance et direction</li><li>Fiche poussette : pavés, escaliers, station accessible ou non</li><li>Météo de chaque journée dans les 15 jours avant le départ</li><li>Un plan B couvert pour chaque journée</li><li>Checklist de départ, papiers, urgences</li><li>Carte à importer dans Google My Maps</li></ul></div>
     <div class="carte soleil">{ico("enfant", "i l", "")}<h3>Pour les enfants</h3>
-      <ul class="liste-ok"><li>« Découvre la ville » : pays, capitale, langue et secrets, en phrases simples</li><li>Ses premiers mots dans la langue du pays, avec la prononciation</li><li>« Ce que je vais voir » : les lieux du séjour en grand, à cocher</li><li>Bingo des rues, chasse au trésor et coloriage</li><li>Un journal de bord pour chaque jour</li></ul></div>
+      <ul class="liste-ok"><li>« Découvre la ville » : pays, capitale, langue et secrets, en phrases simples</li><li>Ses premiers mots dans la langue du pays, avec la prononciation, à écouter sur le site</li><li>« Ce que je vais voir » : les lieux du séjour en grand, à cocher</li><li>Bingo des rues, chasse au trésor et coloriage</li><li>Un journal de bord pour chaque jour</li></ul></div>
   </div>
   <div class="apercu" aria-hidden="true">
     <div class="feuille f1">{drapeau("it", "demo")}<b class="ft">Découvre Rome</b><div class="tuiles mini"><div class="tuile"><small>On y parle</small><b>l'italien</b></div><div class="tuile"><small>On paie avec</small><b>l'euro (€)</b></div></div></div>
@@ -664,7 +708,12 @@ def accueil():
     <div class="carte">{ico("langer", "i", "")}<h3>Où changer bébé</h3><p>Tables à langer signalées, y compris celles accessibles aux papas.</p></div>
     <div class="carte">{ico("jeux", "i", "")}<h3>La récré entre deux visites</h3><p>L'aire de jeux la plus proche, pour se défouler dix minutes.</p></div>
     <div class="carte">{ico("pluie", "i", "")}<h3>Un plan B chaque jour</h3><p>Pluie, fatigue ou fermeture : un lieu couvert à proximité.</p></div>
-    <div class="carte">{ico("poussette", "i", "")}<h3>Poussette ou porte-bébé</h3><p>Chaque lieu indique s'il roule ou s'il vaut mieux porter.</p></div>
+    <div class="carte">{ico("poussette", "i", "")}<h3>Pavés, escaliers, ascenseurs</h3><p>Pour chaque lieu : les rues pavées et escaliers alentour, la station la plus proche et son accès sans marche.</p></div>
+    <div class="carte">{ico("eau", "i", "")}<h3>De l'eau pour la gourde</h3><p>Les fontaines d'eau potable les plus proches, sur la carte et dans le carnet.</p></div>
+    <div class="carte">{ico("pluie", "i", "")}<h3>La météo de chaque jour</h3><p>Dans les 15 jours avant le départ, le carnet affiche la météo prévue et signale quand sortir le plan B.</p></div>
+    <div class="carte">{ico("carte", "i", "")}<h3>« Autour de moi », le jour J</h3><p>Un bouton donne les toilettes, l'eau, la pharmacie et la station la plus proches, même sans réseau une fois le carnet ouvert.</p></div>
+    <div class="carte">{ico("bulle", "i", "")}<h3>Les mots qui parlent</h3><p>Les enfants écoutent leurs premiers mots dans la langue du pays, avec la voix du téléphone.</p></div>
+    <div class="carte">{ico("avion", "i", "")}<h3>Un PDF qui se suffit</h3><p>Aucun lien à toucher : adresses, transports, distances et directions sont écrits en clair, pour le papier et le mode avion.</p></div>
   </div>
 </div></section>
 
@@ -728,7 +777,7 @@ def carnet():
     page("carnet/", "Créer mon carnet de voyage en famille, avec jeux pour les enfants | PetitMondo",
          "Générez gratuitement un carnet de voyage familial : programme adapté à l'âge des enfants, lieux numérotés avec photos, services à proximité, pages de jeux, PDF utilisable en mode avion.",
          corps, 1, head=leaflet_head(),
-         scripts=f'<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script><script src="{b}assets/commun.js"></script><script src="{b}assets/carnet.js"></script>')
+         scripts=f'<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script><script src="{b}assets/commun.js"></script><script src="{b}assets/ecouter.js"></script><script src="{b}assets/carnet.js"></script>')
 
 
 def hub_jeux():
@@ -815,8 +864,8 @@ def mode_avion():
 </div></section>
 <section style="padding-top:0"><div class="wrap"><div class="etapes3 e4">{"".join(f'<div class="carte">{ico(i, "i l", b)}<h3>{e(t)}</h3><p>{e(d)}</p></div>' for i, t, d in etapes)}</div>
 <div class="grille g2" style="margin-top:30px">
-  <div class="carte menthe"><h3>Ce qui marche sans réseau</h3><ul class="liste-ok"><li>Le carnet PDF complet, jeux compris</li><li>Les pages PetitMondo déjà ouvertes</li><li>La valise cochée et les phrases utiles</li></ul></div>
-  <div class="carte corail"><h3>Ce qui demande une connexion</h3><ul class="liste-ok"><li>La carte interactive et les itinéraires Google Maps</li><li>Les QR codes et liens des sites officiels (horaires, billets)</li><li>La création d'un carnet pour une autre destination</li></ul></div>
+  <div class="carte menthe"><h3>Ce qui marche sans réseau</h3><ul class="liste-ok"><li>Le carnet PDF complet, jeux compris : tout y est écrit en clair, sans lien à toucher</li><li>Les pages PetitMondo déjà ouvertes</li><li>Le bouton « Autour de moi » du carnet (la position GPS fonctionne sans réseau)</li><li>La valise cochée et les phrases utiles</li></ul></div>
+  <div class="carte corail"><h3>Ce qui demande une connexion</h3><ul class="liste-ok"><li>La carte interactive, les itinéraires Google Maps et la météo</li><li>Les QR codes et liens des sites officiels (horaires, billets)</li><li>La création d'un carnet pour une autre destination</li></ul></div>
 </div>
 <p style="margin-top:26px"><a class="btn" href="{b}carnet/">{ico_btn("pdf", b)}Créer mon carnet</a></p></div></section>'''
     page("mode-avion/", "Utiliser son carnet de voyage en mode avion | PetitMondo",
@@ -830,6 +879,8 @@ def methode():
              ("loupe", "Les photos : libres de droits", "Les photos des lieux proviennent de Wikimedia Commons, sous licences libres (domaine public, CC0, CC BY, CC BY-SA). L'auteur et la licence sont indiqués sous chaque photo, dans le PDF et sur la page des crédits. Pour Disneyland Paris, seules nos propres illustrations sont utilisées."),
              ("horloge", "Les programmes : calculés, pas inventés", "Le générateur ne crée aucun lieu. Il choisit parmi les lieux du guide selon l'âge de chaque enfant, vos envies, la poussette et le budget, les regroupe par quartier, calcule les distances à pied et place le déjeuner et la sieste des moins de 4 ans. Les excursions hors de la ville ne sont proposées qu'à partir de 4 jours."),
              ("enfant", "Les pages enfants", "Écrites en phrases courtes pour les enfants qui commencent à lire. Les informations sur chaque pays (capitale, langue, monnaie) et les anecdotes sont vérifiées ; la prononciation est écrite « à la française », pour être lue facilement."),
+             ("poussette", "La fiche poussette", "Elle combine notre évaluation de chaque lieu (facile, à anticiper, porte-bébé conseillé) et un calcul automatique sur OpenStreetMap : voies pavées et escaliers recensés à moins de 250 m, station la plus proche et son accessibilité déclarée, ascenseurs publics. Le recensement n'est pas exhaustif et un ascenseur peut être en panne : ces indications aident à anticiper, sans remplacer une vérification sur place."),
+             ("pluie", "La météo", "Les prévisions viennent du service Open-Meteo et ne s'affichent que dans les 15 jours avant le départ, quand elles deviennent fiables. Elles servent à repérer les journées où sortir le plan B."),
              ("check", "Vie privée", "Aucun compte, aucun cookie publicitaire. Les réponses du formulaire restent dans le lien de votre carnet. La liste de valise cochée reste dans la mémoire de votre navigateur.")]
     corps = f'''<section class="hero"><div class="wrap etroit">
   <span class="etiquette"><i></i>Transparence</span>
@@ -921,6 +972,9 @@ def main():
         VILLES.append(v)
         fo = ROOT / "data" / "osm" / f"{v['id']}.json"
         osm_par_ville[v["id"]] = json.loads(fo.read_text(encoding="utf-8")) if fo.exists() else None
+        fa = ROOT / "data" / "acces" / f"{v['id']}.json"
+        if fa.exists():
+            ACCES[v["id"]] = json.loads(fa.read_text(encoding="utf-8"))
     VILLES.sort(key=lambda v: v.get("ordre", 99))
     (ROOT / "data" / "villes.json").write_text(json.dumps([{"id": v["id"], "nom": v["nom"]} for v in VILLES], ensure_ascii=False), encoding="utf-8")
     accueil()

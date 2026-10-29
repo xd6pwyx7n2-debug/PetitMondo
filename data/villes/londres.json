@@ -147,7 +147,8 @@
     "I'm hungry",
     "aïm heun-gri"
    ]
-  ]
+  ],
+  "voix": "en-GB"
  },
  "bingo": [
   "bus-rouge",
@@ -701,6 +702,24 @@
    "wiki": [],
    "conseil": "Hors de Londres, à environ une heure de trajet. Billets uniquement en ligne, souvent complets des semaines à l'avance. Comptez une demi-journée sur place.",
    "enfant": "Les vrais décors des films : la Grande Salle, le chemin de Traverse et le Poudlard Express."
+  }
+ ],
+ "poussette": [
+  {
+   "titre": "Métro",
+   "texte": "De nombreuses stations n'ont pas d'accès sans marche. Repérez les stations accessibles sur le plan « Step-free Tube Guide » de Transport for London. Toutes les stations de l'Elizabeth line sont accessibles sans marche."
+  },
+  {
+   "titre": "Bus",
+   "texte": "Tous les bus sont accessibles, avec un espace pour les poussettes dépliées. Cet espace est prioritaire pour les fauteuils roulants : il faut parfois plier."
+  },
+  {
+   "titre": "Taxis noirs",
+   "texte": "Les taxis noirs londoniens sont équipés d'une rampe : on peut y monter avec une poussette."
+  },
+  {
+   "titre": "Parcs royaux",
+   "texte": "Hyde Park, Kensington Gardens, St James's Park et Regent's Park ont de grandes allées plates, idéales pour une sieste en poussette."
   }
  ]
 }

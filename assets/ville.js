@@ -59,11 +59,11 @@
 
   try {
     const osm = await PM.osm(v);
-    for (const cle of ['toilettes', 'aire_jeux', 'table_langer', 'resto_enfants', 'pharmacie']) {
+    for (const cle of ['toilettes', 'aire_jeux', 'eau', 'table_langer', 'resto_enfants', 'pharmacie', 'station', 'ascenseur']) {
       const pts = osm.points.filter(p => p.c === cle);
       if (!pts.length) continue;
       const g = L.layerGroup();
-      pts.forEach(p => PM.marqueur(L, p.lat, p.lon, cle, 11)
+      pts.forEach(p => PM.marqueur(L, p.lat, p.lon, cle, cle === 'station' ? 13 : 10)
         .bindPopup(`<strong>${PM.esc(PM.nomPoint(p))}</strong>${PM.detailPoint(p) ? `<br>${PM.esc(PM.detailPoint(p))}` : ''}<br><a href="${PM.lienItineraire({ lat: p.lat, lon: p.lon })}" target="_blank" rel="noopener">Itinéraire</a> · <a href="${PM.lienOSM(p)}" target="_blank" rel="noopener">Corriger</a>`)
         .addTo(g));
       calques[cle] = g;
@@ -79,8 +79,13 @@
     const b = document.createElement('button');
     b.type = 'button'; b.className = 'chip'; b.style.background = 'var(--soleil)';
     b.textContent = 'Autour de moi';
-    b.onclick = () => navigator.geolocation.getCurrentPosition(p => {
+    b.onclick = () => navigator.geolocation.getCurrentPosition(async p => {
       const ll = [p.coords.latitude, p.coords.longitude];
+      const zoneA = document.getElementById('autour'), res = document.getElementById('autour-res');
+      if (zoneA && res) {
+        zoneA.hidden = false;
+        try { res.innerHTML = PM.autour(await PM.osm(v), { lat: ll[0], lon: ll[1] }); } catch { res.innerHTML = '<p class="muted">Services indisponibles pour le moment.</p>'; }
+      }
       L.circleMarker(ll, { radius: 9, color: '#1B2A4A', weight: 3, fillColor: '#FFC93C', fillOpacity: 1 }).addTo(carte).bindPopup('Vous êtes ici').openPopup();
       carte.setView(ll, 16);
     }, () => { b.textContent = 'Position indisponible'; }, { enableHighAccuracy: true, timeout: 10000 });

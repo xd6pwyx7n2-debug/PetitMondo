@@ -393,3 +393,31 @@ footer small{opacity:.75;display:block;margin-top:14px}
   .etape{grid-template-columns:62px 1fr 72px!important}
   .etape .qr{display:block!important}
 }
+
+/* ===== v4 : poussette, météo, autour de moi, écouter, PDF sans liens ===== */
+.papier{display:none}
+.poussette-fiche{display:flex;gap:10px;align-items:flex-start;font-size:.9rem;border:2px solid var(--nuit);border-radius:12px;padding:8px 12px;margin:10px 0;background:var(--lilas-c)}
+.poussette-fiche .i{margin:0;flex:none}
+.poussette-fiche.facile{background:var(--menthe-c)}
+.poussette-fiche.difficile{background:var(--corail-c)}
+.meteo{display:flex;gap:10px;align-items:flex-start;font-size:.92rem;background:var(--soleil-c);border-radius:12px;padding:10px 12px;margin:12px 0 4px}
+.meteo .i{margin:0;flex:none}
+.meteo.alerte{background:var(--ciel-c);border:2px solid var(--nuit)}
+.jour-pluie .planb{outline:3px solid var(--corail);outline-offset:2px}
+#autour{margin:6px 0 18px;background:var(--soleil-c)}
+.autour-liste{list-style:none;padding:0;margin:8px 0}
+.autour-liste li{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:2px dotted rgba(27,42,74,.2)}
+.autour-liste li .i{width:30px;height:30px;margin:0;flex:none}
+.ecouter{border:2px solid var(--nuit);background:var(--soleil);border-radius:999px;width:38px;height:38px;cursor:pointer;display:inline-grid;place-items:center;box-shadow:var(--ombre-p);flex:none}
+.ecouter svg{width:20px;height:20px}
+.sans-voix .ecouter{display:none}
+.mot{grid-template-columns:1fr 1.2fr 1fr auto}
+.mot.def{grid-template-columns:1fr 2fr}
+@media(max-width:620px){.mot{grid-template-columns:1fr auto}.mot .fr{grid-column:1/-1}.mot .pr{grid-column:1}}
+.acces-ville{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+@media print{
+  .ecran,.ecouter,#autour{display:none!important}
+  .papier{display:block}
+  .mot{grid-template-columns:1fr 1.2fr 1fr!important}
+  .poussette-fiche,.meteo{break-inside:avoid}
+}

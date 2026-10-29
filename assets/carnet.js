@@ -209,15 +209,25 @@
 
   function services(a, osm, p) {
     if (!osm) return '';
-    const cats = [['toilettes', 'Toilettes'], ['aire_jeux', 'Aire de jeux']];
+    const cats = [['toilettes', 'Toilettes'], ['aire_jeux', 'Aire de jeux'], ['eau', 'Eau potable']];
     if (Math.min(...p.ages) < 3) cats.push(['table_langer', 'Table à langer']);
     cats.push(['resto_enfants', 'Resto équipé']);
     const li = [];
     for (const [c, nom] of cats) {
       const pr = PM.proches(osm.points, a, c, 1, c === 'table_langer' ? 1500 : 900)[0];
-      if (pr) li.push(`<li>${PM.ico(PM.CATS[c].ico)}<span><strong>${nom}</strong> à ${PM.fmtDist(pr.d)} : <a href="${PM.lienItineraire({ lat: pr.lat, lon: pr.lon })}" target="_blank" rel="noopener">${pr.t?.name ? esc(pr.t.name) : 'y aller'}</a>${PM.detailPoint(pr) ? ` <span class="muted">(${esc(PM.detailPoint(pr))})</span>` : ''}</span></li>`);
+      if (pr) {
+        const nomP = pr.t?.name ? ` : <a href="${PM.lienItineraire({ lat: pr.lat, lon: pr.lon })}" target="_blank" rel="noopener">${esc(pr.t.name)}</a>` : '';
+        li.push(`<li>${PM.ico(PM.CATS[c].ico)}<span><strong>${nom}</strong> à ${PM.fmtDist(pr.d)} ${PM.direction(a, pr)}${nomP}${PM.detailPoint(pr) ? ` <span class="muted">(${esc(PM.detailPoint(pr))})</span>` : ''}</span></li>`);
+      }
     }
     return li.length ? `<div class="proches"><strong>À proximité</strong> <span class="muted">(signalé dans OpenStreetMap, non vérifié)</span><ul>${li.join('')}</ul></div>` : '';
+  }
+
+  let ACCES = null;
+  function poussette(a, p) {
+    if (!p.poussette && Math.min(...p.ages) >= 3) return '';
+    const f = PM.fichePoussette(a, ACCES);
+    return `<div class="poussette-fiche ${f.classe}">${PM.ico('poussette', 'i s')}<div><strong>${f.note}</strong>${f.details.length ? `<span class="muted"> · ${esc(f.details.join(' · '))}</span>` : ''}</div></div>`;
   }
 
   function checklist(v, p, jours) {
@@ -251,7 +261,36 @@
     </section>${frag}`;
   }
 
+  /* Météo du séjour (Open-Meteo), seulement si le départ est dans les 15 jours */
+  const METEO = c => c === 0 ? ['Soleil', 'soleil'] : c <= 3 ? ['Éclaircies', 'nuages'] : c <= 48 ? ['Brouillard', 'nuages'] : c <= 67 || (c >= 80 && c <= 82) ? ['Pluie', 'pluie'] : c <= 77 || c === 85 || c === 86 ? ['Neige', 'pluie'] : ['Orages', 'pluie'];
+  async function meteo(v, p, n) {
+    if (!p.depart) return { etat: 'sans-date' };
+    const debut = new Date(p.depart + 'T12:00'), auj = new Date();
+    const ecart = Math.round((debut - auj) / 864e5);
+    if (ecart > 14) return { etat: 'trop-tot', ecart };
+    if (ecart < -n) return { etat: 'passe' };
+    const fin = new Date(debut.getTime() + (n - 1) * 864e5).toISOString().slice(0, 10);
+    try {
+      const ctrl = new AbortController(); setTimeout(() => ctrl.abort(), 5000);
+      const r = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${v.centre[0]}&longitude=${v.centre[1]}&daily=weather_code,temperature_2m_max,precipitation_probability_max&timezone=auto&start_date=${p.depart}&end_date=${fin}`, { signal: ctrl.signal });
+      const j = await r.json();
+      if (!j.daily) return { etat: 'indispo' };
+      return { etat: 'ok', jours: j.daily.time.map((t, i) => ({ code: j.daily.weather_code[i], tmax: Math.round(j.daily.temperature_2m_max[i]), pluie: j.daily.precipitation_probability_max[i] ?? 0 })) };
+    } catch { return { etat: 'indispo' }; }
+  }
+  function bandeauMeteo(m, i) {
+    const d = m.etat === 'ok' ? m.jours[i] : null;
+    if (!d) return '';
+    const [lib] = METEO(d.code);
+    let conseil = '';
+    if (d.pluie >= 60) conseil = ' Pluie probable : gardez le plan B sous la main.';
+    else if (d.tmax >= 30) conseil = ' Forte chaleur : visites en plein air le matin, lieux couverts l\'après-midi.';
+    else if (d.tmax <= 5) conseil = ' Il fera froid : bonnets et gants pour les enfants.';
+    return `<p class="meteo ${d.pluie >= 60 ? 'alerte' : ''}">${PM.ico(METEO(d.code)[1] === 'pluie' ? 'pluie' : 'horloge', 'i s')}<span><strong>Météo prévue : ${lib}, ${d.tmax} °C</strong>, risque de pluie ${d.pluie} %.${conseil}</span></p>`;
+  }
+
   async function rendu(v, p, jours, osm) {
+    const met = await meteo(v, p, jours.length);
     const ages = p.ages.map(a => a === 0 ? 'bébé' : `${a} an${a > 1 ? 's' : ''}`).join(', ');
     const dateTxt = p.depart ? new Date(p.depart + 'T12:00').toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
     const dateJour = i => p.depart ? new Date(new Date(p.depart + 'T12:00').getTime() + i * 864e5).toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' }) : '';
@@ -271,14 +310,17 @@
         <button class="btn" id="b-pdf" type="button">${PM.ico('pdf', '')}Enregistrer en PDF (mode avion)</button>
         <button class="btn menthe" id="b-kml" type="button">${PM.ico('carte', '')}Carte Google My Maps</button>
         <button class="btn sec" id="b-csv" type="button">Liste des lieux (CSV)</button>
+        <button class="btn jaune" id="b-autour" type="button">${PM.ico('carte', '')}Autour de moi</button>
         <button class="btn sec" id="b-lien" type="button">Copier le lien du carnet</button>
       </div>
-      <div class="avion carte no-print">${PM.ico('avion', 'i l')}<div><h3>À faire avant de partir</h3><p>Enregistrez ce carnet en PDF : il s'ouvrira en mode avion, sans réseau. Sur iPhone : « Imprimer », puis « Partager › Enregistrer dans Fichiers ». Sur Android : « Imprimer › Enregistrer au format PDF ». Pour la carte : mymaps.google.com › Créer une carte › Importer le fichier KML.</p></div></div>
+      <div id="autour" class="carte no-print" hidden><h3>Autour de moi</h3><div id="autour-res"><p class="muted">Recherche de votre position…</p></div></div>
+      ${met.etat === 'trop-tot' ? `<p class="note no-print">La météo de chaque journée apparaîtra ici dans les 15 jours avant le départ (encore ${met.ecart - 14} jours) : rouvrez simplement le lien du carnet.</p>` : ''}${met.etat === 'sans-date' ? '<p class="note no-print">Indiquez la date d\'arrivée pour voir la météo de chaque journée dans les 15 jours avant le départ.</p>' : ''}
+      <div class="avion carte no-print">${PM.ico('avion', 'i l')}<div><h3>À faire avant de partir</h3><p>Enregistrez ce carnet en PDF : il s'ouvrira en mode avion, sans réseau. Tout y est écrit en clair : adresses, transports, services proches avec leur distance et leur direction. Les QR codes ne servent que si vous avez du réseau. Sur iPhone : « Imprimer », puis « Partager › Enregistrer dans Fichiers ». Sur Android : « Imprimer › Enregistrer au format PDF ». Pour la carte : mymaps.google.com › Créer une carte › Importer le fichier KML.</p></div></div>
       <div id="map" class="no-print" style="margin:22px 0 12px" aria-label="Carte du séjour"></div>
       <div class="filtres no-print">${jours.map((j, i) => `<span class="chip"><i class="pt" style="background:${COULEURS_JOURS[i % 5]}"></i>Jour ${j.n}</span>`).join('')}<span class="chip"><i class="pt" style="background:${PM.CATS.toilettes.couleur}"></i>Toilettes</span><span class="chip"><i class="pt" style="background:${PM.CATS.aire_jeux.couleur}"></i>Aires de jeux</span><span class="chip"><i class="pt" style="background:${PM.CATS.table_langer.couleur}"></i>Tables à langer</span></div>`;
 
     jours.forEach((j, i) => {
-      h += `<article class="jour"><div class="jour-tete" style="--c:${FONDS_JOURS[i % 5]}"><h3>Jour ${j.n}${dateJour(i) ? ` <span style="font-weight:600;font-size:.7em">· ${dateJour(i)}</span>` : ''}</h3><span class="badge tampon">${esc(j.zone)}</span></div><div class="jour-corps">`;
+      h += `<article class="jour${met.etat === 'ok' && met.jours[i]?.pluie >= 60 ? ' jour-pluie' : ''}"><div class="jour-tete" style="--c:${FONDS_JOURS[i % 5]}"><h3>Jour ${j.n}${dateJour(i) ? ` <span style="font-weight:600;font-size:.7em">· ${dateJour(i)}</span>` : ''}</h3><span class="badge tampon">${esc(j.zone)}</span></div><div class="jour-corps">${bandeauMeteo(met, i)}`;
       let k = 0;
       for (const e of j.etapes) {
         if (e.type === 'trajet') { h += `<div class="etape trajet"><span></span><p>${esc(e.texte)}</p></div>`; continue; }
@@ -291,19 +333,21 @@
           <p>${esc(a.conseil)}</p>
           ${badgesAct(a, p)}
           <p class="acces">${PM.ico('carte', 'i s')}<span><strong>${esc(a.adresse)}</strong><br>${esc(a.transport)} · environ ${dureeTxt(a.duree)}</span></p>
-          <p style="font-size:.9rem"><a href="${PM.lienItineraire(a)}" target="_blank" rel="noopener"><strong>Itinéraire</strong></a>${a.site ? ` · <a href="${esc(a.site)}" target="_blank" rel="noopener"><strong>Site officiel</strong> (horaires, tarifs)</a>` : ''}</p>
+          <p class="ecran" style="font-size:.9rem"><a href="${PM.lienItineraire(a)}" target="_blank" rel="noopener"><strong>Itinéraire</strong></a>${a.site ? ` · <a href="${esc(a.site)}" target="_blank" rel="noopener"><strong>Site officiel</strong> (horaires, tarifs)</a>` : ''}</p>
+          ${a.site ? `<p class="papier" style="font-size:.9rem">Horaires et tarifs : <strong>${esc(PM.domaine(a.site))}</strong></p>` : ''}
+          ${poussette(a, p)}
           ${services(a, osm, p)}
         </div><div class="qr" data-url="${esc(PM.lienItineraire(a))}"></div></div>`;
       }
       if (j.planB) {
         const jeux = osm ? PM.proches(osm.points, j.centre, 'aire_jeux', 1, 1500)[0] : null;
-        h += `<div class="planb">${PM.ico('pluie')}<div><strong>Sauver la journée</strong> (pluie, fatigue, fermeture) : <a href="${PM.lienItineraire(j.planB)}" target="_blank" rel="noopener">${esc(j.planB.nom)}</a>, lieu couvert à ${PM.fmtDist(PM.distance(j.centre, j.planB))}. ${esc(j.planB.transport)}.${jeux ? ` Besoin de se défouler ? Une aire de jeux est signalée à ${PM.fmtDist(jeux.d)}.` : ''}</div></div>`;
+        h += `<div class="planb">${PM.ico('pluie')}<div><strong>Sauver la journée</strong> (pluie, fatigue, fermeture) : <a href="${PM.lienItineraire(j.planB)}" target="_blank" rel="noopener">${esc(j.planB.nom)}</a>, lieu couvert à ${PM.fmtDist(PM.distance(j.centre, j.planB))} ${PM.direction(j.centre, j.planB)}. Adresse : ${esc(j.planB.adresse)}. ${esc(j.planB.transport)}.${jeux ? ` Besoin de se défouler ? Une aire de jeux est signalée à ${PM.fmtDist(jeux.d)} ${PM.direction(j.centre, jeux)}.` : ''}</div></div>`;
       }
       h += `</div></article>`;
     });
 
     h += `<article class="jour"><div class="jour-tete" style="--c:#FFF1C9"><h3>Avant de partir</h3>${PM.ico('valise')}</div><div class="jour-corps" style="padding-top:16px"><ul class="check">${checklist(v, p, jours).map(x => `<li>${esc(x)}</li>`).join('')}</ul></div></article>`;
-    h += `<article class="jour"><div class="jour-tete" style="--c:#DDF1FB"><h3>Bon à savoir · ${esc(v.nom)}</h3>${PM.ico('loupe')}</div><div class="jour-corps" style="padding-top:12px">${v.conseils.map(c => `<p><strong>${esc(c.titre)}.</strong> ${esc(c.texte)}</p>`).join('')}<h4 style="margin-top:18px">Urgences</h4>${v.urgences.map(u => `<p><strong>${esc(u.nom)}</strong> : ${esc(u.detail)}</p>`).join('')}</div></article>`;
+    h += `<article class="jour"><div class="jour-tete" style="--c:#DDF1FB"><h3>Bon à savoir · ${esc(v.nom)}</h3>${PM.ico('loupe')}</div><div class="jour-corps" style="padding-top:12px">${v.conseils.map(c => `<p><strong>${esc(c.titre)}.</strong> ${esc(c.texte)}</p>`).join('')}${(p.poussette || Math.min(...p.ages) < 3) && v.poussette ? `<h4 style="margin-top:18px">Avec une poussette</h4>${v.poussette.map(c => `<p><strong>${esc(c.titre)}.</strong> ${esc(c.texte)}</p>`).join('')}` : ''}<h4 style="margin-top:18px">Urgences</h4>${v.urgences.map(u => `<p><strong>${esc(u.nom)}</strong> : ${esc(u.detail)}</p>`).join('')}</div></article>`;
     if (p.enfants) h += await pagesEnfants(v, jours);
 
     const utilisees = [...new Set(jours.flatMap(j => j.acts.concat(j.planB ? [j.planB] : [])).map(a => a.id))]
@@ -338,6 +382,18 @@
 
     // Exports
     $('#b-pdf').onclick = () => window.print();
+    $('#b-autour').onclick = () => {
+      const zone = $('#autour'), res = $('#autour-res');
+      zone.hidden = false; zone.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      if (!osm) { res.innerHTML = '<p class="muted">Les services ne sont pas disponibles pour le moment.</p>'; return; }
+      if (!navigator.geolocation) { res.innerHTML = '<p class="muted">La position n\'est pas disponible sur cet appareil.</p>'; return; }
+      navigator.geolocation.getCurrentPosition(pos => {
+        const ici = { lat: pos.coords.latitude, lon: pos.coords.longitude };
+        res.innerHTML = PM.distance(ici, { lat: v.centre[0], lon: v.centre[1] }) > 40000
+          ? `<p class="muted">Vous semblez loin de ${esc(v.nom)}. Ce bouton est fait pour le jour J, sur place.</p>`
+          : PM.autour(osm, ici);
+      }, () => { res.innerHTML = '<p class="muted">Autorisez la localisation pour voir les services les plus proches.</p>'; }, { enableHighAccuracy: true, timeout: 12000 });
+    };
     $('#b-lien').onclick = async () => { try { await navigator.clipboard.writeText(location.href); $('#b-lien').textContent = 'Lien copié'; } catch { prompt('Copiez ce lien :', location.href); } };
     const lieuxExport = () => {
       const dossiers = jours.map(j => ({ nom: `Jour ${j.n} — ${j.zone}`, lieux: j.acts.map((a, k) => ({ nom: `${j.n}.${k + 1} ${a.nom}`, lat: a.lat, lon: a.lon, c: 'activite', adresse: a.adresse, desc: `${a.adresse}. ${a.transport}. ${a.conseil}${a.site ? ' ' + a.site : ''}` })) }));
@@ -370,6 +426,7 @@
       }
       let osm = null;
       try { osm = await PM.osm(v); } catch { /* le carnet reste utilisable sans services OSM */ }
+      ACCES = await PM.acces(v);
       const jours = planifier(v, p);
       await rendu(v, p, jours, osm);
     } catch (err) {
