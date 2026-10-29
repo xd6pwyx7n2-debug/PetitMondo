@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" role="img" aria-label="Illustration de Barcelone : basilique, palmier, téléphérique, mer et soleil">
+  <rect width="640" height="320" rx="28" fill="#FFE7A8"/>
+  <circle cx="520" cy="86" r="44" fill="#FF6B4A" stroke="#1B2A4A" stroke-width="4"/>
+  <path d="M40 74 C160 30 300 30 420 80" fill="none" stroke="#1B2A4A" stroke-width="3"/>
+  <g stroke="#1B2A4A" stroke-width="3.5" stroke-linejoin="round">
+    <rect x="292" y="56" width="26" height="22" rx="4" fill="#FFF8EC"/>
+    <path d="M305 78v10" fill="none"/>
+    <rect x="152" y="42" width="22" height="18" rx="4" fill="#6EC6F0"/>
+  </g>
+  <path d="M0 236 C80 220 160 250 240 236 S400 220 480 236 S600 250 640 236 V292 a28 28 0 0 1 -28 28 H28 A28 28 0 0 1 0 292z" fill="#6EC6F0" stroke="#1B2A4A" stroke-width="4"/>
+  <path d="M40 270 q14 -10 28 0 t28 0 M380 280 q14 -10 28 0 t28 0 M500 262 q14 -10 28 0 t28 0" fill="none" stroke="#FFF8EC" stroke-width="4" stroke-linecap="round"/>
+  <g stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round" fill="#FFC93C">
+    <path d="M320 236 V150 l14 -70 14 70 V236z"/>
+    <path d="M356 236 V138 l14 -84 14 84 V236z"/>
+    <path d="M392 236 V146 l13 -66 13 66 V236z"/>
+    <path d="M426 236 V164 l11 -54 11 54 V236z"/>
+    <path d="M300 236 V186 h168 V236z" fill="#FFF8EC"/>
+  </g>
+  <g fill="#1B2A4A">
+    <circle cx="334" cy="120" r="4"/><circle cx="370" cy="106" r="4"/><circle cx="405" cy="118" r="4"/><circle cx="437" cy="136" r="3.5"/>
+    <path d="M370 236 v-30 a14 14 0 0 1 28 0 v30z" fill="#FF6B4A" stroke="#1B2A4A" stroke-width="4"/>
+  </g>
+  <g fill="#FF6B4A" stroke="#1B2A4A" stroke-width="3"><circle cx="334" cy="80" r="5"/><circle cx="370" cy="54" r="5"/><circle cx="405" cy="80" r="5"/><circle cx="437" cy="110" r="4"/></g>
+  <g stroke="#1B2A4A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M150 236 C146 190 140 160 150 130" fill="none"/>
+    <path d="M150 130 c-30 -10 -50 4 -58 20 c20 -14 40 -12 58 -20z" fill="#2FB59A"/>
+    <path d="M150 130 c30 -14 54 -2 62 14 c-22 -10 -42 -6 -62 -14z" fill="#2FB59A"/>
+    <path d="M150 130 c-10 -26 -30 -34 -46 -32 c22 6 34 18 46 32z" fill="#2FB59A"/>
+    <path d="M150 130 c8 -26 30 -36 46 -34 c-20 8 -34 18 -46 34z" fill="#2FB59A"/>
+  </g>
+  <g stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round">
+    <path d="M40 236 h80 v-26 a40 40 0 0 0 -80 0z" fill="#FFF8EC"/>
+    <path d="M54 236 v-18 h16 v18 M90 236 v-18 h16 v18" fill="#6EC6F0"/>
+    <path d="M500 236 h100 v-46 h-100z" fill="#FFF8EC"/>
+    <path d="M520 206 h16 v16 h-16z M564 206 h16 v16 h-16z" fill="#FFC93C"/>
+  </g>
+  <path d="M0 236 h640" stroke="#1B2A4A" stroke-width="4"/>
+  <path d="M60 300 C140 290 200 300 260 286" fill="none" stroke="#1B2A4A" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round"/>
+</svg>

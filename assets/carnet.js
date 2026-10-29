@@ -4,7 +4,8 @@
   const form = $('#form-carnet');
   const zoneEnfants = $('#enfants');
   const sortie = $('#carnet');
-  const COULEURS_JOURS = ['#C2603A', '#5E7F62', '#3F6C8C', '#8E5BA8', '#D9A441'];
+  const COULEURS_JOURS = ['#FF6B4A', '#2FB59A', '#6EC6F0', '#A88BEB', '#FFC93C'];
+  const FONDS_JOURS = ['#FFE1D9', '#D5F2EA', '#DDF1FB', '#EEE7FC', '#FFF1C9'];
   let carte = null, dernier = null;
 
   /* ---------- Enfants ---------- */
@@ -188,9 +189,9 @@
     const li = [];
     for (const [c, nom] of cats) {
       const pr = PM.proches(osm.points, a, c, 1, c === 'table_langer' ? 1500 : 900)[0];
-      if (pr) li.push(`<li><strong>${nom}</strong> : <a class="imprime-url" href="${PM.lienMaps({ lat: pr.lat, lon: pr.lon })}" target="_blank" rel="noopener">${esc(PM.nomPoint(pr))}</a>, ${PM.fmtDist(pr.d)}${PM.detailPoint(pr) ? ` <span style="color:var(--gris)">(${esc(PM.detailPoint(pr))})</span>` : ''}</li>`);
+      if (pr) li.push(`<li>${PM.ico(PM.CATS[c].ico)}<span><strong>${nom}</strong> à ${PM.fmtDist(pr.d)} : <a href="${PM.lienItineraire({ lat: pr.lat, lon: pr.lon })}" target="_blank" rel="noopener">${pr.t?.name ? esc(pr.t.name) : 'y aller'}</a>${PM.detailPoint(pr) ? ` <span class="muted">(${esc(PM.detailPoint(pr))})</span>` : ''}</span></li>`);
     }
-    return li.length ? `<div class="proches"><strong>À proximité</strong> <span style="color:var(--gris)">(signalé dans OpenStreetMap, non vérifié)</span><ul>${li.join('')}</ul></div>` : '';
+    return li.length ? `<div class="proches"><strong>À proximité</strong> <span class="muted">(signalé dans OpenStreetMap, non vérifié)</span><ul>${li.join('')}</ul></div>` : '';
   }
 
   function checklist(v, p, jours) {
@@ -212,25 +213,29 @@
     const dateJour = i => p.depart ? new Date(new Date(p.depart + 'T12:00').getTime() + i * 864e5).toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' }) : '';
     let h = `
       <div class="couv">
-        <span class="surtitre" style="color:#fff;opacity:.85">Carnet PetitMondo</span>
-        <h2>${esc(v.nom)} en famille</h2>
-        <p>${p.jours} jour${p.jours > 1 ? 's' : ''}${dateTxt ? ` · à partir du ${dateTxt}` : ''} · enfants : ${esc(ages)}</p>
-        <p>Rythme ${{ calme: 'tranquille', equilibre: 'équilibré', intense: 'soutenu' }[p.rythme]}${p.poussette ? ' · avec poussette' : ''}</p>
+        <div class="txt">
+          <span class="etiquette"><i></i>Carnet PetitMondo</span>
+          <h2>${esc(v.nom)} <span class="hl">en famille</span></h2>
+          <p>${p.jours} jour${p.jours > 1 ? 's' : ''}${dateTxt ? ` · à partir du ${dateTxt}` : ''}</p>
+          <p>Enfants : ${esc(ages)}</p>
+          <p>Rythme ${{ calme: 'tranquille', equilibre: 'équilibré', intense: 'soutenu' }[p.rythme]}${p.poussette ? ' · avec poussette' : ''}</p>
+        </div>
+        <div class="illu"><img class="v" src="${PM.base}assets/villes/${v.id}.svg" alt=""><img class="m" src="${PM.base}assets/mondo.svg" alt=""></div>
       </div>
       <div class="actions no-print">
-        <button class="btn" id="b-pdf" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>Imprimer ou enregistrer en PDF</button>
-        <button class="btn sec" id="b-kml" type="button">Carte pour Google My Maps (KML)</button>
+        <button class="btn" id="b-pdf" type="button">${PM.ico('pdf', '')}Imprimer ou enregistrer en PDF</button>
+        <button class="btn menthe" id="b-kml" type="button">${PM.ico('carte', '')}Carte Google My Maps</button>
         <button class="btn sec" id="b-csv" type="button">Liste des lieux (CSV)</button>
         <button class="btn sec" id="b-lien" type="button">Copier le lien du carnet</button>
       </div>
       <p class="note no-print">Sur iPhone : « Imprimer » puis « Partager › Enregistrer dans Fichiers » pour garder le PDF hors connexion. Pour My Maps : mymaps.google.com › Créer une carte › Importer › choisir le fichier KML.</p>
       <div id="map" class="no-print" style="margin:18px 0" aria-label="Carte du séjour"></div>
-      <div class="legende no-print">${jours.map((j, i) => `<span><i class="pt" style="background:${COULEURS_JOURS[i]}"></i>Jour ${j.n}</span>`).join('')}<span><i class="pt" style="background:${PM.CATS.toilettes.couleur}"></i>Toilettes</span><span><i class="pt" style="background:${PM.CATS.aire_jeux.couleur}"></i>Aires de jeux</span></div>`;
+      <div class="filtres no-print">${jours.map((j, i) => `<span class="chip"><i class="pt" style="background:${COULEURS_JOURS[i]}"></i>Jour ${j.n}</span>`).join('')}<span class="chip"><i class="pt" style="background:${PM.CATS.toilettes.couleur}"></i>Toilettes</span><span class="chip"><i class="pt" style="background:${PM.CATS.aire_jeux.couleur}"></i>Aires de jeux</span><span class="chip"><i class="pt" style="background:${PM.CATS.table_langer.couleur}"></i>Tables à langer</span></div>`;
 
     jours.forEach((j, i) => {
-      h += `<article class="jour"><div class="jour-tete"><h3 style="color:${COULEURS_JOURS[i]}">Jour ${j.n}${dateJour(i) ? ` · ${dateJour(i)}` : ''}</h3><span class="badge g">${esc(j.zone)}</span></div>`;
+      h += `<article class="jour"><div class="jour-tete" style="--c:${FONDS_JOURS[i]}"><h3>Jour ${j.n}${dateJour(i) ? ` <span style="font-weight:600;font-size:.7em">· ${dateJour(i)}</span>` : ''}</h3><span class="badge tampon">${esc(j.zone)}</span></div><div class="jour-corps">`;
       for (const e of j.etapes) {
-        if (e.type === 'trajet') { h += `<div class="etape" style="padding:4px 0"><span></span><p style="font-size:.85rem">↓ ${esc(e.texte)}</p></div>`; continue; }
+        if (e.type === 'trajet') { h += `<div class="etape trajet"><span></span><p>${esc(e.texte)}</p></div>`; continue; }
         if (e.type === 'repas' || e.type === 'pause') { h += `<div class="etape pause"><span class="h">${hh(e.h)}</span><div><h4>${esc(e.titre)}</h4><p>${esc(e.texte)}</p></div></div>`; continue; }
         const a = e.a;
         h += `<div class="etape"><span class="h">${e.type === 'soir' ? 'Soirée' : hh(e.h)}</span><div>
@@ -238,19 +243,19 @@
           <p>${esc(a.conseil)}</p>
           ${badgesAct(a, p)}
           <p style="font-size:.85rem">${esc(a.adresse)} · environ ${a.duree >= 60 ? hh(a.duree).replace(' h', ' h ').trim() : a.duree + ' min'}</p>
-          <p style="font-size:.88rem"><a class="imprime-url" href="${PM.lienItineraire(a)}" target="_blank" rel="noopener">Itinéraire</a>${a.site ? ` · <a class="imprime-url" href="${esc(a.site)}" target="_blank" rel="noopener">Site officiel (horaires, tarifs)</a>` : ''}</p>
+          <p style="font-size:.88rem"><a href="${PM.lienItineraire(a)}" target="_blank" rel="noopener"><strong>Itinéraire</strong></a>${a.site ? ` · <a href="${esc(a.site)}" target="_blank" rel="noopener"><strong>Site officiel</strong> (horaires, tarifs)</a>` : ''}</p>
           ${services(a, osm, p)}
         </div><div class="qr" data-url="${esc(PM.lienMaps(a))}"></div></div>`;
       }
       if (j.planB) {
         const jeux = osm ? PM.proches(osm.points, j.centre, 'aire_jeux', 1, 1500)[0] : null;
-        h += `<div class="planb"><strong>Sauver la journée</strong> (pluie, fatigue, fermeture) : <a href="${PM.lienItineraire(j.planB)}" target="_blank" rel="noopener">${esc(j.planB.nom)}</a>, lieu couvert à ${PM.fmtDist(PM.distance(j.centre, j.planB))} du quartier. ${esc(j.planB.conseil)}${jeux ? ` Besoin de se défouler ? Aire de jeux à ${PM.fmtDist(jeux.d)} du centre de la journée.` : ''}</div>`;
+        h += `<div class="planb">${PM.ico('pluie')}<div><strong>Sauver la journée</strong> (pluie, fatigue, fermeture) : <a href="${PM.lienItineraire(j.planB)}" target="_blank" rel="noopener">${esc(j.planB.nom)}</a>, lieu couvert à ${PM.fmtDist(PM.distance(j.centre, j.planB))} du quartier. ${esc(j.planB.conseil)}${jeux ? ` Besoin de se défouler ? Aire de jeux à ${PM.fmtDist(jeux.d)} du centre de la journée.` : ''}</div></div>`;
       }
-      h += `</article>`;
+      h += `</div></article>`;
     });
 
-    h += `<article class="jour"><h3>Avant de partir</h3><ul class="check">${checklist(v, p, jours).map(x => `<li>${esc(x)}</li>`).join('')}</ul></article>`;
-    h += `<article class="jour"><h3>Bon à savoir à ${esc(v.nom)}</h3>${v.conseils.map(c => `<p><strong>${esc(c.titre)}.</strong> ${esc(c.texte)}</p>`).join('')}<h3 style="margin-top:18px">Urgences</h3>${v.urgences.map(u => `<p><strong>${esc(u.nom)}</strong> : ${esc(u.detail)}</p>`).join('')}</article>`;
+    h += `<article class="jour"><div class="jour-tete" style="--c:#FFF1C9"><h3>Avant de partir</h3>${PM.ico('valise')}</div><div class="jour-corps" style="padding-top:16px"><ul class="check">${checklist(v, p, jours).map(x => `<li>${esc(x)}</li>`).join('')}</ul><p style="margin-top:14px"><a href="${PM.base}valise/"><strong>La liste complète de la valise des enfants</strong></a> · <a href="${PM.base}${v.id}/jeux/"><strong>Les jeux à imprimer pour les enfants</strong></a></p></div></article>`;
+    h += `<article class="jour"><div class="jour-tete" style="--c:#DDF1FB"><h3>Bon à savoir à ${esc(v.nom)}</h3>${PM.ico('loupe')}</div><div class="jour-corps" style="padding-top:12px">${v.conseils.map(c => `<p><strong>${esc(c.titre)}.</strong> ${esc(c.texte)}</p>`).join('')}<h4 style="margin-top:18px">Urgences</h4>${v.urgences.map(u => `<p><strong>${esc(u.nom)}</strong> : ${esc(u.detail)}</p>`).join('')}</div></article>`;
     h += `<p class="note">Programme indicatif établi le ${new Date().toLocaleDateString('fr-FR')}. Lieux sélectionnés par PetitMondo (fiches vérifiées le ${new Date(v.verification).toLocaleDateString('fr-FR')}). Toilettes, aires de jeux, tables à langer et restaurants équipés : données © contributeurs OpenStreetMap${osm?.maj ? `, mises à jour le ${new Date(osm.maj).toLocaleDateString('fr-FR')}` : ''}, non vérifiées sur place. ${esc(v.avertissement)}</p>`;
     sortie.innerHTML = h;
     sortie.hidden = false;
@@ -264,7 +269,7 @@
       carte = PM.fondCarte(L, 'map', v.centre, 13);
       const groupe = [];
       jours.forEach((j, i) => j.acts.forEach((a, k) => {
-        const m = L.circleMarker([a.lat, a.lon], { radius: 9, color: '#fff', weight: 2, fillColor: COULEURS_JOURS[i], fillOpacity: 1 })
+        const m = L.circleMarker([a.lat, a.lon], { radius: 10, color: '#1B2A4A', weight: 2.5, fillColor: COULEURS_JOURS[i], fillOpacity: 1 })
           .bindPopup(`<strong>J${j.n}.${k + 1} ${esc(a.nom)}</strong><br><a href="${PM.lienItineraire(a)}" target="_blank" rel="noopener">Itinéraire</a>`).addTo(carte);
         groupe.push(m.getLatLng());
       }));

@@ -3,87 +3,70 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Créer mon carnet de voyage en famille — PetitMondo</title>
-<meta name="description" content="Générez gratuitement un carnet de voyage familial : programme jour par jour adapté à l'âge des enfants, services à proximité, PDF imprimable et carte KML pour Google My Maps.">
+<title>Créer mon carnet de voyage en famille | PetitMondo</title>
+<meta name="description" content="Générez gratuitement un carnet de voyage familial : programme jour par jour adapté à l&#x27;âge des enfants, services à proximité, PDF imprimable et carte KML pour Google My Maps.">
 <link rel="canonical" href="https://xd6pwyx7n2-debug.github.io/petitmondo/carnet/">
+
 <meta name="pm-base" content="../">
-<meta name="theme-color" content="#FBF6EE">
-<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+<meta name="theme-color" content="#FFF8EC">
+<meta property="og:title" content="Créer mon carnet de voyage en famille | PetitMondo">
+<meta property="og:description" content="Générez gratuitement un carnet de voyage familial : programme jour par jour adapté à l&#x27;âge des enfants, services à proximité, PDF imprimable et carte KML pour Google My Maps.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://xd6pwyx7n2-debug.github.io/petitmondo/carnet/">
+<meta property="og:image" content="https://xd6pwyx7n2-debug.github.io/petitmondo/assets/partage.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icone-180.png">
+<link rel="manifest" href="../manifest.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
 <header class="top"><div class="wrap">
-  <a class="logo" href="../"><img src="../assets/logo.svg" alt="" width="34" height="34">PetitMondo</a>
-  <nav class="nav"><a class="hide-m" href="../barcelone/">Barcelone</a><a href="./">Créer mon carnet</a></nav>
+  <a class="logo" href="../"><img src="../assets/mondo.svg" alt="" width="36" height="42"><span>Petit<b>Mondo</b></span></a>
+  <nav class="nav" aria-label="Navigation principale"><a class="hide-m" href="../barcelone/">Barcelone</a><a class="hide-m" href="../valise/">Valise</a><a class="hide-m" href="../barcelone/jeux/">Jeux</a><a class="cta-nav" href="../carnet/">Créer mon carnet</a></nav>
 </div></header>
-
-<main class="wrap" style="padding-top:32px">
-  <div class="no-print">
-    <span class="surtitre">Gratuit · sans compte · sans application</span>
-    <h1>Créer mon carnet</h1>
-    <p style="color:var(--gris);max-width:40em">Trente secondes pour un programme complet. Rien n'est enregistré : vos réponses restent dans le lien du carnet.</p>
+<main>
+<div class="wrap" style="padding-top:36px">
+  <div class="no-print" style="display:flex;gap:18px;align-items:flex-end;flex-wrap:wrap">
+    <img src="../assets/mondo.svg" alt="" style="width:84px">
+    <div><span class="etiquette"><i></i>Gratuit · sans compte</span>
+    <h1 style="margin-bottom:.2em">Créer mon <span class="hl">carnet</span></h1>
+    <p class="muted" style="max-width:40em;margin:0">Trente secondes pour un séjour organisé. Rien n'est enregistré : vos réponses restent dans le lien du carnet.</p></div>
   </div>
-
-  <form class="form no-print" id="form-carnet" style="margin-top:20px">
+  <form class="form no-print" id="form-carnet" style="margin-top:26px">
     <div class="deux">
-      <div class="champ"><label for="ville">Destination</label>
-        <select id="ville" name="ville"><option value="barcelone">Barcelone</option></select>
-        <div class="aide">Paris, Rome, Londres, Amsterdam et Lisbonne arrivent.</div></div>
-      <div class="champ"><label for="jours">Nombre de jours</label>
-        <select id="jours" name="jours"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option></select></div>
+      <div class="champ"><label for="ville">Destination</label><select id="ville" name="ville"><option value="barcelone">Barcelone</option></select><div class="aide">Paris, Rome, Londres, Amsterdam et Lisbonne arrivent.</div></div>
+      <div class="champ"><label for="jours">Nombre de jours</label><select id="jours" name="jours"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option></select></div>
     </div>
-
-    <div class="champ"><span class="lbl">Âge des enfants</span>
-      <div class="enfants" id="enfants"><button type="button" class="btn sec petit" id="ajout-enfant">+ Ajouter un enfant</button></div>
-      <div class="aide">Mettez 0 pour un bébé de moins d'un an.</div></div>
-
-    <div class="champ"><span class="lbl">Rythme</span>
-      <div class="segment">
-        <input type="radio" id="r1" name="rythme" value="calme"><label for="r1">Tranquille</label>
-        <input type="radio" id="r2" name="rythme" value="equilibre" checked><label for="r2">Équilibré</label>
-        <input type="radio" id="r3" name="rythme" value="intense"><label for="r3">Soutenu</label>
-      </div></div>
-
-    <div class="champ"><span class="lbl">Envies (facultatif)</span>
-      <div class="segment">
-        <input type="checkbox" id="i1" name="interets" value="animaux"><label for="i1">Animaux</label>
-        <input type="checkbox" id="i2" name="interets" value="sciences"><label for="i2">Sciences</label>
-        <input type="checkbox" id="i3" name="interets" value="aventure"><label for="i3">Aventure</label>
-        <input type="checkbox" id="i4" name="interets" value="culture"><label for="i4">Culture</label>
-        <input type="checkbox" id="i5" name="interets" value="parc"><label for="i5">Parcs</label>
-        <input type="checkbox" id="i6" name="interets" value="plage"><label for="i6">Plage</label>
-        <input type="checkbox" id="i7" name="interets" value="gourmand"><label for="i7">Gourmand</label>
-      </div></div>
-
+    <div class="champ"><span class="lbl">Âge des enfants</span><div class="enfants" id="enfants"><button type="button" class="btn sec petit" id="ajout-enfant">+ Ajouter un enfant</button></div><div class="aide">Mettez 0 pour un bébé de moins d'un an.</div></div>
+    <div class="champ"><span class="lbl">Rythme</span><div class="segment">
+      <input type="radio" id="r1" name="rythme" value="calme"><label for="r1">Tranquille</label>
+      <input type="radio" id="r2" name="rythme" value="equilibre" checked><label for="r2">Équilibré</label>
+      <input type="radio" id="r3" name="rythme" value="intense"><label for="r3">Soutenu</label></div></div>
+    <div class="champ"><span class="lbl">Envies <span class="muted" style="font-weight:600;font-size:.9rem">(facultatif)</span></span><div class="segment"><input type="checkbox" id="i-animaux" name="interets" value="animaux"><label for="i-animaux">Animaux</label><input type="checkbox" id="i-sciences" name="interets" value="sciences"><label for="i-sciences">Sciences</label><input type="checkbox" id="i-aventure" name="interets" value="aventure"><label for="i-aventure">Aventure</label><input type="checkbox" id="i-culture" name="interets" value="culture"><label for="i-culture">Culture</label><input type="checkbox" id="i-parc" name="interets" value="parc"><label for="i-parc">Parcs</label><input type="checkbox" id="i-plage" name="interets" value="plage"><label for="i-plage">Plage</label><input type="checkbox" id="i-gourmand" name="interets" value="gourmand"><label for="i-gourmand">Gourmand</label></div></div>
     <div class="deux">
-      <div class="champ"><span class="lbl">Poussette</span>
-        <div class="segment">
-          <input type="radio" id="p1" name="poussette" value="oui"><label for="p1">Oui</label>
-          <input type="radio" id="p2" name="poussette" value="non" checked><label for="p2">Non</label>
-        </div></div>
-      <div class="champ"><span class="lbl">Budget</span>
-        <div class="segment">
-          <input type="radio" id="b1" name="budget" value="tous" checked><label for="b1">Normal</label>
-          <input type="radio" id="b2" name="budget" value="serre"><label for="b2">Priorité au gratuit</label>
-        </div></div>
+      <div class="champ"><span class="lbl">Poussette</span><div class="segment"><input type="radio" id="p1" name="poussette" value="oui"><label for="p1">Oui</label><input type="radio" id="p2" name="poussette" value="non" checked><label for="p2">Non</label></div></div>
+      <div class="champ"><span class="lbl">Budget</span><div class="segment"><input type="radio" id="b1" name="budget" value="tous" checked><label for="b1">Normal</label><input type="radio" id="b2" name="budget" value="serre"><label for="b2">Priorité au gratuit</label></div></div>
     </div>
-
-    <div class="champ" style="max-width:260px"><label for="depart">Date d'arrivée (facultatif)</label>
-      <input type="date" id="depart" name="depart"></div>
-
+    <div class="champ" style="max-width:280px"><label for="depart">Date d'arrivée <span class="muted" style="font-weight:600;font-size:.9rem">(facultatif)</span></label><input type="date" id="depart" name="depart"></div>
     <button class="btn" id="b-generer" type="submit">Créer mon carnet</button>
   </form>
-
   <div class="carnet" id="carnet" hidden aria-live="polite"></div>
+</div>
 </main>
-
-<footer><div class="wrap">PetitMondo · Données cartographiques © <a href="https://www.openstreetmap.org/copyright">contributeurs OpenStreetMap</a></div></footer>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="../assets/commun.js"></script>
-<script src="../assets/carnet.js"></script>
+<footer><div class="wrap">
+  <div>
+    <a class="logo" href="../"><img src="../assets/mondo.svg" alt="" width="36" height="42"><span>Petit<b style="color:var(--soleil)">Mondo</b></span></a>
+    <p>Le monde à découvrir en famille. Des carnets de voyage gratuits, pensés du point de vue des parents.</p>
+    <small>Données cartographiques © <a href="https://www.openstreetmap.org/copyright">contributeurs OpenStreetMap</a>, licence ODbL. Aucun cookie, aucun compte, rien n'est enregistré sur nos serveurs.</small>
+  </div>
+  <div><h4>Destinations</h4><ul><li><a href="../barcelone/">Barcelone en famille</a></li><li><a href="../barcelone/avec-un-bebe/">Barcelone avec un bébé</a></li><li><a href="../barcelone/quand-il-pleut/">Barcelone quand il pleut</a></li><li><a href="../barcelone/gratuit/">Barcelone gratuit</a></li></ul></div>
+  <div><h4>Outils</h4><ul><li><a href="../carnet/">Créer mon carnet</a></li><li><a href="../valise/">Valise des enfants</a></li><li><a href="../barcelone/jeux/">Jeux à imprimer</a></li><li><a href="../barcelone/lexique/">Phrases utiles</a></li><li><a href="../methode/">Notre méthode</a></li></ul></div>
+</div></footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script><script src="../assets/commun.js"></script><script src="../assets/carnet.js"></script>
+<script>if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('../sw.js').catch(()=>{}));</script>
 </body>
 </html>

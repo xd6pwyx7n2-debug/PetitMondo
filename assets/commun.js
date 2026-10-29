@@ -3,12 +3,12 @@ const PM = (() => {
   const base = document.querySelector('meta[name="pm-base"]')?.content || '/';
 
   const CATS = {
-    activite:      { nom: 'Activités',          couleur: '#C2603A' },
-    aire_jeux:     { nom: 'Aires de jeux',      couleur: '#5E7F62' },
-    toilettes:     { nom: 'Toilettes',          couleur: '#3F6C8C' },
-    table_langer:  { nom: 'Tables à langer',    couleur: '#8E5BA8' },
-    pharmacie:     { nom: 'Pharmacies',         couleur: '#2E9E6B' },
-    resto_enfants: { nom: 'Restos équipés',     couleur: '#D9A441' },
+    activite:      { nom: 'Activités',          couleur: '#FF6B4A', ico: 'activite' },
+    aire_jeux:     { nom: 'Aires de jeux',      couleur: '#2FB59A', ico: 'jeux' },
+    toilettes:     { nom: 'Toilettes',          couleur: '#6EC6F0', ico: 'toilettes' },
+    table_langer:  { nom: 'Tables à langer',    couleur: '#A88BEB', ico: 'langer' },
+    pharmacie:     { nom: 'Pharmacies',         couleur: '#7BD389', ico: 'pharmacie' },
+    resto_enfants: { nom: 'Restos équipés',     couleur: '#FFC93C', ico: 'resto' },
   };
 
   const INTERETS = {
@@ -100,6 +100,7 @@ const PM = (() => {
     return d.join(' · ');
   }
 
+  const ico = (n, cls = 'i') => `<svg class="${cls}" aria-hidden="true"><use href="${base}assets/sprite.svg#i-${n}"/></svg>`;
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
   /* Export carte — KML importable dans Google My Maps (un calque par dossier) */
@@ -131,8 +132,8 @@ const PM = (() => {
   }
 
   function marqueur(L, lat, lon, cat, taille = 14) {
-    const couleur = CATS[cat]?.couleur || '#C2603A';
-    return L.circleMarker([lat, lon], { radius: taille / 2, color: '#fff', weight: 2, fillColor: couleur, fillOpacity: 1 });
+    const couleur = CATS[cat]?.couleur || '#FF6B4A';
+    return L.circleMarker([lat, lon], { radius: taille / 2, color: '#1B2A4A', weight: 2, fillColor: couleur, fillOpacity: 1 });
   }
 
   function fondCarte(L, el, centre, zoom = 13) {
@@ -144,5 +145,5 @@ const PM = (() => {
     return m;
   }
 
-  return { base, CATS, INTERETS, store, ville, osm, distance, minutesMarche, fmtDist, proches, lienMaps, lienItineraire, lienOSM, nomPoint, detailPoint, esc, kml, csv, telecharger, marqueur, fondCarte };
+  return { base, ico, CATS, INTERETS, store, ville, osm, distance, minutesMarche, fmtDist, proches, lienMaps, lienItineraire, lienOSM, nomPoint, detailPoint, esc, kml, csv, telecharger, marqueur, fondCarte };
 })();
