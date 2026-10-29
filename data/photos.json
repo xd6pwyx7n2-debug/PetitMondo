@@ -309,26 +309,6 @@
   "lien_licence": "http://creativecommons.org/licenses/by-sa/3.0/",
   "source": "https://commons.wikimedia.org/wiki/File:Royal_observatory_greenwich.jpg"
  },
- "londres/hamleys": {
-  "article": "https://en.wikipedia.org/wiki/Hamleys",
-  "auteur": "AwH108",
-  "fichier": "assets/photos/londres/hamleys.jpg",
-  "h": 378,
-  "l": 760,
-  "licence": "CC BY-SA 4.0",
-  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Hamleys_logo.png"
- },
- "londres/harrypotter": {
-  "article": "https://en.wikipedia.org/wiki/Warner_Bros._Studio_Tour_London_%E2%80%93_The_Making_of_Harry_Potter",
-  "auteur": "S. Perquin",
-  "fichier": "assets/photos/londres/harrypotter.jpg",
-  "h": 666,
-  "l": 1000,
-  "licence": "CC BY-SA 4.0",
-  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Entrance_of_Warner_Bros._Studio_Tour_London_(2025).jpg"
- },
  "londres/science": {
   "article": "https://en.wikipedia.org/wiki/Science_Museum%2C_London",
   "auteur": "Shadowssettle",

@@ -308,7 +308,7 @@
 
     const utilisees = [...new Set(jours.flatMap(j => j.acts.concat(j.planB ? [j.planB] : [])).map(a => a.id))]
       .map(id => ({ a: v.activites.find(x => x.id === id), ph: photoDe(v.id, id) })).filter(x => x.ph);
-    const creditsTxt = utilisees.length ? `<p class="credits-pdf"><strong>Photos</strong> (Wikimedia Commons) : ${utilisees.map(x => `${esc(x.a.nom)} : ${esc(x.ph.auteur)}, ${esc(x.ph.licence)}`).join(' · ')}.</p>` : '';
+    const creditsTxt = utilisees.length ? `<p class="credits-pdf"><strong>Photos</strong> (Wikimedia Commons) : ${utilisees.map(x => `${esc(x.a.nom)} : ${esc(x.ph.auteur.replace('This Photo was taken by ', '').split('. ')[0].slice(0, 60))}, ${esc(x.ph.licence)}`).join(' · ')}.</p>` : '';
     h += `<p class="note">Programme indicatif établi le ${new Date().toLocaleDateString('fr-FR')}. Lieux sélectionnés par PetitMondo (fiches vérifiées le ${new Date(v.verification + 'T12:00').toLocaleDateString('fr-FR')}). Toilettes, aires de jeux, tables à langer et restaurants équipés : données © contributeurs OpenStreetMap${osm?.maj ? `, mises à jour le ${new Date(osm.maj + 'T12:00').toLocaleDateString('fr-FR')}` : ''}, non vérifiées sur place. ${esc(v.avertissement)}</p>${creditsTxt}`;
     sortie.innerHTML = h;
     sortie.hidden = false;

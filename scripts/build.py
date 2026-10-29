@@ -113,7 +113,15 @@ def credit(cle):
     c = PHOTOS.get(cle)
     if not c:
         return ""
-    return f'Photo : {e(c["auteur"])} · <a href="{e(c["source"])}" target="_blank" rel="noopener">{e(c["licence"])}</a>'
+    return f'Photo : {e(court(c["auteur"]))} · <a href="{e(c["source"])}" target="_blank" rel="noopener">{e(c["licence"])}</a>'
+
+
+def court(t, n=42):
+    """Raccourcit un nom d'auteur trop long, en coupant sur un mot."""
+    t = t.replace("This Photo was taken by ", "").split(". ")[0]
+    if t == "Auteur inconnu":
+        return "auteur indiqué sur la fiche source"
+    return t if len(t) <= n else t[:n].rsplit(" ", 1)[0] + "…"
 
 
 def photo(cle, alt, b, cls="photo", ill=None, legende=True):
