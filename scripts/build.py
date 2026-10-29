@@ -239,10 +239,11 @@ def poussette_details(v, a):
     if not f:
         return []
     l = ["beaucoup de rues pavées autour" if f["paves"] >= 8 else "quelques rues pavées autour" if f["paves"] >= 3 else "peu ou pas de pavés signalés autour"]
-    if f["marches"] >= 5:
-        l.append("nombreux escaliers dans le quartier")
+    if f["marches"] >= 15:
+        l.append(f"beaucoup d'escaliers dans le quartier ({f['marches']} recensés à moins de 250 m)")
     elif f["marches"] >= 1:
-        l.append(f"{f['marches']} escalier{'s' if f['marches'] > 1 else ''} signalé{'s' if f['marches'] > 1 else ''} à proximité")
+        pl = "s" if f["marches"] > 1 else ""
+        l.append(f"{f['marches']} escalier{pl} recensé{pl} à moins de 250 m, souvent contournable{pl}")
     if f.get("station"):
         st = f["station"]
         l.append(f"station la plus proche : {st['nom']}, à {fmt_dist(st['d'])}, {FAUTEUIL.get(st['fauteuil'], FAUTEUIL['inconnu'])}")

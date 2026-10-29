@@ -89,8 +89,8 @@ const PM = (() => {
     const f = acces?.lieux?.[a.id];
     if (f) {
       l.push(f.paves >= 8 ? 'beaucoup de rues pavées autour' : f.paves >= 3 ? 'quelques rues pavées autour' : 'peu ou pas de pavés signalés autour');
-      if (f.marches >= 5) l.push('nombreux escaliers dans le quartier');
-      else if (f.marches >= 1) l.push(`${f.marches} escalier${f.marches > 1 ? 's' : ''} signalé${f.marches > 1 ? 's' : ''} à proximité`);
+      if (f.marches >= 15) l.push(`beaucoup d'escaliers dans le quartier (${f.marches} recensés à moins de 250 m)`);
+      else if (f.marches >= 1) l.push(`${f.marches} escalier${f.marches > 1 ? 's' : ''} recensé${f.marches > 1 ? 's' : ''} à moins de 250 m, souvent contournable${f.marches > 1 ? 's' : ''}`);
       if (f.station) l.push(`station la plus proche : ${f.station.nom}, à ${fmtDist(f.station.d)}, ${FAUTEUIL[f.station.fauteuil] || FAUTEUIL.inconnu}`);
       if (f.ascenseurs) l.push(`${f.ascenseurs} ascenseur${f.ascenseurs > 1 ? 's' : ''} public${f.ascenseurs > 1 ? 's' : ''} signalé${f.ascenseurs > 1 ? 's' : ''} à moins de 400 m`);
     }
