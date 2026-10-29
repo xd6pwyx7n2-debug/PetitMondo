@@ -77,9 +77,22 @@ P = {
     "gateau": ("Un gâteau au chocolat", '<path d="M8 22l16-10 16 10v16H8z" fill="#8A5A3C"/><path d="M8 22h32" stroke="#FFC93C" stroke-width="3"/><path d="M8 30h32" stroke="#FFC93C" stroke-width="2"/><circle cx="24" cy="12" r="3" fill="#FF6B4A"/>'),
     "drapeau-tchequie": ("Le drapeau tchèque", '<path d="M10 44V6"/><path d="M10 8h28v10H10z" fill="#fff"/><path d="M10 18h28v10H10z" fill="#FF6B4A"/><path d="M10 8l12 10-12 10z" fill="#3A6BC8"/>'),
     "drapeau-autriche": ("Le drapeau autrichien", '<path d="M10 44V6"/><path d="M10 8h28v7H10z" fill="#FF6B4A"/><path d="M10 15h28v6H10z" fill="#fff"/><path d="M10 21h28v7H10z" fill="#FF6B4A"/>'),
+    "camion": ("Un camion", '<path d="M4 14h24v20H4z" fill="#6EC6F0"/><path d="M28 20h9l7 7v7H28z" fill="#FFC93C"/><path d="M31 23h5l4 4h-9z" fill="#DDF1FB"/><circle cx="12" cy="36" r="4" fill="#1B2A4A"/><circle cx="36" cy="36" r="4" fill="#1B2A4A"/>'),
+    "caravane": ("Une caravane", '<path d="M6 14h26a8 8 0 0 1 8 8v12H6z" fill="#FFF8EC"/><path d="M6 26h34" stroke="#FF6B4A" stroke-width="3"/><path d="M12 18h8v6h-8z" fill="#DDF1FB"/><path d="M40 32h6"/><circle cx="20" cy="36" r="4" fill="#1B2A4A"/>'),
+    "vache": ("Une vache", '<path d="M14 18h24v14H14z" fill="#FFF8EC"/><path d="M17 32v9M35 32v9M38 20l4 8"/><path d="M20 20c3 0 4 3 3 5s-4 1-4-1zM29 24c3 0 4 3 2 5s-4 0-3-2z" fill="#1B2A4A"/><path d="M4 16h10v10a5 5 0 0 1-10 0z" fill="#FFF8EC"/><path d="M4 16l-2-5M14 16l2-5"/><circle cx="8" cy="20" r="1" fill="#1B2A4A"/><path d="M6 26h6" stroke="#FF9F8A" stroke-width="3"/>'),
+    "eolienne": ("Une éolienne", '<path d="M23 44l1-24 1 24z" fill="#FFF8EC"/><path d="M24 20V6M24 20l12 7M24 20L12 27" stroke-width="3"/><circle cx="24" cy="20" r="2.5" fill="#FFC93C"/>'),
+    "tracteur": ("Un tracteur", '<path d="M8 22h14V12h10v14h8v8H8z" fill="#2FB59A"/><path d="M24 14h6v8h-6z" fill="#DDF1FB"/><circle cx="16" cy="34" r="7" fill="#1B2A4A"/><circle cx="16" cy="34" r="2.5" fill="#FFC93C"/><circle cx="37" cy="37" r="4" fill="#1B2A4A"/>'),
+    "tunnel": ("Un tunnel", '<path d="M4 40V26C4 12 14 6 24 6s20 6 20 20v14z" fill="#FF9F8A"/><path d="M12 40V28c0-8 5-12 12-12s12 4 12 12v12z" fill="#1B2A4A"/><path d="M24 40v-8" stroke="#FFC93C" stroke-width="2"/>'),
+    "moto": ("Une moto", '<circle cx="12" cy="34" r="6" fill="#FFF8EC"/><circle cx="36" cy="34" r="6" fill="#FFF8EC"/><path d="M12 34l8-12h10l6 12M20 22h-4M30 22l2-6h4"/><path d="M18 26h14l-2 6H20z" fill="#FF6B4A"/>'),
+    "mouton": ("Un mouton", '<path d="M10 24a6 6 0 0 1 6-8 6 6 0 0 1 10-2 6 6 0 0 1 10 4 6 6 0 0 1 0 12H14a6 6 0 0 1-4-6z" fill="#FFF8EC"/><path d="M16 30v10M30 30v10"/><ellipse cx="38" cy="22" rx="5" ry="6" fill="#1B2A4A"/>'),
+    "panneau": ("Un panneau danger", '<path d="M24 6l20 34H4z" fill="#FFF8EC" stroke="#FF6B4A" stroke-width="4"/><path d="M24 18v10M24 33v1" stroke-width="3"/>'),
+    "voiture-rouge": ("Une voiture rouge", '<path d="M6 30v-6l6-10h20l8 10h2a2 2 0 0 1 2 2v4z" fill="#FF6B4A"/><path d="M14 16h7v8H10zM24 16h7l6 8H24z" fill="#DDF1FB"/><circle cx="14" cy="32" r="4" fill="#1B2A4A"/><circle cx="34" cy="32" r="4" fill="#1B2A4A"/>'),
+    "pompe": ("Une station-service", '<path d="M10 42V8h18v34z" fill="#FFC93C"/><path d="M14 12h10v8H14z" fill="#DDF1FB"/><path d="M28 18h6l4 4v14a3 3 0 0 1-6 0v-8h-4"/><path d="M6 42h26"/>'),
+    "train": ("Un train", '<rect x="12" y="6" width="24" height="30" rx="6" fill="#A88BEB"/><path d="M16 12h16v10H16z" fill="#DDF1FB"/><circle cx="18" cy="29" r="2" fill="#FFC93C"/><circle cx="30" cy="29" r="2" fill="#FFC93C"/><path d="M16 36l-4 6M32 36l4 6M14 40h20"/>'),
+    "avion": ("Un avion dans le ciel", '<path d="M24 4c2 0 3 3 3 6v10l15 8v4l-15-4v9l5 4v3l-8-2-8 2v-3l5-4v-9L6 32v-4l15-8V10c0-3 1-6 3-6z" fill="#6EC6F0"/>'),
 }
 
-DRAPEAUX_NOMS = {"cz": "Drapeau de la Tchéquie", "at": "Drapeau de l'Autriche", "pt": "Drapeau du Portugal", "nl": "Drapeau des Pays-Bas", "fr": "Drapeau de la France", "it": "Drapeau de l'Italie", "es": "Drapeau de l'Espagne",
+DRAPEAUX_NOMS = {"de": "Drapeau de l'Allemagne", "be": "Drapeau de la Belgique", "lu": "Drapeau du Luxembourg", "ch": "Drapeau de la Suisse", "pl": "Drapeau de la Pologne", "cz": "Drapeau de la Tchéquie", "at": "Drapeau de l'Autriche", "pt": "Drapeau du Portugal", "nl": "Drapeau des Pays-Bas", "fr": "Drapeau de la France", "it": "Drapeau de l'Italie", "es": "Drapeau de l'Espagne",
                  "cat": "Drapeau de la Catalogne", "uk": "Drapeau du Royaume-Uni"}
 
 
@@ -93,6 +106,16 @@ def drapeau(code, uid=""):
         return f'<svg class="drapeau" viewBox="0 0 90 60" role="img">{t}<path d="M0 0h90v30H0z" fill="#fff"/><path d="M0 30h90v30H0z" fill="#D7141A"/><path d="M0 0l45 30L0 60z" fill="#11457E"/></svg>'
     if code == "at":
         return f'<svg class="drapeau" viewBox="0 0 90 60" role="img">{t}<path d="M0 0h90v20H0z" fill="#C8102E"/><path d="M0 20h90v20H0z" fill="#fff"/><path d="M0 40h90v20H0z" fill="#C8102E"/></svg>'
+    if code == "de":
+        return f'<svg class="drapeau" viewBox="0 0 90 60" role="img">{t}<path d="M0 0h90v20H0z" fill="#000"/><path d="M0 20h90v20H0z" fill="#DD0000"/><path d="M0 40h90v20H0z" fill="#FFCE00"/></svg>'
+    if code == "be":
+        return f'<svg class="drapeau" viewBox="0 0 90 60" role="img">{t}<path d="M0 0h30v60H0z" fill="#000"/><path d="M30 0h30v60H30z" fill="#FDDA24"/><path d="M60 0h30v60H60z" fill="#EF3340"/></svg>'
+    if code == "lu":
+        return f'<svg class="drapeau" viewBox="0 0 90 60" role="img">{t}<path d="M0 0h90v20H0z" fill="#EA141D"/><path d="M0 20h90v20H0z" fill="#fff"/><path d="M0 40h90v20H0z" fill="#51ADDA"/></svg>'
+    if code == "ch":
+        return f'<svg class="drapeau" viewBox="0 0 90 60" role="img">{t}<path d="M0 0h90v60H0z" fill="#DA291C"/><path d="M39 12h12v12h12v12H51v12H39V36H27V24h12z" fill="#fff"/></svg>'
+    if code == "pl":
+        return f'<svg class="drapeau" viewBox="0 0 90 60" role="img">{t}<path d="M0 0h90v30H0z" fill="#fff"/><path d="M0 30h90v30H0z" fill="#DC143C"/></svg>'
     if code == "nl":
         return f'<svg class="drapeau" viewBox="0 0 90 60" role="img">{t}<path d="M0 0h90v20H0z" fill="#AE1C28"/><path d="M0 20h90v20H0z" fill="#fff"/><path d="M0 40h90v20H0z" fill="#21468B"/></svg>'
     if code == "it":

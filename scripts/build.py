@@ -234,7 +234,7 @@ def page(chemin, titre, desc, corps, depth, *, head="", scripts="", indexable=Tr
     <small>Cartes © <a href="https://www.openstreetmap.org/copyright">contributeurs OpenStreetMap</a>. Photos libres de droits via Wikimedia Commons, <a href="{b}credits/">crédits détaillés</a>. Aucun cookie, aucun compte.</small>
   </div>
   <div><h4>Destinations</h4><ul>{villes_pied}</ul></div>
-  <div><h4>Outils</h4><ul><li><a href="{b}carnet/">Créer mon carnet</a></li><li><a href="{b}jeux/">Jeux à imprimer</a></li><li><a href="{b}valise/">Valise des enfants</a></li><li><a href="{b}mode-avion/">Utiliser en mode avion</a></li><li><a href="{b}methode/">Notre méthode</a></li></ul></div>
+  <div><h4>Outils</h4><ul><li><a href="{b}carnet/">Créer mon carnet</a></li><li><a href="{b}jeux/">Jeux à imprimer</a></li><li><a href="{b}jeux-de-voiture/">Jeux de voiture</a></li><li><a href="{b}valise/">Valise des enfants</a></li><li><a href="{b}mode-avion/">Utiliser en mode avion</a></li><li><a href="{b}methode/">Notre méthode</a></li></ul></div>
 </div></footer>
 {scripts}
 <script>if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('{b}sw.js').catch(()=>{{}}));</script>
@@ -442,6 +442,112 @@ def pages_enfants(v, b, nb_journal=3):
   <h4>Ma note de la journée</h4><p class="etoiles">☆ ☆ ☆ ☆ ☆</p>
 </section>'''
     return decouvre, jeux
+
+
+# ---------------------------------------------------------------- jeux pour la route (voiture, train, avion)
+BINGO_ROUTE = ["camion", "caravane", "vache", "eolienne", "tracteur", "tunnel", "moto", "mouton", "panneau",
+               "voiture-rouge", "pompe", "pont", "train", "avion", "velo", "chien", "montagne", "chateau"]
+PLAQUES = [("D", "de", "Allemagne"), ("B", "be", "Belgique"), ("NL", "nl", "Pays-Bas"), ("L", "lu", "Luxembourg"),
+           ("CH", "ch", "Suisse"), ("I", "it", "Italie"), ("E", "es", "Espagne"), ("P", "pt", "Portugal"),
+           ("UK", "uk", "Royaume-Uni"), ("A", "at", "Autriche"), ("CZ", "cz", "Tchéquie"), ("PL", "pl", "Pologne")]
+JEUX_A_DIRE = [
+    ("Ni oui ni non", "Un joueur pose des questions, l'autre répond sans jamais dire « oui » ni « non ». Le premier qui se trompe passe son tour."),
+    ("Dans ma valise, je mets…", "Chacun répète toute la liste et ajoute un objet : « une brosse à dents, un doudou, un parapluie… ». Celui qui en oublie un a perdu."),
+    ("Je vois, avec mes petits yeux…", "« … quelque chose de vert ! » Les autres cherchent ce que le joueur a vu, dedans ou dehors."),
+    ("La course des couleurs", "Chacun choisit une couleur de voiture. Le premier qui en compte dix a gagné."),
+    ("Le mot qui rebondit", "Dire un mot qui commence par la dernière lettre du mot précédent : « chat, tomate, éléphant… ». Pour les grands : par la dernière syllabe."),
+    ("Qui suis-je ?", "Un joueur pense à un animal ou à un personnage. Les autres posent des questions ; il ne répond que par oui ou par non."),
+    ("Les plaques qui parlent", "Avec les lettres d'une plaque, inventer une phrase : GT-412-RB devient « Gentil Tigre… Rigole Beaucoup »."),
+    ("L'histoire à plusieurs voix", "Chacun ajoute une phrase à une histoire qui commence par « Il était une fois, dans une voiture… »."),
+    ("Le roi du silence", "Qui tiendra le plus longtemps sans parler ni rire ? Parfait avant la sieste."),
+]
+
+
+def labyrinthe(graine, cols=10, lignes=12, c=24):
+    """Labyrinthe parfait, toujours le même pour une même graine (imprimable, sans hasard au rechargement)."""
+    import random
+    rnd = random.Random(graine)
+    vu = [[False] * cols for _ in range(lignes)]
+    murs_h = [[True] * cols for _ in range(lignes + 1)]   # mur au-dessus de la case (y, x)
+    murs_v = [[True] * (cols + 1) for _ in range(lignes)]  # mur à gauche de la case (y, x)
+    pile = [(0, 0)]
+    vu[0][0] = True
+    while pile:
+        y, x = pile[-1]
+        voisins = [(dy, dx) for dy, dx in ((0, 1), (1, 0), (0, -1), (-1, 0))
+                   if 0 <= y + dy < lignes and 0 <= x + dx < cols and not vu[y + dy][x + dx]]
+        if not voisins:
+            pile.pop()
+            continue
+        dy, dx = rnd.choice(voisins)
+        ny, nx = y + dy, x + dx
+        if dy == 1: murs_h[ny][x] = False
+        elif dy == -1: murs_h[y][x] = False
+        elif dx == 1: murs_v[y][nx] = False
+        else: murs_v[y][x] = False
+        vu[ny][nx] = True
+        pile.append((ny, nx))
+    murs_h[0][0] = False                 # entrée en haut à gauche
+    murs_h[lignes][cols - 1] = False     # sortie en bas à droite
+    m, d = 6, []
+    for y in range(lignes + 1):
+        for x in range(cols):
+            if murs_h[y][x]: d.append(f"M{m + x * c} {m + y * c}h{c}")
+    for y in range(lignes):
+        for x in range(cols + 1):
+            if murs_v[y][x]: d.append(f"M{m + x * c} {m + y * c}v{c}")
+    w, h = cols * c + 2 * m, lignes * c + 2 * m
+    return (f'<svg class="laby" viewBox="0 -18 {w} {h + 36}" role="img" aria-label="Labyrinthe">'
+            f'<text x="{m + c / 2}" y="-5" text-anchor="middle" font-size="11" font-weight="800" fill="#FF6B4A">Départ</text>'
+            f'<path d="{"".join(d)}" stroke="#1B2A4A" stroke-width="3" stroke-linecap="round" fill="none"/>'
+            f'<text x="{w}" y="{h + 14}" text-anchor="end" font-size="11" font-weight="800" fill="#2FB59A">Arrivée</text></svg>')
+
+
+def petits_carres(cols=8, lignes=10, c=26):
+    pts = "".join(f'<circle cx="{10 + x * c}" cy="{10 + y * c}" r="2.6" fill="#1B2A4A"/>' for y in range(lignes) for x in range(cols))
+    return f'<svg class="points" viewBox="0 0 {20 + (cols - 1) * c} {20 + (lignes - 1) * c}" role="img" aria-label="Grille de points">{pts}</svg>'
+
+
+def morpion():
+    g = '<svg class="morpion" viewBox="0 0 66 66" aria-hidden="true"><path d="M22 3v60M44 3v60M3 22h60M3 44h60" stroke="#1B2A4A" stroke-width="2.5" stroke-linecap="round"/></svg>'
+    return "".join(g for _ in range(6))
+
+
+def pages_route(b, destination="", graine="route"):
+    """Cinq pages pour le trajet. Classe « route » : le carnet peut les retirer si l'option est décochée."""
+    vers = f" vers {destination}" if destination else ""
+    bingo = "".join(f"<div>{svg_picto(P[c][1])}<span>{e(P[c][0])}</span></div>" for c in BINGO_ROUTE)
+    plaques = "".join(f'<div class="plaque"><span class="code"><i>★</i>{c}</span>{drapeau(dr, f"pl{graine}{i}")}<b>{e(pays)}</b><span class="coche">☐</span></div>'
+                      for i, (c, dr, pays) in enumerate(PLAQUES))
+    tete = lambda img, etiq, titre: f'<div class="pe-tete"><img src="{b}assets/{img}" alt="" class="pe-mondo"><div><span class="etiquette"><i></i>{etiq}</span><h2>{titre}</h2></div></div>'
+    return f'''<section class="page-enfant route">
+  {tete("mondo-coucou.svg", "Pour la route", f"Le bingo de la route")}
+  <p class="pe-consigne">Regarde par la fenêtre{e(vers)} et coche chaque case quand tu l'as vue. Une ligne complète : tu as gagné !</p>
+  <div class="bingo">{bingo}</div>
+</section>
+<section class="page-enfant route">
+  {tete("mondo.svg", "Pour la route", "La chasse aux plaques")}
+  <p class="pe-consigne">Sur les plaques européennes, les lettres du pays sont écrites dans la bande bleue, à gauche. Coche chaque pays que tu repères !</p>
+  <div class="plaques">{plaques}</div>
+  <p class="pe-consigne" style="margin-top:14px">Les plaques françaises ont, à droite, le numéro d'un département. Lequel vois-tu le plus souvent ? <span class="ligne-courte"></span></p>
+</section>
+<section class="page-enfant route">
+  {tete("mondo-coucou.svg", "Pour la route", "Le labyrinthe de Mondo")}
+  <p class="pe-consigne">Aide Mondo à sortir du labyrinthe{e(vers)}. Pars du haut, trouve le chemin jusqu'en bas, sans traverser les murs.</p>
+  {labyrinthe(graine)}
+</section>
+<section class="page-enfant route">
+  {tete("mondo.svg", "Pour la route · à deux", "Petits carrés et morpion")}
+  <p class="pe-consigne"><strong>Les petits carrés :</strong> chacun à son tour relie deux points voisins. Celui qui ferme un carré écrit son initiale dedans et rejoue. À la fin, le plus de carrés gagne.</p>
+  {petits_carres()}
+  <p class="pe-consigne" style="margin-top:12px"><strong>Le morpion :</strong> une croix, un rond, chacun son tour. Trois alignés, c'est gagné !</p>
+  <div class="morpions">{morpion()}</div>
+</section>
+<section class="page-enfant route a-dire">
+  {tete("mondo-coucou.svg", "À lire par un adulte", "Jeux à dire, sans papier")}
+  <p class="pe-consigne">Pour la voiture, le train ou la file d'attente : aucun matériel, juste la voix.</p>
+  <ol class="jeux-dire">{"".join(f"<li><strong>{e(t)}</strong> {e(r)}</li>" for t, r in JEUX_A_DIRE)}</ol>
+</section>'''
 
 
 # ---------------------------------------------------------------- pages ville
@@ -681,7 +787,7 @@ def pages_ville(v, osm):
     # ---------- pages enfants : fragment du carnet PDF + pages web
     dec_f, jeux_f = pages_enfants(v, "{{BASE}}", 5)
     (ROOT / "data" / "enfants").mkdir(parents=True, exist_ok=True)
-    (ROOT / "data" / "enfants" / f"{vid}.html").write_text(dec_f + jeux_f, encoding="utf-8")
+    (ROOT / "data" / "enfants" / f"{vid}.html").write_text(dec_f + pages_route("{{BASE}}", n, vid) + jeux_f, encoding="utf-8")
     dec_w, jeux_w = pages_enfants(v, b2)
     autres_lien = "../jeux/"
     c = f'''<section class="hero no-print"><div class="wrap grid">
@@ -870,7 +976,7 @@ def accueil():
     <div class="carte">{ico("parents", "i l", "")}<h3>Pour les parents</h3>
       <ul class="liste-ok"><li>Programme jour par jour, horaires et temps de marche</li><li>Chaque lieu numéroté comme sur la carte, avec photo, adresse, transport et QR code vers l'itinéraire</li><li>Toilettes, eau potable, aire de jeux et table à langer les plus proches, avec le temps de marche</li><li>Fiche poussette : pavés, escaliers, station accessible ou non</li><li>Météo de chaque journée dans les 15 jours avant le départ</li><li>Un plan B couvert pour chaque journée</li><li>Checklist de départ, papiers, urgences</li><li>Carte à importer dans Google My Maps</li></ul></div>
     <div class="carte soleil">{ico("enfant", "i l", "")}<h3>Pour les enfants</h3>
-      <ul class="liste-ok"><li>« Découvre la ville » : pays, capitale, langue et secrets, en phrases simples</li><li>Ses premiers mots dans la langue du pays, avec la prononciation, à écouter sur le site</li><li>« Ce que je vais voir » : les lieux du séjour en grand, à cocher</li><li>Bingo des rues, chasse au trésor et coloriage</li><li>Un journal de bord pour chaque jour</li></ul></div>
+      <ul class="liste-ok"><li>« Découvre la ville » : pays, capitale, langue et secrets, en phrases simples</li><li>Ses premiers mots dans la langue du pays, avec la prononciation, à écouter sur le site</li><li>« Ce que je vais voir » : les lieux du séjour en grand, à cocher</li><li>Bingo des rues, chasse au trésor et coloriage</li><li>Jeux pour la route : bingo de la route, chasse aux plaques, labyrinthe, petits carrés</li><li>Un journal de bord pour chaque jour</li></ul></div>
   </div>
   <div class="apercu" aria-hidden="true">
     <div class="feuille f1">{drapeau("it", "demo")}<b class="ft">Découvre Rome</b><div class="tuiles mini"><div class="tuile"><small>On y parle</small><b>l'italien</b></div><div class="tuile"><small>On paie avec</small><b>l'euro (€)</b></div></div></div>
@@ -962,7 +1068,7 @@ def carnet():
     </div>
     <div class="deux">
       <div class="champ"><label for="depart">Date d'arrivée <span class="muted" style="font-weight:600;font-size:.9rem">(facultatif)</span></label><input type="date" id="depart" name="depart"></div>
-      <div class="champ"><span class="lbl">Pages enfants</span><div class="segment"><input type="checkbox" id="pe" name="pe" value="1" checked><label for="pe">Inclure les jeux et la découverte</label></div></div>
+      <div class="champ"><span class="lbl">Pages enfants</span><div class="segment"><input type="checkbox" id="pe" name="pe" value="1" checked><label for="pe">Jeux et découverte de la ville</label><input type="checkbox" id="pr" name="pr" value="1" checked><label for="pr">Jeux pour la route</label></div></div>
     </div>
     <button class="btn" id="b-generer" type="submit">Créer mon carnet</button>
   </form>
@@ -984,9 +1090,35 @@ def hub_jeux():
   <p class="lead">Pour chaque destination : un bingo à cocher dans les rues, une chasse au trésor, un coloriage de Mondo, un journal de bord, et une page pour découvrir le pays, sa langue et ses premiers mots. Tout est aussi inclus dans le carnet PDF.</p></div>
   <div class="visuel"><img src="{b}assets/mondo-coucou.svg" alt="Mondo" style="max-width:260px;display:block;margin:0 auto"></div>
 </div></section>
-<section style="padding-top:0"><div class="wrap"><div class="grille">{cartes}</div></div></section>'''
+<section style="padding-top:0"><div class="wrap">
+  <a class="carte corail route-promo" href="{b}jeux-de-voiture/">{ico("voiture", "i l", b)}<div><h2 style="font-size:1.6rem;margin:0">Nouveau : les jeux pour la route</h2><p>Bingo de la route, chasse aux plaques, labyrinthe, petits carrés et jeux à dire : de quoi tenir tout le trajet en voiture, en train ou en avion.</p></div></a>
+  <div class="grille" style="margin-top:24px">{cartes}</div>
+</div></section>'''
     page("jeux/", "Jeux de voyage à imprimer pour les enfants | PetitMondo",
          coupe("Bingo des rues, chasse au trésor, coloriage, journal de voyage et découverte du pays à imprimer gratuitement pour " + ", ".join(v["nom"] for v in VILLES[:-1]) + " et " + VILLES[-1]["nom"] + ".", 200), corps, 1, actif="jeux", fil=[("Jeux à imprimer", "jeux/")])
+
+
+
+def jeux_voiture():
+    b = "../"
+    corps = f'''<section class="hero no-print"><div class="wrap grid">
+  <div><span class="etiquette"><i></i>À imprimer · 3 à 10 ans · gratuit</span>
+  <h1>Jeux de voiture <span class="hl">pour les enfants</span></h1>
+  <p class="lead">Cinq pages pour transformer le trajet en jeu : le bingo de la route, la chasse aux plaques étrangères, le labyrinthe de Mondo, les petits carrés et le morpion, et neuf jeux à dire sans papier. Imprimez, glissez dans la portière avec un crayon.</p>
+  <div class="cta"><button class="btn" type="button" onclick="print()">{ico_btn("pdf", b)}Imprimer les jeux</button><a class="btn sec" href="{b}carnet/">Les inclure dans mon carnet</a></div></div>
+  <div class="visuel"><img src="{b}assets/mondo-coucou.svg" alt="Mondo, la chouette de PetitMondo" style="max-width:260px;display:block;margin:0 auto"></div>
+</div></section>
+<section style="padding-top:0"><div class="wrap etroit">{pages_route(b)}</div></section>
+<section class="no-print"><div class="wrap etroit">
+  <h2>Questions fréquentes</h2>
+  {faq_html([("Quels jeux faire en voiture avec un enfant de 3 ans ?", "Le bingo de la route, avec ses images, se joue avant de savoir lire. « Je vois, avec mes petits yeux » et « La course des couleurs » marchent aussi très bien dès 3 ans."),
+             ("Quels jeux en voiture sans écran et sans matériel ?", "Ni oui ni non, Dans ma valise je mets, Qui suis-je, le mot qui rebondit ou l'histoire à plusieurs voix : neuf jeux à dire sont détaillés sur la dernière page."),
+             ("Ces jeux marchent-ils dans le train ou l'avion ?", "Oui pour le labyrinthe, les petits carrés, le morpion et les jeux à dire. Le bingo de la route et la chasse aux plaques sont faits pour la voiture."),
+             ("Peut-on les ajouter au carnet de voyage ?", "Oui : dans « Créer mon carnet », laissez cochée l'option « Jeux pour la route ». Les pages sont ajoutées au PDF avec celles de la destination.")])}
+</div></section>'''
+    page("jeux-de-voiture/", "Jeux de voiture pour enfants à imprimer gratuitement | PetitMondo",
+         "Bingo de la route, chasse aux plaques, labyrinthe, petits carrés, morpion et 9 jeux à dire sans écran : des jeux de voiture à imprimer gratuitement pour les enfants de 3 à 10 ans.",
+         corps, 1, actif="jeux", fil=[("Jeux à imprimer", "jeux/"), ("Jeux de voiture", "jeux-de-voiture/")])
 
 
 VALISE = {
@@ -1200,6 +1332,7 @@ def main():
         pages_ville(v, osm_par_ville[v["id"]])
         pages_lieux(v, osm_par_ville[v["id"]])
     hub_jeux()
+    jeux_voiture()
     valise()
     mode_avion()
     methode()

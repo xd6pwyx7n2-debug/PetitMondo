@@ -35,10 +35,11 @@
       depart: fd.get('depart') || '',
       interets: fd.getAll('interets'),
       enfants: !!fd.get('pe'),
+      route: !!fd.get('pr'),
     };
   }
   function versURL(p) {
-    const q = new URLSearchParams({ v: p.ville, j: p.jours, a: p.ages.join('-'), r: p.rythme, p: p.poussette ? 1 : 0, b: p.budget, i: p.interets.join('-'), e: p.enfants ? 1 : 0 });
+    const q = new URLSearchParams({ v: p.ville, j: p.jours, a: p.ages.join('-'), r: p.rythme, p: p.poussette ? 1 : 0, b: p.budget, i: p.interets.join('-'), e: p.enfants ? 1 : 0, t: p.route ? 1 : 0 });
     if (p.depart) q.set('d', p.depart);
     history.replaceState(null, '', '#' + q.toString());
   }
@@ -54,6 +55,7 @@
     coche('poussette', h.get('p') === '1' ? 'oui' : 'non');
     coche('budget', h.get('b') || 'tous');
     form.pe.checked = h.get('e') !== '0';
+    if (form.pr) form.pr.checked = h.get('t') !== '0';
     if (h.get('d')) form.depart.value = h.get('d');
     const ints = (h.get('i') || '').split('-');
     form.querySelectorAll('input[name="interets"]').forEach(c => { c.checked = ints.includes(c.value); });
@@ -258,7 +260,7 @@
     return l;
   }
 
-  async function pagesEnfants(v, jours) {
+  async function pagesEnfants(v, jours, p) {
     let frag = '';
     try {
       const r = await fetch(`${PM.base}data/enfants/${v.id}.html`);
@@ -266,14 +268,24 @@
       const tmp = document.createElement('div');
       tmp.innerHTML = frag;
       tmp.querySelectorAll('.journal[data-jour]').forEach(el => { if (+el.dataset.jour > jours.length) el.remove(); });
+      if (!p.route) tmp.querySelectorAll('.route').forEach(el => el.remove());
+      if (!p.enfants) tmp.querySelectorAll('.page-enfant:not(.route)').forEach(el => el.remove());
       frag = tmp.innerHTML;
     } catch { /* hors connexion sans cache : on garde la page « Ce que je vais voir » */ }
-    const voir = jours.map(j => `<h3 style="margin-top:18px">Jour ${j.n}</h3><div class="voir-grille">${j.acts.map((a, k) => `
-      <div class="voir">${numero(j, k + 1)}${imgPhoto(v.id, a, '')}<div class="txt"><b>${esc(a.nom)}</b>${esc(a.enfant || '')}<span class="coche">☐ J'y suis allé !</span></div></div>`).join('')}</div>`).join('');
-    return `<section class="page-enfant voir-page">
-      <div class="pe-tete"><img src="${PM.base}assets/mondo-coucou.svg" alt="" class="pe-mondo"><div><span class="etiquette"><i></i>Le carnet de l'explorateur</span><h2>Ce que je vais voir à ${esc(v.nom)}</h2></div></div>
-      <p class="pe-consigne">Chaque lieu a un numéro, le même que sur la carte des parents. Coche-le quand tu y es allé !</p>${voir}
-    </section>${frag}`;
+    // « Ce que je vais voir » : une feuille par groupe de jours (6 lieux au plus), pour que rien ne soit coupé à l'impression
+    const jourHTML = j => `<h3 style="margin-top:14px">Jour ${j.n}</h3><div class="voir-grille">${j.acts.map((a, k) => `
+      <div class="voir">${numero(j, k + 1)}${imgPhoto(v.id, a, '')}<div class="txt"><b>${esc(a.nom)}</b>${esc(a.enfant || '')}<span class="coche">☐ J'y suis allé !</span></div></div>`).join('')}</div>`;
+    const groupes = [];
+    for (const j of jours) {
+      const g = groupes[groupes.length - 1];
+      const rangs = x => Math.ceil(x.acts.length / 3);
+      if (g && g.length < 2 && g.reduce((s, x) => s + rangs(x), 0) + rangs(j) <= 2) g.push(j); else groupes.push([j]);
+    }
+    const voir = !p.enfants ? '' : groupes.map((g, i) => `<section class="page-enfant voir-page">
+      <div class="pe-tete"><img src="${PM.base}assets/mondo-coucou.svg" alt="" class="pe-mondo"><div><span class="etiquette"><i></i>Le carnet de l'explorateur</span><h2>Ce que je vais voir à ${esc(v.nom)}${groupes.length > 1 ? ` <span class="suite-page">${i + 1}/${groupes.length}</span>` : ''}</h2></div></div>
+      ${i === 0 ? '<p class="pe-consigne">Chaque lieu a un numéro, le même que sur la carte des parents. Coche-le quand tu y es allé !</p>' : ''}${g.map(jourHTML).join('')}
+    </section>`).join('');
+    return voir + frag;
   }
 
   /* Météo du séjour (Open-Meteo), seulement si le départ est dans les 15 jours */
@@ -385,7 +397,7 @@
 
     h += `<article class="jour"><div class="jour-tete" style="--c:#FFF1C9"><h3>Avant de partir</h3>${PM.ico('valise')}</div><div class="jour-corps" style="padding-top:16px"><ul class="check">${checklist(v, p, jours).map(x => `<li>${esc(x)}</li>`).join('')}</ul></div></article>`;
     h += `<article class="jour"><div class="jour-tete" style="--c:#DDF1FB"><h3>Bon à savoir · ${esc(v.nom)}</h3>${PM.ico('loupe')}</div><div class="jour-corps" style="padding-top:12px">${v.conseils.map(c => `<p><strong>${esc(c.titre)}.</strong> ${esc(c.texte)}</p>`).join('')}${(p.poussette || Math.min(...p.ages) < 3) && v.poussette ? `<h4 style="margin-top:18px">Avec une poussette</h4>${v.poussette.map(c => `<p><strong>${esc(c.titre)}.</strong> ${esc(c.texte)}</p>`).join('')}` : ''}<h4 style="margin-top:18px">Urgences</h4>${v.urgences.map(u => `<p><strong>${esc(u.nom)}</strong> : ${esc(u.detail)}</p>`).join('')}</div></article>`;
-    if (p.enfants) h += await pagesEnfants(v, jours);
+    if (p.enfants || p.route) h += await pagesEnfants(v, jours, p);
 
     const utilisees = [...new Set(jours.flatMap(j => j.acts.concat(j.planB ? [j.planB] : [])).map(a => a.id))]
       .map(id => ({ a: v.activites.find(x => x.id === id), ph: photoDe(v.id, id) })).filter(x => x.ph);

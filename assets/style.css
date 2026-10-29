@@ -455,3 +455,86 @@ footer small{opacity:.75;display:block;margin-top:14px}
 .carte.act .fiche{font-weight:700}
 @media print{.carte.act h3 a{text-decoration:none}}
 .grille.g2f{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+
+/* ---------- jeux pour la route */
+.route-promo{display:flex;gap:18px;align-items:center;text-decoration:none}
+.plaques{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.plaque{display:grid;grid-template-columns:auto 34px 1fr auto;gap:8px;align-items:center;border:var(--trait);border-radius:var(--r-p);padding:8px 10px;background:var(--blanc)}
+.plaque .code{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;min-width:34px;height:40px;background:#1E50B4;color:#fff;border-radius:6px;font:800 .95rem/1 var(--titre);padding:0 4px}
+.plaque .code i{color:#FFCE00;font-style:normal;font-size:.6rem;margin-bottom:2px}
+.plaque .drapeau{width:34px;height:auto;border:1.5px solid var(--nuit);border-radius:4px}
+.plaque b{font-size:.95rem}
+.plaque .coche{font-size:1.3rem}
+.ligne-courte{display:inline-block;width:6em;border-bottom:2px dotted var(--nuit)}
+.laby{display:block;width:100%;max-width:440px;margin:10px auto 0}
+.points{display:block;width:100%;max-width:300px;margin:8px auto}
+.morpions{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;max-width:520px;margin:6px auto 0}
+.jeux-dire{display:grid;gap:10px;padding-left:1.3em;margin:10px 0 0}
+.jeux-dire strong{display:block;font-family:var(--titre)}
+@media(max-width:620px){.plaques{grid-template-columns:repeat(2,minmax(0,1fr))}.morpions{grid-template-columns:repeat(3,1fr)}.route-promo{flex-direction:column;align-items:flex-start}}
+@media print{
+  .plaques{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+  .laby{max-width:150mm}
+  .points{max-width:95mm}
+  .morpions{grid-template-columns:repeat(6,1fr)!important;max-width:170mm}
+  .a-dire{font-size:11.5pt!important}
+}
+.suite-page{font-size:.55em;color:var(--texte2);font-weight:700}
+
+/* ==========================================================
+   Impression du carnet : rien ne doit être coupé entre deux feuilles.
+   Règles doublées en page-break-* pour Safari (iPhone, iPad, Mac).
+   Les cadres ne portent que sur des blocs courts et insécables ;
+   les conteneurs longs (journée, conseils) n'ont plus de cadre.
+   ========================================================== */
+@media print{
+  @page{size:A4;margin:11mm}
+  html,body{width:auto!important;background:#fff!important}
+  .carnet,.carnet .wrap{max-width:none!important;padding:0!important}
+  .carnet img,.carnet svg,.carnet figure{max-width:100%}
+  /* couverture : hauteur fixe en mm, jamais en vh (Safari calcule vh sur l'écran) */
+  .couv{display:block!important;min-height:0!important;height:auto!important;overflow:visible!important;box-shadow:none!important;break-after:page;page-break-after:always;break-inside:avoid;page-break-inside:avoid}
+  .couv .illu{display:block!important;height:auto!important;border-left:0!important;border-top:var(--trait)}
+  .couv .illu img.v{max-height:120mm;width:auto;margin:0 auto;display:block}
+  /* journées : un en-tête encadré, puis des blocs insécables, sans grand cadre qui traverse les feuilles */
+  .jour{display:block!important;border:0!important;border-radius:0!important;box-shadow:none!important;overflow:visible!important;background:none!important;margin:0!important;break-before:page;page-break-before:always}
+  .jour-tete{border:var(--trait)!important;border-radius:14px;break-after:avoid;page-break-after:avoid;break-inside:avoid;page-break-inside:avoid}
+  .jour-corps{display:block!important;padding:4px 2px 0!important}
+  .etape,.planb,.proches,.poussette-fiche,.meteo,.check li,.jour-corps>p,.jour-corps h4{break-inside:avoid;page-break-inside:avoid}
+  .jour-corps h4{break-after:avoid;page-break-after:avoid}
+  /* pages enfants : une feuille chacune */
+  .page-enfant{display:block!important;overflow:visible!important;box-shadow:none!important;margin:0!important;padding:7mm!important;break-before:page;page-break-before:always;break-inside:avoid;page-break-inside:avoid}
+  .page-enfant .pe-mondo{width:16mm!important;height:auto}
+  .page-enfant .pe-tete{margin-bottom:3mm}
+  .page-enfant .pe-tete h2{font-size:21pt!important}
+  .page-enfant .pe-consigne{font-size:11pt}
+  .voir-grille{gap:4mm!important}
+  .voir .photo{aspect-ratio:3/2!important}
+  .voir .txt{padding:2mm 3mm!important;font-size:10pt}
+  .voir .txt b{font-size:12pt!important}
+  .cadre-dessin{height:70mm!important}
+  .coloriage{max-height:180mm;width:auto;max-width:100%}
+  .bingo div{min-height:24mm!important}
+  .liste-mots .mot{break-inside:avoid;page-break-inside:avoid}
+}
+@media print{
+  .page-enfant{font-size:12pt!important}
+  .laby{max-width:120mm!important}
+  .points{max-width:72mm!important}
+  .morpions{max-width:150mm!important;gap:6mm!important}
+}
+@media print{
+  .plaques{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:4mm!important;margin-top:4mm}
+  .plaque{padding:3mm 4mm!important;grid-template-columns:auto 14mm 1fr auto!important;gap:3mm!important}
+  .plaque .code{height:14mm;min-width:12mm;font-size:15pt}
+  .plaque .drapeau{width:14mm}
+  .plaque b{font-size:13pt}
+  .plaque .coche{font-size:18pt}
+  .laby{max-width:135mm!important}
+  .points{max-width:85mm!important}
+}
+.plaque{grid-template-columns:auto 30px minmax(0,1fr) auto;min-width:0}
+.plaque b{overflow-wrap:anywhere;hyphens:auto}
+@media(max-width:620px){.plaque{gap:6px;padding:6px 8px}.plaque .drapeau{width:26px}.plaque b{font-size:.85rem}}
+.plaque b{hyphens:manual}
+@media(max-width:620px){.plaque{grid-template-columns:auto minmax(0,1fr) auto}.plaque .drapeau{display:none}}
