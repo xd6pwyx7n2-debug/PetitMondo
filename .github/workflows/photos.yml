@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - "data/villes/**"
+      - ".github/workflows/photos.yml"
       - "scripts/fetch_photos.py"
 
 permissions:
@@ -26,17 +27,23 @@ jobs:
         run: pip install pillow
       - name: Récupérer les photos (Wikimedia Commons)
         run: python scripts/fetch_photos.py
-      - name: Régénérer les pages
-        run: python scripts/build.py
-      - name: Enregistrer les changements
+      - name: Enregistrer (sans conflit avec l'autre action)
         run: |
           git config user.name "petitmondo-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add -A
-          if git diff --cached --quiet; then
-            echo "Aucun changement."
-          else
-            git commit -m "Photos libres de droits mises à jour"
-            git pull --rebase
-            git push
-          fi
+          mkdir -p /tmp/sauve
+          cp data/photos.json /tmp/sauve/
+          cp -r assets/photos /tmp/sauve/photos
+          for essai in 1 2 3 4; do
+            git fetch -q origin main
+            git reset -q --hard origin/main
+            cp /tmp/sauve/photos.json data/
+            mkdir -p assets/photos && cp -r /tmp/sauve/photos/. assets/photos/
+            python scripts/build.py
+            git add -A
+            if git diff --cached --quiet; then echo "Aucun changement."; exit 0; fi
+            git commit -q -m "Photos libres de droits mises à jour ($(date +%F))"
+            if git push -q origin HEAD:main; then exit 0; fi
+            sleep $((essai * 15))
+          done
+          exit 1

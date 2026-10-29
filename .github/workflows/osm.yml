@@ -7,6 +7,7 @@ on:
   push:
     paths:
       - "data/villes/**"
+      - ".github/workflows/osm.yml"
       - "scripts/fetch_osm.py"
       - "scripts/fetch_vacances.py"
       - "scripts/build.py"
@@ -30,17 +31,25 @@ jobs:
         run: python scripts/fetch_osm.py
       - name: Calendrier des vacances scolaires
         run: python scripts/fetch_vacances.py || true
-      - name: Régénérer les pages
-        run: python scripts/build.py
-      - name: Enregistrer les changements
+      - name: Enregistrer (sans conflit avec l'autre action)
         run: |
           git config user.name "petitmondo-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add -A
-          if git diff --cached --quiet; then
-            echo "Aucun changement."
-          else
-            git commit -m "Données OSM mises à jour ($(date +%F))"
-            git pull --rebase
-            git push
-          fi
+          mkdir -p /tmp/sauve
+          cp -r data/osm /tmp/sauve/osm
+          [ -d data/acces ] && cp -r data/acces /tmp/sauve/acces || true
+          [ -f data/vacances.json ] && cp data/vacances.json /tmp/sauve/ || true
+          for essai in 1 2 3 4; do
+            git fetch -q origin main
+            git reset -q --hard origin/main
+            cp -r /tmp/sauve/osm data/
+            [ -d /tmp/sauve/acces ] && cp -r /tmp/sauve/acces data/ || true
+            [ -f /tmp/sauve/vacances.json ] && cp /tmp/sauve/vacances.json data/ || true
+            python scripts/build.py
+            git add -A
+            if git diff --cached --quiet; then echo "Aucun changement."; exit 0; fi
+            git commit -q -m "Données OSM et calendrier mis à jour ($(date +%F))"
+            if git push -q origin HEAD:main; then exit 0; fi
+            sleep $((essai * 15))
+          done
+          exit 1
