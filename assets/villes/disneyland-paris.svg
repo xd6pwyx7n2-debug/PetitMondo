@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" role="img" aria-label="Illustration d'un parc d'attractions : château de conte, feux d'artifice, ballons et manège">
+  <rect width="640" height="320" rx="28" fill="#1B2A4A"/>
+  <g fill="#FFC93C"><circle cx="80" cy="60" r="3"/><circle cx="140" cy="110" r="2.5"/><circle cx="560" cy="50" r="3"/><circle cx="600" cy="120" r="2.5"/><circle cx="420" cy="40" r="2.5"/><circle cx="220" cy="40" r="2"/></g>
+  <!-- feux d'artifice -->
+  <g stroke-width="4" stroke-linecap="round">
+    <g stroke="#FF6B4A"><path d="M120 70 v-26 M120 70 v26 M120 70 h-26 M120 70 h26 M120 70 l-18-18 M120 70 l18 18 M120 70 l18-18 M120 70 l-18 18"/></g>
+    <g stroke="#2FB59A"><path d="M520 90 v-22 M520 90 v22 M520 90 h-22 M520 90 h22 M520 90 l-15-15 M520 90 l15 15 M520 90 l15-15 M520 90 l-15 15"/></g>
+  </g>
+  <!-- château (dessin original) -->
+  <g stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round">
+    <path d="M220 248 V170 h200 V248z" fill="#FFF8EC"/>
+    <path d="M240 170 V120 h40 V170z M360 170 V120 h40 V170z M300 170 V96 h40 V170z" fill="#FFF8EC"/>
+    <path d="M234 120 l26 -44 l26 44z M354 120 l26 -44 l26 44z" fill="#A88BEB"/>
+    <path d="M294 96 l26 -56 l26 56z" fill="#FF6B4A"/>
+    <path d="M300 248 v-40 a20 20 0 0 1 40 0 v40z" fill="#FFC93C"/>
+    <path d="M256 140 h8 v14 h-8z M376 140 h8 v14 h-8z M316 116 h8 v14 h-8z" fill="#FFC93C"/>
+    <path d="M320 40 v-14 l14 6 l-14 6" fill="#FFC93C"/>
+  </g>
+  <!-- manège -->
+  <g stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round">
+    <path d="M460 248 v-50 M560 248 v-50 M510 248 v-50" fill="none" stroke="#FFF8EC"/>
+    <path d="M450 198 h120 l-60 -40 z" fill="#FFC93C"/>
+    <path d="M450 236 h120" fill="none" stroke="#FFF8EC"/>
+  </g>
+  <!-- ballons -->
+  <g stroke="#1B2A4A" stroke-width="3.5">
+    <path d="M110 250 V200 M124 250 V190 M96 250 V206" fill="none" stroke="#FFF8EC" stroke-width="2.5"/>
+    <ellipse cx="96" cy="194" rx="14" ry="17" fill="#2FB59A"/>
+    <ellipse cx="124" cy="176" rx="14" ry="17" fill="#FF6B4A"/>
+    <ellipse cx="110" cy="186" rx="14" ry="17" fill="#FFC93C"/>
+  </g>
+  <path d="M0 248 H640 V292 a28 28 0 0 1 -28 28 H28 A28 28 0 0 1 0 292z" fill="#2FB59A" stroke="#1B2A4A" stroke-width="4"/>
+  <path d="M200 298 C280 286 360 298 440 286" fill="none" stroke="#FFF8EC" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round"/>
+</svg>

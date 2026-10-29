@@ -1,0 +1,153 @@
+"""Contenus partagés : pictogrammes du bingo, drapeaux, lexiques des parents."""
+
+# Pictogrammes 48×48 au trait nuit, dessinés pour PetitMondo
+P = {
+    "palmier": ("Un palmier", '<path d="M24 44V22M24 22c-8-6-16-2-18 4 6-4 12-3 18-4zm0 0c8-6 16-2 18 4-6-4-12-3-18-4zm0 0c-2-8-8-12-14-11 6 2 10 6 14 11zm0 0c2-8 8-12 14-11-6 2-10 6-14 11z" fill="#2FB59A"/>'),
+    "perruche": ("Une perruche verte", '<ellipse cx="22" cy="28" rx="10" ry="12" fill="#2FB59A"/><circle cx="26" cy="18" r="7" fill="#2FB59A"/><path d="M32 18l5 3-5 2z" fill="#FF6B4A"/><circle cx="27" cy="17" r="1.5" fill="#1B2A4A"/><path d="M16 38l-6 6"/>'),
+    "mosaique": ("Une mosaïque", '<path d="M8 8h14v14H8zM26 8h14v14H26zM8 26h14v14H8zM26 26h14v14H26z" fill="#6EC6F0"/><path d="M8 8h14v14H8zM26 26h14v14H26z" fill="#FFC93C"/>'),
+    "dragon": ("Un dragon", '<path d="M8 34c4-10 14-14 22-10s10-6 12-10c2 6-2 14-8 16 4 2 6 6 4 10-6-4-12-2-18 0s-10-2-12-6z" fill="#2FB59A"/><circle cx="36" cy="16" r="1.5" fill="#1B2A4A"/>'),
+    "bateau": ("Un bateau", '<path d="M6 30h36l-6 10H12z" fill="#FF6B4A"/><path d="M24 8v22M24 10l12 16H24z" fill="#FFF8EC"/>'),
+    "telepherique": ("Un téléphérique", '<path d="M4 8l40 8M24 12v8"/><rect x="14" y="20" width="20" height="18" rx="4" fill="#FF6B4A"/><path d="M18 24h12v6H18z" fill="#DDF1FB"/>'),
+    "tour-pointue": ("Une tour pointue", '<path d="M18 44V20l6-16 6 16v24z" fill="#FFC93C"/><circle cx="24" cy="24" r="2" fill="#1B2A4A"/>'),
+    "chateau-sable": ("Un château de sable", '<path d="M8 42V26h6v4h6v-8h8v8h6v-4h6v16z" fill="#FFE7A8"/><path d="M22 42v-6h4v6"/>'),
+    "glace": ("Une glace", '<path d="M16 22l8 22 8-22z" fill="#FFC93C"/><circle cx="20" cy="18" r="6" fill="#FF9F8A"/><circle cx="28" cy="18" r="6" fill="#A88BEB"/>'),
+    "bus-rouge": ("Un bus rouge", '<rect x="6" y="12" width="36" height="24" rx="5" fill="#FF6B4A"/><path d="M10 16h28v8H10z" fill="#DDF1FB"/><circle cx="14" cy="38" r="3" fill="#1B2A4A"/><circle cx="34" cy="38" r="3" fill="#1B2A4A"/>'),
+    "fontaine": ("Une fontaine", '<path d="M10 40h28l-4-8H14z" fill="#6EC6F0"/><path d="M24 32V14M24 14c-6 0-10 6-10 10M24 14c6 0 10 6 10 10"/>'),
+    "mouette": ("Une mouette", '<path d="M6 24q9-10 18 0 9-10 18 0"/>'),
+    "drapeau-catalan": ("Le drapeau catalan", '<path d="M10 44V6"/><rect x="10" y="8" width="28" height="20" fill="#FFC93C"/><path d="M10 12h28M10 17h28M10 22h28" stroke="#FF6B4A" stroke-width="2.5"/>'),
+    "musicien": ("Un musicien de rue", '<path d="M14 36l14-24 6 4-14 24z" fill="#FFC93C"/><circle cx="16" cy="36" r="6" fill="#FF6B4A"/>'),
+    "velo": ("Un vélo", '<circle cx="13" cy="32" r="7" fill="#DDF1FB"/><circle cx="35" cy="32" r="7" fill="#DDF1FB"/><path d="M13 32l8-12h10l4 12M21 20l6 12h-14M29 16h5"/>'),
+    "churros": ("Des churros", '<path d="M12 40l8-30M22 40l6-30M32 40l2-30" stroke="#D9A441" stroke-width="5"/><path d="M8 40h32"/>'),
+    "plage": ("Une serviette de plage", '<path d="M8 30h32v10H8z" fill="#FF9F8A"/><path d="M8 34h32" stroke="#FFF8EC" stroke-width="2"/><circle cx="34" cy="14" r="6" fill="#FFC93C"/>'),
+    "parasol": ("Un parasol", '<path d="M6 22a18 14 0 0 1 36 0z" fill="#FF6B4A"/><path d="M24 22v20M18 42h12"/>'),
+    "tour-eiffel": ("La tour Eiffel", '<path d="M22 4h4l8 40h-5q-5-10-10 0h-5z" fill="#FF6B4A"/><path d="M18 22h12M16 32h16"/>'),
+    "pigeon": ("Un pigeon", '<ellipse cx="22" cy="28" rx="13" ry="9" fill="#C9D3E6"/><circle cx="32" cy="18" r="6" fill="#C9D3E6"/><path d="M38 18l4 2-4 1"/><circle cx="33" cy="17" r="1.3" fill="#1B2A4A"/><path d="M18 37v6M26 37v6"/>'),
+    "croissant": ("Un croissant", '<path d="M6 30c6-14 30-14 36 0-6-2-10 0-12 4-4-4-8-4-12 0-2-4-6-6-12-4z" fill="#FFC93C"/><path d="M18 22l2 10M30 22l-2 10"/>'),
+    "metro": ("Une entrée de métro", '<path d="M10 44V18c0-8 6-12 14-12s14 4 14 12v26" fill="none"/><rect x="16" y="12" width="16" height="7" rx="2" fill="#FFC93C"/><path d="M10 44h28"/>'),
+    "pont": ("Un pont", '<path d="M4 22h40v6H4z" fill="#FFF8EC"/><path d="M8 44V28q8-10 16 0 8-10 16 0v16" fill="#6EC6F0"/>'),
+    "statue": ("Une statue", '<circle cx="24" cy="10" r="5" fill="#C9D3E6"/><path d="M18 16h12l2 16H16z" fill="#C9D3E6"/><path d="M12 32h24v10H12z" fill="#FFF8EC"/>'),
+    "manege": ("Un manège", '<path d="M8 18h32L24 6z" fill="#FF6B4A"/><path d="M12 18v22M24 18v22M36 18v22M8 40h32"/><circle cx="12" cy="30" r="3" fill="#FFC93C"/><circle cx="36" cy="26" r="3" fill="#FFC93C"/>'),
+    "artiste": ("Un peintre", '<path d="M10 40l8-30h12l8 30" fill="none"/><rect x="14" y="10" width="20" height="16" fill="#FFF8EC"/><circle cx="20" cy="16" r="2.5" fill="#FF6B4A"/><circle cx="28" cy="20" r="2.5" fill="#2FB59A"/>'),
+    "chien": ("Un chien en promenade", '<ellipse cx="22" cy="30" rx="12" ry="7" fill="#FFE7A8"/><circle cx="35" cy="22" r="6" fill="#FFE7A8"/><path d="M36 16l3-4M14 36v6M28 36v6M10 28l-4-4"/><circle cx="36" cy="21" r="1.3" fill="#1B2A4A"/>'),
+    "drapeau-france": ("Le drapeau français", '<path d="M10 44V6"/><path d="M10 8h10v20H10z" fill="#3A6BC8"/><path d="M20 8h9v20h-9z" fill="#fff"/><path d="M29 8h9v20h-9z" fill="#FF6B4A"/>'),
+    "horloge": ("Une grande horloge", '<circle cx="24" cy="24" r="16" fill="#FFF8EC"/><path d="M24 14v10l7 4"/>'),
+    "arbre": ("Un grand arbre", '<circle cx="24" cy="18" r="12" fill="#2FB59A"/><path d="M24 30v14"/>'),
+    "parapluie": ("Un parapluie", '<path d="M6 24a18 16 0 0 1 36 0z" fill="#A88BEB"/><path d="M24 24v14a4 4 0 0 1-8 0"/>'),
+    "macaron": ("Un macaron", '<ellipse cx="24" cy="18" rx="14" ry="6" fill="#FF9F8A"/><path d="M10 24h28" stroke="#FFF8EC" stroke-width="4"/><ellipse cx="24" cy="30" rx="14" ry="6" fill="#FF9F8A"/>'),
+    "casque-romain": ("Un casque de gladiateur", '<path d="M12 34V22a12 12 0 0 1 24 0v12z" fill="#FFC93C"/><path d="M24 10V4M16 4h16" stroke="#FF6B4A" stroke-width="4"/><path d="M16 26h16"/>'),
+    "colonne": ("Une colonne antique", '<path d="M12 8h24v5H12zM12 38h24v5H12z" fill="#FFF8EC"/><path d="M16 13v25M22 13v25M28 13v25M32 13v25"/>'),
+    "pizza": ("Une pizza", '<path d="M24 6l16 34H8z" fill="#FFC93C"/><circle cx="22" cy="26" r="3" fill="#FF6B4A"/><circle cx="28" cy="33" r="3" fill="#FF6B4A"/><circle cx="18" cy="35" r="2.5" fill="#2FB59A"/>'),
+    "scooter": ("Un scooter", '<path d="M12 34h20l6-12h-6" fill="none"/><path d="M14 28h14v6H14z" fill="#6EC6F0"/><circle cx="12" cy="36" r="5" fill="#FFF8EC"/><circle cx="36" cy="36" r="5" fill="#FFF8EC"/>'),
+    "obelisque": ("Un obélisque", '<path d="M20 42l2-32 2-4 2 4 2 32z" fill="#FFE7A8"/><path d="M14 42h20"/>'),
+    "eglise-dome": ("Un dôme d'église", '<path d="M10 42V28h28v14z" fill="#FFF8EC"/><path d="M12 28a12 12 0 0 1 24 0z" fill="#6EC6F0"/><path d="M24 16V8M21 11h6"/>'),
+    "chat": ("Un chat", '<path d="M14 40c0-12 4-18 10-18s10 6 10 18z" fill="#FFE7A8"/><path d="M16 18l2-8 6 6 6-6 2 8a8 8 0 0 1-16 0z" fill="#FFE7A8"/><circle cx="21" cy="17" r="1.2" fill="#1B2A4A"/><circle cx="27" cy="17" r="1.2" fill="#1B2A4A"/>'),
+    "pates": ("Un plat de pâtes", '<path d="M8 28h32a16 12 0 0 1-32 0z" fill="#FFF8EC"/><path d="M14 28c2-8 6-2 8-8s6 4 8-2 6 4 6 10" stroke="#FFC93C" stroke-width="3.5"/><circle cx="22" cy="26" r="3" fill="#FF6B4A"/>'),
+    "drapeau-italie": ("Le drapeau italien", '<path d="M10 44V6"/><path d="M10 8h10v20H10z" fill="#2FB59A"/><path d="M20 8h9v20h-9z" fill="#fff"/><path d="M29 8h9v20h-9z" fill="#FF6B4A"/>'),
+    "piece": ("Une pièce de monnaie", '<circle cx="24" cy="24" r="14" fill="#FFC93C"/><circle cx="24" cy="24" r="9"/>'),
+    "cabine": ("Une cabine téléphonique rouge", '<rect x="14" y="8" width="20" height="34" rx="3" fill="#FF6B4A"/><path d="M18 16h12v18H18z" fill="#DDF1FB"/><path d="M24 16v18M18 25h12"/>'),
+    "taxi-noir": ("Un taxi noir", '<path d="M8 32v-6l6-10h20l6 10v6z" fill="#1B2A4A"/><path d="M16 18h16l4 8H12z" fill="#DDF1FB"/><circle cx="15" cy="34" r="4" fill="#FFF8EC"/><circle cx="33" cy="34" r="4" fill="#FFF8EC"/>'),
+    "garde": ("Un garde au grand bonnet", '<path d="M16 22V12a8 9 0 0 1 16 0v10z" fill="#1B2A4A"/><circle cx="24" cy="26" r="5" fill="#FFE7A8"/><path d="M16 32h16v12H16z" fill="#FF6B4A"/>'),
+    "corbeau": ("Un corbeau", '<ellipse cx="22" cy="28" rx="13" ry="9" fill="#1B2A4A"/><circle cx="32" cy="18" r="6" fill="#1B2A4A"/><path d="M37 18l6 2-6 2z" fill="#FFC93C"/><circle cx="33" cy="17" r="1.3" fill="#fff"/>'),
+    "dinosaure": ("Un dinosaure", '<path d="M6 36c4-2 8-8 10-14s10-12 18-10 8 8 4 10-6-2-8 2 2 10-2 14h-6v-6h-6v6h-6z" fill="#2FB59A"/><circle cx="34" cy="15" r="1.4" fill="#1B2A4A"/>'),
+    "couronne": ("Une couronne", '<path d="M8 36l2-20 8 8 6-12 6 12 8-8 2 20z" fill="#FFC93C"/><circle cx="24" cy="30" r="2.5" fill="#FF6B4A"/>'),
+    "drapeau-uk": ("Le drapeau britannique", '<path d="M10 44V6"/><rect x="10" y="8" width="28" height="20" fill="#3A6BC8"/><path d="M10 8l28 20M38 8L10 28" stroke="#fff" stroke-width="3"/><path d="M24 8v20M10 18h28" stroke="#FF6B4A" stroke-width="4"/>'),
+    "the": ("Une tasse de thé", '<path d="M10 20h22v10a11 11 0 0 1-22 0z" fill="#FFF8EC"/><path d="M32 22h4a4 4 0 0 1 0 8h-4M16 14q2-4 0-8M24 14q2-4 0-8"/>'),
+    "chateau": ("Un château de conte", '<path d="M10 42V22h28v20z" fill="#FFF8EC"/><path d="M8 22l6-12 6 12zM28 22l6-12 6 12z" fill="#A88BEB"/><path d="M18 22l6-16 6 16z" fill="#FF6B4A"/><path d="M21 42v-8a3 3 0 0 1 6 0v8" fill="#FFC93C"/>'),
+    "ballon": ("Un ballon", '<ellipse cx="24" cy="18" rx="11" ry="13" fill="#FF6B4A"/><path d="M24 31l-2 3h4zM24 34c-3 4 3 6 0 10"/>'),
+    "train-vapeur": ("Un train à vapeur", '<path d="M8 36V22h14V14h8v8h10v14z" fill="#FF6B4A"/><path d="M30 14V8h-6" /><circle cx="14" cy="38" r="4" fill="#1B2A4A"/><circle cx="34" cy="38" r="4" fill="#1B2A4A"/><path d="M26 6q4-4 8 0" stroke="#C9D3E6"/>'),
+    "feu-artifice": ("Un feu d'artifice", '<path d="M24 24V8M24 24V40M24 24H8M24 24h16M24 24l-11-11M24 24l11 11M24 24l11-11M24 24l-11 11" stroke="#FF6B4A"/><circle cx="24" cy="24" r="3" fill="#FFC93C"/>'),
+    "popcorn": ("Un cornet de pop-corn", '<path d="M14 18h20l-3 24H17z" fill="#FF6B4A"/><path d="M19 18l1 24M29 18l-1 24" stroke="#FFF8EC" stroke-width="2.5"/><circle cx="18" cy="15" r="4" fill="#FFF8EC"/><circle cx="25" cy="12" r="4" fill="#FFF8EC"/><circle cx="31" cy="15" r="4" fill="#FFF8EC"/>'),
+    "bateau-pirate": ("Un bateau pirate", '<path d="M6 30h36l-6 10H12z" fill="#8B5A3C"/><path d="M22 6v24M22 8l14 6-14 6" fill="#1B2A4A"/><circle cx="28" cy="13" r="1.8" fill="#fff"/>'),
+    "montagne": ("Une montagne", '<path d="M4 40l14-24 8 12 6-8 12 20z" fill="#FF9F8A"/><path d="M14 23l4-7 4 7" fill="#FFF8EC"/>'),
+    "cheval": ("Un cheval de manège", '<path d="M14 40V26c0-8 6-14 14-14l6-4v8c0 6-4 10-8 10v14" fill="#FFF8EC"/><path d="M24 6v36" stroke="#FFC93C" stroke-width="3"/><circle cx="31" cy="14" r="1.3" fill="#1B2A4A"/>'),
+    "etoile": ("Une étoile", '<path d="M24 6l5 11 12 1-9 8 3 12-11-6-11 6 3-12-9-8 12-1z" fill="#FFC93C"/>'),
+    "lanterne": ("Une lanterne", '<path d="M18 14h12l2 22H16z" fill="#FFC93C"/><path d="M20 10h8v4h-8zM16 36h16v4H16zM24 6v4"/>'),
+}
+
+DRAPEAUX_NOMS = {"fr": "Drapeau de la France", "it": "Drapeau de l'Italie", "es": "Drapeau de l'Espagne",
+                 "cat": "Drapeau de la Catalogne", "uk": "Drapeau du Royaume-Uni"}
+
+
+def drapeau(code, uid=""):
+    t = f'<title>{DRAPEAUX_NOMS[code]}</title>'
+    if code == "fr":
+        return f'<svg class="drapeau" viewBox="0 0 90 60" role="img">{t}<path d="M0 0h30v60H0z" fill="#0055A4"/><path d="M30 0h30v60H30z" fill="#fff"/><path d="M60 0h30v60H60z" fill="#EF4135"/></svg>'
+    if code == "it":
+        return f'<svg class="drapeau" viewBox="0 0 90 60" role="img">{t}<path d="M0 0h30v60H0z" fill="#009246"/><path d="M30 0h30v60H30z" fill="#fff"/><path d="M60 0h30v60H60z" fill="#CE2B37"/></svg>'
+    if code == "es":
+        return f'<svg class="drapeau" viewBox="0 0 90 60" role="img">{t}<path d="M0 0h90v60H0z" fill="#AA151B"/><path d="M0 15h90v30H0z" fill="#F1BF00"/></svg>'
+    if code == "cat":
+        bandes = "".join(f'<path d="M0 {y}h90v{60 / 9:.3f}H0z" fill="#DA121A"/>' for y in [60 / 9 * i for i in (1, 3, 5, 7)])
+        return f'<svg class="drapeau" viewBox="0 0 90 60" role="img">{t}<path d="M0 0h90v60H0z" fill="#FCDD09"/>{bandes}</svg>'
+    if code == "uk":
+        return (f'<svg class="drapeau" viewBox="0 0 60 30" role="img">{t}<clipPath id="uks{uid}"><path d="M0 0v30h60V0z"/></clipPath>'
+                f'<clipPath id="ukt{uid}"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath><g clip-path="url(#uks{uid})">'
+                '<path d="M0 0v30h60V0z" fill="#012169"/><path d="M0 0l60 30m0-30L0 30" stroke="#fff" stroke-width="6"/>'
+                f'<path d="M0 0l60 30m0-30L0 30" clip-path="url(#ukt{uid})" stroke="#C8102E" stroke-width="4"/>'
+                '<path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"/></g></svg>')
+    return ""
+
+
+# Phrases des parents : français, puis une ou deux langues locales
+LEXIQUES = {
+    "barcelone": (["Espagnol", "Catalan"], [
+        ("Bonjour", "Hola / Buenos días", "Hola / Bon dia"),
+        ("Merci beaucoup", "Muchas gracias", "Moltes gràcies"),
+        ("Où sont les toilettes ?", "¿Dónde está el baño?", "On és el lavabo?"),
+        ("Avez-vous une table à langer ?", "¿Tienen cambiador?", "Teniu canviador?"),
+        ("Une chaise haute, s'il vous plaît", "Una trona, por favor", "Una trona, si us plau"),
+        ("Avez-vous un menu enfant ?", "¿Tienen menú infantil?", "Teniu menú infantil?"),
+        ("Pouvez-vous chauffer ce biberon ?", "¿Puede calentar este biberón?", "Em pot escalfar aquest biberó?"),
+        ("Un verre d'eau, s'il vous plaît", "Un vaso de agua, por favor", "Un got d'aigua, si us plau"),
+        ("L'addition, s'il vous plaît", "La cuenta, por favor", "El compte, si us plau"),
+        ("Y a-t-il un ascenseur ?", "¿Hay ascensor?", "Hi ha ascensor?"),
+        ("Où y a-t-il une aire de jeux ?", "¿Dónde hay un parque infantil?", "On hi ha un parc infantil?"),
+        ("Combien ça coûte ?", "¿Cuánto cuesta?", "Quant costa?"),
+        ("Où est la pharmacie la plus proche ?", "¿Dónde está la farmacia más cercana?", "On és la farmàcia més propera?"),
+        ("Mon enfant a de la fièvre", "Mi hijo / mi hija tiene fiebre", "El meu fill / la meva filla té febre"),
+        ("Mon enfant est allergique à…", "Mi hijo / mi hija es alérgico / alérgica a…", "El meu fill / la meva filla és al·lèrgic / al·lèrgica a…"),
+        ("Nous nous sommes perdus", "Nos hemos perdido", "Ens hem perdut"),
+        ("Aidez-moi, s'il vous plaît", "Ayúdeme, por favor", "Ajudi'm, si us plau"),
+        ("Appelez une ambulance", "Llame a una ambulancia", "Truqui una ambulància"),
+    ]),
+    "rome": (["Italien"], [
+        ("Bonjour", "Buongiorno"),
+        ("Merci beaucoup", "Grazie mille"),
+        ("Où sont les toilettes ?", "Dov'è il bagno?"),
+        ("Avez-vous une table à langer ?", "Avete un fasciatoio?"),
+        ("Une chaise haute, s'il vous plaît", "Un seggiolone, per favore"),
+        ("Avez-vous un menu enfant ?", "Avete un menù per bambini?"),
+        ("Pouvez-vous chauffer ce biberon ?", "Può scaldare questo biberon?"),
+        ("Un verre d'eau, s'il vous plaît", "Un bicchiere d'acqua, per favore"),
+        ("L'addition, s'il vous plaît", "Il conto, per favore"),
+        ("Y a-t-il un ascenseur ?", "C'è un ascensore?"),
+        ("Où y a-t-il une aire de jeux ?", "Dove c'è un parco giochi?"),
+        ("Combien ça coûte ?", "Quanto costa?"),
+        ("Où est la pharmacie la plus proche ?", "Dov'è la farmacia più vicina?"),
+        ("Mon enfant a de la fièvre", "Mio figlio / mia figlia ha la febbre"),
+        ("Mon enfant est allergique à…", "Mio figlio / mia figlia è allergico / allergica a…"),
+        ("Nous nous sommes perdus", "Ci siamo persi"),
+        ("Aidez-moi, s'il vous plaît", "Mi aiuti, per favore"),
+        ("Appelez une ambulance", "Chiami un'ambulanza"),
+    ]),
+    "londres": (["Anglais"], [
+        ("Bonjour", "Hello / Good morning"),
+        ("Merci beaucoup", "Thank you very much"),
+        ("Où sont les toilettes ?", "Where are the toilets?"),
+        ("Avez-vous une table à langer ?", "Do you have a baby changing room?"),
+        ("Une chaise haute, s'il vous plaît", "A high chair, please"),
+        ("Avez-vous un menu enfant ?", "Do you have a children's menu?"),
+        ("Pouvez-vous chauffer ce biberon ?", "Could you warm up this bottle, please?"),
+        ("Un verre d'eau, s'il vous plaît", "A glass of tap water, please"),
+        ("L'addition, s'il vous plaît", "Could we have the bill, please?"),
+        ("Y a-t-il un ascenseur ?", "Is there a lift?"),
+        ("Où y a-t-il une aire de jeux ?", "Where is the nearest playground?"),
+        ("Combien ça coûte ?", "How much is it?"),
+        ("Où est la pharmacie la plus proche ?", "Where is the nearest pharmacy?"),
+        ("Mon enfant a de la fièvre", "My son / my daughter has a fever"),
+        ("Mon enfant est allergique à…", "My son / my daughter is allergic to…"),
+        ("Nous nous sommes perdus", "We are lost"),
+        ("Aidez-moi, s'il vous plaît", "Can you help me, please?"),
+        ("Appelez une ambulance", "Please call an ambulance"),
+    ]),
+}

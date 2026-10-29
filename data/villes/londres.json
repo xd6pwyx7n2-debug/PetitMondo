@@ -1,0 +1,710 @@
+{
+ "id": "londres",
+ "nom": "Londres",
+ "pays": "Royaume-Uni",
+ "ordre": 4,
+ "accroche": "Dinosaures, bus rouges et châteaux",
+ "centre": [
+  51.5072,
+  -0.1276
+ ],
+ "bbox": [
+  51.46,
+  -0.23,
+  51.55,
+  0.01
+ ],
+ "verification": "2026-10-29",
+ "photo": [
+  "en:London",
+  "fr:Londres"
+ ],
+ "avertissement": "Horaires, tarifs et conditions d'accès changent souvent : vérifiez toujours sur le site officiel avant de partir.",
+ "zones": {
+  "westminster": {
+   "nom": "Westminster et Buckingham",
+   "centre": [
+    51.5015,
+    -0.133
+   ]
+  },
+  "kensington": {
+   "nom": "South Kensington et Hyde Park",
+   "centre": [
+    51.501,
+    -0.176
+   ]
+  },
+  "southbank": {
+   "nom": "South Bank et London Eye",
+   "centre": [
+    51.504,
+    -0.116
+   ]
+  },
+  "city": {
+   "nom": "Tour de Londres et Tower Bridge",
+   "centre": [
+    51.507,
+    -0.076
+   ]
+  },
+  "westend": {
+   "nom": "Covent Garden et Bloomsbury",
+   "centre": [
+    51.515,
+    -0.126
+   ]
+  },
+  "nord": {
+   "nom": "Regent's Park et Camden",
+   "centre": [
+    51.53,
+    -0.15
+   ]
+  },
+  "est": {
+   "nom": "Bethnal Green",
+   "centre": [
+    51.529,
+    -0.055
+   ]
+  },
+  "greenwich": {
+   "nom": "Greenwich",
+   "centre": [
+    51.48,
+    -0.005
+   ]
+  },
+  "leavesden": {
+   "nom": "Excursion aux studios Harry Potter",
+   "centre": [
+    51.6903,
+    -0.418
+   ]
+  }
+ },
+ "enfants": {
+  "drapeaux": [
+   "uk"
+  ],
+  "pays": "le Royaume-Uni",
+  "capitale": "Londres",
+  "langue": "l'anglais",
+  "monnaie": "la livre sterling (£)",
+  "faits": [
+   "Big Ben n'est pas le nom de la tour : c'est le surnom de la grosse cloche cachée à l'intérieur.",
+   "Les bus rouges à deux étages s'appellent des « double-deckers ». Monte à l'étage, tout devant !",
+   "Le métro de Londres, surnommé « the Tube », a ouvert en 1863. C'est le plus ancien du monde.",
+   "Au Royaume-Uni, les voitures roulent à gauche. Sur les passages piétons, il est écrit « Look right » : regarde à droite !",
+   "Des corbeaux vivent à la Tour de Londres. Une vieille légende dit que s'ils partaient, le royaume tomberait."
+  ],
+  "mots_titre": "Mes premiers mots en anglais",
+  "mots": [
+   [
+    "Bonjour",
+    "Hello",
+    "hè-lo"
+   ],
+   [
+    "Merci",
+    "Thank you",
+    "fènk-iou"
+   ],
+   [
+    "S'il te plaît",
+    "Please",
+    "pliz"
+   ],
+   [
+    "Oui / Non",
+    "Yes / No",
+    "yèss / no-ou"
+   ],
+   [
+    "Au revoir",
+    "Goodbye",
+    "goud-baï"
+   ],
+   [
+    "Une glace",
+    "An ice cream",
+    "ann aïss-krim"
+   ],
+   [
+    "De l'eau",
+    "Water",
+    "wo-teur"
+   ],
+   [
+    "Les toilettes",
+    "The toilets",
+    "zeu toï-lett"
+   ],
+   [
+    "J'ai faim",
+    "I'm hungry",
+    "aïm heun-gri"
+   ]
+  ]
+ },
+ "bingo": [
+  "bus-rouge",
+  "cabine",
+  "taxi-noir",
+  "garde",
+  "corbeau",
+  "horloge",
+  "parapluie",
+  "metro",
+  "pont",
+  "dinosaure",
+  "couronne",
+  "drapeau-uk",
+  "pigeon",
+  "bateau",
+  "arbre",
+  "statue",
+  "the",
+  "chien"
+ ],
+ "urgences": [
+  {
+   "nom": "Urgences",
+   "detail": "999 ou 112, gratuits depuis n'importe quel téléphone"
+  },
+  {
+   "nom": "Avis médical non urgent",
+   "detail": "NHS 111, par téléphone (111) ou sur 111.nhs.uk"
+  },
+  {
+   "nom": "Evelina London Children's Hospital",
+   "detail": "Hôpital pour enfants avec urgences pédiatriques, à côté de St Thomas' Hospital, face au Parlement"
+  },
+  {
+   "nom": "Pharmacies",
+   "detail": "Les « chemists » ou « pharmacies » (Boots, Superdrug et pharmacies indépendantes) vendent les médicaments courants pour enfants."
+  }
+ ],
+ "conseils": [
+  {
+   "titre": "Papiers : passeport et ETA",
+   "texte": "Le passeport est obligatoire, la carte d'identité ne suffit plus. Chaque voyageur, bébés compris, doit aussi obtenir une autorisation électronique de voyage (ETA) avant le départ, sur l'application ou le site officiel du gouvernement britannique."
+  },
+  {
+   "titre": "Transports",
+   "texte": "Payez avec une carte bancaire sans contact ou une carte Oyster. Les moins de 11 ans voyagent gratuitement dans le métro et le bus avec un adulte qui paie. De nombreuses stations de métro n'ont pas d'ascenseur ; les bus sont tous accessibles aux poussettes."
+  },
+  {
+   "titre": "Musées gratuits",
+   "texte": "Les grands musées nationaux (Natural History Museum, Science Museum, British Museum, Young V&A) sont gratuits. Réserver un créneau gratuit en ligne évite l'attente pendant les vacances."
+  },
+  {
+   "titre": "Côté route",
+   "texte": "Les voitures arrivent par la droite. Apprenez aux enfants à regarder à droite d'abord, comme indiqué au sol sur les passages piétons."
+  },
+  {
+   "titre": "Prises électriques",
+   "texte": "Les prises britanniques sont différentes : emportez un adaptateur pour chargeurs, veilleuse ou chauffe-biberon."
+  }
+ ],
+ "papiers": "Passeport en cours de validité pour chaque membre de la famille, enfants compris, et autorisation électronique de voyage (ETA) obtenue avant le départ pour chacun, bébés compris.",
+ "activites": [
+  {
+   "id": "nhm",
+   "nom": "Natural History Museum",
+   "zone": "kensington",
+   "adresse": "Cromwell Road, London SW7 5BD",
+   "lat": 51.4967,
+   "lon": -0.1764,
+   "site": "https://www.nhm.ac.uk",
+   "ages": [
+    3,
+    17
+   ],
+   "interieur": true,
+   "gratuit": true,
+   "duree": 150,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "sciences",
+    "animaux"
+   ],
+   "transport": "Métro South Kensington (lignes District, Circle et Piccadilly)",
+   "wiki": [
+    "en:Natural History Museum, London"
+   ],
+   "conseil": "Entrée gratuite. Le squelette de baleine bleue suspendu dans le grand hall et la galerie des dinosaures sont les incontournables. Arrivez à l'ouverture.",
+   "enfant": "Un dinosaure qui bouge et un squelette de baleine bleue géant t'attendent."
+  },
+  {
+   "id": "science",
+   "nom": "Science Museum",
+   "zone": "kensington",
+   "adresse": "Exhibition Road, London SW7 2DD",
+   "lat": 51.4978,
+   "lon": -0.1745,
+   "site": "https://www.sciencemuseum.org.uk",
+   "ages": [
+    3,
+    17
+   ],
+   "interieur": true,
+   "gratuit": true,
+   "duree": 150,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "sciences"
+   ],
+   "transport": "Métro South Kensington (lignes District, Circle et Piccadilly)",
+   "wiki": [
+    "en:Science Museum, London"
+   ],
+   "conseil": "Entrée gratuite, galerie interactive Wonderlab payante. Fusées, machines à vapeur et expériences : parfait quand il pleut.",
+   "enfant": "Des fusées, des avions et une galerie où tu fais toi-même les expériences."
+  },
+  {
+   "id": "diana",
+   "nom": "Aire de jeux Diana Memorial",
+   "zone": "kensington",
+   "adresse": "Kensington Gardens, London W2 4RU",
+   "lat": 51.5073,
+   "lon": -0.1876,
+   "site": "https://www.royalparks.org.uk",
+   "ages": [
+    0,
+    12
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 90,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "parc",
+    "aventure"
+   ],
+   "transport": "Métro Queensway (Central line)",
+   "wiki": [
+    "en:Diana, Princess of Wales Memorial Playground"
+   ],
+   "conseil": "Une aire de jeux sur le thème de Peter Pan, avec un grand bateau pirate en bois et du sable. Elle est réservée aux enfants et à leurs accompagnateurs.",
+   "enfant": "Grimpe à bord d'un immense bateau pirate en bois."
+  },
+  {
+   "id": "westminster",
+   "nom": "Big Ben et palais de Westminster",
+   "zone": "westminster",
+   "adresse": "Parliament Square, London SW1A 0AA",
+   "lat": 51.5007,
+   "lon": -0.1246,
+   "site": "https://www.parliament.uk",
+   "ages": [
+    4,
+    17
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 30,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Métro Westminster (lignes Jubilee, District et Circle)",
+   "wiki": [
+    "en:Big Ben",
+    "en:Palace of Westminster"
+   ],
+   "conseil": "Se découvre de l'extérieur, idéalement depuis le pont de Westminster. Soyez là à l'heure pile pour entendre sonner Big Ben.",
+   "enfant": "Écoute bien : à chaque heure pile, la grosse cloche Big Ben sonne BONG."
+  },
+  {
+   "id": "buckingham",
+   "nom": "Palais de Buckingham et relève de la garde",
+   "zone": "westminster",
+   "adresse": "Buckingham Palace, London SW1A 1AA",
+   "lat": 51.5014,
+   "lon": -0.1419,
+   "site": "https://www.royal.uk",
+   "ages": [
+    4,
+    17
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 60,
+   "poussette": "moyen",
+   "reservation": false,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Métro Green Park ou St James's Park",
+   "wiki": [
+    "en:Buckingham Palace"
+   ],
+   "conseil": "La relève de la garde n'a pas lieu tous les jours : vérifiez le calendrier officiel. Venez 45 minutes en avance pour être au premier rang, la foule est dense.",
+   "enfant": "Les gardes portent de grands bonnets noirs en fourrure et des vestes rouges."
+  },
+  {
+   "id": "stjames",
+   "nom": "St James's Park",
+   "zone": "westminster",
+   "adresse": "St James's Park, London SW1A 2BJ",
+   "lat": 51.5025,
+   "lon": -0.1348,
+   "site": "https://www.royalparks.org.uk",
+   "ages": [
+    0,
+    17
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 60,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "parc",
+    "animaux"
+   ],
+   "transport": "Métro St James's Park (lignes District et Circle)",
+   "wiki": [
+    "en:St James's Park"
+   ],
+   "conseil": "Le parc voisin de Buckingham, avec un lac, une aire de jeux et des pélicans qui vivent là depuis le XVIIe siècle.",
+   "enfant": "De vrais pélicans vivent sur le lac de ce parc, en pleine ville."
+  },
+  {
+   "id": "eye",
+   "nom": "London Eye",
+   "zone": "southbank",
+   "adresse": "Riverside Building, County Hall, London SE1 7PB",
+   "lat": 51.5033,
+   "lon": -0.1196,
+   "site": "https://www.londoneye.com",
+   "ages": [
+    3,
+    17
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 60,
+   "poussette": "facile",
+   "reservation": true,
+   "interets": [
+    "aventure"
+   ],
+   "transport": "Métro Waterloo ou Westminster",
+   "wiki": [
+    "en:London Eye"
+   ],
+   "conseil": "Un tour complet dure environ 30 minutes, dans une capsule vitrée. Réservez un créneau en ligne pour éviter la longue file.",
+   "enfant": "Monte dans une bulle de verre et vois Londres d'en haut."
+  },
+  {
+   "id": "sealife",
+   "nom": "SEA LIFE London Aquarium",
+   "zone": "southbank",
+   "adresse": "County Hall, Westminster Bridge Road, London SE1 7PB",
+   "lat": 51.502,
+   "lon": -0.1194,
+   "site": "https://www.visitsealife.com/london",
+   "ages": [
+    0,
+    12
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 90,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "animaux"
+   ],
+   "transport": "Métro Waterloo ou Westminster",
+   "wiki": [
+    "en:Sea Life London Aquarium"
+   ],
+   "conseil": "Juste à côté du London Eye : facile à combiner le même jour, et pratique quand il pleut.",
+   "enfant": "Requins, pingouins et tortues de mer, juste au bord de la Tamise."
+  },
+  {
+   "id": "tower",
+   "nom": "Tour de Londres",
+   "zone": "city",
+   "adresse": "London EC3N 4AB",
+   "lat": 51.5081,
+   "lon": -0.0759,
+   "site": "https://www.hrp.org.uk/tower-of-london",
+   "ages": [
+    5,
+    17
+   ],
+   "interieur": false,
+   "gratuit": false,
+   "duree": 180,
+   "poussette": "moyen",
+   "reservation": true,
+   "interets": [
+    "culture",
+    "aventure"
+   ],
+   "transport": "Métro Tower Hill (lignes District et Circle)",
+   "wiki": [
+    "en:Tower of London"
+   ],
+   "conseil": "Joyaux de la Couronne, corbeaux et gardiens en costume (les Yeomen Warders) : une demi-journée de chevaliers. Les visites guidées par les gardiens plaisent aux enfants.",
+   "enfant": "Ici sont gardées les vraies couronnes des rois et des reines."
+  },
+  {
+   "id": "towerbridge",
+   "nom": "Tower Bridge",
+   "zone": "city",
+   "adresse": "Tower Bridge Road, London SE1 2UP",
+   "lat": 51.5055,
+   "lon": -0.0754,
+   "site": "https://www.towerbridge.org.uk",
+   "ages": [
+    5,
+    17
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 60,
+   "poussette": "moyen",
+   "reservation": false,
+   "interets": [
+    "aventure"
+   ],
+   "transport": "Métro Tower Hill, puis 5 min à pied",
+   "wiki": [
+    "en:Tower Bridge"
+   ],
+   "conseil": "Le pont se traverse gratuitement à pied. L'exposition payante mène aux passerelles hautes et à leur plancher de verre.",
+   "enfant": "Marche sur un plancher en verre, très haut au-dessus de la Tamise."
+  },
+  {
+   "id": "british",
+   "nom": "British Museum",
+   "zone": "westend",
+   "adresse": "Great Russell Street, London WC1B 3DG",
+   "lat": 51.5194,
+   "lon": -0.127,
+   "site": "https://www.britishmuseum.org",
+   "ages": [
+    6,
+    17
+   ],
+   "interieur": true,
+   "gratuit": true,
+   "duree": 120,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Métro Tottenham Court Road ou Holborn",
+   "wiki": [
+    "en:British Museum"
+   ],
+   "conseil": "Entrée gratuite. Avec des enfants, filez vers les momies égyptiennes, très appréciées, puis repartez avant la fatigue.",
+   "enfant": "Des momies égyptiennes et la pierre de Rosette, qui a permis de lire les hiéroglyphes."
+  },
+  {
+   "id": "transport",
+   "nom": "London Transport Museum",
+   "zone": "westend",
+   "adresse": "Covent Garden Piazza, London WC2E 7BB",
+   "lat": 51.5119,
+   "lon": -0.1215,
+   "site": "https://www.ltmuseum.co.uk",
+   "ages": [
+    2,
+    12
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 90,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "aventure",
+    "sciences"
+   ],
+   "transport": "Métro Covent Garden (Piccadilly line)",
+   "wiki": [
+    "en:London Transport Museum"
+   ],
+   "conseil": "Vieux bus, tramways et rames de métro dans lesquels on peut monter. Un espace de jeu est prévu pour les plus petits.",
+   "enfant": "Monte dans de vieux bus rouges et de vieilles rames de métro."
+  },
+  {
+   "id": "covent",
+   "nom": "Covent Garden et ses artistes de rue",
+   "zone": "westend",
+   "adresse": "The Piazza, London WC2E 8RF",
+   "lat": 51.5117,
+   "lon": -0.124,
+   "site": "https://www.coventgarden.london",
+   "ages": [
+    0,
+    17
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 45,
+   "poussette": "moyen",
+   "reservation": false,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Métro Covent Garden (Piccadilly line)",
+   "wiki": [
+    "en:Covent Garden"
+   ],
+   "conseil": "Jongleurs, acrobates et musiciens se produisent sur la place toute la journée. Très fréquenté le week-end.",
+   "enfant": "Des jongleurs et des acrobates font le spectacle sur la place."
+  },
+  {
+   "id": "hamleys",
+   "nom": "Hamleys",
+   "zone": "westend",
+   "adresse": "188-196 Regent Street, London W1B 5BT",
+   "lat": 51.5129,
+   "lon": -0.1404,
+   "site": "https://www.hamleys.com",
+   "ages": [
+    2,
+    12
+   ],
+   "interieur": true,
+   "gratuit": true,
+   "duree": 45,
+   "poussette": "moyen",
+   "reservation": false,
+   "interets": [
+    "aventure"
+   ],
+   "transport": "Métro Oxford Circus",
+   "wiki": [
+    "en:Hamleys"
+   ],
+   "conseil": "Un magasin de jouets sur sept étages, avec démonstrations. L'entrée est libre ; prévoyez un budget ou une règle claire avant d'entrer.",
+   "enfant": "Sept étages de jouets, avec des vendeurs qui font des démonstrations."
+  },
+  {
+   "id": "zoo",
+   "nom": "Zoo de Londres (ZSL)",
+   "zone": "nord",
+   "adresse": "Outer Circle, Regent's Park, London NW1 4RY",
+   "lat": 51.5353,
+   "lon": -0.1534,
+   "site": "https://www.londonzoo.org",
+   "ages": [
+    1,
+    12
+   ],
+   "interieur": false,
+   "gratuit": false,
+   "duree": 240,
+   "poussette": "facile",
+   "reservation": true,
+   "interets": [
+    "animaux"
+   ],
+   "transport": "Métro Camden Town, puis 15 min à pied",
+   "wiki": [
+    "en:London Zoo"
+   ],
+   "conseil": "L'un des plus anciens zoos scientifiques du monde, dans Regent's Park. Réserver en ligne coûte généralement moins cher qu'au guichet.",
+   "enfant": "Pingouins, gorilles et tigres vivent dans un grand parc royal."
+  },
+  {
+   "id": "youngva",
+   "nom": "Young V&A",
+   "zone": "est",
+   "adresse": "Cambridge Heath Road, London E2 9PA",
+   "lat": 51.5291,
+   "lon": -0.0553,
+   "site": "https://www.vam.ac.uk/young",
+   "ages": [
+    0,
+    14
+   ],
+   "interieur": true,
+   "gratuit": true,
+   "duree": 90,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "culture",
+    "aventure"
+   ],
+   "transport": "Métro Bethnal Green (Central line)",
+   "wiki": [
+    "en:Young V&A"
+   ],
+   "conseil": "Un musée gratuit entièrement pensé pour les enfants : jouets, design, espaces pour jouer et créer. Plus calme que les grands musées du centre.",
+   "enfant": "Un musée rien que pour les enfants, où l'on joue, construit et dessine."
+  },
+  {
+   "id": "greenwich",
+   "nom": "Observatoire royal de Greenwich",
+   "zone": "greenwich",
+   "adresse": "Blackheath Avenue, London SE10 8XJ",
+   "lat": 51.4769,
+   "lon": -0.0005,
+   "site": "https://www.rmg.co.uk",
+   "ages": [
+    6,
+    17
+   ],
+   "interieur": false,
+   "gratuit": false,
+   "duree": 90,
+   "poussette": "moyen",
+   "reservation": false,
+   "interets": [
+    "sciences"
+   ],
+   "transport": "Bateau sur la Tamise jusqu'à Greenwich Pier, ou DLR Cutty Sark, puis montée dans le parc",
+   "wiki": [
+    "en:Royal Observatory, Greenwich"
+   ],
+   "conseil": "Poser un pied de chaque côté du méridien de Greenwich amuse tous les âges. Le parc en pente offre une vue superbe sur Londres. Venir en bateau fait partie de l'aventure.",
+   "enfant": "Mets un pied de chaque côté de la ligne : tu es à l'est et à l'ouest en même temps !"
+  },
+  {
+   "id": "harrypotter",
+   "nom": "Studios Harry Potter (Warner Bros. Studio Tour)",
+   "zone": "leavesden",
+   "adresse": "Studio Tour Drive, Leavesden WD25 7LR",
+   "lat": 51.6903,
+   "lon": -0.418,
+   "site": "https://www.wbstudiotour.co.uk",
+   "ages": [
+    6,
+    17
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 240,
+   "poussette": "facile",
+   "reservation": true,
+   "excursion": true,
+   "interets": [
+    "aventure",
+    "culture"
+   ],
+   "transport": "Train depuis London Euston jusqu'à Watford Junction, puis navette des studios",
+   "wiki": [
+    "en:Warner Bros. Studio Tour London – The Making of Harry Potter"
+   ],
+   "conseil": "Hors de Londres, à environ une heure de trajet. Billets uniquement en ligne, souvent complets des semaines à l'avance. Comptez une demi-journée sur place.",
+   "enfant": "Les vrais décors des films : la Grande Salle, le chemin de Traverse et le Poudlard Express."
+  }
+ ]
+}

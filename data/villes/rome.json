@@ -1,0 +1,674 @@
+{
+ "id": "rome",
+ "nom": "Rome",
+ "pays": "Italie",
+ "ordre": 3,
+ "accroche": "Gladiateurs, fontaines et gelato",
+ "centre": [
+  41.898,
+  12.48
+ ],
+ "bbox": [
+  41.85,
+  12.43,
+  41.935,
+  12.52
+ ],
+ "verification": "2026-10-29",
+ "photo": [
+  "it:Roma",
+  "en:Rome"
+ ],
+ "avertissement": "Horaires, tarifs et conditions d'accès changent souvent : vérifiez toujours sur le site officiel avant de partir.",
+ "zones": {
+  "antique": {
+   "nom": "Rome antique (Colisée, Forum)",
+   "centre": [
+    41.89,
+    12.488
+   ]
+  },
+  "centre": {
+   "nom": "Centre historique (Trevi, Panthéon)",
+   "centre": [
+    41.9,
+    12.479
+   ]
+  },
+  "vatican": {
+   "nom": "Vatican et Château Saint-Ange",
+   "centre": [
+    41.904,
+    12.458
+   ]
+  },
+  "borghese": {
+   "nom": "Villa Borghese et Flaminio",
+   "centre": [
+    41.9145,
+    12.48
+   ]
+  },
+  "trastevere": {
+   "nom": "Trastevere et Janicule",
+   "centre": [
+    41.89,
+    12.466
+   ]
+  },
+  "ostie": {
+   "nom": "Excursion à Ostie antique",
+   "centre": [
+    41.7558,
+    12.2919
+   ]
+  }
+ },
+ "enfants": {
+  "drapeaux": [
+   "it"
+  ],
+  "pays": "l'Italie",
+  "capitale": "Rome",
+  "langue": "l'italien",
+  "monnaie": "l'euro (€)",
+  "faits": [
+   "Selon la légende, Rome a été fondée par deux jumeaux, Romulus et Rémus, nourris par une louve.",
+   "Le Colisée a presque 2 000 ans. Des combats de gladiateurs s'y déroulaient devant des dizaines de milliers de spectateurs.",
+   "Au milieu de Rome se trouve un autre pays : le Vatican, le plus petit pays du monde.",
+   "La tradition dit qu'en lançant une pièce dans la fontaine de Trevi, par-dessus ton épaule, tu reviendras un jour à Rome.",
+   "Dans les rues, des petites fontaines appelées « nasoni » donnent de l'eau fraîche et potable."
+  ],
+  "mots_titre": "Mes premiers mots en italien",
+  "mots": [
+   [
+    "Bonjour",
+    "Buongiorno",
+    "bouonn-djor-no"
+   ],
+   [
+    "Salut",
+    "Ciao",
+    "tchao"
+   ],
+   [
+    "Merci",
+    "Grazie",
+    "gra-tsié"
+   ],
+   [
+    "S'il te plaît",
+    "Per favore",
+    "pèr fa-vo-ré"
+   ],
+   [
+    "Oui / Non",
+    "Sì / No",
+    "si / no"
+   ],
+   [
+    "Au revoir",
+    "Arrivederci",
+    "a-ri-vé-dèr-tchi"
+   ],
+   [
+    "Une glace",
+    "Un gelato",
+    "oun djé-la-to"
+   ],
+   [
+    "De l'eau",
+    "Acqua",
+    "a-koua"
+   ],
+   [
+    "J'ai faim",
+    "Ho fame",
+    "o fa-mé"
+   ]
+  ]
+ },
+ "bingo": [
+  "casque-romain",
+  "colonne",
+  "fontaine",
+  "glace",
+  "pizza",
+  "scooter",
+  "obelisque",
+  "eglise-dome",
+  "pigeon",
+  "chat",
+  "pont",
+  "statue",
+  "mouette",
+  "arbre",
+  "artiste",
+  "pates",
+  "piece",
+  "drapeau-italie"
+ ],
+ "urgences": [
+  {
+   "nom": "Numéro d'urgence européen",
+   "detail": "112, gratuit, depuis n'importe quel téléphone"
+  },
+  {
+   "nom": "Hôpital pédiatrique Bambino Gesù",
+   "detail": "Hôpital de référence pour enfants, sur la colline du Janicule (Piazza di Sant'Onofrio)"
+  },
+  {
+   "nom": "Pharmacies",
+   "detail": "Croix verte « Farmacia ». La pharmacie de garde est affichée sur la porte des pharmacies fermées."
+  }
+ ],
+ "conseils": [
+  {
+   "titre": "Pavés et poussette",
+   "texte": "Le centre historique est pavé (les sampietrini) et souvent en pente. Une poussette tout-terrain ou un porte-bébé change la journée."
+  },
+  {
+   "titre": "Chaleur et eau",
+   "texte": "L'été, il fait très chaud dès la fin de matinée. Visitez tôt, faites la sieste, ressortez en fin d'après-midi. Remplissez les gourdes aux nasoni, ces fontaines d'eau potable."
+  },
+  {
+   "titre": "Réserver à l'avance",
+   "texte": "Colisée, Forum et musées du Vatican se réservent sur créneau, plusieurs jours à l'avance en haute saison. Les sites de l'État sont gratuits pour les moins de 18 ans, mais le billet gratuit doit souvent être réservé aussi."
+  },
+  {
+   "titre": "Tenue au Vatican",
+   "texte": "Pour entrer dans la basilique Saint-Pierre et les musées du Vatican, épaules et genoux doivent être couverts, enfants compris."
+  },
+  {
+   "titre": "Escaliers de la place d'Espagne",
+   "texte": "Il est interdit de s'asseoir sur les marches, sous peine d'amende. On peut les monter et les descendre librement."
+  }
+ ],
+ "papiers": "Pour un séjour en Italie, carte d'identité ou passeport en cours de validité pour chaque membre de la famille, enfants compris, et carte européenne d'assurance maladie.",
+ "activites": [
+  {
+   "id": "colisee",
+   "nom": "Colisée",
+   "zone": "antique",
+   "adresse": "Piazza del Colosseo, 1, 00184 Roma",
+   "lat": 41.8902,
+   "lon": 12.4922,
+   "site": "https://colosseo.it",
+   "ages": [
+    6,
+    17
+   ],
+   "interieur": false,
+   "gratuit": false,
+   "duree": 90,
+   "poussette": "moyen",
+   "reservation": true,
+   "interets": [
+    "culture",
+    "aventure"
+   ],
+   "transport": "Métro Colosseo (ligne B)",
+   "wiki": [
+    "it:Colosseo",
+    "en:Colosseum"
+   ],
+   "conseil": "Réservation obligatoire sur créneau. Le billet comprend aussi le Forum et le Palatin. Racontez les gladiateurs avant la visite : l'arène prend alors vie.",
+   "enfant": "Ici, les gladiateurs se battaient devant une foule immense. Imagine le bruit !"
+  },
+  {
+   "id": "forum",
+   "nom": "Forum romain et Palatin",
+   "zone": "antique",
+   "adresse": "Via della Salara Vecchia, 5/6, 00186 Roma",
+   "lat": 41.8925,
+   "lon": 12.4853,
+   "site": "https://colosseo.it",
+   "ages": [
+    8,
+    17
+   ],
+   "interieur": false,
+   "gratuit": false,
+   "duree": 120,
+   "poussette": "difficile",
+   "reservation": true,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Métro Colosseo (ligne B)",
+   "wiki": [
+    "it:Foro Romano",
+    "en:Roman Forum"
+   ],
+   "conseil": "Le cœur de la Rome antique, très peu ombragé et entièrement pavé. Visitez tôt, chapeaux et eau obligatoires, porte-bébé conseillé.",
+   "enfant": "C'était la grande place de la ville, avec ses temples et ses marchés."
+  },
+  {
+   "id": "circo",
+   "nom": "Cirque Maxime",
+   "zone": "antique",
+   "adresse": "Via del Circo Massimo, 00186 Roma",
+   "lat": 41.8861,
+   "lon": 12.4851,
+   "site": "",
+   "ages": [
+    0,
+    17
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 30,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "parc",
+    "culture"
+   ],
+   "transport": "Métro Circo Massimo (ligne B)",
+   "wiki": [
+    "it:Circo Massimo",
+    "en:Circus Maximus"
+   ],
+   "conseil": "Une immense pelouse là où se tenaient les courses de chars. Les enfants peuvent y courir librement.",
+   "enfant": "Fais la course comme les chars romains sur cette grande piste d'herbe."
+  },
+  {
+   "id": "bocca",
+   "nom": "Bouche de la Vérité",
+   "zone": "antique",
+   "adresse": "Piazza della Bocca della Verità, 18, 00186 Roma",
+   "lat": 41.8881,
+   "lon": 12.4814,
+   "site": "",
+   "ages": [
+    4,
+    12
+   ],
+   "interieur": false,
+   "gratuit": false,
+   "duree": 30,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Bus jusqu'à la Piazza della Bocca della Verità",
+   "wiki": [
+    "it:Bocca della Verità",
+    "en:Mouth of Truth"
+   ],
+   "conseil": "La légende amuse beaucoup les enfants. File d'attente fréquente pour la photo, plus courte en début de matinée.",
+   "enfant": "Ose mettre ta main dans la bouche : la légende dit qu'elle mord les menteurs !"
+  },
+  {
+   "id": "trevi",
+   "nom": "Fontaine de Trevi",
+   "zone": "centre",
+   "adresse": "Piazza di Trevi, 00187 Roma",
+   "lat": 41.9009,
+   "lon": 12.4833,
+   "site": "",
+   "ages": [
+    0,
+    17
+   ],
+   "interieur": false,
+   "gratuit": "partiel",
+   "duree": 30,
+   "poussette": "moyen",
+   "reservation": false,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Métro Barberini (ligne A), puis 10 min à pied",
+   "wiki": [
+    "it:Fontana di Trevi",
+    "en:Trevi Fountain"
+   ],
+   "conseil": "Depuis février 2026, l'accès au bord du bassin est payant (2 €) et se réserve. La fontaine reste visible gratuitement depuis la place. Très bondée : venez tôt le matin ou tard le soir.",
+   "enfant": "Tourne le dos à la fontaine et lance une pièce par-dessus ton épaule."
+  },
+  {
+   "id": "pantheon",
+   "nom": "Panthéon",
+   "zone": "centre",
+   "adresse": "Piazza della Rotonda, 00186 Roma",
+   "lat": 41.8986,
+   "lon": 12.4769,
+   "site": "",
+   "ages": [
+    6,
+    17
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 30,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Bus jusqu'à Largo di Torre Argentina, puis 5 min à pied",
+   "wiki": [
+    "it:Pantheon (Roma)",
+    "en:Pantheon, Rome"
+   ],
+   "conseil": "Entrée payante depuis 2023. Une visite courte et spectaculaire : le trou au sommet de la coupole fascine les enfants.",
+   "enfant": "Au plafond, un grand trou rond laisse entrer le soleil… et la pluie."
+  },
+  {
+   "id": "navona",
+   "nom": "Place Navone",
+   "zone": "centre",
+   "adresse": "Piazza Navona, 00186 Roma",
+   "lat": 41.8992,
+   "lon": 12.4731,
+   "site": "",
+   "ages": [
+    0,
+    17
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 30,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Bus jusqu'au Corso del Rinascimento",
+   "wiki": [
+    "it:Piazza Navona",
+    "en:Piazza Navona"
+   ],
+   "conseil": "Une grande place piétonne avec trois fontaines et des artistes de rue. Un marché de Noël s'y installe en décembre.",
+   "enfant": "Trouve les quatre géants de la fontaine : chacun représente un grand fleuve du monde."
+  },
+  {
+   "id": "espagne",
+   "nom": "Place d'Espagne et escalier de la Trinité-des-Monts",
+   "zone": "centre",
+   "adresse": "Piazza di Spagna, 00187 Roma",
+   "lat": 41.9057,
+   "lon": 12.4823,
+   "site": "",
+   "ages": [
+    4,
+    17
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 30,
+   "poussette": "difficile",
+   "reservation": false,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Métro Spagna (ligne A)",
+   "wiki": [
+    "it:Scalinata di Trinità dei Monti",
+    "en:Spanish Steps"
+   ],
+   "conseil": "Il est interdit de s'asseoir sur les marches, sous peine d'amende. Avec une poussette, préférez admirer l'escalier depuis la place, en bas.",
+   "enfant": "Compte les marches en montant : il y en a plus de cent !"
+  },
+  {
+   "id": "vatican",
+   "nom": "Musées du Vatican et chapelle Sixtine",
+   "zone": "vatican",
+   "adresse": "Viale Vaticano, 00165 Roma",
+   "lat": 41.9065,
+   "lon": 12.4536,
+   "site": "https://www.museivaticani.va",
+   "ages": [
+    8,
+    17
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 180,
+   "poussette": "moyen",
+   "reservation": true,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Métro Ottaviano (ligne A), puis 10 min à pied",
+   "wiki": [
+    "it:Musei Vaticani",
+    "en:Vatican Museums"
+   ],
+   "conseil": "Immense et très fréquenté : réservez, arrivez à l'ouverture et choisissez un parcours court. Épaules et genoux couverts.",
+   "enfant": "Lève la tête dans la chapelle Sixtine : tout le plafond est peint."
+  },
+  {
+   "id": "saint-pierre",
+   "nom": "Basilique et place Saint-Pierre",
+   "zone": "vatican",
+   "adresse": "Piazza San Pietro, 00120 Città del Vaticano",
+   "lat": 41.9022,
+   "lon": 12.4539,
+   "site": "https://www.basilicasanpietro.va",
+   "ages": [
+    5,
+    17
+   ],
+   "interieur": true,
+   "gratuit": true,
+   "duree": 60,
+   "poussette": "moyen",
+   "reservation": false,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Métro Ottaviano (ligne A), puis 10 min à pied",
+   "wiki": [
+    "it:Basilica di San Pietro in Vaticano",
+    "en:St. Peter's Basilica"
+   ],
+   "conseil": "L'entrée de la basilique est gratuite, la montée à la coupole payante. Contrôle de sécurité et tenue couvrante obligatoires.",
+   "enfant": "Tu entres dans un autre pays : le Vatican. Cherche les gardes suisses en costume coloré."
+  },
+  {
+   "id": "saint-ange",
+   "nom": "Château Saint-Ange",
+   "zone": "vatican",
+   "adresse": "Lungotevere Castello, 50, 00193 Roma",
+   "lat": 41.9031,
+   "lon": 12.4663,
+   "site": "",
+   "ages": [
+    6,
+    17
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 90,
+   "poussette": "moyen",
+   "reservation": false,
+   "interets": [
+    "culture",
+    "aventure"
+   ],
+   "transport": "Bus jusqu'au Lungotevere, ou 15 min à pied depuis la place Saint-Pierre",
+   "wiki": [
+    "it:Castel Sant'Angelo",
+    "en:Castel Sant'Angelo"
+   ],
+   "conseil": "Un château rond aux allures de forteresse, avec rampes, remparts et vue sur Saint-Pierre depuis la terrasse. Le pont des Anges est piéton.",
+   "enfant": "Tout en haut du château, un ange en bronze déploie ses ailes."
+  },
+  {
+   "id": "borghese",
+   "nom": "Parc de la Villa Borghese",
+   "zone": "borghese",
+   "adresse": "Piazzale Napoleone I, 00197 Roma",
+   "lat": 41.9112,
+   "lon": 12.4795,
+   "site": "",
+   "ages": [
+    0,
+    17
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 120,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "parc",
+    "aventure"
+   ],
+   "transport": "Métro Flaminio ou Spagna (ligne A)",
+   "wiki": [
+    "it:Villa Borghese",
+    "en:Villa Borghese gardens"
+   ],
+   "conseil": "Le grand parc des familles romaines : allées ombragées, petit lac avec barques et location de vélos ou de rosalies. Accès direct depuis la place du Peuple par la terrasse du Pincio.",
+   "enfant": "Pédale en rosalie ou rame en barque sur le petit lac."
+  },
+  {
+   "id": "bioparco",
+   "nom": "Bioparco di Roma",
+   "zone": "borghese",
+   "adresse": "Piazzale del Giardino Zoologico, 1, 00197 Roma",
+   "lat": 41.9166,
+   "lon": 12.4823,
+   "site": "https://www.bioparco.it",
+   "ages": [
+    1,
+    12
+   ],
+   "interieur": false,
+   "gratuit": false,
+   "duree": 180,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "animaux"
+   ],
+   "transport": "Tram 3 ou 19, arrêt Bioparco",
+   "wiki": [
+    "it:Bioparco di Roma",
+    "en:Bioparco di Roma"
+   ],
+   "conseil": "Le zoo de Rome, dans la Villa Borghese. Ombragé et praticable en poussette, il coupe agréablement une journée de monuments.",
+   "enfant": "Girafes, lions et hippopotames vivent au cœur d'un grand parc."
+  },
+  {
+   "id": "explora",
+   "nom": "Explora, musée des enfants",
+   "zone": "borghese",
+   "adresse": "Via Flaminia, 80, 00196 Roma",
+   "lat": 41.9162,
+   "lon": 12.4741,
+   "site": "https://mdbr.it",
+   "ages": [
+    0,
+    11
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 120,
+   "poussette": "facile",
+   "reservation": true,
+   "interets": [
+    "sciences",
+    "aventure"
+   ],
+   "transport": "Métro Flaminio (ligne A), puis 5 min à pied",
+   "wiki": [
+    "it:Explora - Il Museo dei Bambini di Roma"
+   ],
+   "conseil": "Un musée à toucher pour les 0-11 ans, avec un espace réservé aux 0-3 ans. Séances sur réservation en ligne. Parfait plan B en cas de pluie.",
+   "enfant": "Un musée où l'on joue : petite ville, supermarché, eau et expériences."
+  },
+  {
+   "id": "trastevere",
+   "nom": "Quartier du Trastevere",
+   "zone": "trastevere",
+   "adresse": "Piazza di Santa Maria in Trastevere, 00153 Roma",
+   "lat": 41.8894,
+   "lon": 12.4703,
+   "site": "",
+   "ages": [
+    0,
+    17
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 60,
+   "poussette": "moyen",
+   "reservation": false,
+   "interets": [
+    "gourmand",
+    "culture"
+   ],
+   "transport": "Tram 8, arrêt Belli",
+   "wiki": [
+    "it:Trastevere",
+    "en:Trastevere"
+   ],
+   "conseil": "Ruelles colorées, places animées et trattorias : le quartier idéal pour un dîner en famille. Pavés partout.",
+   "enfant": "Des ruelles couvertes de lierre où l'on mange les meilleures pizzas."
+  },
+  {
+   "id": "janicule",
+   "nom": "Colline du Janicule",
+   "zone": "trastevere",
+   "adresse": "Piazzale Giuseppe Garibaldi, 00165 Roma",
+   "lat": 41.8916,
+   "lon": 12.4614,
+   "site": "",
+   "ages": [
+    3,
+    17
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 60,
+   "poussette": "moyen",
+   "reservation": false,
+   "interets": [
+    "aventure",
+    "parc"
+   ],
+   "transport": "Bus jusqu'au Piazzale Garibaldi, ou montée à pied depuis le Trastevere",
+   "wiki": [
+    "it:Gianicolo",
+    "en:Janiculum"
+   ],
+   "conseil": "Le plus beau panorama sur les toits de Rome. Chaque jour à midi, un coup de canon retentit sous la terrasse : arrivez quelques minutes avant.",
+   "enfant": "À midi pile, un canon tire un grand BOUM pour donner l'heure à toute la ville."
+  },
+  {
+   "id": "ostie",
+   "nom": "Ostie antique (excursion)",
+   "zone": "ostie",
+   "adresse": "Viale dei Romagnoli, 717, 00119 Roma",
+   "lat": 41.7558,
+   "lon": 12.2919,
+   "site": "",
+   "ages": [
+    6,
+    17
+   ],
+   "interieur": false,
+   "gratuit": false,
+   "duree": 180,
+   "poussette": "difficile",
+   "reservation": false,
+   "interets": [
+    "culture",
+    "aventure"
+   ],
+   "transport": "Train Roma-Lido depuis la station Porta San Paolo (métro Piramide, ligne B), arrêt Ostia Antica",
+   "wiki": [
+    "it:Ostia antica",
+    "en:Ostia Antica"
+   ],
+   "conseil": "Une ville romaine entière, moins fréquentée que le Forum : rues, maisons, théâtre et boulangeries. À environ 25 km du centre, prévoyez une demi-journée.",
+   "enfant": "Promène-toi dans une vraie ville romaine, avec son théâtre et ses toilettes antiques !",
+   "excursion": true
+  }
+ ]
+}

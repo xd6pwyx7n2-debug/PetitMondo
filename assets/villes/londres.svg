@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" role="img" aria-label="Illustration de Londres : tour de l'horloge, bus rouge à deux étages, Tamise et pont">
+  <rect width="640" height="320" rx="28" fill="#D5F2EA"/>
+  <g fill="#FFF8EC" stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round">
+    <path d="M70 80 q20-18 44-6 q18-12 34 4 q16 2 14 16 h-100 q-6-10 8-14z"/>
+    <path d="M440 60 q16-14 36-4 q14-10 28 4 q12 2 10 12 h-82 q-4-8 8-12z"/>
+  </g>
+  <!-- tour de l'horloge -->
+  <g stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round">
+    <path d="M250 236 V100 h56 V236z" fill="#FFC93C"/>
+    <path d="M244 100 h68 l-34 -60 z" fill="#FF6B4A"/>
+    <path d="M278 40 v-18" fill="none"/>
+    <circle cx="278" cy="132" r="20" fill="#FFF8EC"/>
+    <path d="M278 132 v-12 M278 132 l9 5" fill="none"/>
+    <path d="M262 170 h32 M262 196 h32 M262 222 h32" fill="none" stroke-width="3"/>
+  </g>
+  <!-- pont -->
+  <g stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round">
+    <path d="M420 236 V140 h30 V236z M540 236 V140 h30 V236z" fill="#FFF8EC"/>
+    <path d="M416 140 l19 -26 l19 26z M536 140 l19 -26 l19 26z" fill="#6E7FA8"/>
+    <path d="M450 168 h90 v10 h-90z" fill="#6EC6F0"/>
+    <path d="M360 214 h280" fill="none"/>
+  </g>
+  <path d="M0 236 H640 V292 a28 28 0 0 1 -28 28 H28 A28 28 0 0 1 0 292z" fill="#6EC6F0" stroke="#1B2A4A" stroke-width="4"/>
+  <path d="M0 236 H240 V262 H0z" fill="#FFF8EC" stroke="#1B2A4A" stroke-width="4"/>
+  <path d="M20 249 h24 M70 249 h24 M120 249 h24 M170 249 h24" stroke="#1B2A4A" stroke-width="3"/>
+  <!-- bus rouge -->
+  <g stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round">
+    <rect x="60" y="150" width="150" height="82" rx="14" fill="#FF6B4A"/>
+    <path d="M72 162 h126 v22 h-126z M72 196 h40 v20 h-40z M122 196 h40 v20 h-40z" fill="#DDF1FB"/>
+    <path d="M60 190 h150" fill="none"/>
+    <circle cx="96" cy="234" r="12" fill="#1B2A4A"/>
+    <circle cx="178" cy="234" r="12" fill="#1B2A4A"/>
+  </g>
+  <path d="M300 296 q14 -10 28 0 t28 0 M480 284 q14 -10 28 0 t28 0" fill="none" stroke="#FFF8EC" stroke-width="4" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,42 @@
+name: Photos libres de droits
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "data/villes/**"
+      - "scripts/fetch_photos.py"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: contenu
+  cancel-in-progress: false
+
+jobs:
+  photos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Installer Pillow
+        run: pip install pillow
+      - name: Récupérer les photos (Wikimedia Commons)
+        run: python scripts/fetch_photos.py
+      - name: Régénérer les pages
+        run: python scripts/build.py
+      - name: Enregistrer les changements
+        run: |
+          git config user.name "petitmondo-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Aucun changement."
+          else
+            git commit -m "Photos libres de droits mises à jour"
+            git pull --rebase
+            git push
+          fi

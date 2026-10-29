@@ -1,26 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 140"><defs><clipPath id="g"><circle cx="60" cy="60" r="40"/></clipPath></defs>
-    <ellipse cx="60" cy="133" rx="32" ry="5" fill="#1B2A4A" opacity=".12"/>
-    <path d="M46 98 L43 120" stroke="#1B2A4A" stroke-width="7" stroke-linecap="round"/>
-    <path d="M74 98 L77 120" stroke="#1B2A4A" stroke-width="7" stroke-linecap="round"/>
-    <path d="M33 122 h16 a6 6 0 0 1 0 8 h-18 a5 5 0 0 1 2-8z" fill="#FF6B4A" stroke="#1B2A4A" stroke-width="3" stroke-linejoin="round"/>
-    <path d="M71 122 h16 a5 5 0 0 1 2 8 h-18 a6 6 0 0 1 0-8z" fill="#FF6B4A" stroke="#1B2A4A" stroke-width="3" stroke-linejoin="round"/>
-    <path d="M20 66 C8 60 6 44 12 36" stroke="#1B2A4A" stroke-width="6" stroke-linecap="round" fill="none"/>
-    <circle cx="12" cy="33" r="6" fill="#FFF8EC" stroke="#1B2A4A" stroke-width="3"/>
-    <path d="M100 66 C110 74 110 86 104 94" stroke="#1B2A4A" stroke-width="6" stroke-linecap="round" fill="none"/>
-    <circle cx="60" cy="60" r="40" fill="#6EC6F0"/>
-    <g clip-path="url(#g)" fill="#2FB59A">
-      <path d="M22 40c10-8 22-6 26 2s-2 14-10 14-6 10-14 10S12 48 22 40z"/>
-      <path d="M68 24c12-4 26 4 30 16-8 2-12 8-20 6s-8-8-14-10 0-10 4-12z"/>
-      <path d="M70 80c8-4 20-2 24 6s-6 16-16 16-14-6-14-12 2-8 6-10z"/>
-    </g>
-    <circle cx="60" cy="60" r="40" fill="none" stroke="#1B2A4A" stroke-width="4"/>
-    <path d="M34 26 C44 4 76 4 86 26 Z" fill="#FFC93C" stroke="#1B2A4A" stroke-width="3.5" stroke-linejoin="round"/>
-    <path d="M30 27 h60" stroke="#1B2A4A" stroke-width="4" stroke-linecap="round"/>
-    <ellipse cx="47" cy="58" rx="8" ry="9" fill="#fff" stroke="#1B2A4A" stroke-width="3"/>
-    <ellipse cx="73" cy="58" rx="8" ry="9" fill="#fff" stroke="#1B2A4A" stroke-width="3"/>
-    <circle cx="49" cy="60" r="3.6" fill="#1B2A4A"/>
-    <circle cx="75" cy="60" r="3.6" fill="#1B2A4A"/>
-    <circle cx="38" cy="72" r="5" fill="#FF9F8A"/>
-    <circle cx="82" cy="72" r="5" fill="#FF9F8A"/>
-    <path d="M50 74 Q60 84 70 74" stroke="#1B2A4A" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220">
+  <!-- Mondo, la chouette guide de PetitMondo -->
+  <ellipse cx="100" cy="212" rx="58" ry="6" fill="#1B2A4A" opacity=".12"/>
+  <!-- pattes -->
+  <g fill="#FFC93C" stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round">
+    <path d="M70 192 l-10 14 h12 l2 -6 l4 6 h12 l-8 -14z"/>
+    <path d="M114 192 l-6 14 h12 l4 -6 l2 6 h12 l-10 -14z"/>
+  </g>
+  <!-- aigrettes -->
+  <g fill="#FF6B4A" stroke="#1B2A4A" stroke-width="5" stroke-linejoin="round">
+    <path d="M44 66 L34 22 L82 46 Z"/>
+    <path d="M156 66 L166 22 L118 46 Z"/>
+  </g>
+  <!-- corps -->
+  <path d="M100 34 C150 34 176 72 176 122 C176 170 144 198 100 198 C56 198 24 170 24 122 C24 72 50 34 100 34 Z" fill="#FF6B4A" stroke="#1B2A4A" stroke-width="5"/>
+  <!-- ventre et plumes -->
+  <path d="M100 118 C130 118 146 140 146 162 C146 182 126 194 100 194 C74 194 54 182 54 162 C54 140 70 118 100 118 Z" fill="#FFF1C9"/>
+  <g fill="none" stroke="#E8A33D" stroke-width="3.5" stroke-linecap="round">
+    <path d="M78 146 q6 6 12 0 M98 146 q6 6 12 0 M118 146 q6 6 12 0"/>
+    <path d="M68 164 q6 6 12 0 M88 164 q6 6 12 0 M108 164 q6 6 12 0 M128 164 q6 6 12 0"/>
+    <path d="M80 182 q6 6 12 0 M100 182 q6 6 12 0"/>
+  </g>
+  <path d="M100 118 C130 118 146 140 146 162 C146 182 126 194 100 194 C74 194 54 182 54 162 C54 140 70 118 100 118 Z" fill="none" stroke="#1B2A4A" stroke-width="4"/>
+  <!-- ailes -->
+  <path d="M30 104 C14 128 16 160 40 178 C46 156 50 132 48 110 Z" fill="#E2553A" stroke="#1B2A4A" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M170 104 C186 128 184 160 160 178 C154 156 150 132 152 110 Z" fill="#E2553A" stroke="#1B2A4A" stroke-width="5" stroke-linejoin="round"/>
+  <!-- foulard d'aviateur -->
+  <path d="M58 120 C80 132 120 132 142 120 L146 132 C122 146 78 146 54 132 Z" fill="#2FB59A" stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M68 134 L42 158 L54 162 L50 174 L78 146 Z" fill="#2FB59A" stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round"/>
+  <!-- disque facial -->
+  <circle cx="72" cy="88" r="31" fill="#FFF8EC" stroke="#1B2A4A" stroke-width="5"/>
+  <circle cx="128" cy="88" r="31" fill="#FFF8EC" stroke="#1B2A4A" stroke-width="5"/>
+  <!-- yeux -->
+  <circle cx="76" cy="92" r="15" fill="#1B2A4A"/>
+  <circle cx="124" cy="92" r="15" fill="#1B2A4A"/>
+  <circle cx="82" cy="86" r="5.5" fill="#fff"/>
+  <circle cx="130" cy="86" r="5.5" fill="#fff"/>
+  <circle cx="72" cy="99" r="2.5" fill="#fff"/>
+  <circle cx="120" cy="99" r="2.5" fill="#fff"/>
+  <!-- joues -->
+  <ellipse cx="52" cy="110" rx="8" ry="5" fill="#FF9F8A"/>
+  <ellipse cx="148" cy="110" rx="8" ry="5" fill="#FF9F8A"/>
+  <!-- bec -->
+  <path d="M100 100 L112 112 L100 126 L88 112 Z" fill="#FFC93C" stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round"/>
+  <!-- carte tenue -->
+  <g transform="rotate(-8 100 170)">
+    <path d="M66 156 L88 150 L112 156 L134 150 L134 182 L112 188 L88 182 L66 188 Z" fill="#fff" stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M88 150 V182 M112 156 V188" stroke="#1B2A4A" stroke-width="3"/>
+    <path d="M72 178 C82 168 94 176 104 166 S124 160 128 160" fill="none" stroke="#FF6B4A" stroke-width="3" stroke-dasharray="1 6" stroke-linecap="round"/>
+    <circle cx="128" cy="160" r="4" fill="#FF6B4A" stroke="#1B2A4A" stroke-width="2"/>
+  </g>
+  <!-- bouts d'ailes qui tiennent la carte -->
+  <path d="M52 160 C60 154 70 156 72 166 C66 174 56 172 52 160 Z" fill="#E2553A" stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M148 160 C140 154 130 156 128 166 C134 174 144 172 148 160 Z" fill="#E2553A" stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round"/>
+</svg>

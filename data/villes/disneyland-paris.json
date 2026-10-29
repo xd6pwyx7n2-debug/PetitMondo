@@ -1,0 +1,506 @@
+{
+ "id": "disneyland-paris",
+ "nom": "Disneyland Paris",
+ "pays": "France",
+ "type": "parc",
+ "ordre": 1,
+ "accroche": "Deux parcs, un séjour bien organisé",
+ "centre": [
+  48.8705,
+  2.779
+ ],
+ "bbox": [
+  48.85,
+  2.765,
+  48.88,
+  2.8
+ ],
+ "verification": "2026-10-29",
+ "photo": [],
+ "avertissement": "Horaires, attractions, tailles minimales et spectacles changent souvent : vérifiez dans l'application officielle de Disneyland Paris le jour même. Les positions sur la carte sont indicatives.",
+ "zones": {
+  "dlp": {
+   "nom": "Disneyland Park",
+   "centre": [
+    48.873,
+    2.776
+   ]
+  },
+  "daw": {
+   "nom": "Disney Adventure World",
+   "centre": [
+    48.8672,
+    2.779
+   ]
+  },
+  "village": {
+   "nom": "Disney Village et Val d'Europe",
+   "centre": [
+    48.869,
+    2.786
+   ]
+  }
+ },
+ "enfants": {
+  "drapeaux": [
+   "fr"
+  ],
+  "pays": "la France",
+  "capitale": "Paris, à environ 30 km",
+  "langue": "le français, et beaucoup d'anglais dans les parcs",
+  "monnaie": "l'euro (€)",
+  "faits": [
+   "Disneyland Paris a ouvert le 12 avril 1992, à Marne-la-Vallée, à l'est de Paris.",
+   "Il y a deux parcs : Disneyland Park, avec son château, et Disney Adventure World.",
+   "Le château de la Belle au Bois Dormant mesure environ 50 mètres de haut.",
+   "Sous le château, dans une grotte, dort un grand dragon. Approche-toi doucement…",
+   "C'est le parc d'attractions qui reçoit le plus de visiteurs en Europe."
+  ],
+  "mots_titre": "Les mots anglais du parc",
+  "mots": [
+   [
+    "Château",
+    "Castle",
+    "ka-seul"
+   ],
+   [
+    "Rue",
+    "Street",
+    "strit"
+   ],
+   [
+    "Aventure",
+    "Adventure",
+    "ad-vènn-tcheur"
+   ],
+   [
+    "Découverte",
+    "Discovery",
+    "dis-ke-veu-ri"
+   ],
+   [
+    "Frontière",
+    "Frontier",
+    "freunn-tir"
+   ],
+   [
+    "Défilé",
+    "Parade",
+    "pa-réïd"
+   ],
+   [
+    "Sortie",
+    "Exit",
+    "èg-zit"
+   ],
+   [
+    "Temps d'attente",
+    "Wait time",
+    "wéït taïm"
+   ],
+   [
+    "Toilettes",
+    "Restrooms",
+    "rèst-roumz"
+   ]
+  ]
+ },
+ "bingo": [
+  "chateau",
+  "ballon",
+  "train-vapeur",
+  "feu-artifice",
+  "popcorn",
+  "manege",
+  "bateau-pirate",
+  "montagne",
+  "dragon",
+  "glace",
+  "fontaine",
+  "horloge",
+  "parapluie",
+  "cheval",
+  "etoile",
+  "arbre",
+  "bateau",
+  "lanterne"
+ ],
+ "urgences": [
+  {
+   "nom": "Urgences",
+   "detail": "15 (SAMU), 18 (pompiers) ou 112, gratuits depuis n'importe quel téléphone"
+  },
+  {
+   "nom": "Dans les parcs",
+   "detail": "Postes de secours dans chaque parc : demandez à n'importe quel membre du personnel (Cast Member)."
+  },
+  {
+   "nom": "Enfant perdu",
+   "detail": "Montrez aux enfants à quoi ressemble un Cast Member et notez votre numéro de téléphone sur leur bras ou sur un bracelet."
+  },
+  {
+   "nom": "Hôpital le plus proche",
+   "detail": "Grand Hôpital de l'Est Francilien, site de Marne-la-Vallée, à Jossigny"
+  }
+ ],
+ "conseils": [
+  {
+   "titre": "Billets",
+   "texte": "L'entrée est gratuite pour les moins de 3 ans. Achetez les billets en ligne à l'avance et téléchargez l'application officielle : temps d'attente, horaires des spectacles et plan du parc."
+  },
+  {
+   "titre": "Rider Switch",
+   "texte": "Si un enfant est trop petit pour une attraction, un parent monte pendant que l'autre attend avec lui, puis échange sans refaire la file grâce au pass Rider Switch remis à la sortie. Demandez-le à l'entrée de l'attraction."
+  },
+  {
+   "titre": "Bébés",
+   "texte": "Un Baby Care Centre se trouve sur Main Street, U.S.A. dans Disneyland Park, un autre derrière Studio Services dans Disney Adventure World : tables à langer, coin repas et coin calme."
+  },
+  {
+   "titre": "Poussettes",
+   "texte": "Location possible près de l'entrée de chaque parc. Les poussettes se garent devant les attractions : notez bien où vous laissez la vôtre."
+  },
+  {
+   "titre": "Taille minimale",
+   "texte": "Plusieurs attractions imposent une taille minimale. Mesurez votre enfant avant de partir et vérifiez les tailles dans l'application pour éviter les déceptions."
+  },
+  {
+   "titre": "S'y rendre",
+   "texte": "La gare Marne-la-Vallée-Chessy, desservie par le RER A et le TGV, est juste devant les parcs."
+  }
+ ],
+ "papiers": "Billets d'entrée téléchargés dans l'application, pièce d'identité, carte Vitale ou carte européenne d'assurance maladie, et taille des enfants notée quelque part.",
+ "activites": [
+  {
+   "id": "mainstreet",
+   "nom": "Main Street, U.S.A.",
+   "zone": "dlp",
+   "adresse": "Disneyland Park, 77700 Chessy",
+   "lat": 48.8716,
+   "lon": 2.7786,
+   "site": "https://www.disneylandparis.com",
+   "ages": [
+    0,
+    17
+   ],
+   "interieur": false,
+   "gratuit": false,
+   "duree": 45,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Gare Marne-la-Vallée-Chessy (RER A, TGV), puis 5 min à pied",
+   "wiki": [],
+   "conseil": "L'avenue d'entrée, avec ses boutiques et ses arcades couvertes de chaque côté. On y trouve le Baby Care Centre et, près de l'entrée, la location de poussettes.",
+   "enfant": "Une rue d'Amérique d'autrefois, avec ses vieilles voitures et ses boutiques colorées."
+  },
+  {
+   "id": "chateau",
+   "nom": "Château de la Belle au Bois Dormant",
+   "zone": "dlp",
+   "adresse": "Disneyland Park, 77700 Chessy",
+   "lat": 48.8731,
+   "lon": 2.7764,
+   "site": "https://www.disneylandparis.com",
+   "ages": [
+    0,
+    17
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 30,
+   "poussette": "moyen",
+   "reservation": false,
+   "interets": [
+    "culture",
+    "aventure"
+   ],
+   "transport": "Au bout de Main Street, U.S.A.",
+   "wiki": [],
+   "conseil": "Montez dans la galerie à l'étage, puis descendez dans la grotte du dragon, sous le château. La grotte est sombre : rassurez les plus petits avant d'entrer.",
+   "enfant": "Sous le château, un grand dragon dort dans sa grotte. Il ouvre parfois un œil…"
+  },
+  {
+   "id": "fantasyland",
+   "nom": "Fantasyland",
+   "zone": "dlp",
+   "adresse": "Disneyland Park, 77700 Chessy",
+   "lat": 48.8752,
+   "lon": 2.776,
+   "site": "https://www.disneylandparis.com",
+   "ages": [
+    0,
+    10
+   ],
+   "interieur": false,
+   "gratuit": false,
+   "duree": 180,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "aventure"
+   ],
+   "transport": "Derrière le château",
+   "wiki": [],
+   "conseil": "Le pays des plus petits : la plupart des attractions conviennent dès le plus jeune âge. Commencez par là dès l'ouverture, les files s'allongent vite.",
+   "enfant": "Des manèges de contes de fées, des bateaux et un carrousel de chevaux."
+  },
+  {
+   "id": "discoveryland",
+   "nom": "Discoveryland",
+   "zone": "dlp",
+   "adresse": "Disneyland Park, 77700 Chessy",
+   "lat": 48.8746,
+   "lon": 2.7795,
+   "site": "https://www.disneylandparis.com",
+   "ages": [
+    5,
+    17
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 120,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "aventure",
+    "sciences"
+   ],
+   "transport": "À droite du château",
+   "wiki": [],
+   "conseil": "Le pays de l'espace et du futur, avec beaucoup d'attractions couvertes : un bon refuge en cas de pluie. Certaines ont une taille minimale.",
+   "enfant": "Fusées, vaisseaux et lasers : le pays de l'espace."
+  },
+  {
+   "id": "frontierland",
+   "nom": "Frontierland",
+   "zone": "dlp",
+   "adresse": "Disneyland Park, 77700 Chessy",
+   "lat": 48.8727,
+   "lon": 2.7718,
+   "site": "https://www.disneylandparis.com",
+   "ages": [
+    6,
+    17
+   ],
+   "interieur": false,
+   "gratuit": false,
+   "duree": 120,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "aventure"
+   ],
+   "transport": "À gauche du château",
+   "wiki": [],
+   "conseil": "Le Far West, avec un train de la mine à sensations et un manoir hanté. Vérifiez les tailles minimales et l'âge conseillé pour les enfants impressionnables.",
+   "enfant": "Un village de cow-boys, une montagne rouge et un train qui file à toute allure."
+  },
+  {
+   "id": "adventureland",
+   "nom": "Adventureland",
+   "zone": "dlp",
+   "adresse": "Disneyland Park, 77700 Chessy",
+   "lat": 48.8708,
+   "lon": 2.774,
+   "site": "https://www.disneylandparis.com",
+   "ages": [
+    4,
+    17
+   ],
+   "interieur": false,
+   "gratuit": false,
+   "duree": 120,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "aventure"
+   ],
+   "transport": "À gauche de Main Street, U.S.A.",
+   "wiki": [],
+   "conseil": "Pirates, galion à explorer et île sillonnée de ponts suspendus et de grottes : parfait pour se dépenser à pied entre deux files d'attente.",
+   "enfant": "Explore l'île des pirates, ses ponts suspendus et ses grottes."
+  },
+  {
+   "id": "spectacle",
+   "nom": "Spectacle du soir devant le château",
+   "zone": "dlp",
+   "adresse": "Disneyland Park, 77700 Chessy",
+   "lat": 48.8725,
+   "lon": 2.7772,
+   "site": "https://www.disneylandparis.com",
+   "ages": [
+    3,
+    17
+   ],
+   "interieur": false,
+   "gratuit": false,
+   "duree": 30,
+   "poussette": "moyen",
+   "reservation": false,
+   "soir": true,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Sur Main Street, U.S.A. et devant le château",
+   "wiki": [],
+   "conseil": "Le parc termine la journée par un grand spectacle nocturne. Horaire dans l'application. Placez-vous 30 à 45 minutes avant, ou regardez depuis le bas de Main Street pour repartir vite.",
+   "enfant": "Le soir, le château s'illumine de couleurs, de musique et de feux d'artifice."
+  },
+  {
+   "id": "frozen",
+   "nom": "World of Frozen",
+   "zone": "daw",
+   "adresse": "Disney Adventure World, 77700 Chessy",
+   "lat": 48.8662,
+   "lon": 2.7808,
+   "site": "https://www.disneylandparis.com",
+   "ages": [
+    3,
+    12
+   ],
+   "interieur": false,
+   "gratuit": false,
+   "duree": 90,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "aventure"
+   ],
+   "transport": "Dans Disney Adventure World, autour du lac",
+   "wiki": [],
+   "conseil": "La nouvelle zone ouverte en 2026, autour d'un village de montagne enneigé et de son lac. Très demandée : visez l'ouverture ou la fin de journée.",
+   "enfant": "Un village des montagnes, sous la neige, au bord d'un lac."
+  },
+  {
+   "id": "pixar",
+   "nom": "World of Pixar",
+   "zone": "daw",
+   "adresse": "Disney Adventure World, 77700 Chessy",
+   "lat": 48.8668,
+   "lon": 2.7775,
+   "site": "https://www.disneylandparis.com",
+   "ages": [
+    3,
+    12
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 120,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "aventure"
+   ],
+   "transport": "Dans Disney Adventure World",
+   "wiki": [],
+   "conseil": "Les attractions inspirées des films Pixar, dont l'aventure de Rémy le petit rat cuisinier, en grande partie couverte. Bonne zone pour les 3-10 ans.",
+   "enfant": "Deviens tout petit comme une souris dans une cuisine géante."
+  },
+  {
+   "id": "avengers",
+   "nom": "Avengers Campus",
+   "zone": "daw",
+   "adresse": "Disney Adventure World, 77700 Chessy",
+   "lat": 48.8676,
+   "lon": 2.7762,
+   "site": "https://www.disneylandparis.com",
+   "ages": [
+    7,
+    17
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 90,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "aventure"
+   ],
+   "transport": "Dans Disney Adventure World",
+   "wiki": [],
+   "conseil": "L'univers des super-héros, avec des attractions à sensations et une aventure interactive. Tailles minimales pour certaines attractions.",
+   "enfant": "Le quartier général des super-héros, où tu peux les croiser."
+  },
+  {
+   "id": "lac",
+   "nom": "Disney Cascade of Lights",
+   "zone": "daw",
+   "adresse": "Disney Adventure World, 77700 Chessy",
+   "lat": 48.8665,
+   "lon": 2.78,
+   "site": "https://www.disneylandparis.com",
+   "ages": [
+    3,
+    17
+   ],
+   "interieur": false,
+   "gratuit": false,
+   "duree": 30,
+   "poussette": "facile",
+   "reservation": false,
+   "soir": true,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Sur le lac de Disney Adventure World",
+   "wiki": [],
+   "conseil": "Le spectacle de lumières sur le lac, lancé en 2026. Consultez l'horaire dans l'application et arrivez en avance pour une place au bord de l'eau.",
+   "enfant": "Des lumières et des jets d'eau dansent sur le lac."
+  },
+  {
+   "id": "village",
+   "nom": "Disney Village",
+   "zone": "village",
+   "adresse": "Disney Village, 77700 Chessy",
+   "lat": 48.8695,
+   "lon": 2.787,
+   "site": "https://www.disneylandparis.com",
+   "ages": [
+    0,
+    17
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 60,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "gourmand"
+   ],
+   "transport": "Entre la gare Marne-la-Vallée-Chessy et le lac Disney",
+   "wiki": [],
+   "conseil": "Accès libre sans billet : restaurants, boutiques et promenade au bord du lac. Pratique pour dîner avant de rentrer.",
+   "enfant": "Une rue pleine de lumières et de restaurants, au bord d'un lac."
+  },
+  {
+   "id": "sealife",
+   "nom": "SEA LIFE Paris Val d'Europe",
+   "zone": "village",
+   "adresse": "Centre commercial Val d'Europe, 14 cours du Danube, 77700 Serris",
+   "lat": 48.8546,
+   "lon": 2.7858,
+   "site": "https://www.visitsealife.com/paris",
+   "ages": [
+    0,
+    12
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 90,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "animaux"
+   ],
+   "transport": "RER A Val d'Europe, une station avant Marne-la-Vallée-Chessy",
+   "wiki": [
+    "fr:Sea Life Paris"
+   ],
+   "conseil": "Un aquarium dans le centre commercial voisin : une bonne demi-journée hors des parcs, au calme, quand il pleut ou quand les enfants saturent.",
+   "enfant": "Des requins et des raies, dans un grand aquarium près du parc."
+  }
+ ]
+}

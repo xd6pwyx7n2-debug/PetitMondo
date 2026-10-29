@@ -265,3 +265,128 @@ footer small{opacity:.75;display:block;margin-top:14px}
   a{text-decoration:none}
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 }
+
+/* ===== v3 : photos, destinations, pages enfants, mode avion ===== */
+.logo img{width:40px;height:44px}
+.photo{margin:0;position:relative;overflow:hidden;border-radius:14px;border:2.5px solid var(--nuit);background:var(--sable)}
+.photo img{display:block;width:100%;height:100%;object-fit:cover}
+.photo figcaption{position:absolute;left:0;right:0;bottom:0;font-size:.66rem;line-height:1.3;padding:4px 8px;background:rgba(27,42,74,.72);color:#fff}
+.photo figcaption a{color:#fff;text-decoration-color:var(--soleil)}
+.photo.ill img{object-fit:cover;object-position:center}
+.carte-photo{aspect-ratio:16/10;margin:-8px -8px 16px;border-radius:14px}
+.act .ages{top:12px;right:12px;z-index:2}
+.g-act{grid-template-columns:repeat(auto-fill,minmax(290px,1fr));row-gap:26px}
+.acces{display:flex;gap:10px;align-items:flex-start;font-size:.9rem;background:var(--papier);border-radius:12px;padding:10px 12px;margin:10px 0}
+.acces .i{margin:0;flex:none}
+.hero-photo{aspect-ratio:2/1;border-radius:22px;box-shadow:var(--ombre)}
+.hero-illu{border-radius:22px;border:2.5px solid var(--nuit);box-shadow:var(--ombre);width:100%}
+.hero .visuel .mondo{width:30%;bottom:-10%;left:-8%;transform:rotate(-4deg);z-index:3}
+.collage{min-height:340px}
+.collage img:not(.mondo){position:absolute;width:72%;border:2.5px solid var(--nuit);border-radius:20px;box-shadow:var(--ombre)}
+.collage .c1{top:0;right:0;transform:rotate(3deg)}
+.collage .c2{top:30%;left:4%;transform:rotate(-4deg)}
+.collage .c3{bottom:0;right:6%;transform:rotate(2deg)}
+.collage .mondo{width:32%!important;left:auto!important;right:0;bottom:-6%!important}
+@media(max-width:860px){.collage{min-height:300px;margin-top:10px}}
+.g-villes{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.ville .illu .photo{border:0;border-radius:0;height:100%}
+.liste-ok{list-style:none;padding:0;margin:10px 0 0}
+.liste-ok li{padding:6px 0 6px 30px;position:relative;font-weight:600}
+.liste-ok li:before{content:"";position:absolute;left:0;top:9px;width:18px;height:18px;border-radius:50%;background:var(--menthe);border:2px solid var(--nuit)}
+.carte.soleil .liste-ok li:before{background:var(--soleil)}
+.carte.corail .liste-ok li:before{background:var(--corail)}
+.avion{display:flex;gap:18px;align-items:flex-start;background:var(--ciel-c)}
+.avion .i{flex:none;margin:0}
+.avion .suite{display:inline-flex;align-items:center;gap:6px;font-weight:800;color:var(--corail);text-decoration:none;margin-top:6px}
+.avion .suite svg{width:18px;height:18px}
+.etapes3.e4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:960px){.etapes3.e4{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.etapes3.e4{grid-template-columns:1fr}}
+.mini-illu{border:2.5px solid var(--nuit);border-radius:14px;margin-bottom:12px;width:100%}
+.liens-btn{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.lex.l1 .fr{background:var(--soleil-c)}
+@media(max-width:620px){.lex.l1{grid-template-columns:1fr!important}.lex.l1 .t:nth-child(2){display:none}.lex.l1 .fr{border-bottom:0;padding-bottom:2px}}
+
+/* Aperçu des pages enfants sur l'accueil */
+.apercu{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+.feuille{width:230px;min-height:250px;background:var(--blanc);border:var(--trait);border-radius:16px;box-shadow:var(--ombre);padding:16px}
+.feuille .ft{display:block;font:800 1.15rem var(--titre);margin:8px 0 10px}
+.feuille.f1{transform:rotate(-3deg)} .feuille.f2{transform:rotate(1.5deg)} .feuille.f3{transform:rotate(-1deg)}
+.feuille .drapeau{width:70px}
+.tuiles.mini{grid-template-columns:1fr}
+.tuiles.mini .tuile{padding:8px 10px}
+.tuiles.mini .tuile b{font-size:1rem}
+.liste-mots.mini .mot{padding:6px 8px;grid-template-columns:1fr}
+.liste-mots.mini .mot b{font-size:1.05rem}
+.bingo.mini{grid-template-columns:repeat(3,1fr);gap:6px}
+.bingo.mini div{padding:4px;min-height:0}
+
+/* Pages enfants (site et PDF) : gros caractères, lecture facile */
+.page-enfant{background:var(--blanc);border:var(--trait);border-radius:var(--r);box-shadow:var(--ombre);padding:26px;margin-bottom:30px;font-size:1.15rem}
+.pe-tete{display:flex;gap:16px;align-items:center;margin-bottom:14px}
+.pe-tete h2{margin:0;font-size:clamp(1.8rem,5vw,2.4rem)}
+.pe-tete .etiquette{margin-bottom:8px}
+.pe-mondo{width:78px;flex:none}
+.pe-consigne{font-weight:600;color:var(--texte2)}
+.drapeaux{display:flex;gap:14px;margin:8px 0 18px}
+.drapeau{width:120px;height:auto;border:2.5px solid var(--nuit);border-radius:8px;display:block}
+.tuiles{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:22px}
+.tuile{background:var(--soleil-c);border:var(--trait);border-radius:14px;padding:12px 14px}
+.tuile:nth-child(2){background:var(--menthe-c)} .tuile:nth-child(3){background:var(--ciel-c)} .tuile:nth-child(4){background:var(--corail-c)}
+.tuile small{display:block;font-weight:700;color:var(--texte2);font-size:.85rem}
+.tuile b{font:800 1.3rem/1.15 var(--titre)}
+.faits{counter-reset:f;list-style:none;padding:0;margin:0}
+.faits li{counter-increment:f;position:relative;padding:10px 0 10px 52px;font-size:1.15rem;line-height:1.5;border-bottom:2px dotted rgba(27,42,74,.2)}
+.faits li:before{content:counter(f);position:absolute;left:0;top:8px;width:36px;height:36px;border-radius:50%;background:var(--soleil);border:var(--trait);display:grid;place-items:center;font:800 1.1rem var(--titre)}
+.liste-mots{display:grid;gap:10px}
+.mot{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:10px;align-items:center;border:var(--trait);border-radius:14px;padding:10px 14px;background:var(--papier)}
+.mot .fr{font-weight:700;color:var(--texte2)}
+.mot b{font:800 1.4rem/1.1 var(--titre)}
+.mot .pr{font-style:italic;color:var(--corail);font-weight:700}
+.mot.def{grid-template-columns:1fr 2fr}
+.mot.def span{color:var(--texte2)}
+@media(max-width:620px){.mot{grid-template-columns:1fr}.mot.def{grid-template-columns:1fr}.tuiles{grid-template-columns:1fr}.pe-mondo{width:60px}}
+.chasse{font-size:1.15rem;line-height:1.9;padding-left:22px}
+.coloriage{width:100%;max-width:440px;display:block;margin:10px auto}
+.cadre-dessin{height:230px;border:2.5px dashed var(--nuit);border-radius:16px;margin-top:8px}
+.etoiles{font-size:2.2rem;letter-spacing:.2em;margin:4px 0}
+.journal h4{margin-top:16px}
+.voir-grille{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.voir{border:var(--trait);border-radius:16px;overflow:hidden;background:var(--papier);break-inside:avoid}
+.voir .photo{border:0;border-bottom:var(--trait);border-radius:0;aspect-ratio:4/3}
+.voir .txt{padding:12px 14px}
+.voir .txt b{font:800 1.15rem/1.15 var(--titre);display:block;margin-bottom:4px}
+.voir .coche{font-weight:800;margin-top:8px;display:block}
+.num{display:inline-grid;place-items:center;min-width:34px;height:34px;padding:0 6px;border-radius:999px;border:2.5px solid var(--nuit);font:800 .95rem var(--titre);background:var(--c,var(--soleil));color:var(--nuit);flex:none}
+.voir .num{position:absolute;margin:10px}
+.voir{position:relative}
+
+/* Carnet : vignettes et repères numérotés */
+.etape .vignette{float:right;width:120px;aspect-ratio:4/3;margin:0 0 8px 12px}
+.etape .vignette figcaption{display:none}
+.etape .tete-lieu{display:flex;gap:10px;align-items:center;margin-bottom:4px}
+.etape .acces{background:var(--papier)}
+.marqueur{background:none;border:0}
+.marqueur span{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;border:2.5px solid var(--nuit);font:800 .8rem/1 var(--titre);color:var(--nuit);box-shadow:2px 2px 0 var(--nuit)}
+.credits-pdf{font-size:.78rem;color:var(--texte2)}
+@media(max-width:620px){.etape .vignette{width:96px}}
+
+@media print{
+  .page-enfant{box-shadow:none;break-before:page;break-inside:avoid;font-size:13pt;border-width:2px}
+  .page-enfant.decouvre{break-before:page}
+  .voir-grille{grid-template-columns:repeat(3,1fr)}
+  .photo figcaption{font-size:6pt}
+  .hero.no-print{display:none}
+  .collage,.apercu{display:none}
+}
+@media print{
+  .page-enfant h3,.page-enfant h4,.jour-tete{break-after:avoid}
+  .voir-page .voir-grille{grid-template-columns:repeat(3,1fr)!important}
+  .voir{break-inside:avoid}
+  .bingo{grid-template-columns:repeat(6,1fr)!important}
+  .tuiles{grid-template-columns:repeat(2,1fr)!important}
+  .mot{grid-template-columns:1fr 1.2fr 1fr!important}
+  .mot.def{grid-template-columns:1fr 2fr!important}
+  .etape{grid-template-columns:62px 1fr 72px!important}
+  .etape .qr{display:block!important}
+}

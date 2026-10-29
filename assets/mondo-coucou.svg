@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220">
+  <!-- Mondo, la chouette guide de PetitMondo -->
+  <ellipse cx="100" cy="212" rx="58" ry="6" fill="#1B2A4A" opacity=".12"/>
+  <!-- pattes -->
+  <g fill="#FFC93C" stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round">
+    <path d="M70 192 l-10 14 h12 l2 -6 l4 6 h12 l-8 -14z"/>
+    <path d="M114 192 l-6 14 h12 l4 -6 l2 6 h12 l-10 -14z"/>
+  </g>
+  <!-- aigrettes -->
+  <g fill="#FF6B4A" stroke="#1B2A4A" stroke-width="5" stroke-linejoin="round">
+    <path d="M44 66 L34 22 L82 46 Z"/>
+    <path d="M156 66 L166 22 L118 46 Z"/>
+  </g>
+  <!-- corps -->
+  <path d="M100 34 C150 34 176 72 176 122 C176 170 144 198 100 198 C56 198 24 170 24 122 C24 72 50 34 100 34 Z" fill="#FF6B4A" stroke="#1B2A4A" stroke-width="5"/>
+  <!-- ventre et plumes -->
+  <path d="M100 118 C130 118 146 140 146 162 C146 182 126 194 100 194 C74 194 54 182 54 162 C54 140 70 118 100 118 Z" fill="#FFF1C9"/>
+  <g fill="none" stroke="#E8A33D" stroke-width="3.5" stroke-linecap="round">
+    <path d="M78 146 q6 6 12 0 M98 146 q6 6 12 0 M118 146 q6 6 12 0"/>
+    <path d="M68 164 q6 6 12 0 M88 164 q6 6 12 0 M108 164 q6 6 12 0 M128 164 q6 6 12 0"/>
+    <path d="M80 182 q6 6 12 0 M100 182 q6 6 12 0"/>
+  </g>
+  <path d="M100 118 C130 118 146 140 146 162 C146 182 126 194 100 194 C74 194 54 182 54 162 C54 140 70 118 100 118 Z" fill="none" stroke="#1B2A4A" stroke-width="4"/>
+  <!-- ailes -->
+  <path d="M30 104 C14 128 16 160 40 178 C46 156 50 132 48 110 Z" fill="#E2553A" stroke="#1B2A4A" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M158 112 C184 96 196 64 184 38 C166 54 150 80 146 110 Z" fill="#E2553A" stroke="#1B2A4A" stroke-width="5" stroke-linejoin="round"/>
+  <!-- foulard d'aviateur -->
+  <path d="M58 120 C80 132 120 132 142 120 L146 132 C122 146 78 146 54 132 Z" fill="#2FB59A" stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M68 134 L42 158 L54 162 L50 174 L78 146 Z" fill="#2FB59A" stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round"/>
+  <!-- disque facial -->
+  <circle cx="72" cy="88" r="31" fill="#FFF8EC" stroke="#1B2A4A" stroke-width="5"/>
+  <circle cx="128" cy="88" r="31" fill="#FFF8EC" stroke="#1B2A4A" stroke-width="5"/>
+  <!-- yeux -->
+  <circle cx="76" cy="92" r="15" fill="#1B2A4A"/>
+  <circle cx="124" cy="92" r="15" fill="#1B2A4A"/>
+  <circle cx="82" cy="86" r="5.5" fill="#fff"/>
+  <circle cx="130" cy="86" r="5.5" fill="#fff"/>
+  <circle cx="72" cy="99" r="2.5" fill="#fff"/>
+  <circle cx="120" cy="99" r="2.5" fill="#fff"/>
+  <!-- joues -->
+  <ellipse cx="52" cy="110" rx="8" ry="5" fill="#FF9F8A"/>
+  <ellipse cx="148" cy="110" rx="8" ry="5" fill="#FF9F8A"/>
+  <!-- bec -->
+  <path d="M100 100 L112 112 L100 126 L88 112 Z" fill="#FFC93C" stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round"/>
+</svg>
