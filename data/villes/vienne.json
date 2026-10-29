@@ -284,7 +284,8 @@
    "transport": "Métro U4, station Hietzing, puis 5 min à pied",
    "wiki": [],
    "conseil": "Le plus vieux zoo du monde encore ouvert, avec une serre tropicale et un aquarium couverts pour les jours de pluie. Allées larges, parfaites en poussette.",
-   "enfant": "Le plus vieux zoo du monde, avec des éléphants et des ours polaires."
+   "enfant": "Le plus vieux zoo du monde, avec des éléphants et des ours polaires.",
+   "affluence": "Le plus calme : un matin en semaine. Les repas des animaux sont affichés à l'entrée."
   },
   {
    "id": "schonbrunn",
@@ -313,7 +314,8 @@
     "en:Schönbrunn Palace"
    ],
    "conseil": "Le parc est gratuit. Le labyrinthe de haies et l'aire de jeux qui l'accompagne sont payants et ouverts d'avril à début novembre. La montée vers la Gloriette est longue mais offre la plus belle vue.",
-   "enfant": "Un labyrinthe de haies où il faut trouver la sortie."
+   "enfant": "Un labyrinthe de haies où il faut trouver la sortie.",
+   "affluence": "Le parc ouvre tôt : venez le matin avant les groupes. Le labyrinthe ouvre d'avril à début novembre."
   },
   {
    "id": "kindermuseum",
@@ -338,7 +340,8 @@
    "transport": "Métro U4, station Schönbrunn",
    "wiki": [],
    "conseil": "Les enfants se déguisent en princes et princesses et découvrent la vie à la cour. Plus amusant pour eux que la visite des appartements.",
-   "enfant": "Se déguiser comme les enfants de l'impératrice."
+   "enfant": "Se déguiser comme les enfants de l'impératrice.",
+   "affluence": "Visites guidées pour enfants le week-end et pendant les vacances : réservez."
   },
   {
    "id": "tmw",
@@ -366,7 +369,8 @@
     "en:Technisches Museum Wien"
    ],
    "conseil": "Locomotives, mine reconstituée et expériences à faire soi-même. Gratuit pour les moins de 19 ans. Combinable avec Schönbrunn, tout proche.",
-   "enfant": "Une vraie locomotive et une mine sous la terre."
+   "enfant": "Une vraie locomotive et une mine sous la terre.",
+   "affluence": "Le plus calme : un après-midi en semaine."
   },
   {
    "id": "prater",
@@ -394,7 +398,8 @@
     "en:Wiener Riesenrad"
    ],
    "conseil": "L'entrée du parc d'attractions est libre, on paie manège par manège. La grande roue tourne lentement dans des cabines fermées : idéale avec des petits.",
-   "enfant": "Monter tout en haut de la grande roue dans une cabine rouge."
+   "enfant": "Monter tout en haut de la grande roue dans une cabine rouge.",
+   "affluence": "Le plus calme : un matin en semaine. La grande roue tourne toute l'année."
   },
   {
    "id": "liliputbahn",
@@ -451,8 +456,12 @@
     "de:Naturhistorisches Museum Wien",
     "en:Natural History Museum, Vienna"
    ],
-   "conseil": "La salle des dinosaures, avec un allosaure animé, est le grand moment. Gratuit pour les moins de 19 ans. Fermé le mardi.",
-   "enfant": "Des squelettes de dinosaures et un dinosaure qui bouge."
+   "conseil": "La salle des dinosaures, avec un allosaure animé, est le grand moment. Gratuit pour les moins de 19 ans.",
+   "enfant": "Des squelettes de dinosaures et un dinosaure qui bouge.",
+   "ferme": [
+    2
+   ],
+   "affluence": "Le plus calme : en semaine l'après-midi."
   },
   {
    "id": "zoom",
@@ -480,7 +489,11 @@
     "de:Zoom Kindermuseum"
    ],
    "conseil": "Un musée pensé pour les enfants, avec un espace océan pour les moins de 6 ans et des ateliers. Les visites se font par créneaux : réservez.",
-   "enfant": "Un musée où l'on joue, construit et invente."
+   "enfant": "Un musée où l'on joue, construit et invente.",
+   "ferme": [
+    1
+   ],
+   "affluence": "Visites par créneaux, souvent complets le week-end : réservez."
   },
   {
    "id": "hausdesmeeres",
@@ -508,7 +521,8 @@
     "en:Haus des Meeres"
    ],
    "conseil": "Requins, tortues, singes en liberté dans une serre tropicale, le tout dans une ancienne tour en béton. Une valeur sûre quand il pleut.",
-   "enfant": "Des requins et des singes dans une grande tour."
+   "enfant": "Des requins et des singes dans une grande tour.",
+   "affluence": "Très chargé les jours de pluie et le week-end : venez à l'ouverture."
   },
   {
    "id": "hausdermusik",
@@ -534,7 +548,8 @@
    "transport": "Métro U1, U2 ou U4, station Karlsplatz, puis 5 min à pied",
    "wiki": [],
    "conseil": "Un musée des sons à toucher : on y dirige un orchestre virtuel qui suit les gestes de la baguette.",
-   "enfant": "Diriger un vrai orchestre avec une baguette magique."
+   "enfant": "Diriger un vrai orchestre avec une baguette magique.",
+   "affluence": "Le plus calme : en matinée."
   },
   {
    "id": "stephansdom",
@@ -562,7 +577,8 @@
     "en:St. Stephen's Cathedral, Vienna"
    ],
    "conseil": "L'entrée au fond de la nef est libre ; les tours et les catacombes sont payantes. La tour sud se monte par un long escalier, la tour nord en ascenseur.",
-   "enfant": "Un toit de tuiles qui dessine des aigles en couleur."
+   "enfant": "Un toit de tuiles qui dessine des aigles en couleur.",
+   "affluence": "Le plus calme : tôt le matin, avant les groupes."
   },
   {
    "id": "wienmuseum",
@@ -590,7 +606,11 @@
     "en:Wien Museum"
    ],
    "conseil": "L'histoire de la ville racontée avec des maquettes et des objets. L'exposition permanente est gratuite pour tous, et la terrasse a une belle vue.",
-   "enfant": "Une grande maquette de Vienne d'autrefois."
+   "enfant": "Une grande maquette de Vienne d'autrefois.",
+   "ferme": [
+    1
+   ],
+   "affluence": "Rarement bondé."
   },
   {
    "id": "donauinsel",

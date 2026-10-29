@@ -262,7 +262,8 @@
     "en:Colosseum"
    ],
    "conseil": "Réservation obligatoire sur créneau. Le billet comprend aussi le Forum et le Palatin. Racontez les gladiateurs avant la visite : l'arène prend alors vie.",
-   "enfant": "Ici, les gladiateurs se battaient devant une foule immense. Imagine le bruit !"
+   "enfant": "Ici, les gladiateurs se battaient devant une foule immense. Imagine le bruit !",
+   "affluence": "Créneau horaire obligatoire, à réserver tôt. Le plus calme : le premier créneau du matin ou la fin d'après-midi."
   },
   {
    "id": "forum",
@@ -290,7 +291,8 @@
     "en:Roman Forum"
    ],
    "conseil": "Le cœur de la Rome antique, très peu ombragé et entièrement pavé. Visitez tôt, chapeaux et eau obligatoires, porte-bébé conseillé.",
-   "enfant": "C'était la grande place de la ville, avec ses temples et ses marchés."
+   "enfant": "C'était la grande place de la ville, avec ses temples et ses marchés.",
+   "affluence": "Prévoyez le matin, avant la chaleur : peu d'ombre sur le site."
   },
   {
    "id": "circo",
@@ -347,7 +349,8 @@
     "en:Mouth of Truth"
    ],
    "conseil": "La légende amuse beaucoup les enfants. File d'attente fréquente pour la photo, plus courte en début de matinée.",
-   "enfant": "Ose mettre ta main dans la bouche : la légende dit qu'elle mord les menteurs !"
+   "enfant": "Ose mettre ta main dans la bouche : la légende dit qu'elle mord les menteurs !",
+   "affluence": "Les groupes se succèdent en journée : venez tôt le matin, la file est alors courte."
   },
   {
    "id": "trevi",
@@ -375,7 +378,8 @@
     "en:Trevi Fountain"
    ],
    "conseil": "Depuis février 2026, l'accès au bord du bassin est payant (2 €) et se réserve. La fontaine reste visible gratuitement depuis la place. Très bondée : venez tôt le matin ou tard le soir.",
-   "enfant": "Tourne le dos à la fontaine et lance une pièce par-dessus ton épaule."
+   "enfant": "Tourne le dos à la fontaine et lance une pièce par-dessus ton épaule.",
+   "affluence": "Le plus calme : avant 8 h ou tard le soir. En journée, la foule est très dense."
   },
   {
    "id": "pantheon",
@@ -403,7 +407,8 @@
     "en:Pantheon, Rome"
    ],
    "conseil": "Entrée payante depuis 2023. Une visite courte et spectaculaire : le trou au sommet de la coupole fascine les enfants.",
-   "enfant": "Au plafond, un grand trou rond laisse entrer le soleil… et la pluie."
+   "enfant": "Au plafond, un grand trou rond laisse entrer le soleil… et la pluie.",
+   "affluence": "Le plus calme : à l'ouverture. Réservation conseillée le week-end."
   },
   {
    "id": "navona",
@@ -459,7 +464,8 @@
     "en:Spanish Steps"
    ],
    "conseil": "Il est interdit de s'asseoir sur les marches, sous peine d'amende. Avec une poussette, préférez admirer l'escalier depuis la place, en bas.",
-   "enfant": "Compte les marches en montant : il y en a plus de cent !"
+   "enfant": "Compte les marches en montant : il y en a plus de cent !",
+   "affluence": "Interdit de s'asseoir sur les marches. Le plus calme : tôt le matin."
   },
   {
    "id": "vatican",
@@ -487,7 +493,12 @@
     "en:Vatican Museums"
    ],
    "conseil": "Immense et très fréquenté : réservez, arrivez à l'ouverture et choisissez un parcours court. Épaules et genoux couverts.",
-   "enfant": "Lève la tête dans la chapelle Sixtine : tout le plafond est peint."
+   "enfant": "Lève la tête dans la chapelle Sixtine : tout le plafond est peint.",
+   "ferme": [
+    0
+   ],
+   "ferme_note": "sauf le dernier dimanche du mois, gratuit mais très chargé",
+   "affluence": "Réservez le premier créneau du matin. Le dernier dimanche du mois, l'entrée est gratuite mais l'attente est très longue."
   },
   {
    "id": "saint-pierre",
@@ -515,7 +526,8 @@
     "en:St. Peter's Basilica"
    ],
    "conseil": "L'entrée de la basilique est gratuite, la montée à la coupole payante. Contrôle de sécurité et tenue couvrante obligatoires.",
-   "enfant": "Tu entres dans un autre pays : le Vatican. Cherche les gardes suisses en costume coloré."
+   "enfant": "Tu entres dans un autre pays : le Vatican. Cherche les gardes suisses en costume coloré.",
+   "affluence": "Le mercredi matin, l'audience du pape occupe la place et la basilique ouvre plus tard. Le plus calme : tôt le matin."
   },
   {
    "id": "saint-ange",
@@ -544,7 +556,12 @@
     "en:Castel Sant'Angelo"
    ],
    "conseil": "Un château rond aux allures de forteresse, avec rampes, remparts et vue sur Saint-Pierre depuis la terrasse. Le pont des Anges est piéton.",
-   "enfant": "Tout en haut du château, un ange en bronze déploie ses ailes."
+   "enfant": "Tout en haut du château, un ange en bronze déploie ses ailes.",
+   "ferme": [
+    1
+   ],
+   "ferme_note": "sauf le premier lundi du mois, l'après-midi",
+   "affluence": "Le plus calme : en fin d'après-midi."
   },
   {
    "id": "borghese",
@@ -573,7 +590,11 @@
     "en:Villa Borghese gardens"
    ],
    "conseil": "Le grand parc des familles romaines : allées ombragées, petit lac avec barques et location de vélos ou de rosalies. Accès direct depuis la place du Peuple par la terrasse du Pincio.",
-   "enfant": "Pédale en rosalie ou rame en barque sur le petit lac."
+   "enfant": "Pédale en rosalie ou rame en barque sur le petit lac.",
+   "ferme": [
+    1
+   ],
+   "affluence": "Réservation obligatoire, par créneaux de deux heures, souvent complets : réservez dès l'ouverture des ventes."
   },
   {
    "id": "bioparco",
@@ -601,7 +622,8 @@
     "en:Bioparco di Roma"
    ],
    "conseil": "Le zoo de Rome, dans la Villa Borghese. Ombragé et praticable en poussette, il coupe agréablement une journée de monuments.",
-   "enfant": "Girafes, lions et hippopotames vivent au cœur d'un grand parc."
+   "enfant": "Girafes, lions et hippopotames vivent au cœur d'un grand parc.",
+   "affluence": "Le plus calme : un matin en semaine. Très chargé le dimanche."
   },
   {
    "id": "explora",
@@ -629,7 +651,11 @@
     "it:Explora - Il Museo dei Bambini di Roma"
    ],
    "conseil": "Un musée à toucher pour les 0-11 ans, avec un espace réservé aux 0-3 ans. Séances sur réservation en ligne. Parfait plan B en cas de pluie.",
-   "enfant": "Un musée où l'on joue : petite ville, supermarché, eau et expériences."
+   "enfant": "Un musée où l'on joue : petite ville, supermarché, eau et expériences.",
+   "ferme": [
+    1
+   ],
+   "affluence": "Visites par séances à heure fixe : réservez la vôtre, surtout le week-end."
   },
   {
    "id": "trastevere",
@@ -717,7 +743,11 @@
    ],
    "conseil": "Une ville romaine entière, moins fréquentée que le Forum : rues, maisons, théâtre et boulangeries. À environ 25 km du centre, prévoyez une demi-journée.",
    "enfant": "Promène-toi dans une vraie ville romaine, avec son théâtre et ses toilettes antiques !",
-   "excursion": true
+   "excursion": true,
+   "ferme": [
+    1
+   ],
+   "affluence": "Rarement bondé. Évitez le cœur de l'été en milieu de journée : le site a très peu d'ombre."
   }
  ],
  "poussette": [

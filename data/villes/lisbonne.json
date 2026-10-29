@@ -280,7 +280,8 @@
     "en:Lisbon Oceanarium"
    ],
    "conseil": "Un des plus grands aquariums d'Europe, organisé autour d'un immense bassin central visible depuis plusieurs étages. Venez à l'ouverture.",
-   "enfant": "Un immense bassin avec des requins, des raies et un drôle de poisson-lune tout rond."
+   "enfant": "Un immense bassin avec des requins, des raies et un drôle de poisson-lune tout rond.",
+   "affluence": "Le plus calme : à l'ouverture ou en fin d'après-midi en semaine. Billets en ligne."
   },
   {
    "id": "pavilhao",
@@ -307,7 +308,11 @@
     "pt:Pavilhão do Conhecimento"
    ],
    "conseil": "Le musée des sciences à toucher, juste à côté de l'Oceanário : parfait pour compléter la journée ou quand il pleut.",
-   "enfant": "Ici, tu fais toi-même les expériences de science."
+   "enfant": "Ici, tu fais toi-même les expériences de science.",
+   "ferme": [
+    1
+   ],
+   "affluence": "Le plus calme : un après-midi en semaine."
   },
   {
    "id": "telecabine",
@@ -334,7 +339,8 @@
     "pt:Telecabine Lisboa"
    ],
    "conseil": "Une balade suspendue au-dessus du bord du Tage, avec vue sur le très long pont Vasco de Gama.",
-   "enfant": "Une petite cabine qui vole au-dessus du fleuve."
+   "enfant": "Une petite cabine qui vole au-dessus du fleuve.",
+   "affluence": "Rarement d'attente en semaine."
   },
   {
    "id": "nations",
@@ -390,7 +396,8 @@
     "en:São Jorge Castle"
    ],
    "conseil": "Remparts, tours et le plus beau panorama sur la ville. Des paons se promènent dans les jardins. La montée est raide et pavée : porte-bébé conseillé.",
-   "enfant": "Grimpe sur les remparts d'un vrai château, où se promènent des paons."
+   "enfant": "Grimpe sur les remparts d'un vrai château, où se promènent des paons.",
+   "affluence": "Le plus calme : à l'ouverture ou en fin de journée, quand la lumière est belle."
   },
   {
    "id": "alfama",
@@ -475,7 +482,11 @@
     "en:Belém Tower"
    ],
    "conseil": "Rouverte en mai 2026 après travaux, sur créneaux et avec environ 60 visiteurs à la fois : réservez. À l'intérieur, escaliers étroits ; l'extérieur se voit librement.",
-   "enfant": "Une tour de chevaliers construite au bord de l'eau pour surveiller les bateaux."
+   "enfant": "Une tour de chevaliers construite au bord de l'eau pour surveiller les bateaux.",
+   "ferme": [
+    1
+   ],
+   "affluence": "Visite par créneaux et nombre de visiteurs limité : réservez."
   },
   {
    "id": "jeronimos",
@@ -503,7 +514,11 @@
     "en:Jerónimos Monastery"
    ],
    "conseil": "Un cloître de dentelle de pierre et, dans l'église, le tombeau de Vasco de Gama. Files d'attente longues : venez tôt.",
-   "enfant": "Dans l'église se trouve le tombeau de l'explorateur Vasco de Gama."
+   "enfant": "Dans l'église se trouve le tombeau de l'explorateur Vasco de Gama.",
+   "ferme": [
+    1
+   ],
+   "affluence": "Le plus calme : à l'ouverture. Combinez avec la tour de Belém, mais pas le lundi : les deux sont fermés."
   },
   {
    "id": "padrao",
@@ -559,7 +574,8 @@
     "pt:Pastéis de Belém"
    ],
    "conseil": "La pâtisserie historique des pastéis de nata. La file de vente à emporter avance vite ; les salles intérieures permettent souvent de s'asseoir plus rapidement.",
-   "enfant": "Goûte un pastel de nata, un petit flan croustillant encore tiède."
+   "enfant": "Goûte un pastel de nata, un petit flan croustillant encore tiède.",
+   "affluence": "La file au comptoir de vente à emporter est longue ; la salle à l'intérieur est souvent plus rapide."
   },
   {
    "id": "coches",
@@ -587,7 +603,11 @@
     "en:National Coach Museum"
    ],
    "conseil": "Des carrosses royaux dorés dans un grand bâtiment moderne et plat : visite courte qui plaît beaucoup aux enfants.",
-   "enfant": "Des carrosses de rois et de reines, couverts d'or."
+   "enfant": "Des carrosses de rois et de reines, couverts d'or.",
+   "ferme": [
+    1
+   ],
+   "affluence": "Rarement bondé."
   },
   {
    "id": "zoo",
@@ -615,7 +635,8 @@
     "en:Lisbon Zoo"
    ],
    "conseil": "Grand zoo ombragé, praticable en poussette. Prévoyez une demi-journée.",
-   "enfant": "Éléphants, girafes et dauphins dans un grand jardin."
+   "enfant": "Éléphants, girafes et dauphins dans un grand jardin.",
+   "affluence": "Le plus calme : un matin en semaine."
   },
   {
    "id": "eduardo",
@@ -723,7 +744,11 @@
     "pt:Museu da Marioneta"
    ],
    "conseil": "Des marionnettes du monde entier dans un ancien couvent. Une bonne idée pour une après-midi pluvieuse.",
-   "enfant": "Des marionnettes venues du monde entier, des toutes petites aux géantes."
+   "enfant": "Des marionnettes venues du monde entier, des toutes petites aux géantes.",
+   "ferme": [
+    1
+   ],
+   "affluence": "Rarement bondé, idéal quand il pleut."
   },
   {
    "id": "cascais",

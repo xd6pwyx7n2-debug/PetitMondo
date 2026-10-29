@@ -286,7 +286,12 @@
     "en:NEMO (museum)"
    ],
    "conseil": "Le grand musée des sciences à toucher, dans un bâtiment en forme de proue de navire. Prévoyez une demi-journée, surtout par temps de pluie.",
-   "enfant": "Un musée où l'on a le droit de tout toucher pour faire des expériences."
+   "enfant": "Un musée où l'on a le droit de tout toucher pour faire des expériences.",
+   "ferme": [
+    1
+   ],
+   "ferme_note": "sauf quelques lundis de vacances scolaires",
+   "affluence": "Le plus calme : un jour de semaine après 14 h."
   },
   {
    "id": "artis",
@@ -314,7 +319,8 @@
     "en:Artis (zoo)"
    ],
    "conseil": "L'un des plus anciens zoos d'Europe, au cœur de la ville, avec un aquarium et un planétarium. Allées plates, idéales en poussette.",
-   "enfant": "Lions, girafes et éléphants vivent au milieu de la ville."
+   "enfant": "Lions, girafes et éléphants vivent au milieu de la ville.",
+   "affluence": "Le plus calme : un matin en semaine."
   },
   {
    "id": "micropia",
@@ -342,7 +348,8 @@
     "nl:Micropia"
    ],
    "conseil": "Le musée des microbes, à côté d'ARTIS : microscopes géants et expériences, très apprécié des enfants curieux.",
-   "enfant": "Regarde au microscope les petites bêtes invisibles qui vivent partout."
+   "enfant": "Regarde au microscope les petites bêtes invisibles qui vivent partout.",
+   "affluence": "Rarement bondé ; une bonne option près d'Artis."
   },
   {
    "id": "scheepvaart",
@@ -371,7 +378,8 @@
     "en:Het Scheepvaartmuseum"
    ],
    "conseil": "Bateaux, cartes anciennes et, à quai, la réplique d'un grand navire marchand du XVIIIe siècle. Vérifiez sur le site qu'il est ouvert à la visite.",
-   "enfant": "Monte à bord d'un grand voilier d'autrefois, comme un vrai marin."
+   "enfant": "Monte à bord d'un grand voilier d'autrefois, comme un vrai marin.",
+   "affluence": "Rarement bondé en semaine. Montez à bord du navire en premier."
   },
   {
    "id": "rijks",
@@ -399,7 +407,8 @@
     "en:Rijksmuseum"
    ],
    "conseil": "Gratuit pour les moins de 18 ans, sur créneau. Avec des enfants, filez voir La Ronde de nuit de Rembrandt et les maquettes de bateaux.",
-   "enfant": "Un tableau géant de soldats, La Ronde de nuit, t'attend ici."
+   "enfant": "Un tableau géant de soldats, La Ronde de nuit, t'attend ici.",
+   "affluence": "Le plus calme : à l'ouverture ou en fin d'après-midi. Billet à heure fixe, gratuit pour les moins de 18 ans."
   },
   {
    "id": "vondel",
@@ -452,7 +461,8 @@
    "transport": "Tram 13 ou 17, arrêt Westermarkt",
    "wiki": [],
    "conseil": "La cachette où Anne Frank a écrit son journal pendant la guerre. Conseillée à partir de 10 ans, à préparer en famille. Billets uniquement en ligne. Escaliers raides, pas de poussette.",
-   "enfant": "C'est ici qu'Anne Frank, une jeune fille, a écrit son journal en se cachant pendant la guerre."
+   "enfant": "C'est ici qu'Anne Frank, une jeune fille, a écrit son journal en se cachant pendant la guerre.",
+   "affluence": "Billets uniquement en ligne, mis en vente six semaines à l'avance et vite complets."
   },
   {
    "id": "canaux",
@@ -481,7 +491,8 @@
     "nl:Grachtengordel van Amsterdam"
    ],
    "conseil": "Une heure sur l'eau pour voir les maisons étroites et les ponts sans marcher. Bateaux souvent vitrés : agréable même par temps gris.",
-   "enfant": "Compte les ponts sous lesquels passe ton bateau."
+   "enfant": "Compte les ponts sous lesquels passe ton bateau.",
+   "affluence": "Le plus calme : le premier départ du matin. Les petits bateaux ouverts sont plus amusants pour les enfants."
   },
   {
    "id": "dam",
@@ -537,7 +548,8 @@
     "en:Bloemenmarkt"
    ],
    "conseil": "Des étals flottants sur le canal Singel, avec des bulbes de tulipes de toutes les couleurs. Trottoir étroit et fréquenté.",
-   "enfant": "Des fleurs et des bulbes de tulipes de toutes les couleurs, sur des bateaux."
+   "enfant": "Des fleurs et des bulbes de tulipes de toutes les couleurs, sur des bateaux.",
+   "affluence": "Le plus calme : le matin."
   },
   {
    "id": "adam",
@@ -565,7 +577,8 @@
     "nl:A'DAM Toren"
    ],
    "conseil": "Une terrasse panoramique tout en haut d'une tour, avec une balançoire au-dessus du vide (payante, conditions d'âge ou de taille à vérifier). Le trajet en ferry gratuit fait partie de l'aventure.",
-   "enfant": "Prends un ferry gratuit, puis monte tout en haut d'une tour pour voir toute la ville."
+   "enfant": "Prends un ferry gratuit, puis monte tout en haut d'une tour pour voir toute la ville.",
+   "affluence": "Le plus calme : en semaine en journée. Au coucher du soleil, la terrasse est pleine."
   },
   {
    "id": "westerpark",

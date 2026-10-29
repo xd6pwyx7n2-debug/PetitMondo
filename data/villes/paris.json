@@ -245,7 +245,8 @@
     "en:Eiffel Tower"
    ],
    "conseil": "Réservez votre créneau en ligne. Avec des petits, le premier étage et son plancher de verre suffisent souvent. Le Champ de Mars voisin se prête au pique-nique.",
-   "enfant": "Au premier étage, le sol est en verre : tu peux regarder tout en bas sous tes pieds."
+   "enfant": "Au premier étage, le sol est en verre : tu peux regarder tout en bas sous tes pieds.",
+   "affluence": "Le plus calme : à l'ouverture ou après 20 h. Réservez un créneau en ligne, les files sans billet sont longues."
   },
   {
    "id": "aquarium",
@@ -273,7 +274,8 @@
     "en:Aquarium de Paris"
    ],
    "conseil": "Sous les jardins du Trocadéro, face à la tour Eiffel. Une bonne solution de repli quand il pleut.",
-   "enfant": "Des requins, des méduses et des poissons-clowns, cachés sous un jardin."
+   "enfant": "Des requins, des méduses et des poissons-clowns, cachés sous un jardin.",
+   "affluence": "Très fréquenté le mercredi après-midi, le week-end et pendant les vacances scolaires. Préférez un matin en semaine."
   },
   {
    "id": "croisiere",
@@ -302,7 +304,8 @@
     "en:Square du Vert-Galant"
    ],
    "conseil": "Une heure sur l'eau pour voir les grands monuments sans marcher : idéal pour les petites jambes fatiguées. Escaliers pour descendre au quai.",
-   "enfant": "Compte les ponts sous lesquels passe ton bateau."
+   "enfant": "Compte les ponts sous lesquels passe ton bateau.",
+   "affluence": "Le plus calme : le premier départ du matin. Au coucher du soleil, les bateaux sont pleins."
   },
   {
    "id": "notredame",
@@ -330,7 +333,8 @@
     "en:Notre-Dame de Paris"
    ],
    "conseil": "Rouverte en décembre 2024 après l'incendie de 2019. L'entrée est gratuite ; un créneau gratuit peut être réservé sur le site officiel pour limiter l'attente.",
-   "enfant": "Lève les yeux : des gargouilles et des monstres en pierre surveillent la ville."
+   "enfant": "Lève les yeux : des gargouilles et des monstres en pierre surveillent la ville.",
+   "affluence": "Le plus calme : tôt le matin ou en fin de journée. La file avance vite, mais elle est longue entre 11 h et 16 h."
   },
   {
    "id": "louvre",
@@ -358,7 +362,11 @@
     "en:Louvre Palace"
    ],
    "conseil": "Gratuit pour les moins de 18 ans, billet adulte sur créneau. Avec des enfants, ciblez une seule collection, par exemple l'Égypte antique et ses momies, plutôt que de tout voir.",
-   "enfant": "Ici dorment de vraies momies d'Égypte, vieilles de plusieurs milliers d'années."
+   "enfant": "Ici dorment de vraies momies d'Égypte, vieilles de plusieurs milliers d'années.",
+   "ferme": [
+    2
+   ],
+   "affluence": "Le plus calme : à l'ouverture, ou en nocturne le mercredi et le vendredi. Réservez un créneau, même pour les moins de 18 ans, qui entrent gratuitement."
   },
   {
    "id": "tuileries",
@@ -442,7 +450,8 @@
     "en:Ménagerie du Jardin des plantes"
    ],
    "conseil": "L'un des plus anciens zoos du monde, à taille humaine : parfait pour les petits qui se fatiguent vite.",
-   "enfant": "Pandas roux, orangs-outans et tortues géantes vivent ici."
+   "enfant": "Pandas roux, orangs-outans et tortues géantes vivent ici.",
+   "affluence": "Le plus calme : à l'ouverture. Combinable avec la Grande Galerie de l'Évolution, à côté."
   },
   {
    "id": "evolution",
@@ -471,7 +480,11 @@
     "en:Grande Galerie de l'Évolution"
    ],
    "conseil": "La grande caravane des animaux de la savane fait toujours son effet. La Galerie des enfants est conçue pour les 6-12 ans. Excellent plan B en cas de pluie.",
-   "enfant": "Une parade d'éléphants, de girafes et de zèbres traverse le musée."
+   "enfant": "Une parade d'éléphants, de girafes et de zèbres traverse le musée.",
+   "ferme": [
+    2
+   ],
+   "affluence": "Le plus calme : un matin en semaine."
   },
   {
    "id": "cite-sciences",
@@ -499,7 +512,11 @@
     "en:Cité des Sciences et de l'Industrie"
    ],
    "conseil": "La Cité des enfants propose deux espaces, pour les 2-7 ans et les 5-12 ans, sur séances à réserver. Prévoyez une demi-journée.",
-   "enfant": "Ici, tu as le droit de toucher, de construire et d'expérimenter."
+   "enfant": "Ici, tu as le droit de toucher, de construire et d'expérimenter.",
+   "ferme": [
+    1
+   ],
+   "affluence": "Le plus calme : le matin en semaine, hors vacances. La Cité des enfants fonctionne par séances : réservez la vôtre."
   },
   {
    "id": "villette",
@@ -584,7 +601,8 @@
     "en:Sacré-Cœur, Paris"
    ],
    "conseil": "Le funiculaire évite les marches. Au pied de la butte, un manège attend les petits. Le quartier est très fréquenté : surveillez les enfants dans la foule.",
-   "enfant": "Prends le funiculaire, un petit train qui grimpe la colline tout seul."
+   "enfant": "Prends le funiculaire, un petit train qui grimpe la colline tout seul.",
+   "affluence": "Le plus calme : avant 10 h. L'après-midi, la butte est très chargée ; attention aux vendeurs de bracelets."
   },
   {
    "id": "grevin",
@@ -612,7 +630,8 @@
     "en:Musée Grévin"
    ],
    "conseil": "Des personnages en cire plus vrais que nature : les enfants d'âge scolaire adorent reconnaître sportifs et héros. Bonne option en cas de pluie.",
-   "enfant": "Des statues en cire si réelles qu'on croirait qu'elles vont parler."
+   "enfant": "Des statues en cire si réelles qu'on croirait qu'elles vont parler.",
+   "affluence": "Le plus calme : à l'ouverture en semaine. Billets moins chers en ligne."
   },
   {
    "id": "arts-metiers",
@@ -640,7 +659,11 @@
     "en:Musée des Arts et Métiers"
    ],
    "conseil": "Avions anciens suspendus, automates, pendule de Foucault : le musée des inventions, apprécié des enfants curieux et des ados.",
-   "enfant": "De vieux avions sont accrochés au plafond d'une ancienne église."
+   "enfant": "De vieux avions sont accrochés au plafond d'une ancienne église.",
+   "ferme": [
+    1
+   ],
+   "affluence": "Rarement bondé : une bonne option quand tout le reste est plein."
   },
   {
    "id": "arc",
@@ -669,7 +692,8 @@
     "en:Arc de Triomphe"
    ],
    "conseil": "Gratuit pour les moins de 18 ans. Près de 300 marches mènent à la terrasse et à sa vue sur les Champs-Élysées : à réserver aux enfants bons marcheurs.",
-   "enfant": "En haut, douze grandes avenues partent dans toutes les directions, comme une étoile."
+   "enfant": "En haut, douze grandes avenues partent dans toutes les directions, comme une étoile.",
+   "affluence": "Le plus calme : à l'ouverture ou au coucher du soleil. Accès par le passage souterrain, jamais en traversant la place."
   },
   {
    "id": "acclimatation",
@@ -699,7 +723,8 @@
     "en:Jardin d'Acclimatation"
    ],
    "conseil": "Parc d'attractions à l'ancienne avec manèges, ferme et jeux d'eau, au bord du bois de Boulogne. Prévoyez une demi-journée.",
-   "enfant": "Manèges, petit train et animaux de la ferme, tout dans le même jardin."
+   "enfant": "Manèges, petit train et animaux de la ferme, tout dans le même jardin.",
+   "affluence": "Le plus calme : un matin en semaine. Le mercredi et le week-end, les files aux manèges s'allongent."
   },
   {
    "id": "catacombes",
@@ -728,7 +753,11 @@
     "en:Catacombs of Paris"
    ],
    "conseil": "Des galeries souterraines tapissées d'ossements : fascinant pour les ados, déconseillé aux jeunes enfants et aux personnes sensibles. Nombreuses marches.",
-   "enfant": "Un labyrinthe sous la terre, à vingt mètres sous les rues."
+   "enfant": "Un labyrinthe sous la terre, à vingt mètres sous les rues.",
+   "ferme": [
+    1
+   ],
+   "affluence": "Réservation obligatoire, créneaux souvent complets plusieurs jours à l'avance."
   }
  ],
  "poussette": [

@@ -134,6 +134,32 @@
     return ordre;
   }
 
+  /* Jours de fermeture : 0 = dimanche … 6 = samedi */
+  const JOURS = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
+  const jourSemaine = (p, i) => p.depart ? new Date(new Date(p.depart + 'T12:00').getTime() + i * 864e5).getDay() : null;
+  const fermeLe = (a, p, i) => { const d = jourSemaine(p, i); return d !== null && !!a.ferme && a.ferme.includes(d); };
+  const fermetureTxt = a => a.ferme && a.ferme.length ? `Fermé le ${a.ferme.map(d => JOURS[d]).join(' et le ')}${a.ferme_note ? ` (${a.ferme_note})` : ''}.` : '';
+
+  /* Avec une date d'arrivée : ordre des journées qui évite les jours de fermeture,
+     en bougeant le moins possible le programme (l'excursion reste avant le dernier jour). */
+  function eviterFermetures(jours, p) {
+    if (!p.depart || jours.length < 2 || jours.length > 7) return jours;
+    const conflits = ordre => ordre.reduce((s, j, i) => s + j.acts.filter(a => fermeLe(a, p, i)).length, 0);
+    const valide = ordre => !ordre.some((j, i) => j.excursion && i === ordre.length - 1);
+    let meilleur = jours, score = [conflits(jours), 0];
+    const permuter = (reste, acc) => {
+      if (!reste.length) {
+        if (!valide(acc)) return;
+        const s = [conflits(acc), acc.reduce((t, j, i) => t + Math.abs(jours.indexOf(j) - i), 0)];
+        if (s[0] < score[0] || (s[0] === score[0] && s[1] < score[1])) { meilleur = acc; score = s; }
+        return;
+      }
+      reste.forEach((j, k) => permuter(reste.filter((_, x) => x !== k), acc.concat([j])));
+    };
+    if (score[0] > 0) permuter(jours, []);
+    return meilleur;
+  }
+
   function planifier(v, p) {
     const tous = v.activites.map(a => ({ ...a, s: score(a, p) }));
     const elig = tous.filter(a => a.s > -2 && !a.soir && !a.excursion);
@@ -172,14 +198,16 @@
       const pos = Math.max(0, jours.length - 1);
       jours.splice(pos, 0, { zone: v.zones[excursion.zone].nom, ...j, centre: { lat: excursion.lat, lon: excursion.lon }, excursion: true });
     }
+    const ordre = eviterFermetures(jours, p);
+    jours.splice(0, jours.length, ...ordre);
     jours.forEach((j, i) => { j.n = i + 1; });
 
     // Plan B (pluie, fatigue, fermeture) : lieu couvert non prévu, le plus proche
     const couverts = elig.filter(a => a.interieur);
     const pris = new Set();
-    jours.forEach(j => {
+    jours.forEach((j, i) => {
       if (j.excursion) { j.planB = null; return; }
-      const cout = a => PM.distance(j.centre, a) - a.s * 300 + (pris.has(a.id) || utilises.has(a.id) ? 2500 : 0);
+      const cout = a => PM.distance(j.centre, a) - a.s * 300 + (pris.has(a.id) || utilises.has(a.id) ? 2500 : 0) + (fermeLe(a, p, i) ? 9e5 : 0);
       const libre = couverts.filter(a => !j.acts.some(x => x.id === a.id)).sort((a, b) => cout(a) - cout(b));
       j.planB = libre[0] || null;
       if (j.planB) pris.add(j.planB.id);
@@ -193,7 +221,7 @@
     const ailleurs = new Set(jours.filter((x, k) => k !== i).flatMap(x => x.acts.map(a => a.id)));
     const parJour = Math.max(2, Math.min(j.acts.length, { calme: 2, equilibre: 3, intense: 4 }[p.rythme]));
     const choix = v.activites.map(a => ({ ...a, s: score(a, p) }))
-      .filter(a => a.interieur && !a.soir && !a.excursion && a.s > -2 && !ailleurs.has(a.id))
+      .filter(a => a.interieur && !a.soir && !a.excursion && a.s > -2 && !ailleurs.has(a.id) && !fermeLe(a, p, i))
       .sort((a, b) => (PM.distance(j.centre, a) - a.s * 300) - (PM.distance(j.centre, b) - b.s * 300))
       .slice(0, parJour);
     if (!choix.length) return j;
@@ -365,6 +393,11 @@
       <div id="map" class="no-print" style="margin:22px 0 12px" aria-label="Carte du séjour"></div>
       <div class="filtres no-print">${jours.map((j, i) => `<span class="chip"><i class="pt" style="background:${COULEURS_JOURS[i % 5]}"></i>Jour ${j.n}</span>`).join('')}<span class="chip"><i class="pt" style="background:${PM.CATS.toilettes.couleur}"></i>Toilettes</span><span class="chip"><i class="pt" style="background:${PM.CATS.aire_jeux.couleur}"></i>Aires de jeux</span><span class="chip"><i class="pt" style="background:${PM.CATS.table_langer.couleur}"></i>Tables à langer</span></div>`;
 
+    const quand = (a, i) => {
+      const f = fermetureTxt(a), alerte = fermeLe(a, p, i);
+      if (!f && !a.affluence) return '';
+      return `<p class="quand${alerte ? ' alerte' : ''}">${PM.ico('horloge', 'i s')}<span>${alerte ? `<strong>Attention, ce lieu est normalement fermé ce jour-là :</strong> gardez-le pour un autre jour ou passez au plan B. ` : ''}${f ? `<strong>${esc(f)}</strong> ` : ''}${esc(a.affluence || '')}</span></p>`;
+    };
     const jourHTML = (j, i) => {
       let out = '';
       out += `<article id="jour-${i}" class="jour${j.pluie ? ' jour-couvert' : ''}${met.etat === 'ok' && met.jours[i]?.pluie >= 60 ? ' jour-pluie' : ''}"><div class="jour-tete" style="--c:${FONDS_JOURS[i % 5]}"><h3>Jour ${j.n}${dateJour(i) ? ` <span style="font-weight:600;font-size:.7em">· ${dateJour(i)}</span>` : ''}</h3><span class="badge tampon">${esc(j.zone)}</span>${j.excursion ? '' : `<button class="btn petit ${j.pluie ? 'jaune' : 'sec'} no-print b-pluie" type="button" data-i="${i}">${j.pluie ? 'Revenir au programme' : 'Il pleut ? Version couverte'}</button>`}</div><div class="jour-corps">${bandeauMeteo(met, i)}`;
@@ -379,6 +412,7 @@
           <div class="tete-lieu">${num}<h4>${esc(a.nom)}</h4></div>
           <p>${esc(a.conseil)}</p>
           ${badgesAct(a, p)}
+          ${quand(a, i)}
           <p class="acces">${PM.ico('carte', 'i s')}<span><strong>${esc(a.adresse)}</strong><br>${esc(a.transport)} · environ ${dureeTxt(a.duree)}</span></p>
           <p class="ecran" style="font-size:.9rem"><a href="${PM.lienItineraire(a)}" target="_blank" rel="noopener"><strong>Itinéraire</strong></a>${a.site ? ` · <a href="${esc(a.site)}" target="_blank" rel="noopener"><strong>Site officiel</strong> (horaires, tarifs)</a>` : ''}</p>
           ${a.site ? `<p class="papier" style="font-size:.9rem">Horaires et tarifs : <strong>${esc(PM.domaine(a.site))}</strong></p>` : ''}

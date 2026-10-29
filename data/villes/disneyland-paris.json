@@ -265,7 +265,8 @@
    "transport": "Au bout de Main Street, U.S.A.",
    "wiki": [],
    "conseil": "Montez dans la galerie à l'étage, puis descendez dans la grotte du dragon, sous le château. La grotte est sombre : rassurez les plus petits avant d'entrer.",
-   "enfant": "Sous le château, un grand dragon dort dans sa grotte. Il ouvre parfois un œil…"
+   "enfant": "Sous le château, un grand dragon dort dans sa grotte. Il ouvre parfois un œil…",
+   "affluence": "Pour une photo sans foule, passez juste après l'ouverture."
   },
   {
    "id": "fantasyland",
@@ -290,7 +291,8 @@
    "transport": "Derrière le château",
    "wiki": [],
    "conseil": "Le pays des plus petits : la plupart des attractions conviennent dès le plus jeune âge. Commencez par là dès l'ouverture, les files s'allongent vite.",
-   "enfant": "Des manèges de contes de fées, des bateaux et un carrousel de chevaux."
+   "enfant": "Des manèges de contes de fées, des bateaux et un carrousel de chevaux.",
+   "affluence": "Les files sont les plus courtes dans la première heure après l'ouverture : commencez par ici avec les petits."
   },
   {
    "id": "discoveryland",
@@ -417,7 +419,8 @@
    "transport": "Dans Disney Adventure World, autour du lac",
    "wiki": [],
    "conseil": "La nouvelle zone ouverte en 2026, autour d'un village de montagne enneigé et de son lac. Très demandée : visez l'ouverture ou la fin de journée.",
-   "enfant": "Un village des montagnes, sous la neige, au bord d'un lac."
+   "enfant": "Un village des montagnes, sous la neige, au bord d'un lac.",
+   "affluence": "L'un des secteurs les plus demandés : allez-y dès l'ouverture du parc ou en fin de journée."
   },
   {
    "id": "pixar",
@@ -467,7 +470,8 @@
    "transport": "Dans Disney Adventure World",
    "wiki": [],
    "conseil": "L'univers des super-héros, avec des attractions à sensations et une aventure interactive. Tailles minimales pour certaines attractions.",
-   "enfant": "Le quartier général des super-héros, où tu peux les croiser."
+   "enfant": "Le quartier général des super-héros, où tu peux les croiser.",
+   "affluence": "Les files sont plus courtes en fin de journée, pendant que le public se place pour le spectacle du soir."
   },
   {
    "id": "lac",

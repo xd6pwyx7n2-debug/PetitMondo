@@ -305,6 +305,22 @@ def bloc_poussette(v, a, b):
     return f'<div class="poussette-fiche {a["poussette"]}">{ico("poussette", "i s", b)}<div><strong>{note}</strong>{(f"<span class=muted> · {e(" · ".join(det))}</span>") if det else ""}</div></div>'
 
 
+JOURS_FR = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"]
+
+
+def fermeture_txt(a):
+    if not a.get("ferme"):
+        return ""
+    return "Fermé le " + " et le ".join(JOURS_FR[d] for d in a["ferme"]) + (f' ({a["ferme_note"]})' if a.get("ferme_note") else "") + "."
+
+
+def bloc_quand(a, b):
+    f = fermeture_txt(a)
+    if not f and not a.get("affluence"):
+        return ""
+    return f'<p class="quand">{ico("horloge", "i s", b)}<span>{f"<strong>{e(f)}</strong> " if f else ""}{e(a.get("affluence", ""))}</span></p>'
+
+
 def carte_act(a, v, osm, b):
     site = f'<a href="{e(a["site"])}" target="_blank" rel="noopener">Site officiel</a>' if a.get("site") else ""
     li = []
@@ -319,7 +335,7 @@ def carte_act(a, v, osm, b):
   <h3><a href="{b}{v["id"]}/{a["id"]}/">{e(a["nom"])}</a></h3>
   <div class="meta">Environ {duree(a["duree"])} · {e(v["zones"][a["zone"]]["nom"])}</div>
   <div class="badges">{badges(a)}</div>
-  <p>{e(a["conseil"])}</p>
+  <p>{e(a["conseil"])}</p>{bloc_quand(a, b)}
   <p class="acces">{ico("carte", "i s", b)}<span><strong>{e(a["adresse"])}</strong><br>{e(a["transport"])}</span></p>{bloc_poussette(v, a, b)}{prox}
   <div class="liens"><a class="fiche" href="{b}{v["id"]}/{a["id"]}/">Fiche complète</a><a href="{maps(a["nom"], a["adresse"])}" target="_blank" rel="noopener">Voir sur la carte</a>{site}</div>
 </article>'''
@@ -864,6 +880,8 @@ def pages_lieux(v, osm):
         tuiles = [("Âge conseillé", age), ("Durée", f"environ {duree(a['duree'])}"),
                   ("Lieu", "Couvert" if a["interieur"] else "Plein air"), ("Prix", PRIX[a["gratuit"]]),
                   ("Réservation", "Conseillée" if a["reservation"] else "Pas nécessaire")]
+        if a.get("ferme"):
+            tuiles.append(("Fermeture", "Le " + " et le ".join(JOURS_FR[d] for d in a["ferme"])))
         tuiles_html = "".join(f'<div class="tuile"><small>{t}</small><b>{e(x)}</b></div>' for t, x in tuiles)
 
         # services autour, avec le temps de marche écrit en clair
@@ -896,6 +914,8 @@ def pages_lieux(v, osm):
                (f"{a['nom']} : combien de temps prévoir ?", f"Environ {duree(a['duree'])} sur place, sans compter le trajet."),
                (f"{a['nom']} : peut-on y aller avec une poussette ?", NOTE_POUSSETTE[a["poussette"]] + (". " + "; ".join(pd).capitalize() + "." if pd else ".")),
                (f"{a['nom']} : comment y aller ?", f"{a['adresse']}. {a['transport']}.")]
+        if a.get("affluence") or a.get("ferme"):
+            faq.insert(2, (f"{a['nom']} : quand y aller pour éviter la foule ?", " ".join(x for x in (fermeture_txt(a), a.get("affluence", "")) if x)))
         if a["gratuit"] is not False:
             faq.append((f"{a['nom']} : l'entrée est-elle gratuite ?", "Oui, l'accès est libre." if a["gratuit"] is True else "En partie : l'accès principal est libre, certaines zones ou activités sont payantes."))
 
@@ -917,7 +937,7 @@ def pages_lieux(v, osm):
     <div class="carte">{ico("carte", "i", b)}<h2 style="font-size:1.4rem">Y aller</h2><p><strong>{e(a["adresse"])}</strong></p><p>{e(a["transport"])}</p>
       <p><a href="{maps(a["nom"], a["adresse"])}" target="_blank" rel="noopener">Ouvrir l'itinéraire</a></p></div>
   </div>
-  <div style="margin-top:18px">{bloc_poussette(v, a, b)}</div>
+  <div style="margin-top:18px">{bloc_quand(a, b)}{bloc_poussette(v, a, b)}</div>
 </div></section>
 <section class="ciel"><div class="wrap">
   <h2>Autour <span class="hl">du lieu</span></h2>

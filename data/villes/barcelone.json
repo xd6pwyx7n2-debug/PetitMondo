@@ -264,7 +264,8 @@
     "en:Aquarium Barcelona"
    ],
    "conseil": "Le tunnel sous les requins fait l'unanimité de 2 à 12 ans. Arrivez à l'ouverture : l'affluence monte vite en fin de matinée et le week-end.",
-   "enfant": "Tu vas marcher dans un tunnel en verre, avec des requins au-dessus de ta tête."
+   "enfant": "Tu vas marcher dans un tunnel en verre, avec des requins au-dessus de ta tête.",
+   "affluence": "Le plus calme : à l'ouverture en semaine. Très chargé le dimanche et les jours de pluie."
   },
   {
    "id": "maritim",
@@ -378,7 +379,8 @@
     "en:Barcelona Zoo"
    ],
    "conseil": "Prévoyez une demi-journée. Allées plates, très praticables en poussette. À éviter aux heures les plus chaudes de l'été.",
-   "enfant": "Girafes, éléphants, gorilles : combien d'animaux vas-tu reconnaître ?"
+   "enfant": "Girafes, éléphants, gorilles : combien d'animaux vas-tu reconnaître ?",
+   "affluence": "Le plus calme : un matin en semaine. Prévoyez de l'ombre et de l'eau en été."
   },
   {
    "id": "arc",
@@ -464,7 +466,11 @@
     "en:Mercat de la Boqueria"
    ],
    "conseil": "Couleurs et jus de fruits frais plaisent aux enfants, mais la foule est dense en milieu de journée. Allez-y tôt le matin, en porte-bébé plutôt qu'en poussette.",
-   "enfant": "Un marché plein de fruits de toutes les couleurs. Lequel as-tu envie de goûter ?"
+   "enfant": "Un marché plein de fruits de toutes les couleurs. Lequel as-tu envie de goûter ?",
+   "ferme": [
+    0
+   ],
+   "affluence": "Le plus calme : avant 10 h. Certains étals ferment aussi le lundi."
   },
   {
    "id": "barceloneta",
@@ -493,7 +499,8 @@
     "en:Barceloneta Beach"
    ],
    "conseil": "La plage la plus proche du centre, donc la plus fréquentée. Les jeux pour enfants installés le long de la promenade sont un bon complément.",
-   "enfant": "Château de sable, vagues et coquillages : c'est la plage au milieu de la ville."
+   "enfant": "Château de sable, vagues et coquillages : c'est la plage au milieu de la ville.",
+   "affluence": "En été, venez avant 11 h pour trouver de la place sur le sable."
   },
   {
    "id": "novaicaria",
@@ -548,7 +555,8 @@
     "en:Sagrada Família"
    ],
    "conseil": "La lumière des vitraux impressionne même les plus jeunes. Réservation obligatoire sur créneau. Vérifiez sur le site officiel les conditions pour les poussettes et l'âge minimum pour les tours.",
-   "enfant": "À l'intérieur, les colonnes ressemblent à des arbres et les vitraux font des arcs-en-ciel."
+   "enfant": "À l'intérieur, les colonnes ressemblent à des arbres et les vitraux font des arcs-en-ciel.",
+   "affluence": "Créneau horaire obligatoire, à réserver en ligne. Le premier créneau du matin est le plus calme ; la lumière des vitraux est plus belle l'après-midi."
   },
   {
    "id": "batllo",
@@ -576,7 +584,8 @@
     "en:Casa Batlló"
    ],
    "conseil": "La « maison du dragon » de Gaudí, avec une visite immersive qui parle bien aux enfants d'âge scolaire.",
-   "enfant": "Regarde le toit : il ressemble au dos écaillé d'un dragon."
+   "enfant": "Regarde le toit : il ressemble au dos écaillé d'un dragon.",
+   "affluence": "Le plus calme : à l'ouverture ou en soirée. Réservez en ligne."
   },
   {
    "id": "guell",
@@ -605,7 +614,8 @@
     "en:Park Güell"
    ],
    "conseil": "La salamandre en mosaïque est un incontournable. Le parc est en forte pente : le porte-bébé est bien plus pratique. Zone monumentale sur réservation.",
-   "enfant": "Cherche la grande salamandre en mosaïque qui garde l'escalier."
+   "enfant": "Cherche la grande salamandre en mosaïque qui garde l'escalier.",
+   "affluence": "Créneau horaire obligatoire pour la zone monumentale, à réserver plusieurs jours à l'avance en été."
   },
   {
    "id": "bunkers",
@@ -661,7 +671,8 @@
     "en:Montjuïc Cable Car"
    ],
    "conseil": "Les cabines survolent la ville jusqu'au château : une petite aventure pour les enfants et un moyen simple de monter sur la colline.",
-   "enfant": "Tu vas voler au-dessus des arbres dans une petite cabine suspendue."
+   "enfant": "Tu vas voler au-dessus des arbres dans une petite cabine suspendue.",
+   "affluence": "La file s'allonge vers midi : montez le matin."
   },
   {
    "id": "castell",
@@ -747,7 +758,8 @@
     "en:Magic Fountain of Montjuïc"
    ],
    "conseil": "Spectacle d'eau, de lumière et de musique en soirée, selon un calendrier saisonnier, parfois suspendu en période de sécheresse. Vérifiez qu'il a bien lieu avant d'y aller.",
-   "enfant": "Le soir, l'eau danse en musique et change de couleur."
+   "enfant": "Le soir, l'eau danse en musique et change de couleur.",
+   "affluence": "Spectacle seulement certains soirs, selon la saison, et parfois suspendu en cas de sécheresse : vérifiez le calendrier."
   },
   {
    "id": "cosmocaixa",
@@ -776,7 +788,8 @@
     "en:CosmoCaixa Barcelona"
    ],
    "conseil": "Le grand musée des sciences de la ville, avec une forêt amazonienne reconstituée sous verre. Excellent plan B en cas de pluie : prévoyez au moins une demi-journée.",
-   "enfant": "Une vraie forêt tropicale sous une serre, avec des poissons géants."
+   "enfant": "Une vraie forêt tropicale sous une serre, avec des poissons géants.",
+   "affluence": "Le plus calme : un après-midi en semaine. Le matin, les groupes scolaires sont nombreux."
   },
   {
    "id": "tibidabo",
@@ -804,7 +817,8 @@
     "en:Tibidabo Amusement Park"
    ],
    "conseil": "Manèges anciens et modernes au sommet de la montagne, avec vue sur toute la ville. Ouverture selon un calendrier saisonnier, souvent limitée aux week-ends hors été : vérifiez avant d'y aller.",
-   "enfant": "Des manèges tout en haut d'une montagne, avec la mer au loin."
+   "enfant": "Des manèges tout en haut d'une montagne, avec la mer au loin.",
+   "affluence": "Le grand parc n'ouvre pas tous les jours : surtout les week-ends et pendant l'été. Vérifiez le calendrier avant de monter."
   },
   {
    "id": "laberint",
@@ -862,7 +876,10 @@
     "en:Museu Blau"
    ],
    "conseil": "Squelette de baleine, minéraux et fossiles dans un bâtiment moderne et spacieux. Bonne alternative couverte, moins fréquentée que les grands sites.",
-   "enfant": "Un immense squelette de baleine t'attend dans ce musée tout bleu."
+   "enfant": "Un immense squelette de baleine t'attend dans ce musée tout bleu.",
+   "ferme": [
+    1
+   ]
   },
   {
    "id": "diagonalmar",

@@ -284,7 +284,8 @@
     "en:Prague astronomical clock"
    ],
    "conseil": "Le petit spectacle a lieu à chaque heure, de 9 h à 23 h. Arrivez cinq minutes avant et placez les enfants devant, face à l'horloge.",
-   "enfant": "Une horloge magique où un squelette sonne la cloche."
+   "enfant": "Une horloge magique où un squelette sonne la cloche.",
+   "affluence": "À chaque heure pile, la foule se masse devant l'horloge : arrivez cinq minutes avant. Le plus calme : 9 h."
   },
   {
    "id": "karluvmost",
@@ -312,7 +313,8 @@
     "en:Charles Bridge"
    ],
    "conseil": "Piéton et pavé, avec musiciens et dessinateurs. Très calme avant 9 h, bondé l'après-midi : gardez les petits par la main.",
-   "enfant": "Un très vieux pont de pierre gardé par trente statues."
+   "enfant": "Un très vieux pont de pierre gardé par trente statues.",
+   "affluence": "Le plus calme : avant 8 h. Entre 11 h et 18 h, le pont est bondé."
   },
   {
    "id": "hrad",
@@ -340,7 +342,8 @@
     "en:Prague Castle"
    ],
    "conseil": "Les cours et les jardins sont gratuits ; la cathédrale, le vieux palais et la ruelle d'Or sont payants. Ne manquez pas la relève de la garde à midi, avec fanfare, à l'entrée principale.",
-   "enfant": "Un château immense avec des gardes qui changent de place à midi."
+   "enfant": "Un château immense avec des gardes qui changent de place à midi.",
+   "affluence": "Le plus calme : à l'ouverture. Relève de la garde avec fanfare à midi."
   },
   {
    "id": "hracky",
@@ -364,8 +367,11 @@
    ],
    "transport": "Dans l'enceinte du château, au bout de la ruelle Jiřská",
    "wiki": [],
-   "conseil": "Une heure de vitrines pleines de jouets anciens, de trains et de poupées. Peu interactif, mais parfait pour une pause au chaud pendant la visite du château. Fermé le lundi.",
-   "enfant": "Des jouets de toutes les époques, de l'arrière-grand-mère à aujourd'hui."
+   "conseil": "Une heure de vitrines pleines de jouets anciens, de trains et de poupées. Peu interactif, mais parfait pour une pause au chaud pendant la visite du château.",
+   "enfant": "Des jouets de toutes les époques, de l'arrière-grand-mère à aujourd'hui.",
+   "ferme": [
+    1
+   ]
   },
   {
    "id": "kampa",
@@ -422,7 +428,8 @@
     "en:Petřín funicular"
    ],
    "conseil": "Montez en funiculaire, redescendez à pied par les jardins et les vergers. Gratuit pour les moins de 15 ans ; les gares ne sont pas encore accessibles sans marche.",
-   "enfant": "Un petit train qui grimpe tout droit sur la colline."
+   "enfant": "Un petit train qui grimpe tout droit sur la colline.",
+   "affluence": "File d'attente au funiculaire le week-end : montez tôt."
   },
   {
    "id": "rozhledna",
@@ -478,7 +485,8 @@
     "en:Prague Zoo"
    ],
    "conseil": "L'un des plus beaux zoos d'Europe, sur une colline : prévoyez la journée. Un petit télésiège relie le bas et le haut du zoo, pratique pour les petites jambes.",
-   "enfant": "Gorilles, éléphants et un télésiège au milieu des animaux."
+   "enfant": "Gorilles, éléphants et un télésiège au milieu des animaux.",
+   "affluence": "Le plus calme : un matin en semaine. Très chargé le week-end quand il fait beau."
   },
   {
    "id": "ntm",
@@ -505,8 +513,12 @@
     "cs:Národní technické muzeum",
     "en:National Technical Museum (Prague)"
    ],
-   "conseil": "Une immense halle remplie de locomotives, de voitures anciennes et d'avions suspendus. Idéal par temps de pluie. Fermé le lundi.",
-   "enfant": "Des trains, des autos et des avions accrochés au plafond."
+   "conseil": "Une immense halle remplie de locomotives, de voitures anciennes et d'avions suspendus. Idéal par temps de pluie.",
+   "enfant": "Des trains, des autos et des avions accrochés au plafond.",
+   "ferme": [
+    1
+   ],
+   "affluence": "Le plus calme : un matin en semaine."
   },
   {
    "id": "planetarium",
@@ -533,8 +545,12 @@
     "cs:Planetárium Praha",
     "en:Prague Planetarium"
    ],
-   "conseil": "Rouvert en 2025 après travaux, avec une exposition interactive sur l'espace en plus des séances sous le dôme. Fermé le lundi.",
-   "enfant": "Un ciel plein d'étoiles, même en plein jour."
+   "conseil": "Rouvert en 2025 après travaux, avec une exposition interactive sur l'espace en plus des séances sous le dôme.",
+   "enfant": "Un ciel plein d'étoiles, même en plein jour.",
+   "ferme": [
+    1
+   ],
+   "affluence": "Séances sous le dôme à heure fixe : réservez."
   },
   {
    "id": "stromovka",
@@ -644,7 +660,8 @@
    "transport": "Métro B, station Národní třída",
    "wiki": [],
    "conseil": "Plus de 3 000 modèles en briques, des villes miniatures et un coin pour construire. Une bonne carte à garder pour une averse.",
-   "enfant": "Des villes entières construites en petites briques."
+   "enfant": "Des villes entières construites en petites briques.",
+   "affluence": "Le plus calme : le matin. Bonne option par temps de pluie."
   },
   {
    "id": "kralovstvi",
@@ -670,7 +687,8 @@
    "transport": "Métro B, station Anděl, puis 5 min à pied",
    "wiki": [],
    "conseil": "Une gigantesque maquette ferroviaire du pays, avec des boutons pour faire rouler les trains et un espace de jeux pour les petits. Moins cher en semaine et en ligne.",
-   "enfant": "Des centaines de petits trains qui roulent quand tu appuies sur les boutons."
+   "enfant": "Des centaines de petits trains qui roulent quand tu appuies sur les boutons.",
+   "affluence": "Moins cher en semaine et en ligne. Le plus calme : un matin en semaine."
   },
   {
    "id": "vysehrad",
@@ -757,7 +775,12 @@
    ],
    "conseil": "Un vrai château de conte sur son rocher, bâti pour garder les joyaux de la couronne. La visite se fait avec un guide : réservez. La montée est raide, laissez la poussette pour un porte-bébé.",
    "enfant": "Un château de chevaliers perché sur un rocher.",
-   "excursion": true
+   "excursion": true,
+   "ferme": [
+    1
+   ],
+   "ferme_note": "de juillet à octobre ; de novembre à mars, ouverture réduite, surtout le week-end",
+   "affluence": "Visite guidée à heure fixe : réservez en ligne, surtout en été."
   }
  ]
 }

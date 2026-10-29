@@ -290,7 +290,8 @@
     "en:Natural History Museum, London"
    ],
    "conseil": "Entrée gratuite. Le squelette de baleine bleue suspendu dans le grand hall et la galerie des dinosaures sont les incontournables. Arrivez à l'ouverture.",
-   "enfant": "Un dinosaure qui bouge et un squelette de baleine bleue géant t'attendent."
+   "enfant": "Un dinosaure qui bouge et un squelette de baleine bleue géant t'attendent.",
+   "affluence": "Le plus calme : un après-midi en semaine. Le matin, les sorties scolaires sont nombreuses ; l'entrée d'Exhibition Road est souvent plus rapide."
   },
   {
    "id": "science",
@@ -317,7 +318,8 @@
     "en:Science Museum, London"
    ],
    "conseil": "Entrée gratuite, galerie interactive Wonderlab payante. Fusées, machines à vapeur et expériences : parfait quand il pleut.",
-   "enfant": "Des fusées, des avions et une galerie où tu fais toi-même les expériences."
+   "enfant": "Des fusées, des avions et une galerie où tu fais toi-même les expériences.",
+   "affluence": "Le plus calme : un après-midi en semaine. La galerie Wonderlab est payante : réservez un créneau."
   },
   {
    "id": "diana",
@@ -400,7 +402,8 @@
     "en:Buckingham Palace"
    ],
    "conseil": "La relève de la garde n'a pas lieu tous les jours : vérifiez le calendrier officiel. Venez 45 minutes en avance pour être au premier rang, la foule est dense.",
-   "enfant": "Les gardes portent de grands bonnets noirs en fourrure et des vestes rouges."
+   "enfant": "Les gardes portent de grands bonnets noirs en fourrure et des vestes rouges.",
+   "affluence": "Pour la relève de la garde, arrivez 45 minutes avant. Elle n'a pas lieu tous les jours : vérifiez le calendrier."
   },
   {
    "id": "stjames",
@@ -455,7 +458,8 @@
     "en:London Eye"
    ],
    "conseil": "Un tour complet dure environ 30 minutes, dans une capsule vitrée. Réservez un créneau en ligne pour éviter la longue file.",
-   "enfant": "Monte dans une bulle de verre et vois Londres d'en haut."
+   "enfant": "Monte dans une bulle de verre et vois Londres d'en haut.",
+   "affluence": "Le plus calme : le premier tour du matin. Billets moins chers en ligne."
   },
   {
    "id": "sealife",
@@ -482,7 +486,8 @@
     "en:Sea Life London Aquarium"
    ],
    "conseil": "Juste à côté du London Eye : facile à combiner le même jour, et pratique quand il pleut.",
-   "enfant": "Requins, pingouins et tortues de mer, juste au bord de la Tamise."
+   "enfant": "Requins, pingouins et tortues de mer, juste au bord de la Tamise.",
+   "affluence": "Le plus calme : à l'ouverture ou après 16 h. Billets moins chers en ligne."
   },
   {
    "id": "tower",
@@ -510,7 +515,8 @@
     "en:Tower of London"
    ],
    "conseil": "Joyaux de la Couronne, corbeaux et gardiens en costume (les Yeomen Warders) : une demi-journée de chevaliers. Les visites guidées par les gardiens plaisent aux enfants.",
-   "enfant": "Ici sont gardées les vraies couronnes des rois et des reines."
+   "enfant": "Ici sont gardées les vraies couronnes des rois et des reines.",
+   "affluence": "Allez d'abord voir les joyaux de la Couronne, dès l'ouverture : la file grossit vite."
   },
   {
    "id": "towerbridge",
@@ -564,7 +570,8 @@
     "en:British Museum"
    ],
    "conseil": "Entrée gratuite. Avec des enfants, filez vers les momies égyptiennes, très appréciées, puis repartez avant la fatigue.",
-   "enfant": "Des momies égyptiennes et la pierre de Rosette, qui a permis de lire les hiéroglyphes."
+   "enfant": "Des momies égyptiennes et la pierre de Rosette, qui a permis de lire les hiéroglyphes.",
+   "affluence": "Le plus calme : à l'ouverture ou le vendredi soir. Réservation gratuite conseillée."
   },
   {
    "id": "transport",
@@ -592,7 +599,8 @@
     "en:London Transport Museum"
    ],
    "conseil": "Vieux bus, tramways et rames de métro dans lesquels on peut monter. Un espace de jeu est prévu pour les plus petits.",
-   "enfant": "Monte dans de vieux bus rouges et de vieilles rames de métro."
+   "enfant": "Monte dans de vieux bus rouges et de vieilles rames de métro.",
+   "affluence": "Le plus calme : un après-midi en semaine. Le billet reste valable un an."
   },
   {
    "id": "covent",
@@ -671,7 +679,8 @@
     "en:London Zoo"
    ],
    "conseil": "L'un des plus anciens zoos scientifiques du monde, dans Regent's Park. Réserver en ligne coûte généralement moins cher qu'au guichet.",
-   "enfant": "Pingouins, gorilles et tigres vivent dans un grand parc royal."
+   "enfant": "Pingouins, gorilles et tigres vivent dans un grand parc royal.",
+   "affluence": "Le plus calme : un matin en semaine. Les repas des animaux, affichés à l'entrée, sont les meilleurs moments."
   },
   {
    "id": "youngva",
@@ -699,7 +708,8 @@
     "en:Young V&A"
    ],
    "conseil": "Un musée gratuit entièrement pensé pour les enfants : jouets, design, espaces pour jouer et créer. Plus calme que les grands musées du centre.",
-   "enfant": "Un musée rien que pour les enfants, où l'on joue, construit et dessine."
+   "enfant": "Un musée rien que pour les enfants, où l'on joue, construit et dessine.",
+   "affluence": "Très chargé le week-end et pendant les vacances : venez à l'ouverture."
   },
   {
    "id": "greenwich",
@@ -726,7 +736,8 @@
     "en:Royal Observatory, Greenwich"
    ],
    "conseil": "Poser un pied de chaque côté du méridien de Greenwich amuse tous les âges. Le parc en pente offre une vue superbe sur Londres. Venir en bateau fait partie de l'aventure.",
-   "enfant": "Mets un pied de chaque côté de la ligne : tu es à l'est et à l'ouest en même temps !"
+   "enfant": "Mets un pied de chaque côté de la ligne : tu es à l'est et à l'ouest en même temps !",
+   "affluence": "Le plus calme : un matin en semaine. La vue depuis la colline est gratuite."
   },
   {
    "id": "harrypotter",
@@ -753,7 +764,8 @@
    "transport": "Train depuis London Euston jusqu'à Watford Junction, puis navette des studios",
    "wiki": [],
    "conseil": "Hors de Londres, à environ une heure de trajet. Billets uniquement en ligne, souvent complets des semaines à l'avance. Comptez une demi-journée sur place.",
-   "enfant": "Les vrais décors des films : la Grande Salle, le chemin de Traverse et le Poudlard Express."
+   "enfant": "Les vrais décors des films : la Grande Salle, le chemin de Traverse et le Poudlard Express.",
+   "affluence": "Billets uniquement en ligne, à réserver longtemps à l'avance pendant les vacances scolaires."
   }
  ],
  "poussette": [

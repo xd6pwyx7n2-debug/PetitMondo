@@ -538,3 +538,8 @@ footer small{opacity:.75;display:block;margin-top:14px}
 @media(max-width:620px){.plaque{gap:6px;padding:6px 8px}.plaque .drapeau{width:26px}.plaque b{font-size:.85rem}}
 .plaque b{hyphens:manual}
 @media(max-width:620px){.plaque{grid-template-columns:auto minmax(0,1fr) auto}.plaque .drapeau{display:none}}
+/* ---------- quand y aller : fermeture et affluence */
+.quand{display:flex;gap:8px;align-items:flex-start;font-size:.92rem;background:var(--soleil-c);border-radius:var(--r-p);padding:8px 10px;margin:8px 0}
+.quand .i{flex:none}
+.quand.alerte{background:var(--corail-c);border:2px solid var(--corail)}
+@media print{.quand{break-inside:avoid;page-break-inside:avoid}}
