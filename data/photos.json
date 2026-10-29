@@ -1,4 +1,154 @@
 {
+ "amsterdam/_ville": {
+  "article": "https://nl.wikipedia.org/wiki/Amsterdam",
+  "auteur": "Andrés Barrios",
+  "fichier": "assets/photos/amsterdam/_ville.jpg",
+  "h": 667,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png"
+ },
+ "amsterdam/adam": {
+  "article": "https://nl.wikipedia.org/wiki/A%27DAM_Toren",
+  "auteur": "Slaunger",
+  "fichier": "assets/photos/amsterdam/adam.jpg",
+  "h": 1945,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Shell_Tower_Amsterdam-Noord_from_tour_boat_2016-09-12.jpg"
+ },
+ "amsterdam/annefrank": {
+  "article": "https://nl.wikipedia.org/wiki/Anne_Frank_Huis",
+  "auteur": "Juan Emilio Prades Bel",
+  "fichier": "assets/photos/amsterdam/annefrank.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "CC BY 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Jud%C3%ADas_verdes_(Phaseolus_vulgaris).jpg"
+ },
+ "amsterdam/artis": {
+  "article": "https://en.wikipedia.org/wiki/Artis_%28zoo%29",
+  "auteur": "The original uploader was Mtcv at Dutch Wikipedia.",
+  "fichier": "assets/photos/amsterdam/artis.jpg",
+  "h": 574,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:ArtisIngang.jpg"
+ },
+ "amsterdam/bloemenmarkt": {
+  "article": "https://nl.wikipedia.org/wiki/Bloemenmarkt",
+  "auteur": "Shadowgate from Novara, ITALY",
+  "fichier": "assets/photos/amsterdam/bloemenmarkt.jpg",
+  "h": 666,
+  "l": 1000,
+  "licence": "CC BY 2.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Amsterdam_(16033009226).jpg"
+ },
+ "amsterdam/bos": {
+  "article": "https://nl.wikipedia.org/wiki/Amsterdamse_Bos",
+  "auteur": "Shirley de Jong",
+  "fichier": "assets/photos/amsterdam/bos.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Amsterdamse-bos-heuvel.jpg"
+ },
+ "amsterdam/canaux": {
+  "article": "https://en.wikipedia.org/wiki/Canals_of_Amsterdam",
+  "auteur": "Andrés Barrios",
+  "fichier": "assets/photos/amsterdam/canaux.jpg",
+  "h": 667,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png"
+ },
+ "amsterdam/dam": {
+  "article": "https://nl.wikipedia.org/wiki/Dam_%28Amsterdam%29",
+  "auteur": "Deerpeter",
+  "fichier": "assets/photos/amsterdam/dam.jpg",
+  "h": 666,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Dam_Square_2026.jpg"
+ },
+ "amsterdam/micropia": {
+  "article": "https://en.wikipedia.org/wiki/Micropia_%28museum%29",
+  "auteur": "Eric de Redelijkheid",
+  "fichier": "assets/photos/amsterdam/micropia.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "CC BY-SA 2.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Micropia_Museum_Amsterdam_4.jpg"
+ },
+ "amsterdam/nemo": {
+  "article": "https://nl.wikipedia.org/wiki/NEMO_%28museum%29",
+  "auteur": "Velvet",
+  "fichier": "assets/photos/amsterdam/nemo.jpg",
+  "h": 599,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Amsterdam_vue_Nemo.JPG"
+ },
+ "amsterdam/rijks": {
+  "article": "https://nl.wikipedia.org/wiki/Rijksmuseum_Amsterdam",
+  "auteur": "User:Voytikof",
+  "fichier": "assets/photos/amsterdam/rijks.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "CC BY-SA 2.5",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/2.5",
+  "source": "https://commons.wikimedia.org/wiki/File:Amsterdam_-_Rijksmuseum.jpg"
+ },
+ "amsterdam/scheepvaart": {
+  "article": "https://nl.wikipedia.org/wiki/Het_Scheepvaartmuseum",
+  "auteur": "Gouwenaar",
+  "fichier": "assets/photos/amsterdam/scheepvaart.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "CC0",
+  "lien_licence": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:Het_scheepvaartmuseum1_Amsterdam.jpg"
+ },
+ "amsterdam/vondel": {
+  "article": "https://nl.wikipedia.org/wiki/Vondelpark",
+  "auteur": "Dguendel",
+  "fichier": "assets/photos/amsterdam/vondel.jpg",
+  "h": 667,
+  "l": 1000,
+  "licence": "CC BY 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Amsterdam,_Vondelpark,_at_the_pond-2.jpg"
+ },
+ "amsterdam/westerpark": {
+  "article": "https://nl.wikipedia.org/wiki/Westerpark_%28park%29",
+  "auteur": "Bert van As",
+  "fichier": "assets/photos/amsterdam/westerpark.jpg",
+  "h": 667,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Overzicht_Westerpark_met_eenden_en_fonteinen_-_Amsterdam_-_20536573_-_RCE.jpg"
+ },
+ "amsterdam/zaanse": {
+  "article": "https://nl.wikipedia.org/wiki/Zaanse_Schans",
+  "auteur": "罗布泊",
+  "fichier": "assets/photos/amsterdam/zaanse.jpg",
+  "h": 664,
+  "l": 1000,
+  "licence": "CC BY 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:%E8%8D%B7%E5%85%B0%E8%B5%9E%E4%B8%B9_Holland_Zaandam_China_Xinjiang_Urumqi_Welcome_you_to_tour_t_-_panoramio_(2).jpg"
+ },
  "barcelone/_ville": {
   "article": "https://en.wikipedia.org/wiki/Barcelona",
   "auteur": "M McBey",
@@ -238,6 +388,176 @@
   "licence": "CC BY-SA 3.0",
   "lien_licence": "http://creativecommons.org/licenses/by-sa/3.0/",
   "source": "https://commons.wikimedia.org/wiki/File:Barcelona.Zoologico.jpg"
+ },
+ "lisbonne/_ville": {
+  "article": "https://pt.wikipedia.org/wiki/Lisboa",
+  "auteur": "Deensel",
+  "fichier": "assets/photos/lisbonne/_ville.jpg",
+  "h": 517,
+  "l": 1000,
+  "licence": "CC BY 2.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Lisbon_(36831596786)_(cropped).jpg"
+ },
+ "lisbonne/alfama": {
+  "article": "https://pt.wikipedia.org/wiki/Alfama",
+  "auteur": "dirk.olbertz",
+  "fichier": "assets/photos/lisbonne/alfama.jpg",
+  "h": 666,
+  "l": 1000,
+  "licence": "CC BY 2.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Alfama,_Lisboa_-_2010-09-09.jpg"
+ },
+ "lisbonne/cascais": {
+  "article": "https://pt.wikipedia.org/wiki/Cascais",
+  "auteur": "pedrik",
+  "fichier": "assets/photos/lisbonne/cascais.jpg",
+  "h": 664,
+  "l": 1000,
+  "licence": "CC BY 2.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Cascais_(20909928930).jpg"
+ },
+ "lisbonne/castelo": {
+  "article": "https://pt.wikipedia.org/wiki/Castelo_de_S%C3%A3o_Jorge",
+  "auteur": "Auteur inconnu",
+  "fichier": "assets/photos/lisbonne/castelo.jpg",
+  "h": 525,
+  "l": 394,
+  "licence": "CC BY-SA 2.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Castelo_Sao_Jorge_Lisboa_1.JPG"
+ },
+ "lisbonne/coches": {
+  "article": "https://pt.wikipedia.org/wiki/Museu_Nacional_dos_Coches",
+  "auteur": "Pedro Beltrão",
+  "fichier": "assets/photos/lisbonne/coches.jpg",
+  "h": 666,
+  "l": 1000,
+  "licence": "CC BY 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Antigo_Picadeiro_Real.jpg"
+ },
+ "lisbonne/comercio": {
+  "article": "https://pt.wikipedia.org/wiki/Pra%C3%A7a_do_Com%C3%A9rcio",
+  "auteur": "Deensel",
+  "fichier": "assets/photos/lisbonne/comercio.jpg",
+  "h": 666,
+  "l": 1000,
+  "licence": "CC BY 2.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Pra%C3%A7a_do_Com%C3%A9rcio_and_Baixa_Pombalina_(cropped_and_retouched).jpg"
+ },
+ "lisbonne/eduardo": {
+  "article": "https://pt.wikipedia.org/wiki/Parque_Eduardo_VII",
+  "auteur": "Alvesgaspar",
+  "fichier": "assets/photos/lisbonne/eduardo.jpg",
+  "h": 667,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Lisboa_April_2014-1.jpg"
+ },
+ "lisbonne/estrela": {
+  "article": "https://pt.wikipedia.org/wiki/Jardim_da_Estrela",
+  "auteur": "Vitor Oliveira from Torres Vedras, PORTUGAL",
+  "fichier": "assets/photos/lisbonne/estrela.jpg",
+  "h": 666,
+  "l": 1000,
+  "licence": "CC BY-SA 2.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Jardim_da_Estrela_-_Lisboa_-_Portugal_(15227514472).jpg"
+ },
+ "lisbonne/gulbenkian": {
+  "article": "https://pt.wikipedia.org/wiki/Funda%C3%A7%C3%A3o_Calouste_Gulbenkian",
+  "auteur": "Fundação Calouste Gulbenkian",
+  "fichier": "assets/photos/lisbonne/gulbenkian.jpg",
+  "h": 271,
+  "l": 267,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:FCG_Calouste_Gulbenkian_Logo.jpg"
+ },
+ "lisbonne/jeronimos": {
+  "article": "https://pt.wikipedia.org/wiki/Mosteiro_dos_Jer%C3%B3nimos",
+  "auteur": "Holger Uwe Schmitt",
+  "fichier": "assets/photos/lisbonne/jeronimos.jpg",
+  "h": 601,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:1502_legte_K%C3%B6nig_Manuel_I._den_Grundstein_f%C3%BCr_das_Hieronymus_Kloster_in_Lissabon._06.jpg"
+ },
+ "lisbonne/marioneta": {
+  "article": "https://pt.wikipedia.org/wiki/Museu_da_Marioneta",
+  "auteur": "Hipersyl",
+  "fichier": "assets/photos/lisbonne/marioneta.jpg",
+  "h": 1253,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Museu_da_Marioneta.jpg"
+ },
+ "lisbonne/oceanario": {
+  "article": "https://pt.wikipedia.org/wiki/Ocean%C3%A1rio_de_Lisboa",
+  "auteur": "Shadowgate from Novara, ITALY",
+  "fichier": "assets/photos/lisbonne/oceanario.jpg",
+  "h": 666,
+  "l": 1000,
+  "licence": "CC BY 2.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Lisbon_Oceanarium_(34535938846).jpg"
+ },
+ "lisbonne/padrao": {
+  "article": "https://pt.wikipedia.org/wiki/Padr%C3%A3o_dos_Descobrimentos",
+  "auteur": "Diego Delso",
+  "fichier": "assets/photos/lisbonne/padrao.jpg",
+  "h": 1612,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Monumento_a_los_Descubrimientos,_Lisboa,_Portugal,_2012-05-12,_DD_19.JPG"
+ },
+ "lisbonne/pasteis": {
+  "article": "https://pt.wikipedia.org/wiki/Past%C3%A9is_de_Bel%C3%A9m",
+  "auteur": "fw42 from Germany",
+  "fichier": "assets/photos/lisbonne/pasteis.jpg",
+  "h": 666,
+  "l": 1000,
+  "licence": "CC BY 2.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Pastel_de_nata_(18616473070).jpg"
+ },
+ "lisbonne/pavilhao": {
+  "article": "https://pt.wikipedia.org/wiki/Pavilh%C3%A3o_do_Conhecimento",
+  "auteur": "Ana Rita Maciel",
+  "fichier": "assets/photos/lisbonne/pavilhao.jpg",
+  "h": 562,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Pavilion_of_Knowledge.png"
+ },
+ "lisbonne/torre": {
+  "article": "https://pt.wikipedia.org/wiki/Torre_de_Bel%C3%A9m",
+  "auteur": "Lisbon Photoshoots",
+  "fichier": "assets/photos/lisbonne/torre.jpg",
+  "h": 667,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Bel%C3%A9m_Tower_in_Lisbon,_Portugal.jpg"
+ },
+ "lisbonne/zoo": {
+  "article": "https://pt.wikipedia.org/wiki/Jardim_Zool%C3%B3gico_de_Lisboa",
+  "auteur": "Auteur inconnu",
+  "fichier": "assets/photos/lisbonne/zoo.jpg",
+  "h": 394,
+  "l": 525,
+  "licence": "CC BY 2.5",
+  "lien_licence": "https://creativecommons.org/licenses/by/2.5",
+  "source": "https://commons.wikimedia.org/wiki/File:Jardim_Zoologico_Lisboa_1.JPG"
  },
  "londres/_ville": {
   "article": "https://en.wikipedia.org/wiki/London",
