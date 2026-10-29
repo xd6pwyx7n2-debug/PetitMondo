@@ -383,7 +383,10 @@ footer small{opacity:.75;display:block;margin-top:14px}
   .page-enfant h3,.page-enfant h4,.jour-tete{break-after:avoid}
   .voir-page .voir-grille{grid-template-columns:repeat(3,1fr)!important}
   .voir{break-inside:avoid}
-  .bingo{grid-template-columns:repeat(6,1fr)!important}
+  .bingo{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important}
+  .bingo div{font-size:11pt;aspect-ratio:auto;min-height:28mm;padding:4px}
+  .bingo div svg{width:34%}
+  .bingo.mini{display:none}
   .tuiles{grid-template-columns:repeat(2,1fr)!important}
   .mot{grid-template-columns:1fr 1.2fr 1fr!important}
   .mot.def{grid-template-columns:1fr 2fr!important}
