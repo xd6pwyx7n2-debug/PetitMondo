@@ -774,7 +774,7 @@ def pages_ville(v, osm):
     if "restaurants-enfants" in slugs:
         def resto_carte(p):
             t = p["t"]
-            site = f'<a href="{e(t["website"])}" target="_blank" rel="noopener">Site</a>' if t.get("website") else ""
+            site = f'<a href="{e(t["website"] if t["website"].startswith("http") else "https://" + t["website"])}" target="_blank" rel="noopener">Site</a>' if t.get("website") else ""
             heures = f'<p class="muted">{e(t["opening_hours"])}</p>' if t.get("opening_hours") else ""
             return (f'<div class="carte act">{ico("resto", "i", b2)}<h3>{e(nom_point(p))}</h3><p>{e(detail_point(p)) or "Équipement famille signalé"}</p>{heures}'
                     f'<div class="liens"><a href="{maps("", lat=p["lat"], lon=p["lon"])}" target="_blank" rel="noopener">Voir sur la carte</a>{site}</div></div>')
