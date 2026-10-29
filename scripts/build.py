@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Génère toutes les pages statiques de PetitMondo à partir des données.
 
-Usage : python scripts/build.py
+Usage : python scripts/build.py  (relancé automatiquement par les actions OSM et photos)
 Entrées : data/villes/*.json (destinations), data/osm/*.json (services OpenStreetMap),
           data/photos.json (photos libres et crédits, voir fetch_photos.py)
 Sorties : toutes les pages index.html, data/enfants/<ville>.html (pages enfants du carnet), sitemap.xml

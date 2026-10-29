@@ -14,7 +14,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: contenu
+  group: osm
   cancel-in-progress: false
 
 jobs:
