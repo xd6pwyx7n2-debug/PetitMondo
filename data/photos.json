@@ -19,16 +19,6 @@
   "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
   "source": "https://commons.wikimedia.org/wiki/File:Shell_Tower_Amsterdam-Noord_from_tour_boat_2016-09-12.jpg"
  },
- "amsterdam/annefrank": {
-  "article": "https://nl.wikipedia.org/wiki/Anne_Frank_Huis",
-  "auteur": "Juan Emilio Prades Bel",
-  "fichier": "assets/photos/amsterdam/annefrank.jpg",
-  "h": 750,
-  "l": 1000,
-  "licence": "CC BY 4.0",
-  "lien_licence": "https://creativecommons.org/licenses/by/4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Jud%C3%ADas_verdes_(Phaseolus_vulgaris).jpg"
- },
  "amsterdam/artis": {
   "article": "https://en.wikipedia.org/wiki/Artis_%28zoo%29",
   "auteur": "The original uploader was Mtcv at Dutch Wikipedia.",
@@ -468,16 +458,6 @@
   "licence": "CC BY-SA 2.0",
   "lien_licence": "https://creativecommons.org/licenses/by-sa/2.0",
   "source": "https://commons.wikimedia.org/wiki/File:Jardim_da_Estrela_-_Lisboa_-_Portugal_(15227514472).jpg"
- },
- "lisbonne/gulbenkian": {
-  "article": "https://pt.wikipedia.org/wiki/Funda%C3%A7%C3%A3o_Calouste_Gulbenkian",
-  "auteur": "Fundação Calouste Gulbenkian",
-  "fichier": "assets/photos/lisbonne/gulbenkian.jpg",
-  "h": 271,
-  "l": 267,
-  "licence": "CC BY-SA 4.0",
-  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:FCG_Calouste_Gulbenkian_Logo.jpg"
  },
  "lisbonne/jeronimos": {
   "article": "https://pt.wikipedia.org/wiki/Mosteiro_dos_Jer%C3%B3nimos",

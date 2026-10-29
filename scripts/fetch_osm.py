@@ -94,7 +94,11 @@ def categorie(tags):
     if tags.get("highway") == "elevator":
         return "ascenseur"
     if tags.get("railway") == "station" or (tags.get("public_transport") == "station" and tags.get("subway") == "yes"):
-        return "station" if tags.get("name") else None
+        nom = tags.get("name", "")
+        # écarte les gares de petits trains touristiques (parcs d'attractions, musées)
+        if not nom or "railroad" in nom.lower() or tags.get("usage") == "tourism" or tags.get("railway:preserved") == "yes":
+            return None
+        return "station"
     return None
 
 
