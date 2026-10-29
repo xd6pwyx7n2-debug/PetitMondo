@@ -22,7 +22,10 @@ UA = "PetitMondo/1.0 (github.com/xd6pwyx7n2-debug/PetitMondo)"
 ENDPOINTS = [
     "https://overpass-api.de/api/interpreter",
     "https://overpass.kumi.systems/api/interpreter",
+    "https://overpass.private.coffee/api/interpreter",
 ]
+BUDGET = 70 * 60   # au-delà, on s'arrête proprement pour enregistrer ce qui a été récupéré
+DEBUT = time.time()
 
 # Services affichés sur les cartes
 CATEGORIES = {
@@ -61,10 +64,10 @@ def appel(q):
     data = urllib.parse.urlencode({"data": q}).encode()
     derniere = None
     for url in ENDPOINTS:
-        for essai in range(3):
+        for essai in range(2):
             try:
                 req = urllib.request.Request(url, data=data, headers={"User-Agent": UA})
-                with urllib.request.urlopen(req, timeout=300) as r:
+                with urllib.request.urlopen(req, timeout=200) as r:
                     return json.load(r)
             except Exception as exc:  # noqa: BLE001
                 derniere = exc
@@ -163,11 +166,15 @@ def fiche_acces(ville, points, paves, marches):
 
 
 def main():
-    villes = sorted((ROOT / "data" / "villes").glob("*.json"))
+    # les villes sans données passent en premier
+    villes = sorted((ROOT / "data" / "villes").glob("*.json"), key=lambda f: (((ROOT / "data" / "osm" / f.name).exists()), f.name))
     (ROOT / "data" / "osm").mkdir(parents=True, exist_ok=True)
     (ROOT / "data" / "acces").mkdir(parents=True, exist_ok=True)
     erreurs = 0
     for fichier in villes:
+        if time.time() - DEBUT > BUDGET:
+            print("Temps imparti écoulé : les villes restantes seront mises à jour au prochain passage.")
+            break
         ville = json.loads(fichier.read_text(encoding="utf-8"))
         print(f"→ {ville['nom']}")
         try:
