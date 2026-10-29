@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" role="img" aria-label="Illustration d'Amsterdam : maisons étroites, canal, pont, vélo, tulipes et moulin">
+  <rect width="640" height="320" rx="28" fill="#DDF1FB"/>
+  <g fill="#FFF8EC" stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round"><path d="M470 70 q20-18 44-6 q18-12 34 4 q16 2 14 16 h-100 q-6-10 8-14z"/></g>
+  <!-- moulin -->
+  <g stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round">
+    <path d="M560 210 l8 -70 h24 l8 70z" fill="#FFF8EC"/>
+    <path d="M580 120 L540 82 M580 120 L620 82 M580 120 L540 158 M580 120 L620 158" stroke-width="5"/>
+    <circle cx="580" cy="120" r="7" fill="#FF6B4A"/>
+  </g>
+  <!-- maisons de canal -->
+  <g stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round">
+    <path d="M40 210 V96 l20 -22 l20 22 V210z" fill="#FF9F8A"/>
+    <path d="M80 210 V110 h10 v-14 h20 v-14 h20 v14 h10 v14 h0 V210z" fill="#FFC93C"/>
+    <path d="M140 210 V92 q30 -28 60 0 V210z" fill="#2FB59A"/>
+    <path d="M200 210 V104 l26 -26 l26 26 V210z" fill="#A88BEB"/>
+    <path d="M252 210 V114 h14 v-12 h28 v12 h14 V210z" fill="#FFF8EC"/>
+  </g>
+  <g fill="#FFF8EC" stroke="#1B2A4A" stroke-width="3">
+    <path d="M50 116 h20 v22 h-20z M50 156 h20 v22 h-20z M96 124 h28 v22 h-28z M96 164 h28 v22 h-28z M154 110 h32 v22 h-32z M154 152 h32 v22 h-32z M212 118 h28 v22 h-28z M212 160 h28 v22 h-28z M266 128 h28 v22 h-28z M266 168 h28 v22 h-28z"/>
+  </g>
+  <path d="M0 210 H640" stroke="#1B2A4A" stroke-width="4"/>
+  <!-- canal et pont -->
+  <path d="M0 236 H640 V292 a28 28 0 0 1 -28 28 H28 A28 28 0 0 1 0 292z" fill="#6EC6F0" stroke="#1B2A4A" stroke-width="4"/>
+  <path d="M0 210 H640 V236 H0z" fill="#FFE7A8" stroke="#1B2A4A" stroke-width="4"/>
+  <path d="M330 236 q70 -56 140 0" fill="#FFF8EC" stroke="#1B2A4A" stroke-width="4"/>
+  <path d="M330 236 q70 -36 140 0" fill="#6EC6F0" stroke="#1B2A4A" stroke-width="4"/>
+  <!-- vélo -->
+  <g stroke="#1B2A4A" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="222" r="14" fill="#FFF8EC"/><circle cx="150" cy="222" r="14" fill="#FFF8EC"/>
+    <path d="M100 222 l16 -24 h22 l12 24 M116 198 l14 24 h-30 M132 190 h12"/>
+  </g>
+  <!-- tulipes -->
+  <g stroke="#1B2A4A" stroke-width="3" stroke-linejoin="round">
+    <path d="M520 234 v-20 M540 234 v-24 M560 234 v-18" fill="none"/>
+    <path d="M512 214 l3 -12 5 6 5 -6 3 12 a8 8 0 0 1 -16 0z" fill="#FF6B4A"/>
+    <path d="M532 210 l3 -12 5 6 5 -6 3 12 a8 8 0 0 1 -16 0z" fill="#FFC93C"/>
+    <path d="M552 216 l3 -12 5 6 5 -6 3 12 a8 8 0 0 1 -16 0z" fill="#A88BEB"/>
+  </g>
+  <path d="M200 296 q14 -10 28 0 t28 0 M520 290 q14 -10 28 0 t28 0" fill="none" stroke="#FFF8EC" stroke-width="4" stroke-linecap="round"/>
+</svg>

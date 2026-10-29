@@ -437,7 +437,7 @@
       navigator.geolocation.getCurrentPosition(pos => {
         const ici = { lat: pos.coords.latitude, lon: pos.coords.longitude };
         res.innerHTML = PM.distance(ici, { lat: v.centre[0], lon: v.centre[1] }) > 40000
-          ? `<p class="muted">Vous semblez loin de ${esc(v.nom)}. Ce bouton est fait pour le jour J, sur place.</p>`
+          ? `<p class="muted">Vous semblez loin ${/^[AEIOUYÉ]/i.test(v.nom) ? 'd\'' : 'de '}${esc(v.nom)}. Ce bouton est fait pour le jour J, sur place.</p>`
           : PM.autour(osm, ici);
       }, () => { res.innerHTML = '<p class="muted">Autorisez la localisation pour voir les services les plus proches.</p>'; }, { enableHighAccuracy: true, timeout: 12000 });
     };

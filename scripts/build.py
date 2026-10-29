@@ -29,7 +29,7 @@ INTERETS = {"animaux": "Animaux", "sciences": "Sciences", "aventure": "Aventure"
             "parc": "Parcs", "plage": "Plage", "gourmand": "Gourmand"}
 CAT_ICO = {"toilettes": "toilettes", "aire_jeux": "jeux", "table_langer": "langer", "pharmacie": "pharmacie", "resto_enfants": "resto", "eau": "eau", "station": "station"}
 CAT_NOM = {"toilettes": "Toilettes", "aire_jeux": "Aire de jeux", "table_langer": "Table à langer", "pharmacie": "Pharmacie", "resto_enfants": "Restaurant équipé", "eau": "Eau potable", "station": "Station"}
-VILLES_A_VENIR = [("Amsterdam", "Pays-Bas"), ("Lisbonne", "Portugal")]
+VILLES_A_VENIR = [("Prague", "Tchéquie"), ("Vienne", "Autriche")]
 SEO = {
     "avec-un-bebe": "{n} avec un bébé : visites, tables à langer et conseils",
     "quand-il-pleut": "Que faire à {n} avec des enfants quand il pleut",
@@ -88,6 +88,11 @@ def de(groupe):
     if groupe.startswith("les "):
         return "des " + groupe[4:]
     return "de " + groupe
+
+
+def de_v(n):
+    """« de Paris », « d'Amsterdam »."""
+    return ("d'" if n[:1].upper() in "AEIOUYÉ" else "de ") + n
 
 
 def nom_point(p):
@@ -367,7 +372,7 @@ def pages_enfants(v, b, nb_journal=3):
 </section>'''
     bingo = "".join(f"<div>{svg_picto(P[c][1])}<span>{e(P[c][0])}</span></div>" for c in v["bingo"])
     jeux = f'''<section class="page-enfant">
-  <div class="pe-tete"><img src="{b}assets/mondo-coucou.svg" alt="" class="pe-mondo"><div><span class="etiquette"><i></i>Jeu</span><h2>Le bingo de {e(n)}</h2></div></div>
+  <div class="pe-tete"><img src="{b}assets/mondo-coucou.svg" alt="" class="pe-mondo"><div><span class="etiquette"><i></i>Jeu</span><h2>Le bingo {e(de_v(n))}</h2></div></div>
   <p class="pe-consigne">Coche chaque case quand tu l'as vue. Une ligne complète : tu as gagné !</p>
   <div class="bingo">{bingo}</div>
 </section>
@@ -431,7 +436,7 @@ def pages_ville(v, osm):
 
     def hero(depth, surtitre, titre_html, lead, cta_q="j=3&a=5&r=equilibre"):
         b = rel(depth)
-        ph = photo(f"{vid}/_ville", f"Vue de {n}", b, "photo hero-photo")
+        ph = photo(f"{vid}/_ville", f"Vue {de_v(n)}", b, "photo hero-photo")
         visuel = ph or f'<img src="{b}{illu}" alt="" width="640" height="320" class="hero-illu">'
         return f'''<section class="hero"><div class="wrap grid">
   <div>
@@ -623,7 +628,7 @@ def pages_ville(v, osm):
   <div><span class="etiquette"><i></i>À lire avec les enfants</span>
   <h1>{e(n)} <span class="hl">pour les enfants</span></h1>
   <p class="lead">Le pays, la capitale, la langue, les premiers mots et ce qu'il faut savoir avant de partir, en phrases simples. Ces pages sont aussi dans le carnet PDF.</p>
-  <div class="cta"><button class="btn" type="button" onclick="print()">{ico_btn("pdf", b2)}Imprimer ces pages</button><a class="btn sec" href="{autres_lien}">Les jeux de {e(n)}</a></div></div>
+  <div class="cta"><button class="btn" type="button" onclick="print()">{ico_btn("pdf", b2)}Imprimer ces pages</button><a class="btn sec" href="{autres_lien}">Les jeux {e(de_v(n))}</a></div></div>
   <div class="visuel"><img src="{b2}{illu}" alt="" class="hero-illu"><img class="mondo" src="{b2}assets/mondo-coucou.svg" alt=""></div>
 </div></section>
 <section style="padding-top:0"><div class="wrap etroit">{dec_w}</div></section>'''
@@ -633,7 +638,7 @@ def pages_ville(v, osm):
          c, 2, actif="jeux")
     c = f'''<section class="hero no-print"><div class="wrap grid">
   <div><span class="etiquette"><i></i>À imprimer · 3 à 10 ans</span>
-  <h1>Les jeux de <span class="hl">{e(n)}</span></h1>
+  <h1>Les jeux <span class="hl">{e(de_v(n))}</span></h1>
   <p class="lead">Bingo à cocher, chasse au trésor, coloriage de Mondo et trois pages de journal de bord. Imprimez, glissez dans le sac : les visites deviennent un jeu. Ces pages sont aussi incluses dans le carnet PDF.</p>
   <div class="cta"><button class="btn" type="button" onclick="print()">{ico_btn("pdf", b2)}Imprimer les jeux</button><a class="btn sec" href="../decouvrir/">{e(n)} pour les enfants</a></div></div>
   <div class="visuel"><img src="{b2}assets/mondo-coucou.svg" alt="Mondo, la chouette de PetitMondo" style="max-width:260px;display:block;margin:0 auto"></div>
@@ -752,7 +757,7 @@ def accueil():
              ("Comment importer la carte dans Google Maps ?", "Téléchargez le fichier KML depuis votre carnet, ouvrez Google My Maps, créez une carte et choisissez Importer. Vous retrouverez un calque par journée et par type de service.")])}
 </div></section>'''
     page("", "PetitMondo — Carnets de voyage en famille gratuits, avec jeux pour les enfants",
-         "Disneyland Paris, Paris, Rome, Londres, Barcelone : un carnet de voyage familial gratuit adapté à l'âge des enfants, avec programme, lieux faciles à retrouver, jeux et pages enfants, utilisable en mode avion.",
+         "Disneyland Paris, Paris, Rome, Londres, Barcelone, Lisbonne, Amsterdam : un carnet de voyage familial gratuit adapté à l'âge des enfants, avec programme, lieux faciles à retrouver, jeux et pages enfants, utilisable en mode avion.",
          corps, 0, og_titre="PetitMondo — Le monde à découvrir en famille")
 
 
@@ -808,7 +813,7 @@ def hub_jeux():
 </div></section>
 <section style="padding-top:0"><div class="wrap"><div class="grille">{cartes}</div></div></section>'''
     page("jeux/", "Jeux de voyage à imprimer pour les enfants | PetitMondo",
-         "Bingo des rues, chasse au trésor, coloriage, journal de voyage et découverte du pays à imprimer gratuitement pour Disneyland Paris, Paris, Rome, Londres et Barcelone.", corps, 1, actif="jeux")
+         "Bingo des rues, chasse au trésor, coloriage, journal de voyage et découverte du pays à imprimer gratuitement pour Disneyland Paris, Paris, Rome, Londres, Barcelone, Lisbonne et Amsterdam.", corps, 1, actif="jeux")
 
 
 VALISE = {
@@ -913,7 +918,7 @@ def credits():
     lignes = []
     for v in VILLES:
         noms = {a["id"]: a["nom"] for a in v["activites"]}
-        noms["_ville"] = f"vue de {v['nom']}"
+        noms["_ville"] = f"vue {de_v(v['nom'])}"
         for cle, c in sorted(PHOTOS.items()):
             if cle.split("/")[0] != v["id"]:
                 continue

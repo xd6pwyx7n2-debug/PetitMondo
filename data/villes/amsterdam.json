@@ -1,0 +1,662 @@
+{
+ "id": "amsterdam",
+ "nom": "Amsterdam",
+ "pays": "Pays-Bas",
+ "ordre": 7,
+ "accroche": "Canaux, vélos et musées à toucher",
+ "centre": [
+  52.3676,
+  4.9041
+ ],
+ "bbox": [
+  52.3,
+  4.82,
+  52.4,
+  4.96
+ ],
+ "verification": "2026-10-29",
+ "photo": [
+  "nl:Amsterdam",
+  "en:Amsterdam"
+ ],
+ "avertissement": "Horaires, tarifs et conditions d'accès changent souvent : vérifiez toujours sur le site officiel avant de partir.",
+ "zones": {
+  "centre": {
+   "nom": "Centre et canaux",
+   "centre": [
+    52.372,
+    4.892
+   ]
+  },
+  "musees": {
+   "nom": "Museumplein et Vondelpark",
+   "centre": [
+    52.359,
+    4.878
+   ]
+  },
+  "est": {
+   "nom": "Plantage et Oosterdok",
+   "centre": [
+    52.37,
+    4.914
+   ]
+  },
+  "noord": {
+   "nom": "Amsterdam-Nord",
+   "centre": [
+    52.3842,
+    4.902
+   ]
+  },
+  "ouest": {
+   "nom": "Westerpark",
+   "centre": [
+    52.387,
+    4.875
+   ]
+  },
+  "sud": {
+   "nom": "Amsterdamse Bos",
+   "centre": [
+    52.329,
+    4.838
+   ]
+  },
+  "zaanse": {
+   "nom": "Excursion à Zaanse Schans",
+   "centre": [
+    52.474,
+    4.816
+   ]
+  }
+ },
+ "enfants": {
+  "drapeaux": [
+   "nl"
+  ],
+  "pays": "les Pays-Bas",
+  "capitale": "Amsterdam",
+  "langue": "le néerlandais",
+  "monnaie": "l'euro (€)",
+  "voix": "nl-NL",
+  "faits": [
+   "Amsterdam est construite sur des millions de pieux en bois plantés dans le sol mou, comme des pilotis.",
+   "Il y a plus de vélos que d'habitants ! Attention : les pistes cyclables rouges sont pour eux, pas pour les piétons.",
+   "La ville compte plus de 1 200 ponts au-dessus de ses canaux, creusés il y a 400 ans.",
+   "Regarde le haut des maisons : un crochet sert à monter les meubles par la fenêtre, car les escaliers sont trop étroits.",
+   "Les Pays-Bas sont célèbres pour leurs tulipes et leurs moulins à vent."
+  ],
+  "mots_titre": "Mes premiers mots en néerlandais",
+  "mots": [
+   [
+    "Bonjour",
+    "Hallo",
+    "ha-lo"
+   ],
+   [
+    "Merci",
+    "Dank je wel",
+    "dank-ye-vèl"
+   ],
+   [
+    "S'il te plaît",
+    "Alsjeblieft",
+    "als-ye-blift"
+   ],
+   [
+    "Oui / Non",
+    "Ja / Nee",
+    "ya / né"
+   ],
+   [
+    "Au revoir",
+    "Tot ziens",
+    "tot zins"
+   ],
+   [
+    "Une glace",
+    "Een ijsje",
+    "eun aï-sye"
+   ],
+   [
+    "De l'eau",
+    "Water",
+    "va-teur"
+   ],
+   [
+    "Un vélo",
+    "Een fiets",
+    "eun fits"
+   ],
+   [
+    "J'ai faim",
+    "Ik heb honger",
+    "ik hèp hong-eur"
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Sur quoi est construite Amsterdam ?",
+    "r": [
+     "Des pieux en bois",
+     "Des rochers",
+     "Des bateaux"
+    ],
+    "ok": 0,
+    "pourquoi": "Des millions de pieux plantés dans le sol mou."
+   },
+   {
+    "q": "Quel moyen de transport est roi à Amsterdam ?",
+    "r": [
+     "Le vélo",
+     "Le chameau",
+     "Le téléphérique"
+    ],
+    "ok": 0,
+    "pourquoi": "Il y a plus de vélos que d'habitants."
+   },
+   {
+    "q": "À quoi sert le crochet en haut des maisons ?",
+    "r": [
+     "À monter les meubles",
+     "À accrocher le linge",
+     "À attraper les oiseaux"
+    ],
+    "ok": 0,
+    "pourquoi": "Les escaliers sont trop étroits pour les meubles."
+   },
+   {
+    "q": "Quelle fleur est le symbole des Pays-Bas ?",
+    "r": [
+     "La tulipe",
+     "La rose",
+     "Le tournesol"
+    ],
+    "ok": 0,
+    "pourquoi": "On en trouve au marché aux fleurs, sur le canal Singel."
+   },
+   {
+    "q": "Comment dit-on « merci » en néerlandais ?",
+    "r": [
+     "Dank je wel",
+     "Danke schön",
+     "Thank you"
+    ],
+    "ok": 0,
+    "pourquoi": "Ça se prononce « dank-ye-vèl »."
+   }
+  ]
+ },
+ "bingo": [
+  "velo",
+  "pont",
+  "bateau",
+  "tulipe",
+  "moulin",
+  "canard",
+  "drapeau-pays-bas",
+  "fromage",
+  "tram",
+  "mouette",
+  "pigeon",
+  "arbre",
+  "parapluie",
+  "chien",
+  "horloge",
+  "glace",
+  "musicien",
+  "statue"
+ ],
+ "urgences": [
+  {
+   "nom": "Numéro d'urgence européen",
+   "detail": "112, gratuit, depuis n'importe quel téléphone"
+  },
+  {
+   "nom": "Emma Kinderziekenhuis",
+   "detail": "Hôpital pour enfants d'Amsterdam UMC, dans le sud-est de la ville"
+  },
+  {
+   "nom": "Pharmacies",
+   "detail": "« Apotheek ». La pharmacie de garde est indiquée sur la porte des pharmacies fermées."
+  }
+ ],
+ "conseils": [
+  {
+   "titre": "Vélos",
+   "texte": "Les pistes cyclables, souvent en asphalte rouge, sont partout et les vélos roulent vite. Apprenez aux enfants à ne jamais y marcher et tenez les petits par la main."
+  },
+  {
+   "titre": "Canaux",
+   "texte": "Les quais n'ont presque jamais de barrière. Surveillez de près les jeunes enfants le long de l'eau."
+  },
+  {
+   "titre": "Réserver à l'avance",
+   "texte": "La maison d'Anne Frank vend ses billets uniquement en ligne, souvent complets des semaines à l'avance. Le Rijksmuseum fonctionne sur créneaux, gratuit pour les moins de 18 ans."
+  },
+  {
+   "titre": "Pluie et paiement",
+   "texte": "Il pleut souvent : gardez un vêtement de pluie et un plan B couvert. Beaucoup de lieux acceptent uniquement la carte bancaire."
+  }
+ ],
+ "poussette": [
+  {
+   "titre": "Tramway",
+   "texte": "La plupart des trams sont à plancher bas et accueillent les poussettes. Montez par la porte signalée pour les poussettes et les fauteuils."
+  },
+  {
+   "titre": "Ferries gratuits",
+   "texte": "Les ferries vers Amsterdam-Nord, derrière la gare centrale, sont gratuits et on y monte de plain-pied avec une poussette."
+  },
+  {
+   "titre": "Le long des canaux",
+   "texte": "Pavés, ponts bombés et trottoirs étroits encombrés de vélos : la poussette passe, mais doucement. Les grands parcs sont bien plus confortables."
+  },
+  {
+   "titre": "Maisons et musées anciens",
+   "texte": "Les escaliers des vieilles maisons sont très raides. La maison d'Anne Frank n'est pas adaptée aux poussettes ; les grands musées modernes le sont."
+  }
+ ],
+ "papiers": "Pour un séjour aux Pays-Bas, carte d'identité ou passeport en cours de validité pour chaque membre de la famille, enfants compris, et carte européenne d'assurance maladie.",
+ "activites": [
+  {
+   "id": "nemo",
+   "nom": "NEMO Science Museum",
+   "zone": "est",
+   "adresse": "Oosterdok 2, 1011 VX Amsterdam",
+   "lat": 52.3738,
+   "lon": 4.9123,
+   "site": "https://www.nemosciencemuseum.nl",
+   "ages": [
+    3,
+    14
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 180,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "sciences"
+   ],
+   "transport": "10 min à pied de la gare centrale",
+   "wiki": [
+    "nl:NEMO (museum)",
+    "en:NEMO (museum)"
+   ],
+   "conseil": "Le grand musée des sciences à toucher, dans un bâtiment en forme de proue de navire. Prévoyez une demi-journée, surtout par temps de pluie.",
+   "enfant": "Un musée où l'on a le droit de tout toucher pour faire des expériences."
+  },
+  {
+   "id": "artis",
+   "nom": "ARTIS, le zoo d'Amsterdam",
+   "zone": "est",
+   "adresse": "Plantage Kerklaan 38-40, 1018 CZ Amsterdam",
+   "lat": 52.366,
+   "lon": 4.9166,
+   "site": "https://www.artis.nl",
+   "ages": [
+    0,
+    12
+   ],
+   "interieur": false,
+   "gratuit": false,
+   "duree": 240,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "animaux"
+   ],
+   "transport": "Tram 14, arrêt Artis",
+   "wiki": [
+    "nl:Artis (dierentuin)",
+    "en:Artis (zoo)"
+   ],
+   "conseil": "L'un des plus anciens zoos d'Europe, au cœur de la ville, avec un aquarium et un planétarium. Allées plates, idéales en poussette.",
+   "enfant": "Lions, girafes et éléphants vivent au milieu de la ville."
+  },
+  {
+   "id": "micropia",
+   "nom": "Micropia",
+   "zone": "est",
+   "adresse": "Plantage Kerklaan 38, 1018 CZ Amsterdam",
+   "lat": 52.3672,
+   "lon": 4.9126,
+   "site": "https://www.micropia.nl",
+   "ages": [
+    6,
+    17
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 75,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "sciences"
+   ],
+   "transport": "Tram 14, arrêt Artis",
+   "wiki": [
+    "en:Micropia (museum)",
+    "nl:Micropia"
+   ],
+   "conseil": "Le musée des microbes, à côté d'ARTIS : microscopes géants et expériences, très apprécié des enfants curieux.",
+   "enfant": "Regarde au microscope les petites bêtes invisibles qui vivent partout."
+  },
+  {
+   "id": "scheepvaart",
+   "nom": "Musée maritime (Het Scheepvaartmuseum)",
+   "zone": "est",
+   "adresse": "Kattenburgerplein 1, 1018 KK Amsterdam",
+   "lat": 52.3717,
+   "lon": 4.915,
+   "site": "https://www.hetscheepvaartmuseum.nl",
+   "ages": [
+    4,
+    17
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 120,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "aventure",
+    "culture"
+   ],
+   "transport": "15 min à pied de la gare centrale",
+   "wiki": [
+    "nl:Het Scheepvaartmuseum",
+    "en:Het Scheepvaartmuseum"
+   ],
+   "conseil": "Bateaux, cartes anciennes et, à quai, la réplique d'un grand navire marchand du XVIIIe siècle. Vérifiez sur le site qu'il est ouvert à la visite.",
+   "enfant": "Monte à bord d'un grand voilier d'autrefois, comme un vrai marin."
+  },
+  {
+   "id": "rijks",
+   "nom": "Rijksmuseum",
+   "zone": "musees",
+   "adresse": "Museumstraat 1, 1071 XX Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "site": "https://www.rijksmuseum.nl",
+   "ages": [
+    6,
+    17
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 120,
+   "poussette": "facile",
+   "reservation": true,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Tram 2 ou 12, arrêt Rijksmuseum",
+   "wiki": [
+    "nl:Rijksmuseum Amsterdam",
+    "en:Rijksmuseum"
+   ],
+   "conseil": "Gratuit pour les moins de 18 ans, sur créneau. Avec des enfants, filez voir La Ronde de nuit de Rembrandt et les maquettes de bateaux.",
+   "enfant": "Un tableau géant de soldats, La Ronde de nuit, t'attend ici."
+  },
+  {
+   "id": "vondel",
+   "nom": "Vondelpark",
+   "zone": "musees",
+   "adresse": "Vondelpark, 1071 AA Amsterdam",
+   "lat": 52.358,
+   "lon": 4.8686,
+   "site": "",
+   "ages": [
+    0,
+    17
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 90,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "parc"
+   ],
+   "transport": "Tram 1, arrêt 1e Constantijn Huygensstraat",
+   "wiki": [
+    "nl:Vondelpark",
+    "en:Vondelpark"
+   ],
+   "conseil": "Le grand parc de la ville : allées plates, étangs, aires de jeux et pelouses. Parfait pour une sieste en poussette entre deux musées.",
+   "enfant": "Des étangs, des canards et de grandes aires de jeux."
+  },
+  {
+   "id": "annefrank",
+   "nom": "Maison d'Anne Frank",
+   "zone": "centre",
+   "adresse": "Westermarkt 20, 1016 GV Amsterdam",
+   "lat": 52.3752,
+   "lon": 4.884,
+   "site": "https://www.annefrank.org",
+   "ages": [
+    10,
+    17
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 75,
+   "poussette": "difficile",
+   "reservation": true,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Tram 13 ou 17, arrêt Westermarkt",
+   "wiki": [
+    "nl:Anne Frank Huis",
+    "en:Anne Frank House"
+   ],
+   "conseil": "La cachette où Anne Frank a écrit son journal pendant la guerre. Conseillée à partir de 10 ans, à préparer en famille. Billets uniquement en ligne. Escaliers raides, pas de poussette.",
+   "enfant": "C'est ici qu'Anne Frank, une jeune fille, a écrit son journal en se cachant pendant la guerre."
+  },
+  {
+   "id": "canaux",
+   "nom": "Croisière sur les canaux",
+   "zone": "centre",
+   "adresse": "Embarcadères face à la gare centrale, Prins Hendrikkade, 1012 Amsterdam",
+   "lat": 52.3775,
+   "lon": 4.899,
+   "site": "",
+   "ages": [
+    0,
+    17
+   ],
+   "interieur": false,
+   "gratuit": false,
+   "duree": 75,
+   "poussette": "moyen",
+   "reservation": false,
+   "interets": [
+    "aventure",
+    "culture"
+   ],
+   "transport": "Face à la gare centrale",
+   "wiki": [
+    "en:Canals of Amsterdam",
+    "nl:Grachtengordel van Amsterdam"
+   ],
+   "conseil": "Une heure sur l'eau pour voir les maisons étroites et les ponts sans marcher. Bateaux souvent vitrés : agréable même par temps gris.",
+   "enfant": "Compte les ponts sous lesquels passe ton bateau."
+  },
+  {
+   "id": "dam",
+   "nom": "Place du Dam et Palais royal",
+   "zone": "centre",
+   "adresse": "Dam, 1012 JS Amsterdam",
+   "lat": 52.3731,
+   "lon": 4.8926,
+   "site": "",
+   "ages": [
+    0,
+    17
+   ],
+   "interieur": false,
+   "gratuit": "partiel",
+   "duree": 30,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Tram, arrêt Dam",
+   "wiki": [
+    "nl:Dam (Amsterdam)",
+    "en:Dam Square"
+   ],
+   "conseil": "La grande place du centre, avec le Palais royal (visite payante). Point de départ pratique pour se promener le long des canaux.",
+   "enfant": "La grande place de la ville, avec le palais du roi."
+  },
+  {
+   "id": "bloemenmarkt",
+   "nom": "Marché aux fleurs",
+   "zone": "centre",
+   "adresse": "Singel, 1012 DH Amsterdam",
+   "lat": 52.3665,
+   "lon": 4.8913,
+   "site": "",
+   "ages": [
+    0,
+    17
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 30,
+   "poussette": "moyen",
+   "reservation": false,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Tram, arrêt Muntplein",
+   "wiki": [
+    "nl:Bloemenmarkt",
+    "en:Bloemenmarkt"
+   ],
+   "conseil": "Des étals flottants sur le canal Singel, avec des bulbes de tulipes de toutes les couleurs. Trottoir étroit et fréquenté.",
+   "enfant": "Des fleurs et des bulbes de tulipes de toutes les couleurs, sur des bateaux."
+  },
+  {
+   "id": "adam",
+   "nom": "A'DAM Lookout",
+   "zone": "noord",
+   "adresse": "Overhoeksplein 5, 1031 KS Amsterdam",
+   "lat": 52.3842,
+   "lon": 4.902,
+   "site": "https://www.adamlookout.com",
+   "ages": [
+    6,
+    17
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 60,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "aventure"
+   ],
+   "transport": "Ferry gratuit derrière la gare centrale, arrêt Buiksloterweg",
+   "wiki": [
+    "en:A'DAM Toren",
+    "nl:A'DAM Toren"
+   ],
+   "conseil": "Une terrasse panoramique tout en haut d'une tour, avec une balançoire au-dessus du vide (payante, conditions d'âge ou de taille à vérifier). Le trajet en ferry gratuit fait partie de l'aventure.",
+   "enfant": "Prends un ferry gratuit, puis monte tout en haut d'une tour pour voir toute la ville."
+  },
+  {
+   "id": "westerpark",
+   "nom": "Westerpark et sa ferme pour enfants",
+   "zone": "ouest",
+   "adresse": "Westerpark, 1013 RR Amsterdam",
+   "lat": 52.387,
+   "lon": 4.875,
+   "site": "",
+   "ages": [
+    0,
+    12
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 60,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "parc",
+    "animaux"
+   ],
+   "transport": "Bus jusqu'au Haarlemmerweg, ou 25 min à pied depuis le centre",
+   "wiki": [
+    "nl:Westerpark (park)",
+    "en:Westerpark"
+   ],
+   "conseil": "Un grand parc vivant, avec aires de jeux, pataugeoire en été et une petite ferme pour enfants.",
+   "enfant": "Des aires de jeux et une petite ferme avec des chèvres et des cochons."
+  },
+  {
+   "id": "bos",
+   "nom": "Amsterdamse Bos",
+   "zone": "sud",
+   "adresse": "Bosbaanweg 5, 1182 DZ Amstelveen",
+   "lat": 52.329,
+   "lon": 4.838,
+   "site": "",
+   "ages": [
+    0,
+    17
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 180,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "parc",
+    "aventure"
+   ],
+   "transport": "Bus depuis le centre, environ 30 min",
+   "wiki": [
+    "nl:Amsterdamse Bos",
+    "en:Amsterdamse Bos"
+   ],
+   "conseil": "Un immense bois aux sentiers plats, avec aires de jeux, plans d'eau et location de vélos. Une vraie journée nature au bord de la ville.",
+   "enfant": "Une grande forêt pour courir, grimper et faire du vélo."
+  },
+  {
+   "id": "zaanse",
+   "nom": "Moulins de Zaanse Schans (excursion)",
+   "zone": "zaanse",
+   "adresse": "Schansend 7, 1509 AW Zaandam",
+   "lat": 52.474,
+   "lon": 4.816,
+   "site": "",
+   "ages": [
+    3,
+    17
+   ],
+   "interieur": false,
+   "gratuit": "partiel",
+   "duree": 180,
+   "poussette": "moyen",
+   "reservation": false,
+   "interets": [
+    "culture",
+    "aventure"
+   ],
+   "transport": "Train depuis la gare centrale jusqu'à Zaandijk Zaanse Schans, puis 15 min à pied",
+   "wiki": [
+    "nl:Zaanse Schans",
+    "en:Zaanse Schans"
+   ],
+   "conseil": "Un village de moulins à vent et de maisons en bois vertes, à 20 minutes de train. L'accès au site est libre, certains moulins et ateliers sont payants.",
+   "enfant": "Des moulins à vent géants, et un atelier où l'on fabrique des sabots.",
+   "excursion": true
+  }
+ ]
+}

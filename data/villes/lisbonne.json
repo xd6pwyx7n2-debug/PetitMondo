@@ -1,0 +1,760 @@
+{
+ "id": "lisbonne",
+ "nom": "Lisbonne",
+ "pays": "Portugal",
+ "ordre": 6,
+ "accroche": "Tramways jaunes, océan et pastéis",
+ "centre": [
+  38.7223,
+  -9.1393
+ ],
+ "bbox": [
+  38.68,
+  -9.25,
+  38.8,
+  -9.08
+ ],
+ "verification": "2026-10-29",
+ "photo": [
+  "pt:Lisboa",
+  "en:Lisbon"
+ ],
+ "avertissement": "Horaires, tarifs et conditions d'accès changent souvent : vérifiez toujours sur le site officiel avant de partir.",
+ "zones": {
+  "baixa": {
+   "nom": "Baixa, Alfama et château",
+   "centre": [
+    38.7115,
+    -9.134
+   ]
+  },
+  "belem": {
+   "nom": "Belém",
+   "centre": [
+    38.696,
+    -9.206
+   ]
+  },
+  "nations": {
+   "nom": "Parc des Nations",
+   "centre": [
+    38.765,
+    -9.094
+   ]
+  },
+  "nord": {
+   "nom": "Zoo, Eduardo VII et Gulbenkian",
+   "centre": [
+    38.736,
+    -9.16
+   ]
+  },
+  "ouest": {
+   "nom": "Estrela et Lapa",
+   "centre": [
+    38.712,
+    -9.158
+   ]
+  },
+  "cascais": {
+   "nom": "Excursion à Cascais",
+   "centre": [
+    38.697,
+    -9.421
+   ]
+  }
+ },
+ "enfants": {
+  "drapeaux": [
+   "pt"
+  ],
+  "pays": "le Portugal",
+  "capitale": "Lisbonne",
+  "langue": "le portugais",
+  "monnaie": "l'euro (€)",
+  "voix": "pt-PT",
+  "faits": [
+   "En 1755, un très grand tremblement de terre a détruit une grande partie de Lisbonne. La ville a été reconstruite avec des rues bien droites.",
+   "Beaucoup de murs sont couverts d'azulejos : des carreaux de faïence peints, souvent bleus et blancs.",
+   "Le tramway 28, tout jaune, grimpe et descend les ruelles des collines depuis plus de cent ans.",
+   "C'est de Lisbonne qu'est parti l'explorateur Vasco de Gama, en 1497, pour rejoindre l'Inde par la mer.",
+   "Le grand pont rouge du 25-Avril ressemble beaucoup au célèbre pont de San Francisco, en Amérique."
+  ],
+  "mots_titre": "Mes premiers mots en portugais",
+  "mots": [
+   [
+    "Bonjour",
+    "Olá",
+    "o-la"
+   ],
+   [
+    "Merci (si tu es un garçon)",
+    "Obrigado",
+    "o-bri-ga-dou"
+   ],
+   [
+    "Merci (si tu es une fille)",
+    "Obrigada",
+    "o-bri-ga-da"
+   ],
+   [
+    "S'il te plaît",
+    "Por favor",
+    "pour fa-vor"
+   ],
+   [
+    "Oui / Non",
+    "Sim / Não",
+    "sin / nan-o"
+   ],
+   [
+    "Au revoir",
+    "Adeus",
+    "a-dé-ouch"
+   ],
+   [
+    "Une glace",
+    "Um gelado",
+    "oun je-la-dou"
+   ],
+   [
+    "De l'eau",
+    "Água",
+    "a-goua"
+   ],
+   [
+    "La plage",
+    "A praia",
+    "a praï-a"
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Quelle langue parle-t-on au Portugal ?",
+    "r": [
+     "Le portugais",
+     "L'espagnol",
+     "L'italien"
+    ],
+    "ok": 0,
+    "pourquoi": "On dit « obrigado » pour merci."
+   },
+   {
+    "q": "De quelle couleur est le célèbre tramway 28 ?",
+    "r": [
+     "Jaune",
+     "Vert",
+     "Violet"
+    ],
+    "ok": 0,
+    "pourquoi": "Il grimpe les collines depuis plus de cent ans."
+   },
+   {
+    "q": "Comment s'appellent les carreaux peints sur les murs ?",
+    "r": [
+     "Des azulejos",
+     "Des mosaïques romaines",
+     "Des vitraux"
+    ],
+    "ok": 0,
+    "pourquoi": "Ils sont souvent bleus et blancs."
+   },
+   {
+    "q": "Quel explorateur est parti de Lisbonne vers l'Inde en 1497 ?",
+    "r": [
+     "Vasco de Gama",
+     "Christophe Colomb",
+     "Marco Polo"
+    ],
+    "ok": 0,
+    "pourquoi": "Son tombeau se trouve au monastère des Hiéronymites."
+   },
+   {
+    "q": "Que s'est-il passé à Lisbonne en 1755 ?",
+    "r": [
+     "Un grand tremblement de terre",
+     "Une chute de neige géante",
+     "L'arrivée du premier train"
+    ],
+    "ok": 0,
+    "pourquoi": "La ville a été reconstruite avec des rues bien droites."
+   }
+  ]
+ },
+ "bingo": [
+  "tram",
+  "mosaique",
+  "bateau",
+  "pont",
+  "mouette",
+  "chat",
+  "glace",
+  "pastel",
+  "caravelle",
+  "drapeau-portugal",
+  "plage",
+  "statue",
+  "pigeon",
+  "arbre",
+  "musicien",
+  "telepherique",
+  "fontaine",
+  "horloge"
+ ],
+ "urgences": [
+  {
+   "nom": "Numéro d'urgence européen",
+   "detail": "112, gratuit, depuis n'importe quel téléphone"
+  },
+  {
+   "nom": "Hôpital pédiatrique Dona Estefânia",
+   "detail": "Hôpital pour enfants avec urgences pédiatriques, dans le centre de Lisbonne"
+  },
+  {
+   "nom": "Pharmacies",
+   "detail": "Croix verte « Farmácia ». La pharmacie de garde (« de serviço ») est affichée sur la porte des pharmacies fermées."
+  }
+ ],
+ "conseils": [
+  {
+   "titre": "Ascenseurs et funiculaires historiques",
+   "texte": "Après l'accident du funiculaire de Glória en septembre 2025, l'ascenseur de Santa Justa et les funiculaires de Glória, Bica et Lavra sont fermés, sans date de réouverture annoncée à l'automne 2026. Seul le funiculaire de Graça a rouvert en avril 2026."
+  },
+  {
+   "titre": "Tramway 28",
+   "texte": "Mythique mais très bondé et fréquenté par les voleurs à la tire. Prenez-le tôt le matin, ou préférez le bus et le métro avec des enfants."
+  },
+  {
+   "titre": "Chaleur et soleil",
+   "texte": "Le soleil tape fort de mai à septembre, avec peu d'ombre dans les quartiers hauts. Chapeaux, eau et visites couvertes en début d'après-midi."
+  },
+  {
+   "titre": "Réserver à l'avance",
+   "texte": "La tour de Belém fonctionne sur créneaux, avec environ 60 visiteurs à la fois. Le monastère des Hiéronymites et l'Oceanário sont très demandés en haute saison."
+  }
+ ],
+ "poussette": [
+  {
+   "titre": "Pavés et collines",
+   "texte": "Les trottoirs en « calçada portuguesa », de petits pavés blancs et noirs, sont superbes mais glissants, et la ville est très vallonnée. Le porte-bébé est précieux dans l'Alfama, le Chiado et autour du château."
+  },
+  {
+   "titre": "Métro",
+   "texte": "Les stations récentes ont des ascenseurs, les plus anciennes pas toujours : vérifiez votre trajet sur le site du métro de Lisbonne."
+  },
+  {
+   "titre": "Tramway 28",
+   "texte": "Étroit et bondé : on y monte difficilement avec une poussette dépliée. Préférez le bus ou le métro."
+  },
+  {
+   "titre": "Les quartiers plats",
+   "texte": "Belém, le Parc des Nations et la Baixa sont plats et faciles en poussette, avec de grandes promenades au bord du Tage."
+  }
+ ],
+ "papiers": "Pour un séjour au Portugal, carte d'identité ou passeport en cours de validité pour chaque membre de la famille, enfants compris, et carte européenne d'assurance maladie.",
+ "activites": [
+  {
+   "id": "oceanario",
+   "nom": "Oceanário de Lisboa",
+   "zone": "nations",
+   "adresse": "Esplanada Dom Carlos I, s/n, 1990-005 Lisboa",
+   "lat": 38.7636,
+   "lon": -9.0937,
+   "site": "https://www.oceanario.pt",
+   "ages": [
+    0,
+    17
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 150,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "animaux",
+    "sciences"
+   ],
+   "transport": "Métro Oriente (ligne rouge), puis 10 min à pied",
+   "wiki": [
+    "pt:Oceanário de Lisboa",
+    "en:Lisbon Oceanarium"
+   ],
+   "conseil": "Un des plus grands aquariums d'Europe, organisé autour d'un immense bassin central visible depuis plusieurs étages. Venez à l'ouverture.",
+   "enfant": "Un immense bassin avec des requins, des raies et un drôle de poisson-lune tout rond."
+  },
+  {
+   "id": "pavilhao",
+   "nom": "Pavilhão do Conhecimento",
+   "zone": "nations",
+   "adresse": "Largo José Mariano Gago, 1, 1990-073 Lisboa",
+   "lat": 38.7623,
+   "lon": -9.0951,
+   "site": "https://www.pavconhecimento.pt",
+   "ages": [
+    3,
+    14
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 120,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "sciences"
+   ],
+   "transport": "Métro Oriente (ligne rouge), puis 10 min à pied",
+   "wiki": [
+    "pt:Pavilhão do Conhecimento"
+   ],
+   "conseil": "Le musée des sciences à toucher, juste à côté de l'Oceanário : parfait pour compléter la journée ou quand il pleut.",
+   "enfant": "Ici, tu fais toi-même les expériences de science."
+  },
+  {
+   "id": "telecabine",
+   "nom": "Télécabine du Parc des Nations",
+   "zone": "nations",
+   "adresse": "Passeio das Tágides, 1990 Lisboa",
+   "lat": 38.766,
+   "lon": -9.094,
+   "site": "",
+   "ages": [
+    2,
+    17
+   ],
+   "interieur": false,
+   "gratuit": false,
+   "duree": 30,
+   "poussette": "moyen",
+   "reservation": false,
+   "interets": [
+    "aventure"
+   ],
+   "transport": "Métro Oriente (ligne rouge), puis 10 min à pied",
+   "wiki": [
+    "pt:Telecabine Lisboa"
+   ],
+   "conseil": "Une balade suspendue au-dessus du bord du Tage, avec vue sur le très long pont Vasco de Gama.",
+   "enfant": "Une petite cabine qui vole au-dessus du fleuve."
+  },
+  {
+   "id": "nations",
+   "nom": "Promenade et jardins du Parc des Nations",
+   "zone": "nations",
+   "adresse": "Passeio do Tejo, 1990 Lisboa",
+   "lat": 38.768,
+   "lon": -9.093,
+   "site": "",
+   "ages": [
+    0,
+    17
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 60,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "parc"
+   ],
+   "transport": "Métro Oriente (ligne rouge)",
+   "wiki": [
+    "pt:Parque das Nações"
+   ],
+   "conseil": "Le quartier moderne né de l'Exposition universelle de 1998 : promenade plate au bord de l'eau, jardins et jeux d'eau.",
+   "enfant": "Une grande promenade au bord du fleuve, pour courir et pédaler."
+  },
+  {
+   "id": "castelo",
+   "nom": "Château Saint-Georges",
+   "zone": "baixa",
+   "adresse": "Rua de Santa Cruz do Castelo, 1100-129 Lisboa",
+   "lat": 38.7139,
+   "lon": -9.1335,
+   "site": "https://castelodesaojorge.pt",
+   "ages": [
+    5,
+    17
+   ],
+   "interieur": false,
+   "gratuit": false,
+   "duree": 90,
+   "poussette": "difficile",
+   "reservation": false,
+   "interets": [
+    "culture",
+    "aventure"
+   ],
+   "transport": "Bus 737 depuis la Praça da Figueira",
+   "wiki": [
+    "pt:Castelo de São Jorge",
+    "en:São Jorge Castle"
+   ],
+   "conseil": "Remparts, tours et le plus beau panorama sur la ville. Des paons se promènent dans les jardins. La montée est raide et pavée : porte-bébé conseillé.",
+   "enfant": "Grimpe sur les remparts d'un vrai château, où se promènent des paons."
+  },
+  {
+   "id": "alfama",
+   "nom": "Alfama et belvédère de Santa Luzia",
+   "zone": "baixa",
+   "adresse": "Largo de Santa Luzia, 1100-487 Lisboa",
+   "lat": 38.7118,
+   "lon": -9.13,
+   "site": "",
+   "ages": [
+    4,
+    17
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 60,
+   "poussette": "difficile",
+   "reservation": false,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Bus 737 ou à pied depuis la Baixa (forte montée)",
+   "wiki": [
+    "pt:Alfama",
+    "en:Alfama"
+   ],
+   "conseil": "Le plus vieux quartier de la ville, en ruelles et escaliers, avec des façades d'azulejos. Le belvédère offre une vue sur les toits et le Tage.",
+   "enfant": "Un labyrinthe de ruelles et d'escaliers, avec des murs en carreaux peints."
+  },
+  {
+   "id": "comercio",
+   "nom": "Place du Commerce",
+   "zone": "baixa",
+   "adresse": "Praça do Comércio, 1100-148 Lisboa",
+   "lat": 38.7076,
+   "lon": -9.1365,
+   "site": "",
+   "ages": [
+    0,
+    17
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 30,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Métro Terreiro do Paço (ligne bleue)",
+   "wiki": [
+    "pt:Praça do Comércio",
+    "en:Praça do Comércio"
+   ],
+   "conseil": "Une immense place ouverte sur le fleuve, idéale pour courir. L'arc de la rue Augusta, au nord, mène à la Baixa piétonne.",
+   "enfant": "Une place géante au bord de l'eau, avec un grand arc de triomphe."
+  },
+  {
+   "id": "torre",
+   "nom": "Tour de Belém",
+   "zone": "belem",
+   "adresse": "Avenida Brasília, 1400-038 Lisboa",
+   "lat": 38.6916,
+   "lon": -9.216,
+   "site": "",
+   "ages": [
+    6,
+    17
+   ],
+   "interieur": false,
+   "gratuit": false,
+   "duree": 45,
+   "poussette": "difficile",
+   "reservation": true,
+   "interets": [
+    "culture",
+    "aventure"
+   ],
+   "transport": "Tram 15E, arrêt Largo da Princesa, puis 10 min à pied",
+   "wiki": [
+    "pt:Torre de Belém",
+    "en:Belém Tower"
+   ],
+   "conseil": "Rouverte en mai 2026 après travaux, sur créneaux et avec environ 60 visiteurs à la fois : réservez. À l'intérieur, escaliers étroits ; l'extérieur se voit librement.",
+   "enfant": "Une tour de chevaliers construite au bord de l'eau pour surveiller les bateaux."
+  },
+  {
+   "id": "jeronimos",
+   "nom": "Monastère des Hiéronymites",
+   "zone": "belem",
+   "adresse": "Praça do Império, 1400-206 Lisboa",
+   "lat": 38.6979,
+   "lon": -9.2068,
+   "site": "",
+   "ages": [
+    6,
+    17
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 60,
+   "poussette": "moyen",
+   "reservation": false,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Tram 15E, arrêt Mosteiro Jerónimos",
+   "wiki": [
+    "pt:Mosteiro dos Jerónimos",
+    "en:Jerónimos Monastery"
+   ],
+   "conseil": "Un cloître de dentelle de pierre et, dans l'église, le tombeau de Vasco de Gama. Files d'attente longues : venez tôt.",
+   "enfant": "Dans l'église se trouve le tombeau de l'explorateur Vasco de Gama."
+  },
+  {
+   "id": "padrao",
+   "nom": "Monument aux Découvertes",
+   "zone": "belem",
+   "adresse": "Avenida Brasília, 1400-038 Lisboa",
+   "lat": 38.6936,
+   "lon": -9.2057,
+   "site": "",
+   "ages": [
+    4,
+    17
+   ],
+   "interieur": false,
+   "gratuit": "partiel",
+   "duree": 30,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "culture",
+    "aventure"
+   ],
+   "transport": "Tram 15E, arrêt Mosteiro Jerónimos, puis 5 min à pied",
+   "wiki": [
+    "pt:Padrão dos Descobrimentos",
+    "en:Padrão dos Descobrimentos"
+   ],
+   "conseil": "Au sol, une immense rose des vents en mosaïque avec une carte du monde. La terrasse panoramique est payante.",
+   "enfant": "Marche sur une carte du monde géante dessinée sur le sol."
+  },
+  {
+   "id": "pasteis",
+   "nom": "Pastéis de Belém",
+   "zone": "belem",
+   "adresse": "Rua de Belém, 84-92, 1300-085 Lisboa",
+   "lat": 38.6975,
+   "lon": -9.2032,
+   "site": "https://pasteisdebelem.pt",
+   "ages": [
+    0,
+    17
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 30,
+   "poussette": "moyen",
+   "reservation": false,
+   "interets": [
+    "gourmand"
+   ],
+   "transport": "Tram 15E, arrêt Mosteiro Jerónimos",
+   "wiki": [
+    "pt:Pastéis de Belém"
+   ],
+   "conseil": "La pâtisserie historique des pastéis de nata. La file de vente à emporter avance vite ; les salles intérieures permettent souvent de s'asseoir plus rapidement.",
+   "enfant": "Goûte un pastel de nata, un petit flan croustillant encore tiède."
+  },
+  {
+   "id": "coches",
+   "nom": "Musée national des Carrosses",
+   "zone": "belem",
+   "adresse": "Avenida da Índia, 136, 1300-300 Lisboa",
+   "lat": 38.6971,
+   "lon": -9.1985,
+   "site": "",
+   "ages": [
+    5,
+    17
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 60,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Tram 15E, arrêt Belém",
+   "wiki": [
+    "pt:Museu Nacional dos Coches",
+    "en:National Coach Museum"
+   ],
+   "conseil": "Des carrosses royaux dorés dans un grand bâtiment moderne et plat : visite courte qui plaît beaucoup aux enfants.",
+   "enfant": "Des carrosses de rois et de reines, couverts d'or."
+  },
+  {
+   "id": "zoo",
+   "nom": "Jardim Zoológico de Lisboa",
+   "zone": "nord",
+   "adresse": "Praça Marechal Humberto Delgado, 1549-004 Lisboa",
+   "lat": 38.7445,
+   "lon": -9.17,
+   "site": "https://www.zoo.pt",
+   "ages": [
+    1,
+    12
+   ],
+   "interieur": false,
+   "gratuit": false,
+   "duree": 240,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "animaux"
+   ],
+   "transport": "Métro Jardim Zoológico (ligne bleue)",
+   "wiki": [
+    "pt:Jardim Zoológico de Lisboa",
+    "en:Lisbon Zoo"
+   ],
+   "conseil": "Grand zoo ombragé, praticable en poussette. Prévoyez une demi-journée.",
+   "enfant": "Éléphants, girafes et dauphins dans un grand jardin."
+  },
+  {
+   "id": "eduardo",
+   "nom": "Parc Édouard-VII",
+   "zone": "nord",
+   "adresse": "Parque Eduardo VII, 1070-051 Lisboa",
+   "lat": 38.729,
+   "lon": -9.153,
+   "site": "",
+   "ages": [
+    0,
+    17
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 45,
+   "poussette": "moyen",
+   "reservation": false,
+   "interets": [
+    "parc"
+   ],
+   "transport": "Métro Marquês de Pombal (lignes bleue et jaune)",
+   "wiki": [
+    "pt:Parque Eduardo VII",
+    "en:Eduardo VII Park"
+   ],
+   "conseil": "Grand parc en pente avec une vue dégagée sur la ville jusqu'au Tage. Les serres de l'Estufa Fria, à côté, sont payantes.",
+   "enfant": "Un grand jardin en pente avec la ville et le fleuve tout en bas."
+  },
+  {
+   "id": "gulbenkian",
+   "nom": "Jardin de la Fondation Gulbenkian",
+   "zone": "nord",
+   "adresse": "Avenida de Berna, 45A, 1067-001 Lisboa",
+   "lat": 38.7372,
+   "lon": -9.154,
+   "site": "https://gulbenkian.pt",
+   "ages": [
+    0,
+    17
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 60,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "parc",
+    "animaux"
+   ],
+   "transport": "Métro São Sebastião (lignes bleue et rouge)",
+   "wiki": [
+    "pt:Fundação Calouste Gulbenkian"
+   ],
+   "conseil": "Un jardin calme et plat, avec un étang, des canards et des tortues. Idéal pour une pause ou une sieste en poussette.",
+   "enfant": "Cherche les tortues qui se dorent au soleil au bord de l'étang."
+  },
+  {
+   "id": "estrela",
+   "nom": "Jardin de l'Estrela",
+   "zone": "ouest",
+   "adresse": "Praça da Estrela, 1200-667 Lisboa",
+   "lat": 38.714,
+   "lon": -9.159,
+   "site": "",
+   "ages": [
+    0,
+    12
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 45,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "parc"
+   ],
+   "transport": "Tram 28, arrêt Estrela",
+   "wiki": [
+    "pt:Jardim da Estrela"
+   ],
+   "conseil": "Un jardin de quartier apprécié des familles lisboètes, avec une aire de jeux et un petit lac.",
+   "enfant": "Une aire de jeux et un petit lac avec des canards."
+  },
+  {
+   "id": "marioneta",
+   "nom": "Musée de la Marionnette",
+   "zone": "ouest",
+   "adresse": "Rua da Esperança, 146, 1200-660 Lisboa",
+   "lat": 38.7085,
+   "lon": -9.157,
+   "site": "https://www.museudamarioneta.pt",
+   "ages": [
+    4,
+    14
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 60,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Gare de Santos (train de Cascais), puis 10 min à pied",
+   "wiki": [
+    "pt:Museu da Marioneta"
+   ],
+   "conseil": "Des marionnettes du monde entier dans un ancien couvent. Une bonne idée pour une après-midi pluvieuse.",
+   "enfant": "Des marionnettes venues du monde entier, des toutes petites aux géantes."
+  },
+  {
+   "id": "cascais",
+   "nom": "Plages de Cascais (excursion)",
+   "zone": "cascais",
+   "adresse": "Praia da Conceição, 2750 Cascais",
+   "lat": 38.6976,
+   "lon": -9.4198,
+   "site": "",
+   "ages": [
+    0,
+    17
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 240,
+   "poussette": "moyen",
+   "reservation": false,
+   "interets": [
+    "plage"
+   ],
+   "transport": "Train depuis la gare de Cais do Sodré, environ 40 min",
+   "wiki": [
+    "pt:Cascais",
+    "en:Cascais"
+   ],
+   "conseil": "Petites plages abritées et promenade en bord de mer dans une jolie ville balnéaire, à une quarantaine de minutes en train.",
+   "enfant": "Une journée à la plage, dans une petite ville au bord de l'océan.",
+   "excursion": true
+  }
+ ]
+}

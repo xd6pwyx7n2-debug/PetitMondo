@@ -43,6 +43,15 @@ P = {
     "chat": ("Un chat", '<path d="M14 40c0-12 4-18 10-18s10 6 10 18z" fill="#FFE7A8"/><path d="M16 18l2-8 6 6 6-6 2 8a8 8 0 0 1-16 0z" fill="#FFE7A8"/><circle cx="21" cy="17" r="1.2" fill="#1B2A4A"/><circle cx="27" cy="17" r="1.2" fill="#1B2A4A"/>'),
     "pates": ("Un plat de pâtes", '<path d="M8 28h32a16 12 0 0 1-32 0z" fill="#FFF8EC"/><path d="M14 28c2-8 6-2 8-8s6 4 8-2 6 4 6 10" stroke="#FFC93C" stroke-width="3.5"/><circle cx="22" cy="26" r="3" fill="#FF6B4A"/>'),
     "drapeau-italie": ("Le drapeau italien", '<path d="M10 44V6"/><path d="M10 8h10v20H10z" fill="#2FB59A"/><path d="M20 8h9v20h-9z" fill="#fff"/><path d="M29 8h9v20h-9z" fill="#FF6B4A"/>'),
+    "tram": ("Un tramway jaune", '<rect x="8" y="12" width="32" height="24" rx="5" fill="#FFC93C"/><path d="M12 16h24v8H12z" fill="#DDF1FB"/><path d="M24 12V6M18 6h12"/><circle cx="15" cy="38" r="3" fill="#1B2A4A"/><circle cx="33" cy="38" r="3" fill="#1B2A4A"/>'),
+    "pastel": ("Un pastel de nata", '<path d="M8 26h32l-4 12H12z" fill="#D9A441"/><ellipse cx="24" cy="26" rx="16" ry="6" fill="#FFC93C"/><circle cx="20" cy="25" r="2" fill="#8B5A3C"/><circle cx="28" cy="27" r="1.6" fill="#8B5A3C"/>'),
+    "caravelle": ("Une caravelle", '<path d="M6 32h36l-6 9H12z" fill="#8B5A3C"/><path d="M18 8v24M30 12v20" /><path d="M18 10h-8l8 16zM30 14h8l-8 14z" fill="#FFF8EC"/><path d="M22 12l2 4" stroke="#FF6B4A"/>'),
+    "drapeau-portugal": ("Le drapeau portugais", '<path d="M10 44V6"/><path d="M10 8h11v20H10z" fill="#2FB59A"/><path d="M21 8h17v20H21z" fill="#FF6B4A"/><circle cx="21" cy="18" r="4.5" fill="#FFC93C"/>'),
+    "tulipe": ("Une tulipe", '<path d="M24 44V24"/><path d="M16 12l4 4 4-6 4 6 4-4v8a8 8 0 0 1-16 0z" fill="#FF6B4A"/><path d="M24 36c-4-6-10-6-12-4 4 0 8 2 12 4zm0 0c4-6 10-6 12-4-4 0-8 2-12 4z" fill="#2FB59A"/>'),
+    "moulin": ("Un moulin à vent", '<path d="M18 44l3-22h6l3 22z" fill="#FFF8EC"/><path d="M24 18L10 6M24 18l14-12M24 18L10 30M24 18l14 12" stroke-width="3"/><circle cx="24" cy="18" r="2.5" fill="#1B2A4A"/>'),
+    "canard": ("Un canard", '<path d="M8 30c0 8 8 12 18 12s14-6 14-12c-4 2-10 2-14 0" fill="#FFF8EC"/><circle cx="30" cy="18" r="7" fill="#2FB59A"/><path d="M36 18l6 2-6 2z" fill="#FFC93C"/><circle cx="31" cy="17" r="1.3" fill="#1B2A4A"/>'),
+    "drapeau-pays-bas": ("Le drapeau néerlandais", '<path d="M10 44V6"/><path d="M10 8h28v7H10z" fill="#FF6B4A"/><path d="M10 15h28v6H10z" fill="#fff"/><path d="M10 21h28v7H10z" fill="#3A6BC8"/>'),
+    "fromage": ("Une meule de fromage", '<ellipse cx="24" cy="30" rx="16" ry="8" fill="#FFC93C"/><path d="M8 30v-8a16 8 0 0 1 32 0v8" fill="#FFC93C"/><ellipse cx="24" cy="22" rx="16" ry="8" fill="#FFE7A8"/><path d="M24 22L40 22" />'),
     "piece": ("Une pièce de monnaie", '<circle cx="24" cy="24" r="14" fill="#FFC93C"/><circle cx="24" cy="24" r="9"/>'),
     "cabine": ("Une cabine téléphonique rouge", '<rect x="14" y="8" width="20" height="34" rx="3" fill="#FF6B4A"/><path d="M18 16h12v18H18z" fill="#DDF1FB"/><path d="M24 16v18M18 25h12"/>'),
     "taxi-noir": ("Un taxi noir", '<path d="M8 32v-6l6-10h20l6 10v6z" fill="#1B2A4A"/><path d="M16 18h16l4 8H12z" fill="#DDF1FB"/><circle cx="15" cy="34" r="4" fill="#FFF8EC"/><circle cx="33" cy="34" r="4" fill="#FFF8EC"/>'),
@@ -64,7 +73,7 @@ P = {
     "lanterne": ("Une lanterne", '<path d="M18 14h12l2 22H16z" fill="#FFC93C"/><path d="M20 10h8v4h-8zM16 36h16v4H16zM24 6v4"/>'),
 }
 
-DRAPEAUX_NOMS = {"fr": "Drapeau de la France", "it": "Drapeau de l'Italie", "es": "Drapeau de l'Espagne",
+DRAPEAUX_NOMS = {"pt": "Drapeau du Portugal", "nl": "Drapeau des Pays-Bas", "fr": "Drapeau de la France", "it": "Drapeau de l'Italie", "es": "Drapeau de l'Espagne",
                  "cat": "Drapeau de la Catalogne", "uk": "Drapeau du Royaume-Uni"}
 
 
@@ -72,6 +81,10 @@ def drapeau(code, uid=""):
     t = f'<title>{DRAPEAUX_NOMS[code]}</title>'
     if code == "fr":
         return f'<svg class="drapeau" viewBox="0 0 90 60" role="img">{t}<path d="M0 0h30v60H0z" fill="#0055A4"/><path d="M30 0h30v60H30z" fill="#fff"/><path d="M60 0h30v60H60z" fill="#EF4135"/></svg>'
+    if code == "pt":
+        return f'<svg class="drapeau" viewBox="0 0 90 60" role="img">{t}<path d="M0 0h36v60H0z" fill="#006600"/><path d="M36 0h54v60H36z" fill="#FF0000"/><circle cx="36" cy="30" r="11" fill="#FFCC00" stroke="#1B2A4A" stroke-width="1.5"/><path d="M30 24h12v10a6 6 0 0 1-12 0z" fill="#fff" stroke="#FF0000" stroke-width="2"/></svg>'
+    if code == "nl":
+        return f'<svg class="drapeau" viewBox="0 0 90 60" role="img">{t}<path d="M0 0h90v20H0z" fill="#AE1C28"/><path d="M0 20h90v20H0z" fill="#fff"/><path d="M0 40h90v20H0z" fill="#21468B"/></svg>'
     if code == "it":
         return f'<svg class="drapeau" viewBox="0 0 90 60" role="img">{t}<path d="M0 0h30v60H0z" fill="#009246"/><path d="M30 0h30v60H30z" fill="#fff"/><path d="M60 0h30v60H60z" fill="#CE2B37"/></svg>'
     if code == "es":
@@ -90,6 +103,46 @@ def drapeau(code, uid=""):
 
 # Phrases des parents : français, puis une ou deux langues locales
 LEXIQUES = {
+    "lisbonne": (["Portugais"], [
+        ("Bonjour", "Olá / Bom dia"),
+        ("Merci beaucoup", "Muito obrigado (homme) / muito obrigada (femme)"),
+        ("Où sont les toilettes ?", "Onde é a casa de banho?"),
+        ("Avez-vous une table à langer ?", "Há um fraldário?"),
+        ("Une chaise haute, s'il vous plaît", "Uma cadeira de bebé, por favor"),
+        ("Avez-vous un menu enfant ?", "Tem menu infantil?"),
+        ("Pouvez-vous chauffer ce biberon ?", "Pode aquecer este biberão?"),
+        ("Un verre d'eau, s'il vous plaît", "Um copo de água, por favor"),
+        ("L'addition, s'il vous plaît", "A conta, por favor"),
+        ("Y a-t-il un ascenseur ?", "Há elevador?"),
+        ("Où y a-t-il une aire de jeux ?", "Onde há um parque infantil?"),
+        ("Combien ça coûte ?", "Quanto custa?"),
+        ("Où est la pharmacie la plus proche ?", "Onde fica a farmácia mais próxima?"),
+        ("Mon enfant a de la fièvre", "O meu filho / a minha filha tem febre"),
+        ("Mon enfant est allergique à…", "O meu filho / a minha filha é alérgico / alérgica a…"),
+        ("Nous nous sommes perdus", "Estamos perdidos"),
+        ("Aidez-moi, s'il vous plaît", "Ajude-me, por favor"),
+        ("Appelez une ambulance", "Chame uma ambulância"),
+    ]),
+    "amsterdam": (["Néerlandais"], [
+        ("Bonjour", "Hallo / Goedemorgen"),
+        ("Merci beaucoup", "Dank u wel"),
+        ("Où sont les toilettes ?", "Waar is het toilet?"),
+        ("Avez-vous une table à langer ?", "Heeft u een verschoontafel?"),
+        ("Une chaise haute, s'il vous plaît", "Een kinderstoel, alstublieft"),
+        ("Avez-vous un menu enfant ?", "Heeft u een kindermenu?"),
+        ("Pouvez-vous chauffer ce biberon ?", "Kunt u dit flesje opwarmen?"),
+        ("Un verre d'eau, s'il vous plaît", "Een glas water, alstublieft"),
+        ("L'addition, s'il vous plaît", "De rekening, alstublieft"),
+        ("Y a-t-il un ascenseur ?", "Is er een lift?"),
+        ("Où y a-t-il une aire de jeux ?", "Waar is een speeltuin?"),
+        ("Combien ça coûte ?", "Hoeveel kost het?"),
+        ("Où est la pharmacie la plus proche ?", "Waar is de dichtstbijzijnde apotheek?"),
+        ("Mon enfant a de la fièvre", "Mijn zoon / mijn dochter heeft koorts"),
+        ("Mon enfant est allergique à…", "Mijn zoon / mijn dochter is allergisch voor…"),
+        ("Nous nous sommes perdus", "We zijn verdwaald"),
+        ("Aidez-moi, s'il vous plaît", "Kunt u mij helpen?"),
+        ("Appelez une ambulance", "Bel een ambulance"),
+    ]),
     "barcelone": (["Espagnol", "Catalan"], [
         ("Bonjour", "Hola / Buenos días", "Hola / Bon dia"),
         ("Merci beaucoup", "Muchas gracias", "Moltes gràcies"),

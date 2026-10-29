@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" role="img" aria-label="Illustration de Lisbonne : tramway jaune, collines, château, pont rouge et fleuve">
+  <rect width="640" height="320" rx="28" fill="#FFF1C9"/>
+  <circle cx="540" cy="70" r="36" fill="#FFC93C" stroke="#1B2A4A" stroke-width="4"/>
+  <!-- colline et château -->
+  <path d="M0 200 C80 120 200 110 300 170 L300 250 H0z" fill="#FFE1D9" stroke="#1B2A4A" stroke-width="4"/>
+  <g stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round" fill="#FFF8EC">
+    <path d="M110 134 v-30 h14 v8 h12 v-8 h14 v8 h12 v-8 h14 v30z"/>
+    <path d="M150 134 v-12 a8 8 0 0 1 16 0 v12" fill="#FF6B4A"/>
+  </g>
+  <!-- maisons azulejos -->
+  <g stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round">
+    <path d="M30 250 V190 h50 V250z" fill="#6EC6F0"/>
+    <path d="M80 250 V176 h46 V250z" fill="#FFF8EC"/>
+    <path d="M126 250 V196 h44 V250z" fill="#FF9F8A"/>
+    <path d="M40 202 h12 v14 h-12z M58 202 h12 v14 h-12z M92 188 h10 v14 h-10z M108 188 h10 v14 h-10z M136 208 h10 v14 h-10z M152 208 h10 v14 h-10z" fill="#FFC93C"/>
+  </g>
+  <g fill="#1B2A4A" opacity=".35"><circle cx="38" cy="236" r="2.5"/><circle cx="50" cy="236" r="2.5"/><circle cx="62" cy="236" r="2.5"/><circle cx="74" cy="236" r="2.5"/></g>
+  <!-- pont rouge -->
+  <g stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round">
+    <path d="M380 236 V120 h14 V236z M530 236 V120 h14 V236z" fill="#FF6B4A"/>
+    <path d="M330 196 h300" fill="none"/>
+    <path d="M330 180 Q387 120 387 120 Q462 196 537 120 Q600 170 630 180" fill="none" stroke="#FF6B4A" stroke-width="4"/>
+  </g>
+  <!-- fleuve -->
+  <path d="M0 250 H640 V292 a28 28 0 0 1 -28 28 H28 A28 28 0 0 1 0 292z" fill="#6EC6F0" stroke="#1B2A4A" stroke-width="4"/>
+  <path d="M0 236 H330" stroke="#1B2A4A" stroke-width="4"/>
+  <path d="M300 236 H640" stroke="#1B2A4A" stroke-width="4" opacity="0"/>
+  <path d="M420 284 q14 -10 28 0 t28 0 M80 296 q14 -10 28 0 t28 0" fill="none" stroke="#FFF8EC" stroke-width="4" stroke-linecap="round"/>
+  <!-- tramway jaune -->
+  <g stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round">
+    <path d="M200 236 l60 0" stroke-width="3"/>
+    <rect x="186" y="186" width="120" height="50" rx="10" fill="#FFC93C"/>
+    <path d="M196 196 h24 v18 h-24z M228 196 h24 v18 h-24z M260 196 h24 v18 h-24z" fill="#DDF1FB"/>
+    <path d="M246 186 v-22 M232 164 h28" fill="none"/>
+    <path d="M186 222 h120" fill="none"/>
+    <circle cx="212" cy="240" r="8" fill="#1B2A4A"/><circle cx="280" cy="240" r="8" fill="#1B2A4A"/>
+  </g>
+</svg>
