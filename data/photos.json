@@ -849,6 +849,16 @@
   "lien_licence": "https://creativecommons.org/licenses/by-sa/2.0",
   "source": "https://commons.wikimedia.org/wiki/File:Parc_de_la_Villette,_Paris_2010.jpg"
  },
+ "prague/_ville": {
+  "article": "https://en.wikipedia.org/wiki/Mal%C3%A1_Strana",
+  "auteur": "donald judge",
+  "fichier": "assets/photos/prague/_ville.jpg",
+  "h": 665,
+  "l": 1000,
+  "licence": "CC BY 2.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:19.7.16_Prague_Castle_12_(28395711206).jpg"
+ },
  "prague/horloge": {
   "article": "https://cs.wikipedia.org/wiki/Pra%C5%BEsk%C3%BD_orloj",
   "auteur": "Uoaei1",
