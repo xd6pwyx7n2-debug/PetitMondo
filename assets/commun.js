@@ -97,7 +97,7 @@ const PM = (() => {
     return { note, details: l, classe: a.poussette };
   }
 
-  /* Liste « Autour de moi » : le service le plus proche de chaque type, distance et direction en clair */
+  /* Liste « Autour de moi » : le service le plus proche de chaque type, avec le temps de marche */
   function autour(osmData, pos) {
     const types = [['toilettes', 'Toilettes'], ['eau', 'Eau potable'], ['aire_jeux', 'Aire de jeux'], ['table_langer', 'Table à langer'], ['pharmacie', 'Pharmacie'], ['station', 'Station'], ['resto_enfants', 'Restaurant équipé']];
     const li = [];
@@ -105,7 +105,7 @@ const PM = (() => {
       const pr = proches(osmData.points, pos, c, 1, 1500)[0];
       if (!pr) continue;
       const det = detailPoint(pr);
-      li.push(`<li>${ico(CATS[c].ico)}<span><strong>${nom}</strong> à ${fmtDist(pr.d)} ${direction(pos, pr)}, environ ${minutesMarche(pr.d)} min à pied${pr.t?.name ? ` : ${esc(pr.t.name)}` : ''}${det ? ` <span class="muted">(${esc(det)})</span>` : ''}<br><a href="${lienItineraire({ lat: pr.lat, lon: pr.lon })}" target="_blank" rel="noopener">Itinéraire</a></span></li>`);
+      li.push(`<li>${ico(CATS[c].ico)}<span><strong>${nom}</strong> ${aPied(pr.d)}${pr.t?.name ? ` : ${esc(pr.t.name)}` : ''}${det ? ` <span class="muted">· ${esc(det)}</span>` : ''}<br><a href="${lienItineraire({ lat: pr.lat, lon: pr.lon })}" target="_blank" rel="noopener">Itinéraire</a></span></li>`);
     }
     return li.length ? `<ul class="autour-liste">${li.join('')}</ul><p class="muted" style="font-size:.85rem">Données OpenStreetMap, non vérifiées sur place. La liste fonctionne sans réseau une fois la page ouverte ; l'itinéraire demande une connexion.</p>` : '<p class="muted">Aucun service signalé à moins de 1,5 km.</p>';
   }
@@ -119,6 +119,8 @@ const PM = (() => {
 
   /* Marche avec enfants : ~3 km/h, majoré de 30 % pour les détours réels */
   const minutesMarche = m => Math.max(1, Math.round((m * 1.3) / 50));
+  // « à 4 min à pied (200 m) » : plus parlant qu'un point cardinal, sur papier comme en mode avion
+  const aPied = m => { const min = minutesMarche(m); return min <= 30 ? `à ${min} min à pied (${fmtDist(m)})` : `à ${fmtDist(m)}, en transports`; };
   const fmtDist = m => m < 1000 ? `${Math.round(m / 10) * 10} m` : `${(m / 1000).toFixed(1).replace('.', ',')} km`;
 
   function proches(points, lieu, cat, n = 2, max = 900) {
@@ -195,5 +197,5 @@ const PM = (() => {
     return m;
   }
 
-  return { base, acces, autour, ico, direction, domaine, fichePoussette, FAUTEUIL, CATS, INTERETS, store, ville, osm, distance, minutesMarche, fmtDist, proches, lienMaps, lienItineraire, lienOSM, nomPoint, detailPoint, esc, kml, csv, telecharger, marqueur, fondCarte };
+  return { base, acces, autour, ico, direction, domaine, fichePoussette, FAUTEUIL, CATS, INTERETS, store, ville, osm, distance, minutesMarche, aPied, fmtDist, proches, lienMaps, lienItineraire, lienOSM, nomPoint, detailPoint, esc, kml, csv, telecharger, marqueur, fondCarte };
 })();

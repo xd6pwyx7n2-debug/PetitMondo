@@ -1,0 +1,29 @@
+name: Signaler les nouveautés aux moteurs (IndexNow)
+
+on:
+  push:
+    branches: [main]
+    paths: ["sitemap.xml"]
+  workflow_run:
+    workflows: ["Mise à jour des données OpenStreetMap", "Photos libres de droits"]
+    types: [completed]
+  workflow_dispatch:
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: true
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Attendre la mise en ligne du site
+        run: sleep 150
+      - name: Signaler les pages modifiées
+        run: python scripts/indexnow.py 2 || true

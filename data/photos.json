@@ -849,16 +849,6 @@
   "lien_licence": "https://creativecommons.org/licenses/by-sa/2.0",
   "source": "https://commons.wikimedia.org/wiki/File:Parc_de_la_Villette,_Paris_2010.jpg"
  },
- "prague/_ville": {
-  "article": "https://cs.wikipedia.org/wiki/Praha",
-  "auteur": "Collage by Concus Cretus based on work of Moyan Brenn from Anzio, Italy (1); Jirka.h23 (2); Massimo Catarinella (3, 5); ",
-  "fichier": "assets/photos/prague/_ville.jpg",
-  "h": 1775,
-  "l": 1000,
-  "licence": "CC BY-SA 4.0",
-  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Prague_collage_2018.jpg"
- },
  "prague/horloge": {
   "article": "https://cs.wikipedia.org/wiki/Pra%C5%BEsk%C3%BD_orloj",
   "auteur": "Uoaei1",
@@ -898,16 +888,6 @@
   "licence": "CC BY-SA 3.0",
   "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
   "source": "https://commons.wikimedia.org/wiki/File:Zamek_Karl%C5%A1tejn.jpg"
- },
- "prague/kralovstvi": {
-  "article": "https://cs.wikipedia.org/wiki/Kr%C3%A1lovstv%C3%AD_%C5%BEeleznic",
-  "auteur": "ŠJů",
-  "fichier": "assets/photos/prague/kralovstvi.jpg",
-  "h": 750,
-  "l": 1000,
-  "licence": "CC BY 4.0",
-  "lien_licence": "https://creativecommons.org/licenses/by/4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Sm%C3%ADchov,_Stroupe%C5%BEnick%C3%A9ho_23,_Kr%C3%A1lovstv%C3%AD_%C5%BEeleznic_(01).jpg"
  },
  "prague/letna": {
   "article": "https://cs.wikipedia.org/wiki/Letensk%C3%A9_sady",
@@ -1189,16 +1169,6 @@
   "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
   "source": "https://commons.wikimedia.org/wiki/File:Wien_-_Donauinsel_mit_den_Donaubr%C3%BCcken.JPG"
  },
- "vienne/hausdermusik": {
-  "article": "https://de.wikipedia.org/wiki/Haus_der_Musik",
-  "auteur": "Eva Prader",
-  "fichier": "assets/photos/vienne/hausdermusik.jpg",
-  "h": 1500,
-  "l": 1000,
-  "licence": "CC BY-SA 3.0",
-  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
-  "source": "https://commons.wikimedia.org/wiki/File:HDM_Au%C3%9Fenansicht_hoch.JPG"
- },
  "vienne/hausdesmeeres": {
   "article": "https://de.wikipedia.org/wiki/Haus_des_Meeres",
   "auteur": "Thomas Ledl",
@@ -1288,15 +1258,5 @@
   "licence": "CC0",
   "lien_licence": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
   "source": "https://commons.wikimedia.org/wiki/File:Wien_Museum_Neu.jpg"
- },
- "vienne/zoo": {
-  "article": "https://en.wikipedia.org/wiki/Tiergarten_Sch%C3%B6nbrunn",
-  "auteur": "Daniel Zupanc",
-  "fichier": "assets/photos/vienne/zoo.jpg",
-  "h": 666,
-  "l": 1000,
-  "licence": "CC BY-SA 4.0",
-  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Gro%C3%9Fe_Pandas_Yang_Yang_und_Fu_Long.jpg"
  }
 }

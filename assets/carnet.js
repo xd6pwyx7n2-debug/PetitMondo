@@ -230,8 +230,9 @@
     for (const [c, nom] of cats) {
       const pr = PM.proches(osm.points, a, c, 1, c === 'table_langer' ? 1500 : 900)[0];
       if (pr) {
+        const det = PM.detailPoint(pr).split(' · ').filter(x => x && !(c === 'table_langer' && x.startsWith('table à langer'))).join(' · ');
         const nomP = pr.t?.name ? ` : <a href="${PM.lienItineraire({ lat: pr.lat, lon: pr.lon })}" target="_blank" rel="noopener">${esc(pr.t.name)}</a>` : '';
-        li.push(`<li>${PM.ico(PM.CATS[c].ico)}<span><strong>${nom}</strong> à ${PM.fmtDist(pr.d)} ${PM.direction(a, pr)}${nomP}${PM.detailPoint(pr) ? ` <span class="muted">(${esc(PM.detailPoint(pr))})</span>` : ''}</span></li>`);
+        li.push(`<li>${PM.ico(PM.CATS[c].ico)}<span><strong>${nom}</strong> ${PM.aPied(pr.d)}${nomP}${det ? ` <span class="muted">· ${esc(det)}</span>` : ''}</span></li>`);
       }
     }
     return li.length ? `<div class="proches"><strong>À proximité</strong> <span class="muted">(signalé dans OpenStreetMap, non vérifié)</span><ul>${li.join('')}</ul></div>` : '';
@@ -348,7 +349,7 @@
       <div id="autour" class="carte no-print" hidden><h3>Autour de moi</h3><div id="autour-res"><p class="muted">Recherche de votre position…</p></div></div>
       ${vac && vac.length ? `<p class="note vacances">${PM.ico('horloge', 'i s')} <strong>Vacances scolaires françaises pendant votre séjour</strong> : ${vac.map(x => `${esc(x.nom)} (zone${x.zones.length > 1 ? 's' : ''} ${x.zones.join(', ')})`).join(' ; ')}. Attendez-vous à plus de monde sur les grands sites : réservez tôt et arrivez à l'ouverture.</p>` : ''}
       ${met.etat === 'trop-tot' ? `<p class="note no-print">La météo de chaque journée apparaîtra ici dans les 15 jours avant le départ (encore ${met.ecart - 14} jours) : rouvrez simplement le lien du carnet.</p>` : ''}${met.etat === 'sans-date' ? '<p class="note no-print">Indiquez la date d\'arrivée pour voir la météo de chaque journée dans les 15 jours avant le départ.</p>' : ''}
-      <div class="avion carte no-print">${PM.ico('avion', 'i l')}<div><h3>À faire avant de partir</h3><p>Enregistrez ce carnet en PDF : il s'ouvrira en mode avion, sans réseau. Tout y est écrit en clair : adresses, transports, services proches avec leur distance et leur direction. Les QR codes ne servent que si vous avez du réseau. Sur iPhone : « Imprimer », puis « Partager › Enregistrer dans Fichiers ». Sur Android : « Imprimer › Enregistrer au format PDF ». Pour la carte : mymaps.google.com › Créer une carte › Importer le fichier KML.</p></div></div>
+      <div class="avion carte no-print">${PM.ico('avion', 'i l')}<div><h3>À faire avant de partir</h3><p>Enregistrez ce carnet en PDF : il s'ouvrira en mode avion, sans réseau. Tout y est écrit en clair : adresses, transports, services proches avec leur temps de marche. Les QR codes ne servent que si vous avez du réseau. Sur iPhone : « Imprimer », puis « Partager › Enregistrer dans Fichiers ». Sur Android : « Imprimer › Enregistrer au format PDF ». Pour la carte : mymaps.google.com › Créer une carte › Importer le fichier KML.</p></div></div>
       <div id="map" class="no-print" style="margin:22px 0 12px" aria-label="Carte du séjour"></div>
       <div class="filtres no-print">${jours.map((j, i) => `<span class="chip"><i class="pt" style="background:${COULEURS_JOURS[i % 5]}"></i>Jour ${j.n}</span>`).join('')}<span class="chip"><i class="pt" style="background:${PM.CATS.toilettes.couleur}"></i>Toilettes</span><span class="chip"><i class="pt" style="background:${PM.CATS.aire_jeux.couleur}"></i>Aires de jeux</span><span class="chip"><i class="pt" style="background:${PM.CATS.table_langer.couleur}"></i>Tables à langer</span></div>`;
 
@@ -375,7 +376,7 @@
       }
       if (j.planB) {
         const jeux = osm ? PM.proches(osm.points, j.centre, 'aire_jeux', 1, 1500)[0] : null;
-        out += `<div class="planb">${PM.ico('pluie')}<div><strong>Sauver la journée</strong> (pluie, fatigue, fermeture) : <a href="${PM.lienItineraire(j.planB)}" target="_blank" rel="noopener">${esc(j.planB.nom)}</a>, lieu couvert à ${PM.fmtDist(PM.distance(j.centre, j.planB))} ${PM.direction(j.centre, j.planB)}. Adresse : ${esc(j.planB.adresse)}. ${esc(j.planB.transport)}.${jeux ? ` Besoin de se défouler ? Une aire de jeux est signalée à ${PM.fmtDist(jeux.d)} ${PM.direction(j.centre, jeux)}.` : ''}</div></div>`;
+        out += `<div class="planb">${PM.ico('pluie')}<div><strong>Sauver la journée</strong> (pluie, fatigue, fermeture) : <a href="${PM.lienItineraire(j.planB)}" target="_blank" rel="noopener">${esc(j.planB.nom)}</a>, lieu couvert ${PM.aPied(PM.distance(j.centre, j.planB))}. Adresse : ${esc(j.planB.adresse)}. ${esc(j.planB.transport)}.${jeux ? ` Besoin de se défouler ? Une aire de jeux est signalée ${PM.aPied(jeux.d)}.` : ''}</div></div>`;
       }
       out += `</div></article>`;
       return out;

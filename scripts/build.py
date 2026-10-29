@@ -6,10 +6,12 @@ Entrées : data/villes/*.json (destinations), data/osm/*.json (services OpenStre
           data/photos.json (photos libres et crédits, voir fetch_photos.py)
 Sorties : toutes les pages index.html, data/enfants/<ville>.html (pages enfants du carnet), sitemap.xml
 """
+import hashlib
 import html
 import json
 import math
 import pathlib
+import re
 import sys
 import urllib.parse
 from datetime import date
@@ -24,6 +26,7 @@ PAGES = []
 PHOTOS = {}
 VILLES = []
 ACCES = {}
+VERIF = {}  # codes de vérification Search Console / Bing, dans data/seo.json
 
 INTERETS = {"animaux": "Animaux", "sciences": "Sciences", "aventure": "Aventure", "culture": "Culture",
             "parc": "Parcs", "plage": "Plage", "gourmand": "Gourmand"}
@@ -98,7 +101,14 @@ def de_v(n):
 def nom_point(p):
     return p["t"].get("name") or {"toilettes": "Toilettes publiques", "aire_jeux": "Aire de jeux",
                                   "table_langer": "Toilettes avec table à langer", "pharmacie": "Pharmacie",
-                                  "resto_enfants": "Restaurant"}[p["c"]]
+                                  "resto_enfants": "Restaurant", "eau": "Point d'eau potable",
+                                  "station": "Station", "ascenseur": "Ascenseur"}.get(p["c"], "Point")
+
+
+def a_pied(m):
+    """« à 4 min à pied (200 m) » : même calcul que le carnet (détour de 30 %, pas d'enfant)."""
+    mn = max(1, round(m * 1.3 / 50))
+    return f"à {mn} min à pied ({fmt_dist(m)})" if mn <= 30 else f"à {fmt_dist(m)}, en transports"
 
 
 def detail_point(p):
@@ -130,22 +140,55 @@ def court(t, n=42):
     return t if len(t) <= n else t[:n].rsplit(" ", 1)[0] + "…"
 
 
-def photo(cle, alt, b, cls="photo", ill=None, legende=True):
+def photo(cle, alt, b, cls="photo", ill=None, legende=True, prioritaire=False):
     """Photo libre avec crédit, sinon illustration PetitMondo."""
     c = PHOTOS.get(cle)
     if c:
         dims = f' width="{c["l"]}" height="{c["h"]}"' if c.get("l") else ""
         cap = f"<figcaption>{credit(cle)}</figcaption>" if legende else ""
-        return f'<figure class="{cls}"><img src="{b}{c["fichier"]}" alt="{e(alt)}" loading="lazy"{dims}>{cap}</figure>'
+        return f'<figure class="{cls}"><img src="{b}{c["fichier"]}" alt="{e(alt)}" {'fetchpriority="high"' if prioritaire else 'loading="lazy"'}{dims}>{cap}</figure>'
     if ill:
         return f'<figure class="{cls} ill"><img src="{b}{ill}" alt="" loading="lazy"></figure>'
     return ""
 
 
-def page(chemin, titre, desc, corps, depth, *, head="", scripts="", indexable=True, actif="", og_titre=None):
+def coupe(t, n=158):
+    t = " ".join(t.split())
+    return t if len(t) <= n else t[:n - 1].rsplit(" ", 1)[0].rstrip(",;:") + "…"
+
+
+def url_photo(cle):
+    c = PHOTOS.get(cle)
+    return URL + c["fichier"] if c else None
+
+
+def fil_ariane(fil, b):
+    """fil = [(nom, chemin relatif à la racine), ...] ; le dernier élément est la page courante."""
+    if not fil:
+        return "", None
+    items = [("Accueil", "")] + fil
+    html_f = '<nav class="fil" aria-label="Fil d\'Ariane"><div class="wrap"><ol>' + "".join(
+        (f'<li><a href="{b}{c}">{e(n)}</a></li>' if i < len(items) - 1 else f'<li aria-current="page">{e(n)}</li>')
+        for i, (n, c) in enumerate(items)) + "</ol></div></nav>"
+    ld = {"@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": i + 1, "name": n, "item": URL + c} for i, (n, c) in enumerate(items)]}
+    return html_f, ld
+
+
+def page(chemin, titre, desc, corps, depth, *, head="", scripts="", indexable=True, actif="", og_titre=None,
+         image=None, fil=None, ld=None, maj=None):
     b = rel(depth)
-    PAGES.append((chemin, indexable))
-    robots = "" if indexable else '<meta name="robots" content="noindex">'
+    robots = '<meta name="robots" content="max-image-preview:large">' if indexable else '<meta name="robots" content="noindex">'
+    fil_html, fil_ld = fil_ariane(fil, b)
+    graphe = [x for x in (ld or []) + ([fil_ld] if fil_ld else []) if x]
+    if graphe:
+        head += f'<script type="application/ld+json">{json.dumps({"@context": "https://schema.org", "@graph": graphe}, ensure_ascii=False)}</script>'
+    image = image or URL + "assets/partage.png"
+    if chemin == "":
+        if VERIF.get("google_site_verification"):
+            head += f'<meta name="google-site-verification" content="{e(VERIF["google_site_verification"])}">'
+        if VERIF.get("bing_msvalidate"):
+            head += f'<meta name="msvalidate.01" content="{e(VERIF["bing_msvalidate"])}">'
     nav = [(f"{b}#destinations", "Destinations", "dest"), (f"{b}jeux/", "Jeux enfants", "jeux"), (f"{b}valise/", "Valise", "valise")]
     nav_html = "".join(f'<a class="hide-m" href="{h}"{" aria-current=page" if actif == k else ""}>{n}</a>' for h, n, k in nav)
     villes_pied = "".join(f'<li><a href="{b}{v["id"]}/">{e(v["nom"])} en famille</a></li>' for v in VILLES)
@@ -163,8 +206,10 @@ def page(chemin, titre, desc, corps, depth, *, head="", scripts="", indexable=Tr
 <meta property="og:title" content="{e(og_titre or titre)}">
 <meta property="og:description" content="{e(desc)}">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="PetitMondo">
+<meta property="og:locale" content="fr_FR">
 <meta property="og:url" content="{URL}{chemin}">
-<meta property="og:image" content="{URL}assets/partage.png">
+<meta property="og:image" content="{image}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="{b}assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="{b}assets/icone-180.png">
@@ -180,7 +225,7 @@ def page(chemin, titre, desc, corps, depth, *, head="", scripts="", indexable=Tr
   <nav class="nav" aria-label="Navigation principale">{nav_html}<a class="cta-nav" href="{b}carnet/">Créer mon carnet</a></nav>
 </div></header>
 <main>
-{corps}
+{fil_html}{corps}
 </main>
 <footer><div class="wrap">
   <div>
@@ -196,6 +241,7 @@ def page(chemin, titre, desc, corps, depth, *, head="", scripts="", indexable=Tr
 </body>
 </html>
 '''
+    PAGES.append((chemin, indexable, image, hashlib.sha1(html_page.encode()).hexdigest()[:16]))
     cible = ROOT / chemin / "index.html" if not chemin.endswith(".html") else ROOT / chemin
     cible.parent.mkdir(parents=True, exist_ok=True)
     cible.write_text(html_page, encoding="utf-8")
@@ -270,12 +316,12 @@ def carte_act(a, v, osm, b):
     ph = photo(f'{v["id"]}/{a["id"]}', a["nom"], b, "photo carte-photo", f'assets/villes/{v["id"]}.svg')
     return f'''<article class="carte act" data-min="{a["ages"][0]}" data-max="{a["ages"][1]}" data-int="{" ".join(a["interets"])}" data-couvert="{int(a["interieur"])}" data-gratuit="{int(a["gratuit"] is not False)}">
   {ph}<span class="badge tampon ages">{a["ages"][0]}–{a["ages"][1]} ans</span>
-  <h3>{e(a["nom"])}</h3>
+  <h3><a href="{b}{v["id"]}/{a["id"]}/">{e(a["nom"])}</a></h3>
   <div class="meta">Environ {duree(a["duree"])} · {e(v["zones"][a["zone"]]["nom"])}</div>
   <div class="badges">{badges(a)}</div>
   <p>{e(a["conseil"])}</p>
   <p class="acces">{ico("carte", "i s", b)}<span><strong>{e(a["adresse"])}</strong><br>{e(a["transport"])}</span></p>{bloc_poussette(v, a, b)}{prox}
-  <div class="liens"><a href="{maps(a["nom"], a["adresse"])}" target="_blank" rel="noopener">Voir sur la carte</a>{site}</div>
+  <div class="liens"><a class="fiche" href="{b}{v["id"]}/{a["id"]}/">Fiche complète</a><a href="{maps(a["nom"], a["adresse"])}" target="_blank" rel="noopener">Voir sur la carte</a>{site}</div>
 </article>'''
 
 
@@ -437,7 +483,7 @@ def pages_ville(v, osm):
 
     def hero(depth, surtitre, titre_html, lead, cta_q="j=3&a=5&r=equilibre"):
         b = rel(depth)
-        ph = photo(f"{vid}/_ville", f"Vue {de_v(n)}", b, "photo hero-photo")
+        ph = photo(f"{vid}/_ville", f"Vue {de_v(n)}", b, "photo hero-photo", prioritaire=True)
         visuel = ph or f'<img src="{b}{illu}" alt="" width="640" height="320" class="hero-illu">'
         return f'''<section class="hero"><div class="wrap grid">
   <div>
@@ -526,9 +572,20 @@ def pages_ville(v, osm):
   {faq_html(faq)}
   <p class="note" style="margin-top:20px">Fiches vérifiées le {date_fr(v["verification"])}. {e(v["avertissement"])}</p>
 </div></section>'''
-    page(f"{vid}/", f"{n} avec des enfants : lieux, itinéraires et carte pratique | PetitMondo",
-         f"Visiter {n} en famille : {len(acts)} lieux classés par âge avec adresse et transport, plan B pluie, services utiles sur la carte et carnet PDF gratuit avec jeux pour les enfants.",
-         corps, d1, head=leaflet_head(), scripts=leaflet_scripts(b1, vid), actif="dest")
+    annee = v["verification"][:4]
+    fil_v = [(f"{n} avec des enfants", f"{vid}/")]
+    img_v = url_photo(f"{vid}/_ville")
+    ld_v = {"@type": "TouristDestination", "@id": f"{URL}{vid}/#destination", "name": n, "url": f"{URL}{vid}/",
+            "description": f"Guide de {n} pour les familles : {len(acts)} lieux choisis pour les enfants.",
+            "touristType": "Familles avec enfants", "geo": {"@type": "GeoCoordinates", "latitude": v["centre"][0], "longitude": v["centre"][1]},
+            "includesAttraction": [{"@type": "TouristAttraction", "name": a["nom"], "url": f"{URL}{vid}/{a['id']}/"} for a in acts]}
+    if img_v:
+        ld_v["image"] = img_v
+    titre_v = (f"{n} avec des enfants : guide {annee}" if parc else f"Que faire à {n} avec des enfants ? Guide {annee}") + " | PetitMondo"
+    page(f"{vid}/", titre_v,
+         coupe(f"{n} en famille : {len(acts)} lieux classés par âge, dont " + ", ".join(re.sub(r" \(.*?\)", "", x["nom"]) for x in acts[:3]) + ", avec accès, poussette, toilettes, plan B pluie et carnet PDF gratuit avec jeux."),
+         corps, d1, head=leaflet_head(), scripts=leaflet_scripts(b1, vid), actif="dest",
+         image=img_v, fil=fil_v, ld=[ld_v], maj=v["verification"])
 
     # ---------- pages thématiques
     def theme(slug, titre, h1, lead, liste, intro, extra="", calques=None, cta="j=3&a=5&r=equilibre"):
@@ -541,8 +598,10 @@ def pages_ville(v, osm):
         c += carte_section('La carte <span class="hl">pratique</span>', "Touchez un point pour lancer l'itinéraire.")
         c += f'''<section class="ciel"><div class="wrap"><h2>Continuer</h2>{cartes_liens(liens_themes(False, slug)[:4], b)}
 <p class="note" style="margin-top:22px">Fiches vérifiées le {date_fr(v["verification"])}. Services issus d'OpenStreetMap, non vérifiés sur place. {e(v["avertissement"])}</p></div></section>'''
-        page(f"{vid}/{slug}/", SEO[slug].format(n=n) + " | PetitMondo", lead[:155], c, d2,
-             head=leaflet_head(), scripts=leaflet_scripts(b, vid, calques), actif="dest")
+        exemples = f" {noms(liste, 3)}…" if liste else ""
+        page(f"{vid}/{slug}/", SEO[slug].format(n=n) + " | PetitMondo", coupe(f"{n}, {titre} : {lead[0].lower() + lead[1:]}{exemples}"), c, d2,
+             head=leaflet_head(), scripts=leaflet_scripts(b, vid, calques), actif="dest",
+             image=img_v, fil=fil_v + [(titre[0].upper() + titre[1:], f"{vid}/{slug}/")])
 
     def table_services(cat, titre_col, maxi=600):
         lignes = []
@@ -636,7 +695,7 @@ def pages_ville(v, osm):
     c += f'<script src="{b2}assets/ecouter.js"></script>'
     page(f"{vid}/decouvrir/", f"{n} expliqué aux enfants : pays, langue, premiers mots | PetitMondo",
          f"Préparer les enfants au voyage à {n} : le pays, la capitale, la langue, les mots à connaître et les secrets du lieu, à lire ou à imprimer.",
-         c, 2, actif="jeux")
+         c, 2, actif="jeux", image=img_v, fil=fil_v + [("Pour les enfants", f"{vid}/decouvrir/")])
     c = f'''<section class="hero no-print"><div class="wrap grid">
   <div><span class="etiquette"><i></i>À imprimer · 3 à 10 ans</span>
   <h1>Les jeux <span class="hl">{e(de_v(n))}</span></h1>
@@ -647,7 +706,7 @@ def pages_ville(v, osm):
 <section style="padding-top:0"><div class="wrap etroit">{jeux_w}</div></section>'''
     page(f"{vid}/jeux/", f"Jeux à imprimer pour visiter {n} avec des enfants | PetitMondo",
          f"Bingo, chasse au trésor, coloriage et journal de voyage à imprimer gratuitement pour occuper les enfants pendant les visites à {n}.",
-         c, 2, actif="jeux")
+         c, 2, actif="jeux", image=img_v, fil=fil_v + [("Jeux à imprimer", f"{vid}/jeux/")])
 
     if vid in LEXIQUES:
         langues, lignes = LEXIQUES[vid]
@@ -665,7 +724,114 @@ def pages_ville(v, osm):
 </div></section>'''
         page(f"{vid}/lexique/", f"Phrases utiles pour voyager à {n} avec des enfants | PetitMondo",
              f"Table à langer, chaise haute, pharmacie, fièvre, allergie : les phrases en {' et '.join(langues).lower()} dont les parents ont besoin à {n}.",
-             c, 2, actif="dest")
+             c, 2, actif="dest", image=img_v, fil=fil_v + [("Phrases utiles", f"{vid}/lexique/")])
+
+
+# ---------------------------------------------------------------- une page par lieu
+PRIX = {True: "Gratuit", "partiel": "En partie gratuit", False: "Payant"}
+NOTE_POUSSETTE = {"facile": "Facile en poussette", "moyen": "Poussette possible, à anticiper", "difficile": "Porte-bébé conseillé"}
+
+
+def ld_lieu(v, a):
+    d = {"@type": "TouristAttraction", "@id": f'{URL}{v["id"]}/{a["id"]}/#lieu', "name": a["nom"],
+         "description": a["conseil"], "url": f'{URL}{v["id"]}/{a["id"]}/',
+         "address": {"@type": "PostalAddress", "streetAddress": a["adresse"], "addressLocality": v["nom"]},
+         "geo": {"@type": "GeoCoordinates", "latitude": a["lat"], "longitude": a["lon"]},
+         "touristType": "Familles avec enfants", "isAccessibleForFree": a["gratuit"] is True,
+         "containedInPlace": {"@type": "City", "name": v["nom"]}}
+    if url_photo(f'{v["id"]}/{a["id"]}'):
+        d["image"] = url_photo(f'{v["id"]}/{a["id"]}')
+    if a.get("site"):
+        d["sameAs"] = a["site"]
+    return d
+
+
+def pages_lieux(v, osm):
+    vid, n = v["id"], v["nom"]
+    acts = v["activites"]
+    b = rel(2)
+    for a in acts:
+        zone = v["zones"][a["zone"]]["nom"]
+        ph = photo(f"{vid}/{a['id']}", a["nom"], b, "photo hero-photo", prioritaire=True)
+        visuel = ph or f'<img src="{b}assets/villes/{vid}.svg" alt="" width="640" height="320" class="hero-illu">'
+        age = f'{a["ages"][0]} à {a["ages"][1]} ans'
+        tuiles = [("Âge conseillé", age), ("Durée", f"environ {duree(a['duree'])}"),
+                  ("Lieu", "Couvert" if a["interieur"] else "Plein air"), ("Prix", PRIX[a["gratuit"]]),
+                  ("Réservation", "Conseillée" if a["reservation"] else "Pas nécessaire")]
+        tuiles_html = "".join(f'<div class="tuile"><small>{t}</small><b>{e(x)}</b></div>' for t, x in tuiles)
+
+        # services autour, avec le temps de marche écrit en clair
+        services = []
+        for cat, nb, maxi in (("toilettes", 2, 700), ("table_langer", 2, 1000), ("aire_jeux", 2, 800), ("eau", 1, 600), ("pharmacie", 1, 900)):
+            for pt, dd in proches(osm, a, cat, nb, maxi):
+                det = " · ".join(x for x in detail_point(pt).split(" · ") if x and not (cat == "table_langer" and x == "table à langer"))
+                services.append(f'<li>{ico(CAT_ICO.get(cat, "carte"), "i s", b)}<span><strong>{CAT_NOM[cat]}</strong> : {e(nom_point(pt))}, {a_pied(dd)}{" · " + e(det) if det else ""}</span></li>')
+        st = ACCES.get(vid, {}).get("lieux", {}).get(a["id"], {}).get("station")
+        if st:
+            services.append(f'<li>{ico("station", "i s", b)}<span><strong>Station</strong> : {e(st["nom"])}, {a_pied(st["d"])} · {FAUTEUIL.get(st["fauteuil"], FAUTEUIL["inconnu"])}</span></li>')
+        services_html = (f'<ul class="services-lieu">{"".join(services)}</ul><p class="note" style="margin-top:14px">D\'après OpenStreetMap, non vérifié sur place.</p>'
+                         if services else '<p class="muted">Aucun service recensé à proximité dans OpenStreetMap.</p>')
+
+        # lieux à combiner et plan B
+        autres = sorted(((x, dist(a, x)) for x in acts if x is not a and not x.get("excursion")), key=lambda t: t[1])
+        planb = next((t for t in autres if t[0]["interieur"]), None) if not a["interieur"] and not a.get("excursion") else None
+        voisins = [t for t in autres if t[1] <= 3500 and t is not planb][:3] if not a.get("excursion") else []
+        def lien_lieu(x, dd, txt=""):
+            return (f'<a class="carte" href="../{x["id"]}/">{ico("activite", "i", b)}<h3>{e(x["nom"])}</h3>'
+                    f'<p>{txt or e(x["enfant"])}</p><p class="muted">{a_pied(dd)[0].upper() + a_pied(dd)[1:]} · {x["ages"][0]}–{x["ages"][1]} ans</p></a>')
+        bloc_voisins = ""
+        if voisins:
+            bloc_voisins += f'<h2>À combiner <span class="hl m">dans la journée</span></h2><div class="grille" style="margin-top:18px">{"".join(lien_lieu(x, dd) for x, dd in voisins)}</div>'
+        if planb:
+            bloc_voisins += f'<h2 style="margin-top:34px">S\'il pleut : <span class="hl">le plan B couvert</span></h2><div class="grille" style="margin-top:18px">{lien_lieu(planb[0], planb[1], "Le lieu couvert le plus proche, pour ne pas perdre la journée.")}</div>'
+
+        pd = poussette_details(v, a)
+        faq = [(f"{a['nom']} : à partir de quel âge ?", f"Nous le conseillons de {age}. {a['enfant']}"),
+               (f"{a['nom']} : combien de temps prévoir ?", f"Environ {duree(a['duree'])} sur place, sans compter le trajet."),
+               (f"{a['nom']} : peut-on y aller avec une poussette ?", NOTE_POUSSETTE[a["poussette"]] + (". " + "; ".join(pd).capitalize() + "." if pd else ".")),
+               (f"{a['nom']} : comment y aller ?", f"{a['adresse']}. {a['transport']}.")]
+        if a["gratuit"] is not False:
+            faq.append((f"{a['nom']} : l'entrée est-elle gratuite ?", "Oui, l'accès est libre." if a["gratuit"] is True else "En partie : l'accès principal est libre, certaines zones ou activités sont payantes."))
+
+        site = f'<a class="btn sec" href="{e(a["site"])}" target="_blank" rel="noopener">Site officiel</a>' if a.get("site") else ""
+        corps = f'''<section class="hero"><div class="wrap grid">
+  <div>
+    <span class="etiquette"><i></i>{e(n)} · {e(zone)}</span>
+    <h1>{e(a["nom"])}</h1>
+    <p class="lead">{e(a["conseil"])}</p>
+    <div class="badges" style="margin-top:14px">{badges(a)}</div>
+    <div class="cta"><a class="btn" href="{b}carnet/#v={vid}&j=3&a={max(a['ages'][0], 3)}&r=equilibre">{ico_btn("pdf", b)}Créer mon carnet pour {e(n)}</a>{site}</div>
+  </div>
+  <div class="visuel">{visuel}<img class="mondo" src="{b}assets/mondo-coucou.svg" alt=""></div>
+</div></section>
+<section style="padding-top:0"><div class="wrap">
+  <div class="infos-lieu">{tuiles_html}</div>
+  <div class="grille g2f">
+    <div class="carte soleil">{ico("enfant", "i", b)}<h2 style="font-size:1.4rem">Ce que les enfants vont aimer</h2><p>{e(a["enfant"])}</p></div>
+    <div class="carte">{ico("carte", "i", b)}<h2 style="font-size:1.4rem">Y aller</h2><p><strong>{e(a["adresse"])}</strong></p><p>{e(a["transport"])}</p>
+      <p><a href="{maps(a["nom"], a["adresse"])}" target="_blank" rel="noopener">Ouvrir l'itinéraire</a></p></div>
+  </div>
+  <div style="margin-top:18px">{bloc_poussette(v, a, b)}</div>
+</div></section>
+<section class="ciel"><div class="wrap">
+  <h2>Autour <span class="hl">du lieu</span></h2>
+  <p class="muted">Toilettes, tables à langer, aires de jeux, eau potable, pharmacie et station les plus proches, avec le temps de marche.</p>
+  {services_html}
+</div></section>
+{f'<section><div class="wrap">{bloc_voisins}</div></section>' if bloc_voisins else ""}
+<section class="sable"><div class="wrap etroit">
+  <h2>Questions fréquentes</h2>
+  {faq_html(faq)}
+  <p class="note" style="margin-top:20px">Fiche vérifiée le {date_fr(v["verification"])}. {e(v["avertissement"])} <a href="{b}{vid}/">Tous les lieux {e(de_v(n))} avec des enfants</a>.</p>
+</div></section>'''
+        ville_dans_nom = n.lower() in a["nom"].lower() or (v.get("type") == "parc")
+        titre = f'{a["nom"]} avec des enfants' + ("" if ville_dans_nom else f", {n}") + " : âge, accès, poussette | PetitMondo"
+        desc = (f'{a["nom"]} en famille : conseillé de {age}, environ {duree(a["duree"])}, {PRIX[a["gratuit"]].lower()}. '
+                f'{NOTE_POUSSETTE[a["poussette"]]}. Accès et services utiles autour.')
+        page(f"{vid}/{a['id']}/", titre, desc, corps, 2, actif="dest",
+             image=url_photo(f"{vid}/{a['id']}") or url_photo(f"{vid}/_ville"),
+             fil=[(f"{n} avec des enfants", f"{vid}/"), (a["nom"], f"{vid}/{a['id']}/")],
+             ld=[ld_lieu(v, a)], maj=v["verification"])
 
 
 # ---------------------------------------------------------------- pages générales
@@ -702,7 +868,7 @@ def accueil():
   <div class="tete-section"><div><h2>Un carnet, <span class="hl c">deux lecteurs</span></h2><p>Le PDF se partage en deux : une partie pour organiser, une partie pour que les enfants vivent le voyage.</p></div></div>
   <div class="grille g2">
     <div class="carte">{ico("parents", "i l", "")}<h3>Pour les parents</h3>
-      <ul class="liste-ok"><li>Programme jour par jour, horaires et temps de marche</li><li>Chaque lieu numéroté comme sur la carte, avec photo, adresse, transport et QR code vers l'itinéraire</li><li>Toilettes, eau potable, aire de jeux et table à langer les plus proches, avec distance et direction</li><li>Fiche poussette : pavés, escaliers, station accessible ou non</li><li>Météo de chaque journée dans les 15 jours avant le départ</li><li>Un plan B couvert pour chaque journée</li><li>Checklist de départ, papiers, urgences</li><li>Carte à importer dans Google My Maps</li></ul></div>
+      <ul class="liste-ok"><li>Programme jour par jour, horaires et temps de marche</li><li>Chaque lieu numéroté comme sur la carte, avec photo, adresse, transport et QR code vers l'itinéraire</li><li>Toilettes, eau potable, aire de jeux et table à langer les plus proches, avec le temps de marche</li><li>Fiche poussette : pavés, escaliers, station accessible ou non</li><li>Météo de chaque journée dans les 15 jours avant le départ</li><li>Un plan B couvert pour chaque journée</li><li>Checklist de départ, papiers, urgences</li><li>Carte à importer dans Google My Maps</li></ul></div>
     <div class="carte soleil">{ico("enfant", "i l", "")}<h3>Pour les enfants</h3>
       <ul class="liste-ok"><li>« Découvre la ville » : pays, capitale, langue et secrets, en phrases simples</li><li>Ses premiers mots dans la langue du pays, avec la prononciation, à écouter sur le site</li><li>« Ce que je vais voir » : les lieux du séjour en grand, à cocher</li><li>Bingo des rues, chasse au trésor et coloriage</li><li>Un journal de bord pour chaque jour</li></ul></div>
   </div>
@@ -735,7 +901,7 @@ def accueil():
     <div class="carte">{ico("pluie", "i", "")}<h3>La météo de chaque jour</h3><p>Dans les 15 jours avant le départ, le carnet affiche la météo prévue et signale quand sortir le plan B.</p></div>
     <div class="carte">{ico("carte", "i", "")}<h3>« Autour de moi », le jour J</h3><p>Un bouton donne les toilettes, l'eau, la pharmacie et la station la plus proches, même sans réseau une fois le carnet ouvert.</p></div>
     <div class="carte">{ico("bulle", "i", "")}<h3>Les mots qui parlent</h3><p>Les enfants écoutent leurs premiers mots dans la langue du pays, avec la voix du téléphone.</p></div>
-    <div class="carte">{ico("avion", "i", "")}<h3>Un PDF qui se suffit</h3><p>Aucun lien à toucher : adresses, transports, distances et directions sont écrits en clair, pour le papier et le mode avion.</p></div>
+    <div class="carte">{ico("avion", "i", "")}<h3>Un PDF qui se suffit</h3><p>Aucun lien à toucher : adresses, transports et temps de marche sont écrits en clair, pour le papier et le mode avion.</p></div>
   </div>
 </div></section>
 
@@ -757,9 +923,15 @@ def accueil():
              ("Mes informations sont-elles enregistrées ?", "Non. Les réponses du formulaire restent dans le lien de votre carnet, sur votre appareil. Aucun cookie publicitaire, aucun compte."),
              ("Comment importer la carte dans Google Maps ?", "Téléchargez le fichier KML depuis votre carnet, ouvrez Google My Maps, créez une carte et choisissez Importer. Vous retrouverez un calque par journée et par type de service.")])}
 </div></section>'''
-    page("", "PetitMondo — Carnets de voyage en famille gratuits, avec jeux pour les enfants",
-         "Disneyland Paris, Paris, Rome, Londres, Barcelone, Lisbonne, Amsterdam, Prague, Vienne : un carnet de voyage familial gratuit adapté à l'âge des enfants, avec programme, lieux faciles à retrouver, jeux et pages enfants, utilisable en mode avion.",
-         corps, 0, og_titre="PetitMondo — Le monde à découvrir en famille")
+    noms_villes = ", ".join(v["nom"] for v in VILLES)
+    ld = [{"@type": "WebSite", "@id": URL + "#site", "name": "PetitMondo", "url": URL, "inLanguage": "fr",
+           "description": "Guides et carnets de voyage gratuits pour voyager en famille avec des enfants."},
+          {"@type": "Organization", "@id": URL + "#org", "name": "PetitMondo", "url": URL, "logo": URL + "assets/icone-512.png"},
+          {"@type": "ItemList", "name": "Destinations en famille", "itemListElement": [
+              {"@type": "ListItem", "position": i + 1, "name": f'{v["nom"]} avec des enfants', "url": f'{URL}{v["id"]}/'} for i, v in enumerate(VILLES)]}]
+    page("", "Carnet de voyage en famille gratuit, avec jeux enfants | PetitMondo",
+         coupe(f"{noms_villes} : un carnet de voyage familial gratuit adapté à l'âge des enfants, avec programme, lieux faciles à retrouver, jeux et pages enfants, utilisable en mode avion.", 200),
+         corps, 0, og_titre="PetitMondo — Le monde à découvrir en famille", ld=ld)
 
 
 def carnet():
@@ -814,7 +986,7 @@ def hub_jeux():
 </div></section>
 <section style="padding-top:0"><div class="wrap"><div class="grille">{cartes}</div></div></section>'''
     page("jeux/", "Jeux de voyage à imprimer pour les enfants | PetitMondo",
-         "Bingo des rues, chasse au trésor, coloriage, journal de voyage et découverte du pays à imprimer gratuitement pour Disneyland Paris, Paris, Rome, Londres, Barcelone, Lisbonne, Amsterdam, Prague et Vienne.", corps, 1, actif="jeux")
+         coupe("Bingo des rues, chasse au trésor, coloriage, journal de voyage et découverte du pays à imprimer gratuitement pour " + ", ".join(v["nom"] for v in VILLES[:-1]) + " et " + VILLES[-1]["nom"] + ".", 200), corps, 1, actif="jeux", fil=[("Jeux à imprimer", "jeux/")])
 
 
 VALISE = {
@@ -869,7 +1041,7 @@ document.querySelectorAll('.form input').forEach(i=>i.addEventListener('change',
 document.getElementById('v-raz').onclick=()=>{s={};save();maj()};maj()})();</script>'''
     page("valise/", "Valise des enfants : la liste à cocher pour voyager en famille | PetitMondo",
          "La liste de valise pour voyager avec un bébé ou des enfants : papiers, santé, vêtements, objets pratiques. Adaptée à l'âge et à la saison, à cocher ou à imprimer.",
-         corps, 1, scripts=js, actif="valise")
+         corps, 1, scripts=js, actif="valise", fil=[("Valise des enfants", "valise/")])
 
 
 def mode_avion():
@@ -891,7 +1063,7 @@ def mode_avion():
 </div>
 <p style="margin-top:26px"><a class="btn" href="{b}carnet/">{ico_btn("pdf", b)}Créer mon carnet</a></p></div></section>'''
     page("mode-avion/", "Utiliser son carnet de voyage en mode avion | PetitMondo",
-         "Comment garder le carnet de voyage PetitMondo sur le téléphone et l'utiliser en mode avion, sans réseau ni forfait à l'étranger.", corps, 1)
+         "Comment garder le carnet de voyage PetitMondo sur le téléphone et l'utiliser en mode avion, sans réseau ni forfait à l'étranger.", corps, 1, fil=[("Mode avion", "mode-avion/")])
 
 
 def methode():
@@ -912,7 +1084,7 @@ def methode():
 <section style="padding-top:0"><div class="wrap etroit">{"".join(f'<div class="carte" style="margin-bottom:22px">{ico(i, "i", b)}<h3>{e(t)}</h3><p>{e(d)}</p></div>' for i, t, d in blocs)}
 <p><a href="{b}credits/"><strong>Voir les crédits photos</strong></a></p></div></section>'''
     page("methode/", "Notre méthode : d'où viennent les informations | PetitMondo",
-         "Comment PetitMondo sélectionne les lieux, d'où viennent les données sur les toilettes et tables à langer, les photos libres de droits et le calcul des programmes.", corps, 1)
+         "Comment PetitMondo sélectionne les lieux, d'où viennent les données sur les toilettes et tables à langer, les photos libres de droits et le calcul des programmes.", corps, 1, fil=[("Notre méthode", "methode/")])
 
 
 def credits():
@@ -983,8 +1155,31 @@ def page_404():
     p.write_text(s, encoding="utf-8")
 
 
+def sitemap():
+    """lastmod ne change que si le contenu de la page a changé (sinon Google l'ignore)."""
+    aujourdhui = date.today().isoformat()
+    fe = ROOT / "data" / "sitemap-etat.json"
+    etat = json.loads(fe.read_text(encoding="utf-8")) if fe.exists() else {}
+    nouvel, lignes = {}, []
+    for c, idx, image, h in PAGES:
+        if not idx:
+            continue
+        ancien = etat.get(c)
+        jour = ancien[1] if ancien and ancien[0] == h else aujourdhui
+        nouvel[c] = [h, jour]
+        img = f"<image:image><image:loc>{image}</image:loc></image:image>" if image and "/photos/" in image else ""
+        lignes.append(f"  <url><loc>{URL}{c}</loc><lastmod>{jour}</lastmod>{img}</url>\n")
+    fe.write_text(json.dumps(nouvel, ensure_ascii=False, indent=0, sort_keys=True), encoding="utf-8")
+    (ROOT / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+        'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n' + "".join(lignes) + "</urlset>\n", encoding="utf-8")
+
+
 def main():
     global PHOTOS
+    fs = ROOT / "data" / "seo.json"
+    if fs.exists():
+        VERIF.update(json.loads(fs.read_text(encoding="utf-8")))
     fp = ROOT / "data" / "photos.json"
     brut = json.loads(fp.read_text(encoding="utf-8")) if fp.exists() else {}
     PHOTOS = {k: c for k, c in brut.items() if (ROOT / c["fichier"]).exists()}
@@ -1003,6 +1198,7 @@ def main():
     carnet()
     for v in VILLES:
         pages_ville(v, osm_par_ville[v["id"]])
+        pages_lieux(v, osm_par_ville[v["id"]])
     hub_jeux()
     valise()
     mode_avion()
@@ -1010,11 +1206,7 @@ def main():
     credits()
     charte()
     page_404()
-    aujourdhui = date.today().isoformat()
-    (ROOT / "sitemap.xml").write_text(
-        '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-        + "".join(f"  <url><loc>{URL}{c}</loc><lastmod>{aujourdhui}</lastmod></url>\n" for c, idx in PAGES if idx)
-        + "</urlset>\n", encoding="utf-8")
+    sitemap()
     print(f"{len(PAGES)} pages générées, {len(PHOTOS)} photos")
 
 
