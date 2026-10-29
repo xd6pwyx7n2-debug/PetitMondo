@@ -18,7 +18,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from contenu import P, drapeau, LEXIQUES  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-URL = "https://xd6pwyx7n2-debug.github.io/petitmondo/"
+URL = "https://xd6pwyx7n2-debug.github.io/PetitMondo/"
 e = html.escape
 PAGES = []
 PHOTOS = {}
@@ -898,7 +898,7 @@ def page_404():
 </div></section>'''
     page("404.html", "Page introuvable | PetitMondo", "Cette page n'existe pas.", corps, 0, indexable=False)
     p = ROOT / "404.html"
-    s = p.read_text(encoding="utf-8").replace("<head>", '<head>\n<base href="/petitmondo/">', 1)  # servie à n'importe quelle profondeur
+    s = p.read_text(encoding="utf-8").replace("<head>", '<head>\n<base href="/PetitMondo/">', 1)  # servie à n'importe quelle profondeur
     p.write_text(s, encoding="utf-8")
 
 

@@ -20,7 +20,7 @@ import urllib.parse
 import urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-UA = "PetitMondo/1.0 (https://github.com/xd6pwyx7n2-debug/petitmondo; guide de voyage familial)"
+UA = "PetitMondo/1.0 (https://github.com/xd6pwyx7n2-debug/PetitMondo; guide de voyage familial)"
 LICENCES_OK = re.compile(r"^(cc0|public domain|pd|cc by(-sa)? ?\d|cc-by(-sa)?-\d|attribution)", re.I)
 LARGEUR = 1000
 

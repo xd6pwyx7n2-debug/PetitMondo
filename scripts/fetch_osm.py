@@ -53,7 +53,7 @@ def appel(q):
     for url in ENDPOINTS:
         for essai in range(3):
             try:
-                req = urllib.request.Request(url, data=data, headers={"User-Agent": "PetitMondo/1.0 (github.com/xd6pwyx7n2-debug/petitmondo)"})
+                req = urllib.request.Request(url, data=data, headers={"User-Agent": "PetitMondo/1.0 (github.com/xd6pwyx7n2-debug/PetitMondo)"})
                 with urllib.request.urlopen(req, timeout=240) as r:
                     return json.load(r)
             except Exception as exc:  # noqa: BLE001
