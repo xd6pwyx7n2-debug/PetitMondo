@@ -349,6 +349,22 @@ def pages_enfants(v, b, nb_journal=3):
   <p class="pe-consigne">Lis le mot en gras à voix haute, comme il est écrit entre guillemets{", ou touche le haut-parleur pour l'écouter" if k.get("voix") else ""}. Essaie de le dire à quelqu'un pendant le voyage !</p>
   <div class="liste-mots">{lignes}</div>{bonus}
 </section>'''
+    if k.get("quiz"):
+        qs, reps = [], []
+        for i, q in enumerate(k["quiz"]):
+            opts = list(enumerate(q["r"]))
+            opts = opts[i % len(opts):] + opts[:i % len(opts)]  # la bonne réponse n'est pas toujours la première
+            lettres = "abc"
+            boutons = "".join(f'<button class="opt" type="button" data-ok="{1 if j == q["ok"] else 0}"><b>{lettres[x]}</b> {e(t)}</button>' for x, (j, t) in enumerate(opts))
+            bonne = lettres[[j for j, _ in opts].index(q["ok"])]
+            reps.append(f"{i + 1}. {bonne}")
+            qs.append(f'<div class="question"><p class="qq">{i + 1}. {e(q["q"])}</p><div class="opts">{boutons}</div><p class="pourquoi" hidden>{e(q["pourquoi"])}</p></div>')
+        decouvre += f'''<section class="page-enfant quiz">
+  <div class="pe-tete"><img src="{b}assets/mondo-coucou.svg" alt="" class="pe-mondo"><div><span class="etiquette"><i></i>Avant de partir</span><h2>Prêt pour {e(n)} ?</h2></div></div>
+  <p class="pe-consigne">Cinq questions pour devenir un vrai explorateur. Entoure ta réponse, ou touche-la sur l'écran.</p>
+  {"".join(qs)}
+  <p class="reponses">Réponses : {" · ".join(reps)}</p>
+</section>'''
     bingo = "".join(f"<div>{svg_picto(P[c][1])}<span>{e(P[c][0])}</span></div>" for c in v["bingo"])
     jeux = f'''<section class="page-enfant">
   <div class="pe-tete"><img src="{b}assets/mondo-coucou.svg" alt="" class="pe-mondo"><div><span class="etiquette"><i></i>Jeu</span><h2>Le bingo de {e(n)}</h2></div></div>

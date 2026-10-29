@@ -104,7 +104,59 @@
     "rèst-roumz"
    ]
   ],
-  "voix": "en-GB"
+  "voix": "en-GB",
+  "quiz": [
+   {
+    "q": "En quelle année Disneyland Paris a-t-il ouvert ?",
+    "r": [
+     "1992",
+     "1950",
+     "2020"
+    ],
+    "ok": 0,
+    "pourquoi": "Le 12 avril 1992."
+   },
+   {
+    "q": "Combien de parcs y a-t-il ?",
+    "r": [
+     "Deux",
+     "Un",
+     "Dix"
+    ],
+    "ok": 0,
+    "pourquoi": "Disneyland Park et Disney Adventure World."
+   },
+   {
+    "q": "Quel animal dort sous le château ?",
+    "r": [
+     "Un dragon",
+     "Un lion",
+     "Un ours"
+    ],
+    "ok": 0,
+    "pourquoi": "Il vit dans une grotte, juste sous le château."
+   },
+   {
+    "q": "Comment dit-on « château » en anglais ?",
+    "r": [
+     "Castle",
+     "Street",
+     "Exit"
+    ],
+    "ok": 0,
+    "pourquoi": "Castle se prononce « ka-seul »."
+   },
+   {
+    "q": "Jusqu'à quel âge l'entrée est-elle gratuite ?",
+    "r": [
+     "Avant 3 ans",
+     "Avant 10 ans",
+     "Avant 1 an"
+    ],
+    "ok": 0,
+    "pourquoi": "Les moins de 3 ans entrent gratuitement."
+   }
+  ]
  },
  "bingo": [
   "chateau",

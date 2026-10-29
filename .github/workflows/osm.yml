@@ -8,6 +8,7 @@ on:
     paths:
       - "data/villes/**"
       - "scripts/fetch_osm.py"
+      - "scripts/fetch_vacances.py"
       - "scripts/build.py"
 
 permissions:
@@ -27,6 +28,8 @@ jobs:
           python-version: "3.12"
       - name: Récupérer les données OSM
         run: python scripts/fetch_osm.py
+      - name: Calendrier des vacances scolaires
+        run: python scripts/fetch_vacances.py || true
       - name: Régénérer les pages
         run: python scripts/build.py
       - name: Enregistrer les changements

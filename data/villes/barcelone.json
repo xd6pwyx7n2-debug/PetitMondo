@@ -129,7 +129,59 @@
    ]
   ],
   "mots_bonus": "En catalan : Bon dia (bon di-a) = bonjour, Gràcies (gra-ssi-ess) = merci, Adéu (a-dé-ou) = au revoir.",
-  "voix": "es-ES"
+  "voix": "es-ES",
+  "quiz": [
+   {
+    "q": "Quelles langues parle-t-on à Barcelone ?",
+    "r": [
+     "Le catalan et l'espagnol",
+     "L'italien",
+     "Le portugais"
+    ],
+    "ok": 0,
+    "pourquoi": "Barcelone est en Catalogne : on y parle catalan et espagnol."
+   },
+   {
+    "q": "Depuis quand construit-on la Sagrada Família ?",
+    "r": [
+     "Depuis 1882",
+     "Depuis 1990",
+     "Depuis 2010"
+    ],
+    "ok": 0,
+    "pourquoi": "Elle est en construction depuis plus de 140 ans !"
+   },
+   {
+    "q": "Quel oiseau vert vit en liberté dans les parcs ?",
+    "r": [
+     "La perruche",
+     "Le flamant rose",
+     "Le pingouin"
+    ],
+    "ok": 0,
+    "pourquoi": "Écoute-les crier dans les palmiers."
+   },
+   {
+    "q": "Combien d'oies blanches vivent dans le cloître de la cathédrale ?",
+    "r": [
+     "13",
+     "3",
+     "100"
+    ],
+    "ok": 0,
+    "pourquoi": "Treize oies, en souvenir de sainte Eulalie."
+   },
+   {
+    "q": "Quelle grande fête du sport a eu lieu à Barcelone en 1992 ?",
+    "r": [
+     "Les Jeux olympiques",
+     "La Coupe du monde de football",
+     "Le Tour de France"
+    ],
+    "ok": 0,
+    "pourquoi": "Les Jeux olympiques d'été de 1992."
+   }
+  ]
  },
  "bingo": [
   "palmier",

@@ -15,3 +15,16 @@
     speechSynthesis.speak(u);
   });
 })();
+
+/* Quiz des enfants : réponse touchée = bonne ou mauvaise, explication affichée */
+document.addEventListener('click', ev => {
+  const o = ev.target.closest('.quiz .opt');
+  if (!o) return;
+  const q = o.closest('.question');
+  if (q.classList.contains('fait')) return;
+  q.classList.add('fait');
+  q.querySelectorAll('.opt').forEach(b => b.classList.add(b.dataset.ok === '1' ? 'juste' : 'grise'));
+  if (o.dataset.ok !== '1') o.classList.add('faux');
+  const p = q.querySelector('.pourquoi');
+  if (p) { p.hidden = false; p.textContent = (o.dataset.ok === '1' ? 'Bravo ! ' : 'Presque ! ') + p.textContent; }
+});

@@ -148,7 +148,59 @@
     "aïm heun-gri"
    ]
   ],
-  "voix": "en-GB"
+  "voix": "en-GB",
+  "quiz": [
+   {
+    "q": "Qu'est-ce que Big Ben ?",
+    "r": [
+     "La grosse cloche de la tour",
+     "Le nom du roi",
+     "Un bus rouge"
+    ],
+    "ok": 0,
+    "pourquoi": "C'est le surnom de la cloche, pas de la tour."
+   },
+   {
+    "q": "De quel côté de la route roulent les voitures ?",
+    "r": [
+     "À gauche",
+     "À droite",
+     "Au milieu"
+    ],
+    "ok": 0,
+    "pourquoi": "Avant de traverser, regarde d'abord à droite."
+   },
+   {
+    "q": "Comment surnomme-t-on le métro de Londres ?",
+    "r": [
+     "The Tube",
+     "The Metro",
+     "The Snake"
+    ],
+    "ok": 0,
+    "pourquoi": "C'est le plus ancien métro du monde, ouvert en 1863."
+   },
+   {
+    "q": "Quels oiseaux vivent à la Tour de Londres ?",
+    "r": [
+     "Des corbeaux",
+     "Des perroquets",
+     "Des pingouins"
+    ],
+    "ok": 0,
+    "pourquoi": "La légende dit qu'ils protègent le royaume."
+   },
+   {
+    "q": "Avec quelle monnaie paie-t-on au Royaume-Uni ?",
+    "r": [
+     "La livre sterling",
+     "L'euro",
+     "Le dollar"
+    ],
+    "ok": 0,
+    "pourquoi": "Son symbole est £."
+   }
+  ]
  },
  "bingo": [
   "bus-rouge",

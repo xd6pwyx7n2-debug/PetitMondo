@@ -127,7 +127,59 @@
     "o fa-mé"
    ]
   ],
-  "voix": "it-IT"
+  "voix": "it-IT",
+  "quiz": [
+   {
+    "q": "Selon la légende, quel animal a nourri Romulus et Rémus ?",
+    "r": [
+     "Une louve",
+     "Une vache",
+     "Une chèvre"
+    ],
+    "ok": 0,
+    "pourquoi": "Une louve a nourri les jumeaux fondateurs de Rome."
+   },
+   {
+    "q": "Qui combattait dans l'arène du Colisée ?",
+    "r": [
+     "Des gladiateurs",
+     "Des chevaliers",
+     "Des pirates"
+    ],
+    "ok": 0,
+    "pourquoi": "Devant des dizaines de milliers de spectateurs."
+   },
+   {
+    "q": "Quel est le plus petit pays du monde, au milieu de Rome ?",
+    "r": [
+     "Le Vatican",
+     "Monaco",
+     "Andorre"
+    ],
+    "ok": 0,
+    "pourquoi": "Le Vatican est un pays entier dans la ville."
+   },
+   {
+    "q": "Que fait-on à la fontaine de Trevi pour revenir un jour à Rome ?",
+    "r": [
+     "On lance une pièce par-dessus l'épaule",
+     "On boit son eau",
+     "On y trempe les pieds"
+    ],
+    "ok": 0,
+    "pourquoi": "Il est interdit de s'y baigner !"
+   },
+   {
+    "q": "Comment dit-on « merci » en italien ?",
+    "r": [
+     "Grazie",
+     "Gracias",
+     "Thank you"
+    ],
+    "ok": 0,
+    "pourquoi": "Grazie se prononce « gra-tsié »."
+   }
+  ]
  },
  "bingo": [
   "casque-romain",

@@ -106,6 +106,58 @@
     "Un arrondissement",
     "Paris est découpé en 20 quartiers numérotés : les arrondissements."
    ]
+  ],
+  "quiz": [
+   {
+    "q": "Pour quel événement a-t-on construit la tour Eiffel ?",
+    "r": [
+     "L'Exposition universelle de 1889",
+     "Les Jeux olympiques",
+     "Le mariage d'un roi"
+    ],
+    "ok": 0,
+    "pourquoi": "Elle devait être démontée… et elle est toujours là !"
+   },
+   {
+    "q": "Comment s'appelle le fleuve qui traverse Paris ?",
+    "r": [
+     "La Seine",
+     "La Loire",
+     "Le Rhône"
+    ],
+    "ok": 0,
+    "pourquoi": "Des dizaines de ponts la traversent."
+   },
+   {
+    "q": "À quoi sert une gargouille ?",
+    "r": [
+     "À évacuer l'eau de pluie",
+     "À sonner l'heure",
+     "À garder la porte"
+    ],
+    "ok": 0,
+    "pourquoi": "Sa bouche crache l'eau loin des murs."
+   },
+   {
+    "q": "Quel tableau très célèbre est exposé au Louvre ?",
+    "r": [
+     "La Joconde",
+     "Les Tournesols",
+     "La Nuit étoilée"
+    ],
+    "ok": 0,
+    "pourquoi": "Elle a été peinte par Léonard de Vinci."
+   },
+   {
+    "q": "En combien d'arrondissements Paris est-il découpé ?",
+    "r": [
+     "20",
+     "5",
+     "100"
+    ],
+    "ok": 0,
+    "pourquoi": "Ils sont numérotés en escargot, du centre vers l'extérieur."
+   }
   ]
  },
  "bingo": [
