@@ -849,6 +849,166 @@
   "lien_licence": "https://creativecommons.org/licenses/by-sa/2.0",
   "source": "https://commons.wikimedia.org/wiki/File:Parc_de_la_Villette,_Paris_2010.jpg"
  },
+ "prague/_ville": {
+  "article": "https://cs.wikipedia.org/wiki/Praha",
+  "auteur": "Collage by Concus Cretus based on work of Moyan Brenn from Anzio, Italy (1); Jirka.h23 (2); Massimo Catarinella (3, 5); ",
+  "fichier": "assets/photos/prague/_ville.jpg",
+  "h": 1775,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Prague_collage_2018.jpg"
+ },
+ "prague/horloge": {
+  "article": "https://cs.wikipedia.org/wiki/Pra%C5%BEsk%C3%BD_orloj",
+  "auteur": "Uoaei1",
+  "fichier": "assets/photos/prague/horloge.jpg",
+  "h": 1786,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Praha_Astronomical_Clock_02.jpg"
+ },
+ "prague/hrad": {
+  "article": "https://cs.wikipedia.org/wiki/Pra%C5%BEsk%C3%BD_hrad",
+  "auteur": "Stefan Bauer, http://www.ferras.at",
+  "fichier": "assets/photos/prague/hrad.jpg",
+  "h": 652,
+  "l": 1000,
+  "licence": "CC BY-SA 2.5",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/2.5",
+  "source": "https://commons.wikimedia.org/wiki/File:Hradschin_Prag.jpg"
+ },
+ "prague/kampa": {
+  "article": "https://cs.wikipedia.org/wiki/Kampa",
+  "auteur": "Chmee2",
+  "fichier": "assets/photos/prague/kampa.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Kampa5.jpg"
+ },
+ "prague/karlstejn": {
+  "article": "https://cs.wikipedia.org/wiki/Karl%C5%A1tejn_%28hrad%29",
+  "auteur": "Arkadiusz Zarzecki",
+  "fichier": "assets/photos/prague/karlstejn.jpg",
+  "h": 665,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Zamek_Karl%C5%A1tejn.jpg"
+ },
+ "prague/kralovstvi": {
+  "article": "https://cs.wikipedia.org/wiki/Kr%C3%A1lovstv%C3%AD_%C5%BEeleznic",
+  "auteur": "ŠJů",
+  "fichier": "assets/photos/prague/kralovstvi.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "CC BY 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Sm%C3%ADchov,_Stroupe%C5%BEnick%C3%A9ho_23,_Kr%C3%A1lovstv%C3%AD_%C5%BEeleznic_(01).jpg"
+ },
+ "prague/letna": {
+  "article": "https://cs.wikipedia.org/wiki/Letensk%C3%A9_sady",
+  "auteur": "I would appreciate being notified if you use my work outside Wikimedia. More of my work can be found in my personal gall",
+  "fichier": "assets/photos/prague/letna.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Praha,_Hole%C5%A1ovice,_podzim_na_Letn%C3%A9.jpg"
+ },
+ "prague/nm": {
+  "article": "https://cs.wikipedia.org/wiki/N%C3%A1rodn%C3%AD_muzeum",
+  "auteur": "VitVit",
+  "fichier": "assets/photos/prague/nm.jpg",
+  "h": 604,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Praha_N%C3%A1rodn%C3%AD_muzeum_1.jpg"
+ },
+ "prague/ntm": {
+  "article": "https://cs.wikipedia.org/wiki/N%C3%A1rodn%C3%AD_technick%C3%A9_muzeum",
+  "auteur": "Toklick",
+  "fichier": "assets/photos/prague/ntm.jpg",
+  "h": 665,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Budova_N%C3%A1rodn%C3%ADho_technick%C3%A9ho_muzea_na_Letn%C3%A9.jpg"
+ },
+ "prague/pedalos": {
+  "article": "https://cs.wikipedia.org/wiki/Slovansk%C3%BD_ostrov",
+  "auteur": "Jvs",
+  "fichier": "assets/photos/prague/pedalos.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Slovansky_ostrov_1.jpg"
+ },
+ "prague/petrin": {
+  "article": "https://cs.wikipedia.org/wiki/Lanov%C3%A1_dr%C3%A1ha_na_Pet%C5%99%C3%ADn",
+  "auteur": "ROPID",
+  "fichier": "assets/photos/prague/petrin.jpg",
+  "h": 707,
+  "l": 1000,
+  "licence": "CC BY 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Petrin_Funicular_2026_2.jpg"
+ },
+ "prague/planetarium": {
+  "article": "https://cs.wikipedia.org/wiki/Planet%C3%A1rium_Praha",
+  "auteur": "Martin Hlauka (Pescan)",
+  "fichier": "assets/photos/prague/planetarium.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "CC BY 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Planetum,_Praha_(2025-08-07).jpg"
+ },
+ "prague/rozhledna": {
+  "article": "https://cs.wikipedia.org/wiki/Pet%C5%99%C3%ADnsk%C3%A1_rozhledna",
+  "auteur": "SimcaCZE",
+  "fichier": "assets/photos/prague/rozhledna.jpg",
+  "h": 1244,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Pet%C5%99%C3%ADnsk%C3%A1rozhledna2016.jpg"
+ },
+ "prague/stromovka": {
+  "article": "https://en.wikipedia.org/wiki/Stromovka",
+  "auteur": "I would appreciate being notified if you use my work outside Wikimedia. More of my work can be found in my personal gall",
+  "fichier": "assets/photos/prague/stromovka.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Praha,_Bubene%C4%8D,_pohled_na_jez%C3%ADrko_ve_Stromovce.jpg"
+ },
+ "prague/vysehrad": {
+  "article": "https://cs.wikipedia.org/wiki/Vy%C5%A1ehrad",
+  "auteur": "Stanislav Jelen",
+  "fichier": "assets/photos/prague/vysehrad.jpg",
+  "h": 715,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Parn%C3%ADk_Vy%C5%A1ehrad_pod_Vy%C5%A1ehradem.jpg"
+ },
+ "prague/zoo": {
+  "article": "https://cs.wikipedia.org/wiki/Zoologick%C3%A1_zahrada_hl._m._Prahy",
+  "auteur": "Tiia Monto",
+  "fichier": "assets/photos/prague/zoo.jpg",
+  "h": 803,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Prague_Zoo_-_elephant_2.jpg"
+ },
  "rome/_ville": {
   "article": "https://en.wikipedia.org/wiki/Rome",
   "auteur": "Diliff",
@@ -1008,5 +1168,135 @@
   "licence": "CC BY-SA 4.0",
   "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
   "source": "https://commons.wikimedia.org/wiki/File:Trevi_Fountain_-_Roma.jpg"
+ },
+ "vienne/_ville": {
+  "article": "https://en.wikipedia.org/wiki/Vienna",
+  "auteur": "Superbass",
+  "fichier": "assets/photos/vienne/_ville.jpg",
+  "h": 450,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Schoenbrunn_philharmoniker_2012.jpg"
+ },
+ "vienne/donauinsel": {
+  "article": "https://de.wikipedia.org/wiki/Donauinsel",
+  "auteur": "C.Stadler/Bwag",
+  "fichier": "assets/photos/vienne/donauinsel.jpg",
+  "h": 562,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Wien_-_Donauinsel_mit_den_Donaubr%C3%BCcken.JPG"
+ },
+ "vienne/hausdermusik": {
+  "article": "https://de.wikipedia.org/wiki/Haus_der_Musik",
+  "auteur": "Eva Prader",
+  "fichier": "assets/photos/vienne/hausdermusik.jpg",
+  "h": 1500,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:HDM_Au%C3%9Fenansicht_hoch.JPG"
+ },
+ "vienne/hausdesmeeres": {
+  "article": "https://de.wikipedia.org/wiki/Haus_des_Meeres",
+  "auteur": "Thomas Ledl",
+  "fichier": "assets/photos/vienne/hausdesmeeres.jpg",
+  "h": 783,
+  "l": 1000,
+  "licence": "CC BY 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Haus_des_Meeres_2026,_Wien.jpg"
+ },
+ "vienne/kahlenberg": {
+  "article": "https://de.wikipedia.org/wiki/Kahlenberg",
+  "auteur": "C.Stadler/Bwag",
+  "fichier": "assets/photos/vienne/kahlenberg.jpg",
+  "h": 548,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:D%C3%B6bling_(Wien)_-_Kahlenberg.JPG"
+ },
+ "vienne/lainz": {
+  "article": "https://de.wikipedia.org/wiki/Lainzer_Tiergarten",
+  "auteur": "Tokfo",
+  "fichier": "assets/photos/vienne/lainz.jpg",
+  "h": 559,
+  "l": 1000,
+  "licence": "CC0",
+  "lien_licence": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:Torw%C3%A4rterhaus_(75204)_IMG_1471.jpg"
+ },
+ "vienne/nhm": {
+  "article": "https://de.wikipedia.org/wiki/Naturhistorisches_Museum_Wien",
+  "auteur": "C.Stadler/Bwag",
+  "fichier": "assets/photos/vienne/nhm.jpg",
+  "h": 562,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Wien_-_Naturhistorisches_Museum_(4).JPG"
+ },
+ "vienne/prater": {
+  "article": "https://de.wikipedia.org/wiki/Wiener_Riesenrad",
+  "auteur": "Thomas Ledl",
+  "fichier": "assets/photos/vienne/prater.jpg",
+  "h": 667,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Wien_Riesenrad.jpg"
+ },
+ "vienne/schonbrunn": {
+  "article": "https://de.wikipedia.org/wiki/Schlosspark_Sch%C3%B6nbrunn",
+  "auteur": "C.Stadler/Bwag",
+  "fichier": "assets/photos/vienne/schonbrunn.jpg",
+  "h": 683,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Wien_-_Schloss_Sch%C3%B6nbrunn.JPG"
+ },
+ "vienne/stephansdom": {
+  "article": "https://de.wikipedia.org/wiki/Stephansdom",
+  "auteur": "C.Stadler/Bwag",
+  "fichier": "assets/photos/vienne/stephansdom.jpg",
+  "h": 1500,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Wien_-_Stephansdom_(1).JPG"
+ },
+ "vienne/tmw": {
+  "article": "https://de.wikipedia.org/wiki/Technisches_Museum_Wien",
+  "auteur": "C.Stadler/Bwag",
+  "fichier": "assets/photos/vienne/tmw.jpg",
+  "h": 610,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Wien_-_Technisches_Museum_(2).JPG"
+ },
+ "vienne/wienmuseum": {
+  "article": "https://de.wikipedia.org/wiki/Wien_Museum",
+  "auteur": "Christine Koblitz",
+  "fichier": "assets/photos/vienne/wienmuseum.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "CC0",
+  "lien_licence": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:Wien_Museum_Neu.jpg"
+ },
+ "vienne/zoo": {
+  "article": "https://en.wikipedia.org/wiki/Tiergarten_Sch%C3%B6nbrunn",
+  "auteur": "Daniel Zupanc",
+  "fichier": "assets/photos/vienne/zoo.jpg",
+  "h": 666,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Gro%C3%9Fe_Pandas_Yang_Yang_und_Fu_Long.jpg"
  }
 }
