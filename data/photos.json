@@ -1,0 +1,732 @@
+{
+ "barcelone/_ville": {
+  "article": "https://en.wikipedia.org/wiki/Barcelona",
+  "auteur": "M McBey",
+  "fichier": "assets/photos/barcelone/_ville.jpg",
+  "h": 467,
+  "l": 1000,
+  "licence": "CC BY 2.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Evening_light_over_Barcelona.jpg"
+ },
+ "barcelone/aquarium": {
+  "article": "https://ca.wikipedia.org/wiki/Aqu%C3%A0rium_de_Barcelona",
+  "auteur": "Paul Hermans",
+  "fichier": "assets/photos/barcelone/aquarium.jpg",
+  "h": 670,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Queen_Angelfish_14-05-2009_15-24-48.JPG"
+ },
+ "barcelone/arc": {
+  "article": "https://ca.wikipedia.org/wiki/Arc_de_Triomf_%28Barcelona%29",
+  "auteur": "Bajajvikram",
+  "fichier": "assets/photos/barcelone/arc.jpg",
+  "h": 722,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Arc_de_Triomf_Barcelona.jpg"
+ },
+ "barcelone/barceloneta": {
+  "article": "https://ca.wikipedia.org/wiki/Platja_de_la_Barceloneta",
+  "auteur": "Kuba Bożanowski from Warsaw, Poland",
+  "fichier": "assets/photos/barcelone/barceloneta.jpg",
+  "h": 666,
+  "l": 1000,
+  "licence": "CC BY 2.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Barcelona_(16877599244).jpg"
+ },
+ "barcelone/batllo": {
+  "article": "https://ca.wikipedia.org/wiki/Casa_Batll%C3%B3",
+  "auteur": "Enfo",
+  "fichier": "assets/photos/barcelone/batllo.jpg",
+  "h": 1334,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:05_Casa_Batll%C3%B3.jpg"
+ },
+ "barcelone/boqueria": {
+  "article": "https://ca.wikipedia.org/wiki/Mercat_de_la_Boqueria",
+  "auteur": "Josep Renalias",
+  "fichier": "assets/photos/barcelone/boqueria.jpg",
+  "h": 665,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Boqueria_-_Estructura.JPG"
+ },
+ "barcelone/bunkers": {
+  "article": "https://ca.wikipedia.org/wiki/Tur%C3%B3_de_la_Rovira",
+  "auteur": "Toniher",
+  "fichier": "assets/photos/barcelone/bunkers.jpg",
+  "h": 562,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Vista_Barcelona_des_del_Tur%C3%B3_de_la_Rovira.jpg"
+ },
+ "barcelone/castell": {
+  "article": "https://ca.wikipedia.org/wiki/Castell_de_Montju%C3%AFc",
+  "auteur": "C messier",
+  "fichier": "assets/photos/barcelone/castell.jpg",
+  "h": 719,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:%CE%9A%CE%AC%CF%83%CF%84%CF%81%CE%BF_%CE%9C%CE%BF%CE%BD%CE%B6%CE%BF%CF%85%CE%AF%CE%BA_3231_-_3233.jpg"
+ },
+ "barcelone/ciutadella": {
+  "article": "https://ca.wikipedia.org/wiki/Parc_de_la_Ciutadella",
+  "auteur": "SACE (Servicios Aéreos Comerciales Españoles); Rodríguez Escalona, Carlos",
+  "fichier": "assets/photos/barcelone/ciutadella.jpg",
+  "h": 516,
+  "l": 1000,
+  "licence": "CC BY 1.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/1.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Vista_a%C3%A8ria_Ciutadella_1960.jpg"
+ },
+ "barcelone/cosmocaixa": {
+  "article": "https://ca.wikipedia.org/wiki/CosmoCaixa",
+  "auteur": "Jirka Dl",
+  "fichier": "assets/photos/barcelone/cosmocaixa.jpg",
+  "h": 664,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:CosmoCaixa_building.jpg"
+ },
+ "barcelone/diagonalmar": {
+  "article": "https://ca.wikipedia.org/wiki/Parc_de_Diagonal_Mar",
+  "auteur": "Canaan",
+  "fichier": "assets/photos/barcelone/diagonalmar.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Parc_Diagonal_Mar7.JPG"
+ },
+ "barcelone/fontmagica": {
+  "article": "https://ca.wikipedia.org/wiki/Font_M%C3%A0gica_de_Montju%C3%AFc",
+  "auteur": "jordi domènech",
+  "fichier": "assets/photos/barcelone/fontmagica.jpg",
+  "h": 437,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:La_font_de_Montju%C3%AFc_amb_Collserola_al_fons.jpg"
+ },
+ "barcelone/gotic": {
+  "article": "https://ca.wikipedia.org/wiki/Catedral_de_Barcelona",
+  "auteur": "Enric",
+  "fichier": "assets/photos/barcelone/gotic.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:047_Catedral_i_torre_romana_de_Ca_l%27Ardiaca,_av._Catedral_(Barcelona).jpg"
+ },
+ "barcelone/guell": {
+  "article": "https://ca.wikipedia.org/wiki/Park_G%C3%BCell",
+  "auteur": "Canaan",
+  "fichier": "assets/photos/barcelone/guell.jpg",
+  "h": 666,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:G%C3%BCell_BCN_edited.jpg"
+ },
+ "barcelone/laberint": {
+  "article": "https://ca.wikipedia.org/wiki/Parc_del_Laberint_d%27Horta",
+  "auteur": "Canaan",
+  "fichier": "assets/photos/barcelone/laberint.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Laberint_d%27Horta01.jpg"
+ },
+ "barcelone/maritim": {
+  "article": "https://ca.wikipedia.org/wiki/Museu_Mar%C3%ADtim_de_Barcelona",
+  "auteur": "Antoni I. Alomar",
+  "fichier": "assets/photos/barcelone/maritim.jpg",
+  "h": 851,
+  "l": 1000,
+  "licence": "Public domain",
+  "lien_licence": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Drassanes_barcelona.jpg"
+ },
+ "barcelone/museublau": {
+  "article": "https://ca.wikipedia.org/wiki/Museu_Blau",
+  "auteur": "Cristiserra",
+  "fichier": "assets/photos/barcelone/museublau.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Museu_de_Ci%C3%A8ncies_Naturals_de_Barcelona.jpg"
+ },
+ "barcelone/novaicaria": {
+  "article": "https://ca.wikipedia.org/wiki/Platja_de_la_Nova_Ic%C3%A0ria",
+  "auteur": "Jordiferrer",
+  "fichier": "assets/photos/barcelone/novaicaria.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Platja_de_la_Nova_Ic%C3%A0ria_01.JPG"
+ },
+ "barcelone/poble": {
+  "article": "https://ca.wikipedia.org/wiki/Poble_Espanyol",
+  "auteur": "pere prlpz",
+  "fichier": "assets/photos/barcelone/poble.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Porta_del_Poble_Espanyol_de_Montju%C3%AFc_-_20200818_181705.jpg"
+ },
+ "barcelone/sagrada": {
+  "article": "https://ca.wikipedia.org/wiki/Sagrada_Fam%C3%ADlia",
+  "auteur": "Euku",
+  "fichier": "assets/photos/barcelone/sagrada.jpg",
+  "h": 1015,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Barcelona,_Sagrada_Familia_by_night,_2015.jpg"
+ },
+ "barcelone/teleferic": {
+  "article": "https://ca.wikipedia.org/wiki/Telef%C3%A8ric_de_Montju%C3%AFc",
+  "auteur": "Mummelgrummel",
+  "fichier": "assets/photos/barcelone/teleferic.jpg",
+  "h": 1407,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Barcelona_August_2014_-_Seilbahn_de_Montjuic_003.jpg"
+ },
+ "barcelone/tibidabo": {
+  "article": "https://ca.wikipedia.org/wiki/Parc_d%27Atraccions_Tibidabo",
+  "auteur": "Enric",
+  "fichier": "assets/photos/barcelone/tibidabo.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:032_Parc_d%27atraccions_Tibidabo_(Barcelona),_des_de_la_terrassa_del_Sagrat_Cor.jpg"
+ },
+ "barcelone/xocolata": {
+  "article": "https://ca.wikipedia.org/wiki/Museu_de_la_Xocolata",
+  "auteur": "Kippelboy",
+  "fichier": "assets/photos/barcelone/xocolata.jpg",
+  "h": 747,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Museu_de_la_Xocolata_de_Barcelona_fa%C3%A7ana.JPG"
+ },
+ "barcelone/zoo": {
+  "article": "https://en.wikipedia.org/wiki/Barcelona_Zoo",
+  "auteur": "Josep Panadero",
+  "fichier": "assets/photos/barcelone/zoo.jpg",
+  "h": 666,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Barcelona.Zoologico.jpg"
+ },
+ "londres/_ville": {
+  "article": "https://en.wikipedia.org/wiki/London",
+  "auteur": "Ilya Grigorik",
+  "fichier": "assets/photos/londres/_ville.jpg",
+  "h": 562,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:London_Skyline_(125508655).jpeg"
+ },
+ "londres/british": {
+  "article": "https://en.wikipedia.org/wiki/British_Museum",
+  "auteur": "Ham",
+  "fichier": "assets/photos/londres/british.jpg",
+  "h": 717,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:British_Museum_from_NE_2.JPG"
+ },
+ "londres/buckingham": {
+  "article": "https://en.wikipedia.org/wiki/Buckingham_Palace",
+  "auteur": "Julian Herzog (Website)",
+  "fichier": "assets/photos/londres/buckingham.jpg",
+  "h": 599,
+  "l": 1000,
+  "licence": "CC BY 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Buckingham_Palace_London_Morning_2020_01_(cropped).jpg"
+ },
+ "londres/covent": {
+  "article": "https://en.wikipedia.org/wiki/Covent_Garden",
+  "auteur": "Covent_Garden_Interior_May_2006.jpg: Diliff derivative work: SilkTork (talk)",
+  "fichier": "assets/photos/londres/covent.jpg",
+  "h": 776,
+  "l": 1000,
+  "licence": "CC BY 2.5",
+  "lien_licence": "https://creativecommons.org/licenses/by/2.5",
+  "source": "https://commons.wikimedia.org/wiki/File:Covent_Garden_Interior_May_2006_crop.jpg"
+ },
+ "londres/diana": {
+  "article": "https://en.wikipedia.org/wiki/Diana%2C_Princess_of_Wales_Memorial_Playground",
+  "auteur": "Mark Ahsmann",
+  "fichier": "assets/photos/londres/diana.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Pirate_ship,_Diana,_Princess_of_Wales_Memorial_Playground,_Kensington_Gardens_7_June_2011.jpg"
+ },
+ "londres/eye": {
+  "article": "https://en.wikipedia.org/wiki/London_Eye",
+  "auteur": "Khamtran",
+  "fichier": "assets/photos/londres/eye.jpg",
+  "h": 666,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:London-Eye-2009.JPG"
+ },
+ "londres/greenwich": {
+  "article": "https://en.wikipedia.org/wiki/Royal_Observatory%2C_Greenwich",
+  "auteur": "Auteur inconnu",
+  "fichier": "assets/photos/londres/greenwich.jpg",
+  "h": 600,
+  "l": 449,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Royal_observatory_greenwich.jpg"
+ },
+ "londres/hamleys": {
+  "article": "https://en.wikipedia.org/wiki/Hamleys",
+  "auteur": "AwH108",
+  "fichier": "assets/photos/londres/hamleys.jpg",
+  "h": 378,
+  "l": 760,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Hamleys_logo.png"
+ },
+ "londres/harrypotter": {
+  "article": "https://en.wikipedia.org/wiki/Warner_Bros._Studio_Tour_London_%E2%80%93_The_Making_of_Harry_Potter",
+  "auteur": "S. Perquin",
+  "fichier": "assets/photos/londres/harrypotter.jpg",
+  "h": 666,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Entrance_of_Warner_Bros._Studio_Tour_London_(2025).jpg"
+ },
+ "londres/science": {
+  "article": "https://en.wikipedia.org/wiki/Science_Museum%2C_London",
+  "auteur": "Shadowssettle",
+  "fichier": "assets/photos/londres/science.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Science_Museum,_Exhibition_Road_(cropped).jpg"
+ },
+ "londres/stjames": {
+  "article": "https://en.wikipedia.org/wiki/St_James%27s_Park",
+  "auteur": "Colin",
+  "fichier": "assets/photos/londres/stjames.jpg",
+  "h": 508,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:St_James%27s_Park_Lake_%E2%80%93_East_from_the_Blue_Bridge_-_2012-10-06.jpg"
+ },
+ "londres/tower": {
+  "article": "https://en.wikipedia.org/wiki/Tower_of_London",
+  "auteur": "[Duncan] from Nottingham, UK",
+  "fichier": "assets/photos/londres/tower.jpg",
+  "h": 649,
+  "l": 1000,
+  "licence": "CC BY 2.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Tower_of_London_from_the_Shard_(8515883950).jpg"
+ },
+ "londres/towerbridge": {
+  "article": "https://en.wikipedia.org/wiki/Tower_Bridge",
+  "auteur": "Fuzzypiggy",
+  "fichier": "assets/photos/londres/towerbridge.jpg",
+  "h": 666,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Tower_Bridge_at_Dawn.jpg"
+ },
+ "londres/westminster": {
+  "article": "https://en.wikipedia.org/wiki/Big_Ben",
+  "auteur": "Christian David",
+  "fichier": "assets/photos/londres/westminster.jpg",
+  "h": 1778,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Elizabeth_Tower_and_the_north_front_of_the_Palace_of_Westminster,_London.jpg"
+ },
+ "londres/youngva": {
+  "article": "https://en.wikipedia.org/wiki/Young_V%26A",
+  "auteur": "Bex Walton",
+  "fichier": "assets/photos/londres/youngva.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "CC BY 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Young_V%26A_2026-06-06.jpg"
+ },
+ "paris/_ville": {
+  "article": "https://fr.wikipedia.org/wiki/Paris",
+  "auteur": "Yann Caradec from Paris, France",
+  "fichier": "assets/photos/paris/_ville.jpg",
+  "h": 625,
+  "l": 1000,
+  "licence": "CC BY-SA 2.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques,_Paris_ao%C3%BBt_2014_(2).jpg"
+ },
+ "paris/acclimatation": {
+  "article": "https://en.wikipedia.org/wiki/Jardin_d%27Acclimatation",
+  "auteur": "Moktarama",
+  "fichier": "assets/photos/paris/acclimatation.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "CC BY 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Jardin_d%27acclimatation_-_Fondation_Louis_Vuitton.jpg"
+ },
+ "paris/aquarium": {
+  "article": "https://fr.wikipedia.org/wiki/Aquarium_de_Paris",
+  "auteur": "Albin Denooz",
+  "fichier": "assets/photos/paris/aquarium.jpg",
+  "h": 340,
+  "l": 512,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Tunnel_aquarium_trocadero.jpg"
+ },
+ "paris/arc": {
+  "article": "https://fr.wikipedia.org/wiki/Arc_de_triomphe_de_l%27%C3%89toile",
+  "auteur": "ZeusUpsistos",
+  "fichier": "assets/photos/paris/arc.jpg",
+  "h": 667,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Arc_de_Triomphe_-_Ao%C3%BBt_2026.jpg"
+ },
+ "paris/arts-metiers": {
+  "article": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_des_Arts_et_M%C3%A9tiers",
+  "auteur": "Arnaud 25",
+  "fichier": "assets/photos/paris/arts-metiers.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Mus%C3%A9e_des_Arts_et_M%C3%A9tiers_337.jpg"
+ },
+ "paris/buttes": {
+  "article": "https://fr.wikipedia.org/wiki/Parc_des_Buttes-Chaumont",
+  "auteur": "O.Taris",
+  "fichier": "assets/photos/paris/buttes.jpg",
+  "h": 600,
+  "l": 450,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:ParcDesButtesChaumont.JPG"
+ },
+ "paris/catacombes": {
+  "article": "https://fr.wikipedia.org/wiki/Catacombes_de_Paris",
+  "auteur": "Diego Delso",
+  "fichier": "assets/photos/paris/catacombes.jpg",
+  "h": 1000,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Catacumbas,_Par%C3%ADs,_Francia,_2022-11-01,_DD_111-113_HDR.jpg"
+ },
+ "paris/croisiere": {
+  "article": "https://fr.wikipedia.org/wiki/Square_du_Vert-Galant",
+  "auteur": "Inocybe - Piero d'Houin",
+  "fichier": "assets/photos/paris/croisiere.jpg",
+  "h": 664,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Le_Vert_galant.jpg"
+ },
+ "paris/eiffel": {
+  "article": "https://fr.wikipedia.org/wiki/Tour_Eiffel",
+  "auteur": "Benh LIEU SONG",
+  "fichier": "assets/photos/paris/eiffel.jpg",
+  "h": 1851,
+  "l": 1000,
+  "licence": "Public domain",
+  "lien_licence": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Tour_Eiffel_Wikimedia_Commons.jpg"
+ },
+ "paris/evolution": {
+  "article": "https://fr.wikipedia.org/wiki/Grande_galerie_de_l%27%C3%89volution",
+  "auteur": "Arthur Weidmann",
+  "fichier": "assets/photos/paris/evolution.jpg",
+  "h": 666,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Grande_galerie_de_l%27%C3%89volution_Fa%C3%A7ade.jpg"
+ },
+ "paris/grevin": {
+  "article": "https://en.wikipedia.org/wiki/Mus%C3%A9e_Gr%C3%A9vin",
+  "auteur": "Myrabella",
+  "fichier": "assets/photos/paris/grevin.jpg",
+  "h": 1596,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Grevin_musee_facade.jpg"
+ },
+ "paris/louvre": {
+  "article": "https://fr.wikipedia.org/wiki/Palais_du_Louvre",
+  "auteur": "Ali Sabbagh",
+  "fichier": "assets/photos/paris/louvre.jpg",
+  "h": 651,
+  "l": 1000,
+  "licence": "CC0",
+  "lien_licence": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:West_facade_of_the_Cour_Carr%C3%A9e,_Louvre_Palace,_Paris_5_October_2017.jpg"
+ },
+ "paris/luxembourg": {
+  "article": "https://fr.wikipedia.org/wiki/Jardin_du_Luxembourg",
+  "auteur": "Kirua",
+  "fichier": "assets/photos/paris/luxembourg.jpg",
+  "h": 670,
+  "l": 1000,
+  "licence": "Public domain",
+  "lien_licence": "",
+  "source": "https://commons.wikimedia.org/wiki/File:LuxembourgMontparnasse.JPG"
+ },
+ "paris/menagerie": {
+  "article": "https://fr.wikipedia.org/wiki/M%C3%A9nagerie_du_Jardin_des_plantes",
+  "auteur": "FreCha",
+  "fichier": "assets/photos/paris/menagerie.jpg",
+  "h": 666,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Ailurus_fulgens_-_M%C3%A9nagerie_du_Jardin_des_Plantes_01.jpg"
+ },
+ "paris/montmartre": {
+  "article": "https://fr.wikipedia.org/wiki/Basilique_du_Sacr%C3%A9-C%C5%93ur_de_Montmartre",
+  "auteur": "Arthur Weidmann",
+  "fichier": "assets/photos/paris/montmartre.jpg",
+  "h": 1500,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Sacr%C3%A9_Coeur_Fa%C3%A7ade_1.jpg"
+ },
+ "paris/notredame": {
+  "article": "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Notre-Dame_de_Paris",
+  "auteur": "P e z i",
+  "fichier": "assets/photos/paris/notredame.jpg",
+  "h": 1350,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Notre-Dame_de_Paris_2013-07-24.jpg"
+ },
+ "paris/tuileries": {
+  "article": "https://fr.wikipedia.org/wiki/Jardin_des_Tuileries",
+  "auteur": "Javier B",
+  "fichier": "assets/photos/paris/tuileries.jpg",
+  "h": 719,
+  "l": 1000,
+  "licence": "CC BY 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Jardin_des_Tuileries_-_panoramio_-_Javier_B.jpg"
+ },
+ "paris/villette": {
+  "article": "https://fr.wikipedia.org/wiki/Parc_de_la_Villette",
+  "auteur": "Jean-Marie Hullot from France",
+  "fichier": "assets/photos/paris/villette.jpg",
+  "h": 666,
+  "l": 1000,
+  "licence": "CC BY-SA 2.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Parc_de_la_Villette,_Paris_2010.jpg"
+ },
+ "rome/_ville": {
+  "article": "https://en.wikipedia.org/wiki/Rome",
+  "auteur": "Diliff",
+  "fichier": "assets/photos/rome/_ville.jpg",
+  "h": 664,
+  "l": 1000,
+  "licence": "CC BY 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Trevi_Fountain,_Rome,_Italy_2_-_May_2007.jpg"
+ },
+ "rome/bioparco": {
+  "article": "https://it.wikipedia.org/wiki/Bioparco_di_Roma",
+  "auteur": "Alinti",
+  "fichier": "assets/photos/rome/bioparco.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Ingresso_bioparco_2.JPG"
+ },
+ "rome/bocca": {
+  "article": "https://it.wikipedia.org/wiki/Bocca_della_Verit%C3%A0",
+  "auteur": "Sailko",
+  "fichier": "assets/photos/rome/bocca.jpg",
+  "h": 1329,
+  "l": 1000,
+  "licence": "CC BY 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Et%C3%A0_imperiale,_chiusino_a_forma_di_mascherone_di_divinit%C3%A0_fluviale,_detta_bocca_della_verit%C3%A0,_collocata_qui_nel_1632.jpg"
+ },
+ "rome/borghese": {
+  "article": "https://it.wikipedia.org/wiki/Villa_Borghese",
+  "auteur": "Oursana",
+  "fichier": "assets/photos/rome/borghese.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "CC0",
+  "lien_licence": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:Ingresso_monumentale_di_Villa_Borghese_a_Roma_su_piazzale_Flaminio_2018-02.jpg"
+ },
+ "rome/circo": {
+  "article": "https://it.wikipedia.org/wiki/Circo_Massimo",
+  "auteur": "Sonse",
+  "fichier": "assets/photos/rome/circo.jpg",
+  "h": 555,
+  "l": 1000,
+  "licence": "CC BY 2.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Circus_Maximus_%E2%80%A2_Circo_Massimo_(46813512141).jpg"
+ },
+ "rome/colisee": {
+  "article": "https://it.wikipedia.org/wiki/Colosseo",
+  "auteur": "FeaturedPics",
+  "fichier": "assets/photos/rome/colisee.jpg",
+  "h": 701,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Colosseo_2020.jpg"
+ },
+ "rome/espagne": {
+  "article": "https://it.wikipedia.org/wiki/Scalinata_di_Trinit%C3%A0_dei_Monti",
+  "auteur": "Photo2023",
+  "fichier": "assets/photos/rome/espagne.jpg",
+  "h": 1334,
+  "l": 1000,
+  "licence": "CC BY 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Piazza_di_Spagna_2018.jpg"
+ },
+ "rome/forum": {
+  "article": "https://it.wikipedia.org/wiki/Foro_Romano",
+  "auteur": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a ",
+  "fichier": "assets/photos/rome/forum.jpg",
+  "h": 411,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Foro_Romano_Musei_Capitolini_Roma.jpg"
+ },
+ "rome/janicule": {
+  "article": "https://it.wikipedia.org/wiki/Gianicolo",
+  "auteur": "Auteur inconnu",
+  "fichier": "assets/photos/rome/janicule.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "Public domain",
+  "lien_licence": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Janiculum.jpg"
+ },
+ "rome/navona": {
+  "article": "https://it.wikipedia.org/wiki/Piazza_Navona",
+  "auteur": "Paolo Monti",
+  "fichier": "assets/photos/rome/navona.jpg",
+  "h": 1280,
+  "l": 816,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Paolo_Monti_-_Servizio_fotografico_(Roma,_1966)_-_BEIC_6329173.jpg"
+ },
+ "rome/ostie": {
+  "article": "https://it.wikipedia.org/wiki/Ostia_antica",
+  "auteur": "Livioandronico2013",
+  "fichier": "assets/photos/rome/ostie.jpg",
+  "h": 371,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Panoramica_Teatro_di_Ostia.jpg"
+ },
+ "rome/pantheon": {
+  "article": "https://it.wikipedia.org/wiki/Pantheon_%28Roma%29",
+  "auteur": "NikonZ7II",
+  "fichier": "assets/photos/rome/pantheon.jpg",
+  "h": 805,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Pantheon_(Rome)_-_Right_side_and_front.jpg"
+ },
+ "rome/saint-ange": {
+  "article": "https://it.wikipedia.org/wiki/Castel_Sant%27Angelo",
+  "auteur": "Livioandronico2013",
+  "fichier": "assets/photos/rome/saint-ange.jpg",
+  "h": 895,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Castel_Sant%27Angelo_at_Night.jpg"
+ },
+ "rome/saint-pierre": {
+  "article": "https://it.wikipedia.org/wiki/Basilica_di_San_Pietro_in_Vaticano",
+  "auteur": "Alvesgaspar",
+  "fichier": "assets/photos/rome/saint-pierre.jpg",
+  "h": 522,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Basilica_di_San_Pietro_in_Vaticano_September_2015-1a.jpg"
+ },
+ "rome/trastevere": {
+  "article": "https://en.wikipedia.org/wiki/Trastevere",
+  "auteur": "Jensens",
+  "fichier": "assets/photos/rome/trastevere.jpg",
+  "h": 537,
+  "l": 1000,
+  "licence": "Public domain",
+  "lien_licence": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Trastevere_fountain.jpg"
+ },
+ "rome/trevi": {
+  "article": "https://it.wikipedia.org/wiki/Fontana_di_Trevi",
+  "auteur": "NikonZ7II",
+  "fichier": "assets/photos/rome/trevi.jpg",
+  "h": 542,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Trevi_Fountain_-_Roma.jpg"
+ }
+}
