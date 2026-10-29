@@ -1,0 +1,238 @@
+{
+  "id": "barcelone",
+  "nom": "Barcelone",
+  "pays": "Espagne",
+  "centre": [41.3890, 2.1700],
+  "bbox": [41.32, 2.05, 41.47, 2.23],
+  "verification": "2026-10-29",
+  "avertissement": "Horaires, tarifs et conditions d'accès changent souvent : vérifiez toujours sur le site officiel avant de partir.",
+  "zones": {
+    "vieille-ville": { "nom": "Vieille ville et port", "centre": [41.3820, 2.1800] },
+    "ciutadella": { "nom": "Ciutadella et Barceloneta", "centre": [41.3850, 2.1880] },
+    "eixample": { "nom": "Eixample et Gràcia", "centre": [41.4030, 2.1640] },
+    "montjuic": { "nom": "Montjuïc", "centre": [41.3680, 2.1590] },
+    "nord": { "nom": "Hauteurs (Tibidabo, Horta)", "centre": [41.4250, 2.1300] },
+    "est": { "nom": "Front de mer est (Fòrum)", "centre": [41.4050, 2.2120] }
+  },
+  "urgences": [
+    { "nom": "Numéro d'urgence européen", "detail": "112, gratuit, depuis n'importe quel téléphone" },
+    { "nom": "Hôpital pédiatrique Sant Joan de Déu", "detail": "Hôpital de référence pour enfants, à Esplugues de Llobregat (périphérie ouest)", "lat": 41.3836, "lon": 2.1022 },
+    { "nom": "Pharmacies", "detail": "Croix verte « Farmàcia ». Une pharmacie de garde est affichée sur la porte de chaque pharmacie fermée." }
+  ],
+  "conseils": [
+    { "titre": "Métro et poussette", "texte": "Toutes les stations ne disposent pas d'ascenseur, ou il peut être en panne. Repérez votre trajet sur le site officiel des transports (tmb.cat) et prévoyez le bus, entièrement accessible, en alternative." },
+    { "titre": "Horaires espagnols", "texte": "Le déjeuner se prend souvent entre 13 h 30 et 15 h et le dîner rarement avant 20 h 30. Avec des petits, visez l'ouverture des restaurants ou un pique-nique, et gardez un goûter dans le sac." },
+    { "titre": "Chaleur", "texte": "De juin à septembre, programmez l'extérieur le matin, le musée ou la sieste aux heures chaudes, et la plage en fin de journée." },
+    { "titre": "Réserver à l'avance", "texte": "Sagrada Família, Park Güell (zone monumentale) et Casa Batlló fonctionnent sur créneaux horaires. En haute saison, réservez plusieurs jours avant." },
+    { "titre": "Pickpockets", "texte": "Les zones touristiques (Rambla, métro, plage) sont connues pour les vols à la tire. Gardez papiers et téléphone dans une poche fermée, pas dans le panier de la poussette." }
+  ],
+  "activites": [
+    {
+      "id": "aquarium", "nom": "L'Aquàrium de Barcelona", "zone": "vieille-ville",
+      "adresse": "Moll d'Espanya del Port Vell, s/n, 08039 Barcelona",
+      "lat": 41.3768, "lon": 2.1839, "site": "https://www.aquariumbcn.com",
+      "ages": [0, 17], "interieur": true, "gratuit": false, "duree": 120,
+      "poussette": "facile", "reservation": false,
+      "interets": ["animaux", "sciences"],
+      "conseil": "Le tunnel sous les requins fait l'unanimité de 2 à 12 ans. Arrivez à l'ouverture : l'affluence monte vite en fin de matinée et le week-end."
+    },
+    {
+      "id": "maritim", "nom": "Museu Marítim de Barcelona", "zone": "vieille-ville",
+      "adresse": "Av. de les Drassanes, s/n, 08001 Barcelona",
+      "lat": 41.3755, "lon": 2.1756, "site": "https://www.mmb.cat",
+      "ages": [4, 17], "interieur": true, "gratuit": false, "duree": 75,
+      "poussette": "facile", "reservation": false,
+      "interets": ["culture", "aventure"],
+      "conseil": "La réplique grandeur nature de la galère royale impressionne les enfants. Bonne option de repli en cas de pluie près du port."
+    },
+    {
+      "id": "xocolata", "nom": "Museu de la Xocolata", "zone": "ciutadella",
+      "adresse": "Carrer del Comerç, 36, 08003 Barcelona",
+      "lat": 41.3875, "lon": 2.1818, "site": "https://museuxocolata.cat",
+      "ages": [3, 14], "interieur": true, "gratuit": false, "duree": 60,
+      "poussette": "moyen", "reservation": false,
+      "interets": ["gourmand", "culture"],
+      "conseil": "Petit musée, visite courte : idéal en fin d'après-midi avant le parc de la Ciutadella, tout proche. Le billet d'entrée a longtemps été une tablette de chocolat."
+    },
+    {
+      "id": "ciutadella", "nom": "Parc de la Ciutadella", "zone": "ciutadella",
+      "adresse": "Passeig de Picasso, 21, 08003 Barcelona",
+      "lat": 41.3882, "lon": 2.1871, "site": "",
+      "ages": [0, 17], "interieur": false, "gratuit": true, "duree": 90,
+      "poussette": "facile", "reservation": false,
+      "interets": ["parc", "aventure"],
+      "conseil": "Le grand poumon vert du centre : aires de jeux, pelouses, cascade monumentale et barques sur le lac. Parfait pour la pause entre deux visites ou un pique-nique."
+    },
+    {
+      "id": "zoo", "nom": "Zoo de Barcelona", "zone": "ciutadella",
+      "adresse": "Parc de la Ciutadella, s/n, 08003 Barcelona",
+      "lat": 41.3863, "lon": 2.1894, "site": "https://www.zoobarcelona.cat",
+      "ages": [1, 12], "interieur": false, "gratuit": false, "duree": 180,
+      "poussette": "facile", "reservation": false,
+      "interets": ["animaux"],
+      "conseil": "Prévoyez une demi-journée. Allées plates, très praticables en poussette. À éviter aux heures les plus chaudes de l'été."
+    },
+    {
+      "id": "arc", "nom": "Arc de Triomf et Passeig de Lluís Companys", "zone": "ciutadella",
+      "adresse": "Passeig de Lluís Companys, 08018 Barcelona",
+      "lat": 41.3910, "lon": 2.1806, "site": "",
+      "ages": [0, 17], "interieur": false, "gratuit": true, "duree": 30,
+      "poussette": "facile", "reservation": false,
+      "interets": ["culture", "parc"],
+      "conseil": "Grande promenade piétonne où les enfants peuvent courir, souvent animée par des artistes de rue. Elle mène directement au parc de la Ciutadella."
+    },
+    {
+      "id": "gotic", "nom": "Cathédrale et quartier gothique", "zone": "vieille-ville",
+      "adresse": "Pla de la Seu, s/n, 08002 Barcelona",
+      "lat": 41.3839, "lon": 2.1762, "site": "",
+      "ages": [5, 17], "interieur": false, "gratuit": "partiel", "duree": 75,
+      "poussette": "moyen", "reservation": false,
+      "interets": ["culture"],
+      "conseil": "Transformez la balade en chasse au trésor : gargouilles, oies du cloître, ruelles médiévales. Ruelles étroites et pavées, plus simples en porte-bébé."
+    },
+    {
+      "id": "boqueria", "nom": "Marché de la Boqueria", "zone": "vieille-ville",
+      "adresse": "La Rambla, 91, 08001 Barcelona",
+      "lat": 41.3817, "lon": 2.1716, "site": "https://www.boqueria.barcelona",
+      "ages": [3, 17], "interieur": true, "gratuit": true, "duree": 45,
+      "poussette": "difficile", "reservation": false,
+      "interets": ["gourmand", "culture"],
+      "conseil": "Couleurs et jus de fruits frais plaisent aux enfants, mais la foule est dense en milieu de journée. Allez-y tôt le matin, en porte-bébé plutôt qu'en poussette."
+    },
+    {
+      "id": "barceloneta", "nom": "Plage de la Barceloneta", "zone": "ciutadella",
+      "adresse": "Passeig Marítim de la Barceloneta, 08003 Barcelona",
+      "lat": 41.3784, "lon": 2.1925, "site": "",
+      "ages": [0, 17], "interieur": false, "gratuit": true, "duree": 120,
+      "poussette": "moyen", "reservation": false,
+      "interets": ["plage", "aventure"],
+      "conseil": "La plage la plus proche du centre, donc la plus fréquentée. Les jeux pour enfants installés le long de la promenade sont un bon complément."
+    },
+    {
+      "id": "novaicaria", "nom": "Plage de la Nova Icària", "zone": "est",
+      "adresse": "Passeig Marítim de la Nova Icària, 08005 Barcelona",
+      "lat": 41.3906, "lon": 2.2030, "site": "",
+      "ages": [0, 17], "interieur": false, "gratuit": true, "duree": 120,
+      "poussette": "moyen", "reservation": false,
+      "interets": ["plage"],
+      "conseil": "Plus calme et plus familiale que la Barceloneta, avec une grande promenade plate pour les poussettes."
+    },
+    {
+      "id": "sagrada", "nom": "Sagrada Família", "zone": "eixample",
+      "adresse": "Carrer de Mallorca, 401, 08013 Barcelona",
+      "lat": 41.4036, "lon": 2.1744, "site": "https://sagradafamilia.org",
+      "ages": [6, 17], "interieur": true, "gratuit": false, "duree": 90,
+      "poussette": "moyen", "reservation": true,
+      "interets": ["culture"],
+      "conseil": "La lumière des vitraux impressionne même les plus jeunes. Réservation obligatoire sur créneau. Vérifiez les conditions pour les poussettes et l'âge minimum des tours sur le site officiel."
+    },
+    {
+      "id": "batllo", "nom": "Casa Batlló", "zone": "eixample",
+      "adresse": "Passeig de Gràcia, 43, 08007 Barcelona",
+      "lat": 41.3916, "lon": 2.1650, "site": "https://www.casabatllo.es",
+      "ages": [6, 17], "interieur": true, "gratuit": false, "duree": 75,
+      "poussette": "moyen", "reservation": true,
+      "interets": ["culture"],
+      "conseil": "La « maison du dragon » de Gaudí, avec une visite immersive qui parle bien aux enfants d'âge scolaire."
+    },
+    {
+      "id": "guell", "nom": "Park Güell", "zone": "eixample",
+      "adresse": "Carrer d'Olot, 08024 Barcelona",
+      "lat": 41.4145, "lon": 2.1527, "site": "https://parkguell.barcelona",
+      "ages": [3, 17], "interieur": false, "gratuit": false, "duree": 90,
+      "poussette": "difficile", "reservation": true,
+      "interets": ["culture", "parc"],
+      "conseil": "La salamandre en mosaïque est un incontournable. Le parc est en forte pente : le porte-bébé est bien plus pratique. Zone monumentale sur réservation."
+    },
+    {
+      "id": "bunkers", "nom": "Bunkers del Carmel", "zone": "eixample",
+      "adresse": "Carrer de Marià Labèrnia, s/n, 08032 Barcelona",
+      "lat": 41.4192, "lon": 2.1617, "site": "",
+      "ages": [10, 17], "interieur": false, "gratuit": true, "duree": 60,
+      "poussette": "difficile", "reservation": false,
+      "interets": ["aventure"],
+      "conseil": "Le plus beau panorama gratuit de la ville, apprécié des ados au coucher du soleil. Montée raide, pas de garde-corps partout : à éviter avec de jeunes enfants."
+    },
+    {
+      "id": "teleferic", "nom": "Téléphérique de Montjuïc", "zone": "montjuic",
+      "adresse": "Av. de Miramar, 30, 08038 Barcelona",
+      "lat": 41.3717, "lon": 2.1653, "site": "https://www.tmb.cat",
+      "ages": [2, 17], "interieur": false, "gratuit": false, "duree": 30,
+      "poussette": "moyen", "reservation": false,
+      "interets": ["aventure"],
+      "conseil": "Les cabines survolent la ville jusqu'au château : une petite aventure pour les enfants et un moyen simple de monter sur la colline."
+    },
+    {
+      "id": "castell", "nom": "Château de Montjuïc", "zone": "montjuic",
+      "adresse": "Carretera de Montjuïc, 66, 08038 Barcelona",
+      "lat": 41.3634, "lon": 2.1665, "site": "",
+      "ages": [4, 17], "interieur": false, "gratuit": "partiel", "duree": 60,
+      "poussette": "moyen", "reservation": false,
+      "interets": ["culture", "aventure"],
+      "conseil": "Remparts, canons et vue sur le port : un vrai château de chevaliers pour les enfants. Combinez avec le téléphérique."
+    },
+    {
+      "id": "poble", "nom": "Poble Espanyol", "zone": "montjuic",
+      "adresse": "Av. Francesc Ferrer i Guàrdia, 13, 08038 Barcelona",
+      "lat": 41.3688, "lon": 2.1470, "site": "https://www.poble-espanyol.com",
+      "ages": [3, 17], "interieur": false, "gratuit": false, "duree": 120,
+      "poussette": "moyen", "reservation": false,
+      "interets": ["culture"],
+      "conseil": "Un village reconstitué avec des places et des artisans de toute l'Espagne, sans voitures. Les enfants circulent librement."
+    },
+    {
+      "id": "fontmagica", "nom": "Fontaine magique de Montjuïc", "zone": "montjuic",
+      "adresse": "Plaça de Carles Buïgas, 1, 08038 Barcelona",
+      "lat": 41.3712, "lon": 2.1517, "site": "",
+      "ages": [0, 17], "interieur": false, "gratuit": true, "duree": 45,
+      "poussette": "facile", "reservation": false, "soir": true,
+      "interets": ["culture"],
+      "conseil": "Spectacle d'eau, de lumière et de musique en soirée, selon un calendrier saisonnier et parfois suspendu en période de sécheresse. Vérifiez qu'il a bien lieu avant d'y aller."
+    },
+    {
+      "id": "cosmocaixa", "nom": "CosmoCaixa", "zone": "nord",
+      "adresse": "Carrer d'Isaac Newton, 26, 08022 Barcelona",
+      "lat": 41.4131, "lon": 2.1313, "site": "https://cosmocaixa.org",
+      "ages": [3, 17], "interieur": true, "gratuit": false, "duree": 180,
+      "poussette": "facile", "reservation": false,
+      "interets": ["sciences", "animaux"],
+      "conseil": "Le grand musée des sciences de la ville, avec une forêt amazonienne reconstituée sous verre. Excellent plan B en cas de pluie : prévoyez au moins une demi-journée."
+    },
+    {
+      "id": "tibidabo", "nom": "Parc d'attractions du Tibidabo", "zone": "nord",
+      "adresse": "Plaça del Tibidabo, 3-4, 08035 Barcelona",
+      "lat": 41.4225, "lon": 2.1190, "site": "https://www.tibidabo.cat",
+      "ages": [2, 14], "interieur": false, "gratuit": false, "duree": 240,
+      "poussette": "moyen", "reservation": false,
+      "interets": ["aventure"],
+      "conseil": "Manèges anciens et modernes au sommet de la montagne, avec vue sur toute la ville. Ouverture selon un calendrier saisonnier, souvent limitée aux week-ends hors été : vérifiez avant d'y aller."
+    },
+    {
+      "id": "laberint", "nom": "Parc du Labyrinthe d'Horta", "zone": "nord",
+      "adresse": "Passeig dels Castanyers, 1, 08035 Barcelona",
+      "lat": 41.4397, "lon": 2.1462, "site": "",
+      "ages": [4, 17], "interieur": false, "gratuit": "partiel", "duree": 90,
+      "poussette": "difficile", "reservation": false,
+      "interets": ["parc", "aventure"],
+      "conseil": "Un vrai labyrinthe végétal où les enfants adorent se perdre, dans l'un des plus vieux jardins de la ville. Escaliers nombreux."
+    },
+    {
+      "id": "museublau", "nom": "Museu Blau (sciences naturelles)", "zone": "est",
+      "adresse": "Plaça Leonardo da Vinci, 4-5, 08019 Barcelona",
+      "lat": 41.4111, "lon": 2.2214, "site": "https://museuciencies.cat",
+      "ages": [3, 17], "interieur": true, "gratuit": false, "duree": 90,
+      "poussette": "facile", "reservation": false,
+      "interets": ["sciences", "animaux"],
+      "conseil": "Squelette de baleine, minéraux et dinosaures dans un bâtiment moderne et spacieux. Bonne alternative couverte, moins fréquentée que les grands sites."
+    },
+    {
+      "id": "diagonalmar", "nom": "Parc de Diagonal Mar", "zone": "est",
+      "adresse": "Carrer de Llull, 362, 08019 Barcelona",
+      "lat": 41.4073, "lon": 2.2152, "site": "",
+      "ages": [0, 12], "interieur": false, "gratuit": true, "duree": 60,
+      "poussette": "facile", "reservation": false,
+      "interets": ["parc"],
+      "conseil": "Grand parc moderne avec toboggans et bassins, à deux pas de la mer. Une pause tranquille loin de la foule du centre."
+    }
+  ]
+}

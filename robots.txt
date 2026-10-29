@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://xd6pwyx7n2-debug.github.io/petitmondo/sitemap.xml
