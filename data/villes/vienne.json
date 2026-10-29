@@ -1,0 +1,92 @@
+{
+ "id": "vienne",
+ "nom": "Vienne",
+ "pays": "Autriche",
+ "ordre": 9,
+ "accroche": "Grande roue, plus vieux zoo du monde et musées géants",
+ "centre": [48.2082, 16.3738],
+ "bbox": [48.15, 16.24, 48.29, 16.45],
+ "verification": "2026-10-29",
+ "photo": ["de:Wien", "en:Vienna"],
+ "avertissement": "Horaires, tarifs et conditions d'accès changent souvent : vérifiez toujours sur le site officiel avant de partir.",
+ "zones": {
+  "centre": {"nom": "Centre historique", "centre": [48.2075, 16.3720]},
+  "musees": {"nom": "Quartier des musées", "centre": [48.2030, 16.3580]},
+  "prater": {"nom": "Prater", "centre": [48.2160, 16.3990]},
+  "schonbrunn": {"nom": "Schönbrunn", "centre": [48.1840, 16.3100]},
+  "danube": {"nom": "Île du Danube", "centre": [48.2290, 16.4110]},
+  "kahlenberg": {"nom": "Kahlenberg", "centre": [48.2770, 16.3330]},
+  "lainz": {"nom": "Lainzer Tiergarten", "centre": [48.1717, 16.2509]}
+ },
+ "enfants": {
+  "drapeaux": ["at"],
+  "pays": "l'Autriche",
+  "capitale": "Vienne",
+  "langue": "l'allemand",
+  "monnaie": "l'euro (€)",
+  "voix": "de-AT",
+  "faits": [
+   "Le zoo de Schönbrunn a ouvert en 1752 : c'est le plus vieux zoo du monde encore ouvert.",
+   "La grande roue du Prater tourne depuis 1897. Ses cabines ressemblent à de petits wagons rouges.",
+   "Vienne est la ville de la musique : Mozart y a vécu et composé beaucoup de ses œuvres.",
+   "La Sachertorte, un gâteau au chocolat et à la confiture d'abricot, a été inventée à Vienne.",
+   "Le Danube, l'un des plus longs fleuves d'Europe, traverse la ville.",
+   "Le toit de la cathédrale Saint-Étienne est fait de plus de 230 000 tuiles de couleur qui dessinent des motifs."
+  ],
+  "mots_titre": "Mes premiers mots en allemand",
+  "mots": [
+   ["Bonjour", "Grüß Gott", "gruss got"],
+   ["Salut", "Servus", "sèr-vouss"],
+   ["Merci", "Danke", "dann-ke"],
+   ["S'il te plaît", "Bitte", "bi-te"],
+   ["Oui / Non", "Ja / Nein", "ya / naïn"],
+   ["Au revoir", "Auf Wiedersehen", "aouf vi-der-zé-en"],
+   ["Une glace", "Ein Eis", "aïn aïss"],
+   ["De l'eau", "Wasser", "va-sseur"],
+   ["J'ai faim", "Ich habe Hunger", "ich ha-be houng-eur"]
+  ],
+  "quiz": [
+   {"q": "Quel est le plus vieux zoo du monde encore ouvert ?", "r": ["Le zoo de Schönbrunn", "Le zoo de la Lune", "Un zoo construit l'an dernier"], "ok": 0, "pourquoi": "Il a ouvert en 1752, à Vienne."},
+   {"q": "Quel manège géant tourne au Prater depuis 1897 ?", "r": ["Une grande roue", "Un grand huit", "Un toboggan"], "ok": 0, "pourquoi": "La grande roue, avec ses cabines rouges."},
+   {"q": "Quel grand musicien a vécu à Vienne ?", "r": ["Mozart", "Un pirate", "Le père Noël"], "ok": 0, "pourquoi": "Mozart y a composé beaucoup de ses œuvres."},
+   {"q": "La Sachertorte est un gâteau au…", "r": ["Chocolat", "Fromage", "Poisson"], "ok": 0, "pourquoi": "Chocolat, avec une couche de confiture d'abricot."},
+   {"q": "Comment dit-on « merci » en allemand ?", "r": ["Danke", "Grazie", "Gracias"], "ok": 0, "pourquoi": "Ça se prononce « dann-ke »."}
+  ]
+ },
+ "bingo": ["grande-roue", "tram-rouge", "cheval", "gateau", "musicien", "eglise-dome", "tour-pointue", "drapeau-autriche", "couronne", "statue", "fontaine", "pigeon", "canard", "arbre", "chien", "glace", "horloge", "velo"],
+ "urgences": [
+  {"nom": "Numéro d'urgence européen", "detail": "112, gratuit, depuis n'importe quel téléphone (144 pour les secours médicaux autrichiens)"},
+  {"nom": "AKH Wien", "detail": "Grand hôpital universitaire, avec urgences pédiatriques, Währinger Gürtel 18-20, dans le 9e arrondissement"},
+  {"nom": "Pharmacies", "detail": "« Apotheke ». Le numéro 1455 indique la pharmacie de garde la plus proche, jour et nuit."}
+ ],
+ "conseils": [
+  {"titre": "Transports gratuits pour les enfants", "texte": "Les moins de 6 ans voyagent toujours gratuitement. Les moins de 15 ans voyagent aussi gratuitement le dimanche, les jours fériés et pendant les vacances scolaires viennoises. Les autres jours, ils paient demi-tarif."},
+  {"titre": "Musées gratuits pour les jeunes", "texte": "Les grands musées fédéraux, dont le muséum d'histoire naturelle et le musée technique, sont gratuits pour les moins de 19 ans. L'exposition permanente du Wien Museum est gratuite pour tout le monde."},
+  {"titre": "Le dimanche", "texte": "Presque tous les magasins, supermarchés compris, sont fermés le dimanche. Faites les courses le samedi ; les pharmacies de garde restent ouvertes."},
+  {"titre": "Eau", "texte": "L'eau du robinet vient des Alpes et elle est excellente. Les fontaines publiques sont nombreuses : une gourde par enfant suffit."}
+ ],
+ "poussette": [
+  {"titre": "Métro (U-Bahn)", "texte": "Selon les Wiener Linien, toutes les stations de métro sont accessibles sans marche, avec ascenseur. Dans les rames récentes, de grands espaces pour les poussettes se trouvent à l'avant et à l'arrière."},
+  {"titre": "Tramway et bus", "texte": "Deux trams sur trois sont à plancher bas et tous les bus le sont. Montez avec la poussette par la deuxième porte."},
+  {"titre": "Centre-ville", "texte": "Le centre est surtout plat et asphalté, avec quelques ruelles pavées. Les vrais efforts sont la montée vers la Gloriette à Schönbrunn et les chemins du Kahlenberg."},
+  {"titre": "Grands musées", "texte": "Les musées du Ring et du quartier des musées ont des ascenseurs. Les poussettes doivent parfois être laissées au vestiaire : prévoyez un porte-bébé pour les tout-petits."}
+ ],
+ "papiers": "Pour un séjour en Autriche, carte d'identité ou passeport en cours de validité pour chaque membre de la famille, enfants compris, et carte européenne d'assurance maladie.",
+ "activites": [
+  {"id": "zoo", "nom": "Zoo de Schönbrunn", "zone": "schonbrunn", "adresse": "Maxingstraße 13b, 1130 Wien", "lat": 48.1823, "lon": 16.3029, "site": "https://www.zoovienna.at", "ages": [0, 14], "interieur": false, "gratuit": false, "duree": 300, "poussette": "facile", "reservation": false, "interets": ["animaux"], "transport": "Métro U4, station Hietzing, puis 5 min à pied", "wiki": ["de:Tiergarten Schönbrunn", "en:Tiergarten Schönbrunn"], "conseil": "Le plus vieux zoo du monde encore ouvert, avec une serre tropicale et un aquarium couverts pour les jours de pluie. Allées larges, parfaites en poussette.", "enfant": "Le plus vieux zoo du monde, avec des éléphants et des ours polaires."},
+  {"id": "schonbrunn", "nom": "Parc du château de Schönbrunn et labyrinthe", "zone": "schonbrunn", "adresse": "Schönbrunner Schloßstraße 47, 1130 Wien", "lat": 48.1833, "lon": 16.3110, "site": "https://www.schoenbrunn.at", "ages": [0, 14], "interieur": false, "gratuit": "partiel", "duree": 150, "poussette": "facile", "reservation": false, "interets": ["parc", "aventure"], "transport": "Métro U4, station Schönbrunn", "wiki": ["de:Schlosspark Schönbrunn", "en:Schönbrunn Palace"], "conseil": "Le parc est gratuit. Le labyrinthe de haies et l'aire de jeux qui l'accompagne sont payants et ouverts d'avril à début novembre. La montée vers la Gloriette est longue mais offre la plus belle vue.", "enfant": "Un labyrinthe de haies où il faut trouver la sortie."},
+  {"id": "kindermuseum", "nom": "Musée des enfants du château de Schönbrunn", "zone": "schonbrunn", "adresse": "Schloss Schönbrunn, 1130 Wien", "lat": 48.1849, "lon": 16.3115, "site": "https://www.schoenbrunn.at", "ages": [4, 12], "interieur": true, "gratuit": false, "duree": 90, "poussette": "moyen", "reservation": false, "interets": ["culture"], "transport": "Métro U4, station Schönbrunn", "wiki": [], "conseil": "Les enfants se déguisent en princes et princesses et découvrent la vie à la cour. Plus amusant pour eux que la visite des appartements.", "enfant": "Se déguiser comme les enfants de l'impératrice."},
+  {"id": "tmw", "nom": "Musée technique de Vienne", "zone": "schonbrunn", "adresse": "Mariahilfer Straße 212, 1140 Wien", "lat": 48.1907, "lon": 16.3178, "site": "https://www.technischesmuseum.at", "ages": [4, 14], "interieur": true, "gratuit": false, "duree": 180, "poussette": "facile", "reservation": false, "interets": ["sciences"], "transport": "Tram 52 ou 60, arrêt Penzinger Straße", "wiki": ["de:Technisches Museum Wien", "en:Technisches Museum Wien"], "conseil": "Locomotives, mine reconstituée et expériences à faire soi-même. Gratuit pour les moins de 19 ans. Combinable avec Schönbrunn, tout proche.", "enfant": "Une vraie locomotive et une mine sous la terre."},
+  {"id": "prater", "nom": "Prater et grande roue", "zone": "prater", "adresse": "Riesenradplatz 1, 1020 Wien", "lat": 48.2166, "lon": 16.3958, "site": "https://www.wienerriesenrad.com", "ages": [2, 14], "interieur": false, "gratuit": "partiel", "duree": 180, "poussette": "facile", "reservation": false, "interets": ["aventure"], "transport": "Métro U1 ou U2, station Praterstern", "wiki": ["de:Wiener Riesenrad", "en:Wiener Riesenrad"], "conseil": "L'entrée du parc d'attractions est libre, on paie manège par manège. La grande roue tourne lentement dans des cabines fermées : idéale avec des petits.", "enfant": "Monter tout en haut de la grande roue dans une cabine rouge."},
+  {"id": "liliputbahn", "nom": "Petit train du Prater (Liliputbahn)", "zone": "prater", "adresse": "Prater, station Prater, 1020 Wien", "lat": 48.2163, "lon": 16.3985, "site": "https://www.liliputbahn.com", "ages": [0, 10], "interieur": false, "gratuit": false, "duree": 45, "poussette": "facile", "reservation": false, "interets": ["aventure", "parc"], "transport": "Métro U1 ou U2, station Praterstern, puis 5 min à pied", "wiki": ["de:Liliputbahn im Prater", "en:Liliputbahn Prater"], "conseil": "Un petit train qui circule depuis 1928 à travers les arbres du Prater. En saison seulement, du printemps à l'automne.", "enfant": "Un tout petit train qui traverse la forêt du Prater."},
+  {"id": "nhm", "nom": "Muséum d'histoire naturelle", "zone": "musees", "adresse": "Burgring 7, 1010 Wien", "lat": 48.2052, "lon": 16.3600, "site": "https://www.nhm.at", "ages": [3, 14], "interieur": true, "gratuit": false, "duree": 150, "poussette": "facile", "reservation": false, "interets": ["sciences", "animaux"], "transport": "Métro U2 ou U3, station Volkstheater", "wiki": ["de:Naturhistorisches Museum Wien", "en:Natural History Museum, Vienna"], "conseil": "La salle des dinosaures, avec un allosaure animé, est le grand moment. Gratuit pour les moins de 19 ans. Fermé le mardi.", "enfant": "Des squelettes de dinosaures et un dinosaure qui bouge."},
+  {"id": "zoom", "nom": "ZOOM, musée des enfants", "zone": "musees", "adresse": "Museumsplatz 1, 1070 Wien", "lat": 48.2033, "lon": 16.3584, "site": "https://www.kindermuseum.at", "ages": [0, 14], "interieur": true, "gratuit": false, "duree": 90, "poussette": "facile", "reservation": true, "interets": ["sciences", "culture"], "transport": "Métro U2, station MuseumsQuartier", "wiki": ["de:Zoom Kindermuseum"], "conseil": "Un musée pensé pour les enfants, avec un espace océan pour les moins de 6 ans et des ateliers. Les visites se font par créneaux : réservez.", "enfant": "Un musée où l'on joue, construit et invente."},
+  {"id": "hausdesmeeres", "nom": "Haus des Meeres, l'aquarium", "zone": "musees", "adresse": "Fritz-Grünbaum-Platz 1, 1060 Wien", "lat": 48.1974, "lon": 16.3530, "site": "https://www.haus-des-meeres.at", "ages": [0, 14], "interieur": true, "gratuit": false, "duree": 150, "poussette": "facile", "reservation": false, "interets": ["animaux"], "transport": "Métro U3, station Neubaugasse, puis 5 min à pied", "wiki": ["de:Haus des Meeres", "en:Haus des Meeres"], "conseil": "Requins, tortues, singes en liberté dans une serre tropicale, le tout dans une ancienne tour en béton. Une valeur sûre quand il pleut.", "enfant": "Des requins et des singes dans une grande tour."},
+  {"id": "hausdermusik", "nom": "Haus der Musik", "zone": "centre", "adresse": "Seilerstätte 30, 1010 Wien", "lat": 48.2039, "lon": 16.3739, "site": "https://www.hausdermusik.com", "ages": [5, 14], "interieur": true, "gratuit": false, "duree": 120, "poussette": "facile", "reservation": false, "interets": ["culture", "sciences"], "transport": "Métro U1, U2 ou U4, station Karlsplatz, puis 5 min à pied", "wiki": ["de:Haus der Musik", "en:Haus der Musik"], "conseil": "Un musée des sons à toucher : on y dirige un orchestre virtuel qui suit les gestes de la baguette.", "enfant": "Diriger un vrai orchestre avec une baguette magique."},
+  {"id": "stephansdom", "nom": "Cathédrale Saint-Étienne", "zone": "centre", "adresse": "Stephansplatz 3, 1010 Wien", "lat": 48.2085, "lon": 16.3731, "site": "https://www.stephanskirche.at", "ages": [4, 14], "interieur": true, "gratuit": "partiel", "duree": 45, "poussette": "moyen", "reservation": false, "interets": ["culture"], "transport": "Métro U1 ou U3, station Stephansplatz", "wiki": ["de:Stephansdom", "en:St. Stephen's Cathedral, Vienna"], "conseil": "L'entrée au fond de la nef est libre ; les tours et les catacombes sont payantes. La tour sud se monte par un long escalier, la tour nord en ascenseur.", "enfant": "Un toit de tuiles qui dessine des aigles en couleur."},
+  {"id": "wienmuseum", "nom": "Wien Museum", "zone": "centre", "adresse": "Karlsplatz 8, 1040 Wien", "lat": 48.1993, "lon": 16.3713, "site": "https://www.wienmuseum.at", "ages": [6, 14], "interieur": true, "gratuit": true, "duree": 90, "poussette": "facile", "reservation": false, "interets": ["culture"], "transport": "Métro U1, U2 ou U4, station Karlsplatz", "wiki": ["de:Wien Museum", "en:Wien Museum"], "conseil": "L'histoire de la ville racontée avec des maquettes et des objets. L'exposition permanente est gratuite pour tous, et la terrasse a une belle vue.", "enfant": "Une grande maquette de Vienne d'autrefois."},
+  {"id": "donauinsel", "nom": "Île du Danube", "zone": "danube", "adresse": "Donauinsel, 1220 Wien", "lat": 48.2290, "lon": 16.4110, "site": "https://www.wien.info/fr", "ages": [0, 14], "interieur": false, "gratuit": true, "duree": 150, "poussette": "facile", "reservation": false, "interets": ["parc", "plage"], "transport": "Métro U1, station Donauinsel", "wiki": ["de:Donauinsel", "en:Donauinsel"], "conseil": "Plus de 20 km de prairies et de berges sans voitures, avec aires de jeux et baignade en été. Idéal pour le vélo et la poussette.", "enfant": "Une île toute en longueur au milieu du Danube."},
+  {"id": "kahlenberg", "nom": "Kahlenberg", "zone": "kahlenberg", "adresse": "Am Kahlenberg, 1190 Wien", "lat": 48.2770, "lon": 16.3330, "site": "https://www.wien.info/fr", "ages": [0, 14], "interieur": false, "gratuit": true, "duree": 150, "poussette": "moyen", "reservation": false, "interets": ["parc", "aventure"], "transport": "Bus 38A depuis la station de métro Heiligenstadt (U4), terminus Kahlenberg", "wiki": ["de:Kahlenberg", "en:Kahlenberg"], "conseil": "Une colline boisée au-dessus des vignes, avec une vue sur toute la ville et le Danube. Le bus monte jusqu'en haut ; les chemins de forêt sont plus faciles en porte-bébé.", "enfant": "La colline d'où l'on voit toute la ville."},
+  {"id": "lainz", "nom": "Lainzer Tiergarten", "zone": "lainz", "adresse": "Hermesstraße, Lainzer Tor, 1130 Wien", "lat": 48.1717, "lon": 16.2509, "site": "https://www.wien.info/fr", "ages": [2, 14], "interieur": false, "gratuit": true, "duree": 240, "poussette": "moyen", "reservation": false, "interets": ["animaux", "parc"], "transport": "Bus 60B, arrêt Lainzer Tor", "wiki": ["de:Lainzer Tiergarten", "en:Lainzer Tiergarten"], "conseil": "Une ancienne réserve de chasse impériale où vivent sangliers, daims et cerfs en liberté. Gardez vos distances avec les sangliers, surtout au printemps avec leurs petits. Horaires selon la saison.", "enfant": "Une forêt où l'on croise de vrais sangliers."}
+ ]
+}

@@ -1,0 +1,95 @@
+{
+ "id": "prague",
+ "nom": "Prague",
+ "pays": "Tchéquie",
+ "ordre": 8,
+ "accroche": "Château, horloge magique et pont des statues",
+ "centre": [50.0875, 14.4213],
+ "bbox": [50.04, 14.36, 50.13, 14.47],
+ "verification": "2026-10-29",
+ "photo": ["cs:Praha", "en:Prague"],
+ "avertissement": "Horaires, tarifs et conditions d'accès changent souvent : vérifiez toujours sur le site officiel avant de partir.",
+ "zones": {
+  "vieilleville": {"nom": "Vieille Ville et Nouvelle Ville", "centre": [50.0853, 14.4223]},
+  "malastrana": {"nom": "Château et Malá Strana", "centre": [50.0885, 14.4035]},
+  "petrin": {"nom": "Colline de Petřín", "centre": [50.0825, 14.3985]},
+  "nord": {"nom": "Letná, Holešovice et Troja", "centre": [50.1030, 14.4250]},
+  "sud": {"nom": "Smíchov et Vyšehrad", "centre": [50.0680, 14.4120]},
+  "karlstejn": {"nom": "Excursion à Karlštejn", "centre": [49.9393, 14.1882]}
+ },
+ "enfants": {
+  "drapeaux": ["cz"],
+  "pays": "la Tchéquie",
+  "capitale": "Prague",
+  "langue": "le tchèque",
+  "monnaie": "la couronne tchèque (Kč)",
+  "voix": "cs-CZ",
+  "faits": [
+   "Prague est surnommée « la ville aux cent clochers » : compte les tours pointues que tu vois !",
+   "L'horloge astronomique a plus de 600 ans. À chaque heure, un petit squelette sonne la cloche et des personnages défilent à ses fenêtres.",
+   "Le pont Charles a plus de 650 ans. Trente statues de pierre veillent dessus.",
+   "Le château de Prague est l'un des plus grands ensembles de châteaux du monde. Des gardes en uniforme surveillent ses portes.",
+   "En Tchéquie, on ne paie pas en euros mais en couronnes tchèques.",
+   "Prague est la ville des marionnettes : on en trouve dans les théâtres et les boutiques."
+  ],
+  "mots_titre": "Mes premiers mots en tchèque",
+  "mots": [
+   ["Bonjour", "Dobrý den", "do-bri dènn"],
+   ["Salut", "Ahoj", "a-hoï"],
+   ["Merci", "Děkuji", "dié-kou-yi"],
+   ["S'il te plaît", "Prosím", "pro-sim"],
+   ["Oui / Non", "Ano / Ne", "a-no / nè"],
+   ["Au revoir", "Na shledanou", "na-skhlè-da-no-ou"],
+   ["Une glace", "Zmrzlina", "zmr-zli-na"],
+   ["De l'eau", "Voda", "vo-da"],
+   ["J'ai faim", "Mám hlad", "mam hlat"]
+  ],
+  "quiz": [
+   {"q": "Qui sonne la cloche de l'horloge astronomique ?", "r": ["Un petit squelette", "Un roi", "Un chat"], "ok": 0, "pourquoi": "Le squelette tire la cordelette à chaque heure."},
+   {"q": "Comment surnomme-t-on Prague ?", "r": ["La ville aux cent clochers", "La ville des pingouins", "La ville sans ponts"], "ok": 0, "pourquoi": "Il y a des tours pointues partout."},
+   {"q": "Combien de statues y a-t-il sur le pont Charles ?", "r": ["30", "3", "300"], "ok": 0, "pourquoi": "Trente statues de pierre bordent le pont."},
+   {"q": "Avec quelle monnaie paie-t-on en Tchéquie ?", "r": ["La couronne", "L'euro", "Le dollar"], "ok": 0, "pourquoi": "On écrit « Kč » sur les prix."},
+   {"q": "Comment dit-on « salut » en tchèque ?", "r": ["Ahoj", "Hola", "Ciao"], "ok": 0, "pourquoi": "Ça se prononce « a-hoï », comme les marins !"}
+  ]
+ },
+ "bingo": ["tour-pointue", "horloge", "pont", "statue", "chateau", "lanterne", "tram-rouge", "marionnette", "drapeau-tchequie", "couronne", "bateau", "pigeon", "mouette", "eglise-dome", "musicien", "glace", "arbre", "chien"],
+ "urgences": [
+  {"nom": "Numéro d'urgence européen", "detail": "112, gratuit, depuis n'importe quel téléphone (155 pour le SAMU tchèque)"},
+  {"nom": "Hôpital Motol", "detail": "Fakultní nemocnice v Motole, le plus grand hôpital pour enfants du pays, dans l'ouest de Prague"},
+  {"nom": "Pharmacies", "detail": "« Lékárna ». Les pharmacies fermées affichent sur leur porte l'adresse de la pharmacie de garde."}
+ ],
+ "conseils": [
+  {"titre": "Monnaie", "texte": "On paie en couronnes tchèques (Kč). La carte bancaire est acceptée presque partout. Si un terminal propose de payer en euros, choisissez les couronnes : la conversion proposée est presque toujours plus chère. Évitez les bureaux de change de la vieille ville."},
+  {"titre": "Transports gratuits pour les enfants", "texte": "Dans Prague, les enfants voyagent gratuitement jusqu'à 15 ans. À partir de 10 ans, ils doivent pouvoir prouver leur âge : gardez sur vous leur carte d'identité ou leur passeport. Les adultes achètent leur billet aux automates ou dans l'application PID Lítačka."},
+  {"titre": "Éviter la foule", "texte": "Le pont Charles et la place de l'horloge sont bondés en milieu de journée. Venez avant 9 h : c'est plus calme, et les enfants voient vraiment."},
+  {"titre": "Funiculaire de Petřín", "texte": "Rouvert le 22 septembre 2026 avec de nouvelles cabines. Gratuit pour les moins de 15 ans ; les billets de transport d'un jour ou de trois jours sont acceptés."}
+ ],
+ "poussette": [
+  {"titre": "Pavés partout", "texte": "La Vieille Ville, Malá Strana et le château sont presque entièrement pavés, avec des montées raides côté château. Un porte-bébé est souvent plus pratique, ou une poussette à grandes roues."},
+  {"titre": "Métro", "texte": "La plupart des stations ont un ascenseur, mais pas toutes. Certaines n'ont que de très longs escaliers mécaniques, rapides : tenez bien la poussette. La fiche poussette de chaque lieu indique la station la plus proche et son accessibilité."},
+  {"titre": "Tramway", "texte": "Les trams à plancher bas sont de plus en plus nombreux. On monte avec la poussette par les portes marquées du pictogramme poussette."},
+  {"titre": "Un adulte voyage gratuitement", "texte": "Dans Prague, un adulte qui accompagne un enfant de moins de 3 ans voyage gratuitement, à condition de pouvoir prouver l'âge de l'enfant."},
+  {"titre": "Funiculaire de Petřín", "texte": "Ses gares ne sont pas encore accessibles sans marche. Avec une poussette, prévoyez un coup de main pour la porter."}
+ ],
+ "papiers": "Pour un séjour en Tchéquie, carte d'identité ou passeport en cours de validité pour chaque membre de la famille, enfants compris, et carte européenne d'assurance maladie.",
+ "activites": [
+  {"id": "horloge", "nom": "Horloge astronomique", "zone": "vieilleville", "adresse": "Staroměstské náměstí 1, 110 00 Praha 1", "lat": 50.0870, "lon": 14.4207, "site": "https://www.prague.eu/fr", "ages": [2, 14], "interieur": false, "gratuit": true, "duree": 30, "poussette": "moyen", "reservation": false, "interets": ["culture"], "transport": "Métro A, station Staroměstská, puis 5 min à pied", "wiki": ["cs:Pražský orloj", "en:Prague astronomical clock"], "conseil": "Le petit spectacle a lieu à chaque heure, de 9 h à 23 h. Arrivez cinq minutes avant et placez les enfants devant, face à l'horloge.", "enfant": "Une horloge magique où un squelette sonne la cloche."},
+  {"id": "karluvmost", "nom": "Pont Charles", "zone": "vieilleville", "adresse": "Karlův most, 110 00 Praha 1", "lat": 50.0865, "lon": 14.4114, "site": "https://www.prague.eu/fr", "ages": [0, 14], "interieur": false, "gratuit": true, "duree": 45, "poussette": "moyen", "reservation": false, "interets": ["culture"], "transport": "Tram 2, 17 ou 18, arrêt Karlovy lázně", "wiki": ["cs:Karlův most", "en:Charles Bridge"], "conseil": "Piéton et pavé, avec musiciens et dessinateurs. Très calme avant 9 h, bondé l'après-midi : gardez les petits par la main.", "enfant": "Un très vieux pont de pierre gardé par trente statues."},
+  {"id": "hrad", "nom": "Château de Prague", "zone": "malastrana", "adresse": "Hradčany, 119 08 Praha 1", "lat": 50.0909, "lon": 14.4005, "site": "https://www.hrad.cz", "ages": [4, 14], "interieur": false, "gratuit": "partiel", "duree": 150, "poussette": "moyen", "reservation": false, "interets": ["culture"], "transport": "Tram 22, arrêt Pražský hrad, pour éviter la montée à pied", "wiki": ["cs:Pražský hrad", "en:Prague Castle"], "conseil": "Les cours et les jardins sont gratuits ; la cathédrale, le vieux palais et la ruelle d'Or sont payants. Ne manquez pas la relève de la garde à midi, avec fanfare, à l'entrée principale.", "enfant": "Un château immense avec des gardes qui changent de place à midi."},
+  {"id": "hracky", "nom": "Musée du jouet", "zone": "malastrana", "adresse": "Jiřská 6, 119 00 Praha 1 (château de Prague)", "lat": 50.0915, "lon": 14.4045, "site": "https://www.muzeumhracek.cz", "ages": [3, 10], "interieur": true, "gratuit": false, "duree": 60, "poussette": "moyen", "reservation": false, "interets": ["culture"], "transport": "Dans l'enceinte du château, au bout de la ruelle Jiřská", "wiki": [], "conseil": "Une heure de vitrines pleines de jouets anciens, de trains et de poupées. Peu interactif, mais parfait pour une pause au chaud pendant la visite du château. Fermé le lundi.", "enfant": "Des jouets de toutes les époques, de l'arrière-grand-mère à aujourd'hui."},
+  {"id": "kampa", "nom": "Parc de Kampa", "zone": "malastrana", "adresse": "Kampa, 118 00 Praha 1", "lat": 50.0846, "lon": 14.4078, "site": "https://www.prague.eu/fr", "ages": [0, 10], "interieur": false, "gratuit": true, "duree": 60, "poussette": "facile", "reservation": false, "interets": ["parc"], "transport": "Tram 12, 15, 20 ou 22, arrêt Hellichova, puis 5 min à pied", "wiki": ["cs:Kampa", "en:Kampa Island"], "conseil": "Un grand parc plat au bord de la Vltava, juste sous le pont Charles : le bon endroit pour courir et goûter après la foule.", "enfant": "Une île verte où l'on peut courir près de la rivière."},
+  {"id": "petrin", "nom": "Funiculaire et jardins de Petřín", "zone": "petrin", "adresse": "Station basse : Újezd, 118 00 Praha 1", "lat": 50.0806, "lon": 14.4058, "site": "https://pid.cz", "ages": [0, 14], "interieur": false, "gratuit": "partiel", "duree": 150, "poussette": "moyen", "reservation": false, "interets": ["parc", "aventure"], "transport": "Tram 9, 12, 15, 20 ou 22, arrêt Újezd", "wiki": ["cs:Lanová dráha na Petřín", "en:Petřín funicular"], "conseil": "Montez en funiculaire, redescendez à pied par les jardins et les vergers. Gratuit pour les moins de 15 ans ; les gares ne sont pas encore accessibles sans marche.", "enfant": "Un petit train qui grimpe tout droit sur la colline."},
+  {"id": "rozhledna", "nom": "Tour de Petřín et labyrinthe des miroirs", "zone": "petrin", "adresse": "Petřínské sady, 118 00 Praha 1", "lat": 50.0835, "lon": 14.3951, "site": "https://www.prague.city/fr", "ages": [3, 14], "interieur": false, "gratuit": false, "duree": 90, "poussette": "difficile", "reservation": false, "interets": ["aventure"], "transport": "En haut du funiculaire de Petřín, puis 5 min à pied", "wiki": ["cs:Petřínská rozhledna", "en:Petřín Lookout Tower"], "conseil": "Une petite tour Eiffel de 64 m à monter par l'escalier, et juste à côté un labyrinthe de miroirs déformants qui fait rire tout le monde. Billets séparés.", "enfant": "Des miroirs qui te rendent tout petit, tout grand ou tout tordu."},
+  {"id": "zoo", "nom": "Zoo de Prague", "zone": "nord", "adresse": "U Trojského zámku 120/3, 171 00 Praha 7", "lat": 50.1170, "lon": 14.4062, "site": "https://www.zoopraha.cz", "ages": [0, 14], "interieur": false, "gratuit": false, "duree": 300, "poussette": "moyen", "reservation": false, "interets": ["animaux"], "transport": "Bus 112 depuis la station de métro Nádraží Holešovice, arrêt Zoologická zahrada", "wiki": ["cs:Zoologická zahrada hl. m. Prahy", "en:Prague Zoo"], "conseil": "L'un des plus beaux zoos d'Europe, sur une colline : prévoyez la journée. Un petit télésiège relie le bas et le haut du zoo, pratique pour les petites jambes.", "enfant": "Gorilles, éléphants et un télésiège au milieu des animaux."},
+  {"id": "ntm", "nom": "Musée national de la technique", "zone": "nord", "adresse": "Kostelní 1320/42, 170 00 Praha 7", "lat": 50.0977, "lon": 14.4252, "site": "https://www.ntm.cz", "ages": [4, 14], "interieur": true, "gratuit": false, "duree": 180, "poussette": "facile", "reservation": false, "interets": ["sciences"], "transport": "Tram 1, 8, 25 ou 26, arrêt Letenské náměstí", "wiki": ["cs:Národní technické muzeum", "en:National Technical Museum (Prague)"], "conseil": "Une immense halle remplie de locomotives, de voitures anciennes et d'avions suspendus. Idéal par temps de pluie. Fermé le lundi.", "enfant": "Des trains, des autos et des avions accrochés au plafond."},
+  {"id": "planetarium", "nom": "Planétarium de Prague", "zone": "nord", "adresse": "Královská obora 233, 170 00 Praha 7", "lat": 50.1063, "lon": 14.4304, "site": "https://www.planetum.cz", "ages": [5, 14], "interieur": true, "gratuit": false, "duree": 120, "poussette": "facile", "reservation": false, "interets": ["sciences"], "transport": "Tram 12 ou 17, arrêt Výstaviště, puis 5 min à pied dans le parc Stromovka", "wiki": ["cs:Planetárium Praha", "en:Prague Planetarium"], "conseil": "Rouvert en 2025 après travaux, avec une exposition interactive sur l'espace en plus des séances sous le dôme. Fermé le lundi.", "enfant": "Un ciel plein d'étoiles, même en plein jour."},
+  {"id": "stromovka", "nom": "Parc Stromovka", "zone": "nord", "adresse": "Královská obora, 170 00 Praha 7", "lat": 50.1059, "lon": 14.4231, "site": "https://www.prague.eu/fr", "ages": [0, 14], "interieur": false, "gratuit": true, "duree": 120, "poussette": "facile", "reservation": false, "interets": ["parc"], "transport": "Tram 12 ou 17, arrêt Výstaviště", "wiki": ["cs:Stromovka", "en:Stromovka"], "conseil": "Le grand parc des familles pragoises : allées plates, étangs, canards et aires de jeux. Parfait en poussette ou à vélo.", "enfant": "Un immense parc avec des canards et des aires de jeux."},
+  {"id": "letna", "nom": "Parc de Letná", "zone": "nord", "adresse": "Letenské sady, 170 00 Praha 7", "lat": 50.0960, "lon": 14.4170, "site": "https://www.prague.eu/fr", "ages": [0, 14], "interieur": false, "gratuit": true, "duree": 90, "poussette": "facile", "reservation": false, "interets": ["parc"], "transport": "Tram 1, 8, 25 ou 26, arrêt Letenské náměstí", "wiki": ["cs:Letenské sady", "en:Letná Park"], "conseil": "Un plateau vert avec une vue spectaculaire sur les ponts de la Vltava. L'accès depuis la rivière se fait par de grands escaliers : avec une poussette, arrivez en tram par le haut.", "enfant": "Le meilleur balcon pour compter les ponts de Prague."},
+  {"id": "nm", "nom": "Musée national", "zone": "vieilleville", "adresse": "Václavské náměstí 68, 110 00 Praha 1", "lat": 50.0790, "lon": 14.4307, "site": "https://www.nm.cz", "ages": [4, 14], "interieur": true, "gratuit": false, "duree": 150, "poussette": "facile", "reservation": false, "interets": ["sciences", "culture"], "transport": "Métro A ou C, station Muzeum", "wiki": ["cs:Národní muzeum", "en:National Museum (Prague)"], "conseil": "Squelettes géants, animaux et minéraux dans un palais majestueux. Le musée des enfants, dans le nouveau bâtiment, fonctionne sur créneaux : réservez les jours d'affluence.", "enfant": "Un squelette de baleine et des animaux du monde entier."},
+  {"id": "lego", "nom": "Musée LEGO", "zone": "vieilleville", "adresse": "Národní 362/31, 110 00 Praha 1", "lat": 50.0818, "lon": 14.4185, "site": "https://www.muzeumlega.cz", "ages": [4, 12], "interieur": true, "gratuit": false, "duree": 90, "poussette": "moyen", "reservation": false, "interets": ["culture"], "transport": "Métro B, station Národní třída", "wiki": [], "conseil": "Plus de 3 000 modèles en briques, des villes miniatures et un coin pour construire. Une bonne carte à garder pour une averse.", "enfant": "Des villes entières construites en petites briques."},
+  {"id": "kralovstvi", "nom": "Království železnic, le royaume des trains", "zone": "sud", "adresse": "Stroupežnického 23, 150 00 Praha 5", "lat": 50.0716, "lon": 14.4045, "site": "https://www.kralovstvi-zeleznic.cz", "ages": [2, 14], "interieur": true, "gratuit": false, "duree": 150, "poussette": "facile", "reservation": false, "interets": ["sciences", "aventure"], "transport": "Métro B, station Anděl, puis 5 min à pied", "wiki": ["cs:Království železnic", "en:Kingdom of Railways"], "conseil": "Une gigantesque maquette ferroviaire du pays, avec des boutons pour faire rouler les trains et un espace de jeux pour les petits. Moins cher en semaine et en ligne.", "enfant": "Des centaines de petits trains qui roulent quand tu appuies sur les boutons."},
+  {"id": "vysehrad", "nom": "Forteresse de Vyšehrad", "zone": "sud", "adresse": "V Pevnosti 159/5b, 128 00 Praha 2", "lat": 50.0642, "lon": 14.4180, "site": "https://www.praha-vysehrad.cz", "ages": [3, 14], "interieur": false, "gratuit": true, "duree": 120, "poussette": "moyen", "reservation": false, "interets": ["culture", "parc"], "transport": "Métro C, station Vyšehrad, puis 10 min à pied", "wiki": ["cs:Vyšehrad", "en:Vyšehrad"], "conseil": "Remparts, pelouses et vue sur la rivière, loin de la foule. L'accès aux jardins est gratuit ; quelques expositions sont payantes.", "enfant": "Une forteresse de légende perchée au-dessus de la rivière."},
+  {"id": "pedalos", "nom": "Pédalos sur la Vltava", "zone": "vieilleville", "adresse": "Slovanský ostrov, 110 00 Praha 1", "lat": 50.0796, "lon": 14.4135, "site": "https://www.prague.eu/fr", "ages": [3, 14], "interieur": false, "gratuit": false, "duree": 60, "poussette": "facile", "reservation": false, "interets": ["aventure"], "transport": "Tram 2, 9, 17, 18 ou 22, arrêt Národní divadlo", "wiki": ["cs:Slovanský ostrov", "en:Slovanský ostrov"], "conseil": "En saison seulement, du printemps à l'automne, quand il fait beau. Les loueurs prêtent des gilets de sauvetage ; vérifiez la taille enfant avant de monter.", "enfant": "Pédaler sur la rivière avec le château en face."},
+  {"id": "karlstejn", "nom": "Château de Karlštejn", "zone": "karlstejn", "adresse": "Karlštejn 172, 267 18 Karlštejn", "lat": 49.9393, "lon": 14.1882, "site": "https://www.hrad-karlstejn.cz", "ages": [5, 14], "interieur": false, "gratuit": false, "duree": 360, "poussette": "difficile", "reservation": true, "interets": ["culture", "aventure"], "transport": "Train depuis la gare principale (Praha hlavní nádraží), environ 40 min, puis 30 min de montée à pied", "wiki": ["cs:Karlštejn (hrad)", "en:Karlštejn Castle"], "conseil": "Un vrai château de conte sur son rocher, bâti pour garder les joyaux de la couronne. La visite se fait avec un guide : réservez. La montée est raide, laissez la poussette pour un porte-bébé.", "enfant": "Un château de chevaliers perché sur un rocher.", "excursion": true}
+ ]
+}

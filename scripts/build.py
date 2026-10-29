@@ -29,7 +29,7 @@ INTERETS = {"animaux": "Animaux", "sciences": "Sciences", "aventure": "Aventure"
             "parc": "Parcs", "plage": "Plage", "gourmand": "Gourmand"}
 CAT_ICO = {"toilettes": "toilettes", "aire_jeux": "jeux", "table_langer": "langer", "pharmacie": "pharmacie", "resto_enfants": "resto", "eau": "eau", "station": "station"}
 CAT_NOM = {"toilettes": "Toilettes", "aire_jeux": "Aire de jeux", "table_langer": "Table à langer", "pharmacie": "Pharmacie", "resto_enfants": "Restaurant équipé", "eau": "Eau potable", "station": "Station"}
-VILLES_A_VENIR = [("Prague", "Tchéquie"), ("Vienne", "Autriche")]
+VILLES_A_VENIR = []
 SEO = {
     "avec-un-bebe": "{n} avec un bébé : visites, tables à langer et conseils",
     "quand-il-pleut": "Que faire à {n} avec des enfants quand il pleut",
@@ -758,7 +758,7 @@ def accueil():
              ("Comment importer la carte dans Google Maps ?", "Téléchargez le fichier KML depuis votre carnet, ouvrez Google My Maps, créez une carte et choisissez Importer. Vous retrouverez un calque par journée et par type de service.")])}
 </div></section>'''
     page("", "PetitMondo — Carnets de voyage en famille gratuits, avec jeux pour les enfants",
-         "Disneyland Paris, Paris, Rome, Londres, Barcelone, Lisbonne, Amsterdam : un carnet de voyage familial gratuit adapté à l'âge des enfants, avec programme, lieux faciles à retrouver, jeux et pages enfants, utilisable en mode avion.",
+         "Disneyland Paris, Paris, Rome, Londres, Barcelone, Lisbonne, Amsterdam, Prague, Vienne : un carnet de voyage familial gratuit adapté à l'âge des enfants, avec programme, lieux faciles à retrouver, jeux et pages enfants, utilisable en mode avion.",
          corps, 0, og_titre="PetitMondo — Le monde à découvrir en famille")
 
 
@@ -814,7 +814,7 @@ def hub_jeux():
 </div></section>
 <section style="padding-top:0"><div class="wrap"><div class="grille">{cartes}</div></div></section>'''
     page("jeux/", "Jeux de voyage à imprimer pour les enfants | PetitMondo",
-         "Bingo des rues, chasse au trésor, coloriage, journal de voyage et découverte du pays à imprimer gratuitement pour Disneyland Paris, Paris, Rome, Londres, Barcelone, Lisbonne et Amsterdam.", corps, 1, actif="jeux")
+         "Bingo des rues, chasse au trésor, coloriage, journal de voyage et découverte du pays à imprimer gratuitement pour Disneyland Paris, Paris, Rome, Londres, Barcelone, Lisbonne, Amsterdam, Prague et Vienne.", corps, 1, actif="jeux")
 
 
 VALISE = {

@@ -71,9 +71,15 @@ P = {
     "cheval": ("Un cheval de manège", '<path d="M14 40V26c0-8 6-14 14-14l6-4v8c0 6-4 10-8 10v14" fill="#FFF8EC"/><path d="M24 6v36" stroke="#FFC93C" stroke-width="3"/><circle cx="31" cy="14" r="1.3" fill="#1B2A4A"/>'),
     "etoile": ("Une étoile", '<path d="M24 6l5 11 12 1-9 8 3 12-11-6-11 6 3-12-9-8 12-1z" fill="#FFC93C"/>'),
     "lanterne": ("Une lanterne", '<path d="M18 14h12l2 22H16z" fill="#FFC93C"/><path d="M20 10h8v4h-8zM16 36h16v4H16zM24 6v4"/>'),
+    "tram-rouge": ("Un tram rouge et blanc", '<rect x="8" y="12" width="32" height="24" rx="5" fill="#FF6B4A"/><path d="M8 28h32" stroke="#FFF8EC" stroke-width="4"/><path d="M12 16h24v8H12z" fill="#DDF1FB"/><path d="M24 12V6M18 6h12"/><circle cx="15" cy="38" r="3" fill="#1B2A4A"/><circle cx="33" cy="38" r="3" fill="#1B2A4A"/>'),
+    "marionnette": ("Une marionnette", '<path d="M10 6h28M16 6l2 14M32 6l-2 14M24 6v8"/><circle cx="24" cy="18" r="5" fill="#FFE7A8"/><path d="M18 24h12l2 12H16z" fill="#A88BEB"/><path d="M18 36l-2 8M30 36l2 8M18 26l-6 8M30 26l6 8"/>'),
+    "grande-roue": ("Une grande roue", '<circle cx="24" cy="20" r="14" fill="none"/><path d="M24 6v28M10 20h28M14 10l20 20M34 10L14 30"/><path d="M16 44l8-24 8 24"/><circle cx="24" cy="6" r="2.5" fill="#FF6B4A"/><circle cx="38" cy="20" r="2.5" fill="#FF6B4A"/><circle cx="10" cy="20" r="2.5" fill="#FF6B4A"/>'),
+    "gateau": ("Un gâteau au chocolat", '<path d="M8 22l16-10 16 10v16H8z" fill="#8A5A3C"/><path d="M8 22h32" stroke="#FFC93C" stroke-width="3"/><path d="M8 30h32" stroke="#FFC93C" stroke-width="2"/><circle cx="24" cy="12" r="3" fill="#FF6B4A"/>'),
+    "drapeau-tchequie": ("Le drapeau tchèque", '<path d="M10 44V6"/><path d="M10 8h28v10H10z" fill="#fff"/><path d="M10 18h28v10H10z" fill="#FF6B4A"/><path d="M10 8l12 10-12 10z" fill="#3A6BC8"/>'),
+    "drapeau-autriche": ("Le drapeau autrichien", '<path d="M10 44V6"/><path d="M10 8h28v7H10z" fill="#FF6B4A"/><path d="M10 15h28v6H10z" fill="#fff"/><path d="M10 21h28v7H10z" fill="#FF6B4A"/>'),
 }
 
-DRAPEAUX_NOMS = {"pt": "Drapeau du Portugal", "nl": "Drapeau des Pays-Bas", "fr": "Drapeau de la France", "it": "Drapeau de l'Italie", "es": "Drapeau de l'Espagne",
+DRAPEAUX_NOMS = {"cz": "Drapeau de la Tchéquie", "at": "Drapeau de l'Autriche", "pt": "Drapeau du Portugal", "nl": "Drapeau des Pays-Bas", "fr": "Drapeau de la France", "it": "Drapeau de l'Italie", "es": "Drapeau de l'Espagne",
                  "cat": "Drapeau de la Catalogne", "uk": "Drapeau du Royaume-Uni"}
 
 
@@ -83,6 +89,10 @@ def drapeau(code, uid=""):
         return f'<svg class="drapeau" viewBox="0 0 90 60" role="img">{t}<path d="M0 0h30v60H0z" fill="#0055A4"/><path d="M30 0h30v60H30z" fill="#fff"/><path d="M60 0h30v60H60z" fill="#EF4135"/></svg>'
     if code == "pt":
         return f'<svg class="drapeau" viewBox="0 0 90 60" role="img">{t}<path d="M0 0h36v60H0z" fill="#006600"/><path d="M36 0h54v60H36z" fill="#FF0000"/><circle cx="36" cy="30" r="11" fill="#FFCC00" stroke="#1B2A4A" stroke-width="1.5"/><path d="M30 24h12v10a6 6 0 0 1-12 0z" fill="#fff" stroke="#FF0000" stroke-width="2"/></svg>'
+    if code == "cz":
+        return f'<svg class="drapeau" viewBox="0 0 90 60" role="img">{t}<path d="M0 0h90v30H0z" fill="#fff"/><path d="M0 30h90v30H0z" fill="#D7141A"/><path d="M0 0l45 30L0 60z" fill="#11457E"/></svg>'
+    if code == "at":
+        return f'<svg class="drapeau" viewBox="0 0 90 60" role="img">{t}<path d="M0 0h90v20H0z" fill="#C8102E"/><path d="M0 20h90v20H0z" fill="#fff"/><path d="M0 40h90v20H0z" fill="#C8102E"/></svg>'
     if code == "nl":
         return f'<svg class="drapeau" viewBox="0 0 90 60" role="img">{t}<path d="M0 0h90v20H0z" fill="#AE1C28"/><path d="M0 20h90v20H0z" fill="#fff"/><path d="M0 40h90v20H0z" fill="#21468B"/></svg>'
     if code == "it":
@@ -202,5 +212,45 @@ LEXIQUES = {
         ("Nous nous sommes perdus", "We are lost"),
         ("Aidez-moi, s'il vous plaît", "Can you help me, please?"),
         ("Appelez une ambulance", "Please call an ambulance"),
+    ]),
+    "prague": (["Tchèque"], [
+        ("Bonjour", "Dobrý den"),
+        ("Merci beaucoup", "Děkuji mnohokrát"),
+        ("Où sont les toilettes ?", "Kde jsou toalety?"),
+        ("Avez-vous une table à langer ?", "Máte přebalovací pult?"),
+        ("Une chaise haute, s'il vous plaît", "Dětskou židličku, prosím"),
+        ("Avez-vous un menu enfant ?", "Máte dětské menu?"),
+        ("Pouvez-vous chauffer ce biberon ?", "Můžete prosím ohřát tuto lahvičku?"),
+        ("Un verre d'eau, s'il vous plaît", "Sklenici vody, prosím"),
+        ("L'addition, s'il vous plaît", "Účet, prosím"),
+        ("Y a-t-il un ascenseur ?", "Je tady výtah?"),
+        ("Où y a-t-il une aire de jeux ?", "Kde je dětské hřiště?"),
+        ("Combien ça coûte ?", "Kolik to stojí?"),
+        ("Où est la pharmacie la plus proche ?", "Kde je nejbližší lékárna?"),
+        ("Mon enfant a de la fièvre", "Můj syn / moje dcera má horečku"),
+        ("Mon enfant est allergique à…", "Můj syn je alergický / moje dcera je alergická na…"),
+        ("Nous nous sommes perdus", "Ztratili jsme se"),
+        ("Aidez-moi, s'il vous plaît", "Pomozte mi, prosím"),
+        ("Appelez une ambulance", "Zavolejte sanitku"),
+    ]),
+    "vienne": (["Allemand (Autriche)"], [
+        ("Bonjour", "Grüß Gott / Guten Tag"),
+        ("Merci beaucoup", "Vielen Dank"),
+        ("Où sont les toilettes ?", "Wo sind die Toiletten?"),
+        ("Avez-vous une table à langer ?", "Haben Sie einen Wickeltisch?"),
+        ("Une chaise haute, s'il vous plaît", "Einen Kinderstuhl, bitte"),
+        ("Avez-vous un menu enfant ?", "Haben Sie einen Kinderteller?"),
+        ("Pouvez-vous chauffer ce biberon ?", "Können Sie dieses Fläschchen aufwärmen?"),
+        ("Un verre d'eau, s'il vous plaît", "Ein Glas Leitungswasser, bitte"),
+        ("L'addition, s'il vous plaît", "Zahlen, bitte"),
+        ("Y a-t-il un ascenseur ?", "Gibt es einen Lift?"),
+        ("Où y a-t-il une aire de jeux ?", "Wo ist ein Spielplatz?"),
+        ("Combien ça coûte ?", "Wie viel kostet das?"),
+        ("Où est la pharmacie la plus proche ?", "Wo ist die nächste Apotheke?"),
+        ("Mon enfant a de la fièvre", "Mein Sohn / meine Tochter hat Fieber"),
+        ("Mon enfant est allergique à…", "Mein Sohn / meine Tochter ist allergisch gegen…"),
+        ("Nous nous sommes perdus", "Wir haben uns verirrt"),
+        ("Aidez-moi, s'il vous plaît", "Helfen Sie mir, bitte"),
+        ("Appelez une ambulance", "Rufen Sie bitte die Rettung"),
     ]),
 }

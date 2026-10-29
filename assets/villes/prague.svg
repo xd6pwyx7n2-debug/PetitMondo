@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" role="img" aria-label="Illustration de Prague : château sur la colline, clochers pointus, pont de pierre à arches et rivière">
+  <rect width="640" height="320" rx="28" fill="#DDF1FB"/>
+  <g fill="#FFF8EC" stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round"><path d="M64 64 q20-18 44-6 q18-12 34 4 q16 2 14 16 h-100 q-6-10 8-14z"/></g>
+  <!-- colline et château -->
+  <path d="M0 200 Q120 120 300 150 T640 190 V214 H0z" fill="#2FB59A" stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round"/>
+  <g stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round">
+    <path d="M150 156 V118 h150 V156z" fill="#FFF8EC"/>
+    <path d="M196 118 V72 l10 -34 l10 34 V118z" fill="#FFC93C"/>
+    <path d="M232 118 V64 l14 -44 l14 44 V118z" fill="#FFC93C"/>
+    <path d="M268 118 V80 l9 -28 l9 28 V118z" fill="#FFC93C"/>
+    <path d="M150 118 l20 -20 l20 20z M290 118 l10 -14 l10 14z" fill="#FF6B4A"/>
+  </g>
+  <g fill="#1B2A4A"><path d="M164 128 h10 v14 h-10z M184 128 h10 v14 h-10z M276 128 h10 v14 h-10z M240 84 a6 6 0 0 1 12 0 v12 h-12z"/></g>
+  <!-- clochers de la vieille ville -->
+  <g stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round">
+    <path d="M440 214 V120 l18 -48 l18 48 V214z" fill="#A88BEB"/>
+    <path d="M490 214 V128 l16 -42 l16 42 V214z" fill="#A88BEB"/>
+    <path d="M540 214 V150 h40 V214z" fill="#FF9F8A"/>
+    <path d="M540 150 l20 -22 l20 22z" fill="#FF6B4A"/>
+  </g>
+  <circle cx="560" cy="172" r="12" fill="#FFC93C" stroke="#1B2A4A" stroke-width="3"/>
+  <path d="M560 172 v-8 M560 172 h6" stroke="#1B2A4A" stroke-width="3" stroke-linecap="round"/>
+  <!-- rivière et pont à arches -->
+  <path d="M0 236 H640 V292 a28 28 0 0 1 -28 28 H28 A28 28 0 0 1 0 292z" fill="#6EC6F0" stroke="#1B2A4A" stroke-width="4"/>
+  <path d="M0 214 H640 V236 H0z" fill="#FFE7A8" stroke="#1B2A4A" stroke-width="4"/>
+  <path d="M40 236 V206 H600 V236 h-40 a30 26 0 0 0 -60 0 h-40 a30 26 0 0 0 -60 0 h-40 a30 26 0 0 0 -60 0 h-40 a30 26 0 0 0 -60 0 h-40 a30 26 0 0 0 -60 0z" fill="#FFF8EC" stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round"/>
+  <g stroke="#1B2A4A" stroke-width="3" fill="#1B2A4A"><path d="M130 206 v-14 M250 206 v-16 M370 206 v-14 M490 206 v-16"/><circle cx="130" cy="188" r="4"/><circle cx="250" cy="186" r="4"/><circle cx="370" cy="188" r="4"/><circle cx="490" cy="186" r="4"/></g>
+  <path d="M60 296 q14 -10 28 0 t28 0 M400 300 q14 -10 28 0 t28 0" fill="none" stroke="#FFF8EC" stroke-width="4" stroke-linecap="round"/>
+</svg>

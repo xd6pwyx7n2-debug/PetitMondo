@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" role="img" aria-label="Illustration de Vienne : grande roue, cathédrale au toit de tuiles colorées, tramway rouge et Danube">
+  <rect width="640" height="320" rx="28" fill="#DDF1FB"/>
+  <g fill="#FFF8EC" stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round"><path d="M290 60 q20-18 44-6 q18-12 34 4 q16 2 14 16 h-100 q-6-10 8-14z"/></g>
+  <!-- grande roue -->
+  <g stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M490 210 L530 120 L570 210" fill="none" stroke-width="6"/>
+    <circle cx="530" cy="120" r="82" fill="none"/>
+    <path d="M530 38 V202 M448 120 H612 M472 62 L588 178 M588 62 L472 178" stroke-width="2.5"/>
+    <circle cx="530" cy="120" r="10" fill="#FFC93C"/>
+  </g>
+  <g stroke="#1B2A4A" stroke-width="3" stroke-linejoin="round">
+    <rect x="518" y="30" width="24" height="16" rx="4" fill="#FF6B4A"/>
+    <rect x="600" y="112" width="24" height="16" rx="4" fill="#FF6B4A"/>
+    <rect x="436" y="112" width="24" height="16" rx="4" fill="#FF6B4A"/>
+    <rect x="576" y="54" width="24" height="16" rx="4" fill="#FF6B4A"/>
+    <rect x="460" y="54" width="24" height="16" rx="4" fill="#FF6B4A"/>
+    <rect x="576" y="170" width="24" height="16" rx="4" fill="#FF6B4A"/>
+    <rect x="460" y="170" width="24" height="16" rx="4" fill="#FF6B4A"/>
+  </g>
+  <!-- cathédrale -->
+  <g stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round">
+    <path d="M80 210 V40 l20 -26 l20 26 V210z" fill="#FFE7A8"/>
+    <path d="M120 210 V120 l60 -50 l60 50 V210z" fill="#FFF8EC"/>
+    <path d="M132 120 l48 -40 l48 40z" fill="#FFC93C"/>
+  </g>
+  <g fill="none" stroke="#1B2A4A" stroke-width="3"><path d="M150 108 l30 -24 l30 24 M164 96 l16 -12 l16 12"/></g>
+  <g fill="#2FB59A" stroke="#1B2A4A" stroke-width="2"><path d="M168 100 l12 -10 l12 10z"/></g>
+  <g fill="#1B2A4A"><path d="M92 70 h16 v24 h-16z M92 120 h16 v24 h-16z M168 150 a12 12 0 0 1 24 0 v30 h-24z"/></g>
+  <!-- tramway -->
+  <g stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round">
+    <path d="M280 150 v-14 M266 136 h28" fill="none"/>
+    <rect x="250" y="150" width="170" height="56" rx="12" fill="#FF6B4A"/>
+    <path d="M250 184 h170" stroke="#FFF8EC" stroke-width="6"/>
+    <path d="M264 160 h30 v18 h-30z M306 160 h30 v18 h-30z M348 160 h30 v18 h-30z" fill="#DDF1FB"/>
+  </g>
+  <path d="M0 210 H640" stroke="#1B2A4A" stroke-width="4"/>
+  <!-- Danube -->
+  <path d="M0 236 H640 V292 a28 28 0 0 1 -28 28 H28 A28 28 0 0 1 0 292z" fill="#6EC6F0" stroke="#1B2A4A" stroke-width="4"/>
+  <path d="M0 210 H640 V236 H0z" fill="#FFE7A8" stroke="#1B2A4A" stroke-width="4"/>
+  <g fill="#1B2A4A"><circle cx="282" cy="210" r="7"/><circle cx="388" cy="210" r="7"/></g>
+  <path d="M60 296 q14 -10 28 0 t28 0 M420 300 q14 -10 28 0 t28 0" fill="none" stroke="#FFF8EC" stroke-width="4" stroke-linecap="round"/>
+</svg>
