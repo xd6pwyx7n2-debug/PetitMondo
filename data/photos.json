@@ -379,6 +379,16 @@
   "lien_licence": "http://creativecommons.org/licenses/by-sa/3.0/",
   "source": "https://commons.wikimedia.org/wiki/File:Barcelona.Zoologico.jpg"
  },
+ "bruxelles/_ville": {
+  "article": "https://fr.wikipedia.org/wiki/Mont_des_Arts",
+  "auteur": "Ank Kumar",
+  "fichier": "assets/photos/bruxelles/_ville.jpg",
+  "h": 600,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Brussels_view_from_Mont_des_Arts,_Brussels,_Belgium_(cropped).jpg"
+ },
  "bruxelles/atomium": {
   "article": "https://fr.wikipedia.org/wiki/Atomium",
   "auteur": "Trougnouf (Benoit Brummer)",
