@@ -379,16 +379,6 @@
   "lien_licence": "http://creativecommons.org/licenses/by-sa/3.0/",
   "source": "https://commons.wikimedia.org/wiki/File:Barcelona.Zoologico.jpg"
  },
- "bruxelles/_ville": {
-  "article": "https://fr.wikipedia.org/wiki/Bruxelles",
-  "auteur": "Hooiwind",
-  "fichier": "assets/photos/bruxelles/_ville.jpg",
-  "h": 756,
-  "l": 926,
-  "licence": "CC BY-SA 3.0",
-  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Agglomeratie_Brussel.png"
- },
  "bruxelles/atomium": {
   "article": "https://fr.wikipedia.org/wiki/Atomium",
   "auteur": "Trougnouf (Benoit Brummer)",
@@ -518,16 +508,6 @@
   "licence": "CC BY-SA 3.0",
   "lien_licence": "http://creativecommons.org/licenses/by-sa/3.0/",
   "source": "https://commons.wikimedia.org/wiki/File:Parc_de_Bruxelles.JPG"
- },
- "bruxelles/trainworld": {
-  "article": "https://fr.wikipedia.org/wiki/Train_World",
-  "auteur": "Train World",
-  "fichier": "assets/photos/bruxelles/trainworld.jpg",
-  "h": 911,
-  "l": 1000,
-  "licence": "Public domain",
-  "lien_licence": "",
-  "source": "https://commons.wikimedia.org/wiki/File:Logo-TrainWorld.jpg"
  },
  "lisbonne/_ville": {
   "article": "https://pt.wikipedia.org/wiki/Lisboa",
@@ -828,16 +808,6 @@
   "licence": "CC0",
   "lien_licence": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
   "source": "https://commons.wikimedia.org/wiki/File:Madrid_-_Sky_Bar_360%C2%BA_(Hotel_Riu_Plaza_Espa%C3%B1a),_vistas_19.jpg"
- },
- "madrid/bernabeu": {
-  "article": "https://es.wikipedia.org/wiki/Estadio_Santiago_Bernab%C3%A9u",
-  "auteur": "Dr. Blofeld, insert originally by Nordnordwest",
-  "fichier": "assets/photos/madrid/bernabeu.jpg",
-  "h": 805,
-  "l": 901,
-  "licence": "CC BY-SA 2.0",
-  "lien_licence": "https://creativecommons.org/licenses/by-sa/2.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Location_map_Madrid.png"
  },
  "madrid/botanico": {
   "article": "https://es.wikipedia.org/wiki/Real_Jard%C3%ADn_Bot%C3%A1nico_de_Madrid",
