@@ -543,3 +543,10 @@ footer small{opacity:.75;display:block;margin-top:14px}
 .quand .i{flex:none}
 .quand.alerte{background:var(--corail-c);border:2px solid var(--corail)}
 @media print{.quand{break-inside:avoid;page-break-inside:avoid}}
+/* ---------- papiers */
+.papiers-liste{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:12px}
+.papiers-liste li{border-bottom:2px dotted rgba(27,42,74,.2);padding-bottom:10px}
+.papiers-liste label{display:flex;gap:10px;align-items:flex-start;font-size:1.05rem;cursor:pointer}
+.papiers-liste input{width:22px;height:22px;flex:none;margin-top:3px;accent-color:var(--menthe)}
+.papiers-liste p{margin:4px 0 0 32px;color:var(--texte2)}
+@media print{.papiers-liste li{break-inside:avoid;page-break-inside:avoid}}

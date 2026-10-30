@@ -1,0 +1,379 @@
+{
+ "maj": "2026-10-30",
+ "alertes": [
+  "Un bébé de moins de 3 mois qui a de la fièvre (38 °C ou plus).",
+  "Une difficulté à respirer : il respire très vite, se creuse sous les côtes, ou ses lèvres deviennent bleues.",
+  "Un enfant très somnolent, difficile à réveiller, mou, ou qui geint sans pouvoir être consolé.",
+  "Des taches rouges ou violacées qui ne s'effacent pas quand on appuie dessus avec un verre.",
+  "Des convulsions.",
+  "Des signes de déshydratation : couches sèches ou très peu d'urine, bouche sèche, pleurs sans larmes, yeux creusés."
+ ],
+ "trousse": [
+  "Du paracétamol dans une forme adaptée à l'âge (sirop avec sa pipette, suppositoires)",
+  "Un thermomètre",
+  "Des sachets de soluté de réhydratation orale (SRO)",
+  "Du sérum physiologique en dosettes",
+  "Pansements, désinfectant, pince à épiler",
+  "Crème solaire et chapeau",
+  "Les médicaments habituels de l'enfant, avec l'ordonnance",
+  "Une copie du carnet de santé (vaccins, allergies)",
+  "Le poids récent de l'enfant, noté quelque part"
+ ],
+ "phrases_fr": [
+  "Mon enfant a de la fièvre",
+  "Il / elle a vomi",
+  "Il / elle a la diarrhée",
+  "Il / elle a mal à l'oreille",
+  "Il / elle a du mal à respirer",
+  "Il / elle pèse … kilos",
+  "Où sont les urgences pour enfants ?"
+ ],
+ "pays": {
+  "france": {
+   "nom": "France",
+   "de": "en France",
+   "villes": [
+    "paris",
+    "disneyland-paris"
+   ],
+   "langue": "Français",
+   "urgence": "15 (SAMU) ou 112",
+   "avis": "116 117, le numéro du médecin de garde, le soir et le week-end",
+   "pharmacie": "Pharmacie, croix verte. La pharmacie de garde est affichée sur la porte des pharmacies fermées, ou au 3237.",
+   "medicaments": [
+    [
+     "Paracétamol",
+     "Paracétamol",
+     "Doliprane, Dafalgan, Efferalgan"
+    ],
+    [
+     "Ibuprofène",
+     "Ibuprofène",
+     "Advil, Nurofen"
+    ],
+    [
+     "Soluté de réhydratation orale",
+     "SRO",
+     "Adiaril, Fanolyte"
+    ]
+   ],
+   "formes": "sirop, suppositoire, sachet",
+   "concentration": "",
+   "ceam": false,
+   "phrases": null
+  },
+  "italie": {
+   "nom": "Italie",
+   "de": "en Italie",
+   "villes": [
+    "rome"
+   ],
+   "langue": "Italien",
+   "urgence": "112 (ou 118 pour les secours médicaux)",
+   "avis": "La « guardia medica » (médecin de garde) la nuit et le week-end ; dans les zones touristiques, une « guardia medica turistica » ouvre en saison.",
+   "pharmacie": "« Farmacia », croix verte. La pharmacie de garde (« di turno ») est affichée sur la porte des pharmacies fermées.",
+   "medicaments": [
+    [
+     "Paracétamol",
+     "Paracetamolo",
+     "Tachipirina"
+    ],
+    [
+     "Ibuprofène",
+     "Ibuprofene",
+     "Nurofen Febbre e Dolore"
+    ],
+    [
+     "Soluté de réhydratation orale",
+     "Soluzione reidratante orale",
+     ""
+    ]
+   ],
+   "formes": "sciroppo (sirop), supposte (suppositoires), termometro (thermomètre)",
+   "concentration": "",
+   "ceam": true,
+   "phrases": [
+    "Mio figlio / mia figlia ha la febbre",
+    "Ha vomitato",
+    "Ha la diarrea",
+    "Ha mal d'orecchio",
+    "Fa fatica a respirare",
+    "Pesa … chili",
+    "Dov'è il pronto soccorso pediatrico?"
+   ]
+  },
+  "royaume-uni": {
+   "nom": "Royaume-Uni",
+   "de": "au Royaume-Uni",
+   "villes": [
+    "londres"
+   ],
+   "langue": "Anglais",
+   "urgence": "999 ou 112",
+   "avis": "NHS 111, par téléphone ou sur 111.nhs.uk, pour savoir où consulter.",
+   "pharmacie": "« Pharmacy » ou « chemist » (Boots, Superdrug…). Le paracétamol et l'ibuprofène pour enfants se trouvent aussi en supermarché.",
+   "medicaments": [
+    [
+     "Paracétamol",
+     "Paracetamol",
+     "Calpol (enfants), Panadol"
+    ],
+    [
+     "Ibuprofène",
+     "Ibuprofen",
+     "Calprofen, Nurofen for Children"
+    ],
+    [
+     "Soluté de réhydratation orale",
+     "Oral rehydration salts",
+     "Dioralyte"
+    ]
+   ],
+   "formes": "liquid ou suspension (sirop), suppositories, thermometer",
+   "concentration": "",
+   "ceam": true,
+   "phrases": [
+    "My son / my daughter has a fever",
+    "He / she has been sick (vomited)",
+    "He / she has diarrhoea",
+    "He / she has earache",
+    "He / she is struggling to breathe",
+    "He / she weighs … kilos",
+    "Where is the children's A&E?"
+   ]
+  },
+  "espagne": {
+   "nom": "Espagne",
+   "de": "en Espagne",
+   "villes": [
+    "barcelone",
+    "madrid"
+   ],
+   "langue": "Espagnol",
+   "urgence": "112",
+   "avis": "Le « centro de salud » du quartier, ou les urgences (« urgencias ») de l'hôpital le plus proche.",
+   "pharmacie": "« Farmacia », croix verte. La pharmacie de garde (« de guardia ») est affichée sur la porte. Les médicaments ne se vendent qu'en pharmacie.",
+   "medicaments": [
+    [
+     "Paracétamol",
+     "Paracetamol",
+     "Apiretal, Gelocatil"
+    ],
+    [
+     "Ibuprofène",
+     "Ibuprofeno",
+     "Dalsy"
+    ],
+    [
+     "Soluté de réhydratation orale",
+     "Suero oral",
+     "Sueroral"
+    ]
+   ],
+   "formes": "jarabe ou solución oral (sirop), supositorios, termómetro",
+   "concentration": "Certaines solutions de paracétamol pour enfants vendues en Espagne sont bien plus concentrées que le Doliprane : utilisez uniquement la pipette ou le doseur fourni dans la boîte, et faites calculer la dose par le pharmacien selon le poids.",
+   "ceam": true,
+   "phrases": [
+    "Mi hijo / mi hija tiene fiebre",
+    "Ha vomitado",
+    "Tiene diarrea",
+    "Le duele el oído",
+    "Le cuesta respirar",
+    "Pesa … kilos",
+    "¿Dónde están las urgencias pediátricas?"
+   ]
+  },
+  "portugal": {
+   "nom": "Portugal",
+   "de": "au Portugal",
+   "villes": [
+    "lisbonne"
+   ],
+   "langue": "Portugais",
+   "urgence": "112",
+   "avis": "SNS 24, la ligne santé : 808 24 24 24, pour un conseil et une orientation.",
+   "pharmacie": "« Farmácia », croix verte. La pharmacie de garde (« de serviço ») est affichée sur la porte.",
+   "medicaments": [
+    [
+     "Paracétamol",
+     "Paracetamol",
+     "Ben-u-ron"
+    ],
+    [
+     "Ibuprofène",
+     "Ibuprofeno",
+     "Brufen"
+    ],
+    [
+     "Soluté de réhydratation orale",
+     "Solução de reidratação oral",
+     ""
+    ]
+   ],
+   "formes": "xarope (sirop), supositórios, termómetro",
+   "concentration": "Le sirop Ben-u-ron contient 40 mg de paracétamol par millilitre, presque deux fois plus que le Doliprane en sirop (24 mg/ml) : ne le donnez jamais avec la pipette d'un flacon français, et faites calculer la dose par le pharmacien selon le poids.",
+   "ceam": true,
+   "phrases": [
+    "O meu filho / a minha filha tem febre",
+    "Vomitou",
+    "Tem diarreia",
+    "Tem dor de ouvidos",
+    "Tem dificuldade em respirar",
+    "Pesa … quilos",
+    "Onde fica a urgência pediátrica?"
+   ]
+  },
+  "pays-bas": {
+   "nom": "Pays-Bas",
+   "de": "aux Pays-Bas",
+   "villes": [
+    "amsterdam"
+   ],
+   "langue": "Néerlandais",
+   "urgence": "112",
+   "avis": "Le soir et le week-end, la « huisartsenpost » (poste de médecins de garde) : appelez avant de vous déplacer.",
+   "pharmacie": "« Apotheek ». Le paracétamol et l'ibuprofène se trouvent aussi en droguerie (Kruidvat, Etos).",
+   "medicaments": [
+    [
+     "Paracétamol",
+     "Paracetamol",
+     "Panadol, et de nombreux génériques"
+    ],
+    [
+     "Ibuprofène",
+     "Ibuprofen",
+     "Nurofen voor kinderen"
+    ],
+    [
+     "Soluté de réhydratation orale",
+     "ORS",
+     ""
+    ]
+   ],
+   "formes": "drank (sirop), zetpillen (suppositoires), thermometer",
+   "concentration": "",
+   "ceam": true,
+   "phrases": [
+    "Mijn zoon / mijn dochter heeft koorts",
+    "Hij / zij heeft overgegeven",
+    "Hij / zij heeft diarree",
+    "Hij / zij heeft oorpijn",
+    "Hij / zij heeft moeite met ademhalen",
+    "Hij / zij weegt … kilo",
+    "Waar is de spoedeisende hulp voor kinderen?"
+   ]
+  },
+  "tchequie": {
+   "nom": "Tchéquie",
+   "de": "en Tchéquie",
+   "villes": [
+    "prague"
+   ],
+   "langue": "Tchèque",
+   "urgence": "112 (ou 155 pour les secours médicaux)",
+   "avis": "La « pohotovost » (garde médicale) ; à Prague, les urgences pédiatriques de l'hôpital Motol.",
+   "pharmacie": "« Lékárna ». Les pharmacies fermées affichent l'adresse de la pharmacie de garde.",
+   "medicaments": [
+    [
+     "Paracétamol",
+     "Paracetamol",
+     "Paralen, Panadol pro děti"
+    ],
+    [
+     "Ibuprofène",
+     "Ibuprofen",
+     "Nurofen pro děti"
+    ],
+    [
+     "Soluté de réhydratation orale",
+     "Rehydratační roztok",
+     ""
+    ]
+   ],
+   "formes": "sirup ou suspenze (sirop), čípky (suppositoires), teploměr",
+   "concentration": "",
+   "ceam": true,
+   "phrases": [
+    "Můj syn / moje dcera má horečku",
+    "Zvracel / zvracela",
+    "Má průjem",
+    "Bolí ho / ji ucho",
+    "Špatně se mu / jí dýchá",
+    "Váží … kilo",
+    "Kde je dětská pohotovost?"
+   ]
+  },
+  "autriche": {
+   "nom": "Autriche",
+   "de": "en Autriche",
+   "villes": [
+    "vienne"
+   ],
+   "langue": "Allemand",
+   "urgence": "112 (ou 144 pour les secours médicaux)",
+   "avis": "1450, la ligne santé, pour savoir où consulter.",
+   "pharmacie": "« Apotheke ». Le 1455 indique la pharmacie de garde la plus proche.",
+   "medicaments": [
+    [
+     "Paracétamol",
+     "Paracetamol",
+     "Mexalen"
+    ],
+    [
+     "Ibuprofène",
+     "Ibuprofen",
+     "plusieurs marques"
+    ],
+    [
+     "Soluté de réhydratation orale",
+     "Elektrolytlösung",
+     ""
+    ]
+   ],
+   "formes": "Saft (sirop), Zäpfchen (suppositoires), Fieberthermometer",
+   "concentration": "",
+   "ceam": true,
+   "phrases": [
+    "Mein Sohn / meine Tochter hat Fieber",
+    "Er / sie hat erbrochen",
+    "Er / sie hat Durchfall",
+    "Er / sie hat Ohrenschmerzen",
+    "Er / sie bekommt schlecht Luft",
+    "Er / sie wiegt … Kilo",
+    "Wo ist die Notaufnahme für Kinder?"
+   ]
+  },
+  "belgique": {
+   "nom": "Belgique",
+   "de": "en Belgique",
+   "villes": [
+    "bruxelles"
+   ],
+   "langue": "Français ou néerlandais",
+   "urgence": "112",
+   "avis": "1733, le numéro du médecin de garde, le soir et le week-end.",
+   "pharmacie": "Pharmacie, croix verte. La pharmacie de garde est affichée sur la porte et sur pharmacie.be.",
+   "medicaments": [
+    [
+     "Paracétamol",
+     "Paracétamol",
+     "Perdolan, Dafalgan"
+    ],
+    [
+     "Ibuprofène",
+     "Ibuprofène",
+     "Nurofen"
+    ],
+    [
+     "Soluté de réhydratation orale",
+     "SRO / ORS",
+     ""
+    ]
+   ],
+   "formes": "sirop, suppositoire, sachet",
+   "concentration": "",
+   "ceam": true,
+   "phrases": null
+  }
+ }
+}

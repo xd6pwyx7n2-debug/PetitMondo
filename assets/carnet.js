@@ -270,6 +270,19 @@
   }
 
   let ACCES = null;
+  let SANTE = null;
+  /* « Si votre enfant est malade » : la version papier de la page santé du pays */
+  function santeHTML(v) {
+    const p = Object.values((SANTE && SANTE.pays) || {}).find(x => x.villes.includes(v.id));
+    if (!p) return '';
+    const meds = p.medicaments.map(([fr, loc, m]) => `<li><strong>${esc(fr)}</strong> : demandez « ${esc(loc)} »${m ? ` (${esc(m)})` : ''}</li>`).join('');
+    const ph = p.phrases ? `<p><strong>Phrases utiles</strong> : ${p.phrases.map((x, i) => `${esc(SANTE.phrases_fr[i])} = « ${esc(x)} »`).join(' · ')}</p>` : '';
+    return `<h4 style="margin-top:18px">Si votre enfant est malade</h4>
+      <p><strong>Urgence : ${esc(p.urgence)}.</strong> Conseil médical : ${esc(p.avis)} ${esc(p.pharmacie)}</p>
+      <ul>${meds}</ul>
+      ${p.concentration ? `<p><strong>Attention :</strong> ${esc(p.concentration)}</p>` : ''}
+      <p>Utilisez toujours le doseur de la boîte et faites calculer la dose selon le poids par le pharmacien. Appelez les secours en cas de difficulté à respirer, de somnolence inhabituelle, de taches qui ne s'effacent pas à la pression, de convulsions, de signes de déshydratation, ou de fièvre chez un bébé de moins de 3 mois.</p>${ph}`;
+  }
   function poussette(a, p) {
     if (!p.poussette && Math.min(...p.ages) >= 3) return '';
     const f = PM.fichePoussette(a, ACCES);
@@ -431,7 +444,7 @@
     jours.forEach((j, i) => { h += jourHTML(j, i); });
 
     h += `<article class="jour"><div class="jour-tete" style="--c:#FFF1C9"><h3>Avant de partir</h3>${PM.ico('valise')}</div><div class="jour-corps" style="padding-top:16px"><ul class="check">${checklist(v, p, jours).map(x => `<li>${esc(x)}</li>`).join('')}</ul></div></article>`;
-    h += `<article class="jour"><div class="jour-tete" style="--c:#DDF1FB"><h3>Bon à savoir · ${esc(v.nom)}</h3>${PM.ico('loupe')}</div><div class="jour-corps" style="padding-top:12px">${(v.essentiel || []).map(c => `<p><strong>${esc(c.titre)}.</strong> ${esc(c.texte)}</p>`).join('')}${v.conseils.map(c => `<p><strong>${esc(c.titre)}.</strong> ${esc(c.texte)}</p>`).join('')}${(p.poussette || Math.min(...p.ages) < 3) && v.poussette ? `<h4 style="margin-top:18px">Avec une poussette</h4>${v.poussette.map(c => `<p><strong>${esc(c.titre)}.</strong> ${esc(c.texte)}</p>`).join('')}` : ''}<h4 style="margin-top:18px">Urgences</h4>${v.urgences.map(u => `<p><strong>${esc(u.nom)}</strong> : ${esc(u.detail)}</p>`).join('')}</div></article>`;
+    h += `<article class="jour"><div class="jour-tete" style="--c:#DDF1FB"><h3>Bon à savoir · ${esc(v.nom)}</h3>${PM.ico('loupe')}</div><div class="jour-corps" style="padding-top:12px">${(v.essentiel || []).map(c => `<p><strong>${esc(c.titre)}.</strong> ${esc(c.texte)}</p>`).join('')}${v.conseils.map(c => `<p><strong>${esc(c.titre)}.</strong> ${esc(c.texte)}</p>`).join('')}${(p.poussette || Math.min(...p.ages) < 3) && v.poussette ? `<h4 style="margin-top:18px">Avec une poussette</h4>${v.poussette.map(c => `<p><strong>${esc(c.titre)}.</strong> ${esc(c.texte)}</p>`).join('')}` : ''}<h4 style="margin-top:18px">Urgences</h4>${v.urgences.map(u => `<p><strong>${esc(u.nom)}</strong> : ${esc(u.detail)}</p>`).join('')}${santeHTML(v)}</div></article>`;
     if (p.enfants || p.route) h += await pagesEnfants(v, jours, p);
 
     const utilisees = [...new Set(jours.flatMap(j => j.acts.concat(j.planB ? [j.planB] : [])).map(a => a.id))]
@@ -520,6 +533,9 @@
     btn.disabled = true; btn.textContent = 'Préparation du carnet…';
     try {
       const v = await PM.ville(p.ville);
+      if (SANTE === null) {
+        try { const r = await fetch(`${PM.base}data/sante.json`); SANTE = r.ok ? await r.json() : {}; } catch { SANTE = {}; }
+      }
       if (PHOTOS === null) {
         try { const r = await fetch(`${PM.base}data/photos.json`); PHOTOS = r.ok ? await r.json() : {}; } catch { PHOTOS = {}; }
       }

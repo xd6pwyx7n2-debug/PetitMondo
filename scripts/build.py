@@ -212,7 +212,7 @@ def page(chemin, titre, desc, corps, depth, *, head="", scripts="", indexable=Tr
             head += f'<meta name="google-site-verification" content="{e(VERIF["google_site_verification"])}">'
         if VERIF.get("bing_msvalidate"):
             head += f'<meta name="msvalidate.01" content="{e(VERIF["bing_msvalidate"])}">'
-    nav = [(f"{b}#destinations", "Destinations", "dest"), (f"{b}jeux/", "Jeux enfants", "jeux"), (f"{b}valise/", "Valise", "valise")]
+    nav = [(f"{b}#destinations", "Destinations", "dest"), (f"{b}jeux/", "Jeux enfants", "jeux"), (f"{b}papiers/", "Papiers", "valise"), (f"{b}sante/", "Santé", "sante")]
     nav_html = "".join(f'<a class="hide-m" href="{h}"{" aria-current=page" if actif == k else ""}>{n}</a>' for h, n, k in nav)
     villes_pied = "".join(f'<li><a href="{b}{v["id"]}/">{e(v["nom"])} en famille</a></li>' for v in VILLES)
     html_page = f'''<!doctype html>
@@ -257,7 +257,7 @@ def page(chemin, titre, desc, corps, depth, *, head="", scripts="", indexable=Tr
     <small>Cartes © <a href="https://www.openstreetmap.org/copyright">contributeurs OpenStreetMap</a>. Photos libres de droits via Wikimedia Commons, <a href="{b}credits/">crédits détaillés</a>. Aucun cookie, aucun compte.</small>
   </div>
   <div><h4>Destinations</h4><ul>{villes_pied}</ul></div>
-  <div><h4>Outils</h4><ul><li><a href="{b}carnet/">Créer mon carnet</a></li><li><a href="{b}jeux/">Jeux à imprimer</a></li><li><a href="{b}jeux-de-voiture/">Jeux de voiture</a></li><li><a href="{b}valise/">Valise des enfants</a></li><li><a href="{b}mode-avion/">Utiliser en mode avion</a></li><li><a href="{b}methode/">Notre méthode</a></li></ul></div>
+  <div><h4>Outils</h4><ul><li><a href="{b}carnet/">Créer mon carnet</a></li><li><a href="{b}jeux/">Jeux à imprimer</a></li><li><a href="{b}jeux-de-voiture/">Jeux de voiture</a></li><li><a href="{b}papiers/">Papiers des enfants</a></li><li><a href="{b}sante/">Enfant malade en voyage</a></li><li><a href="{b}valise/">Valise des enfants</a></li><li><a href="{b}mode-avion/">Utiliser en mode avion</a></li><li><a href="{b}methode/">Notre méthode</a></li></ul></div>
 </div></footer>
 {scripts}
 <script>if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('{b}sw.js').catch(()=>{{}}));</script>
@@ -713,8 +713,8 @@ def pages_ville(v, osm):
   <h3 style="margin-top:30px">Avec une poussette</h3>
   <div class="acces-ville" style="margin-top:14px">{"".join(f'<div class="carte lilas">{ico("poussette", "i", b1)}<h3>{e(c["titre"])}</h3><p>{e(c["texte"])}</p></div>' for c in v.get("poussette", []))}</div>
   <div class="grille g2" style="margin-top:24px">
-    <div class="carte corail">{ico("urgence", "i", b1)}<h3>Urgences</h3>{"".join(f"<p><strong>{e(u['nom'])}</strong> : {e(u['detail'])}</p>" for u in v["urgences"])}</div>
-    <div class="carte">{ico("valise", "i", b1)}<h3>Papiers</h3><p>{e(v["papiers"])}</p><p><a href="{b1}valise/"><strong>La valise complète des enfants</strong></a></p></div>
+    <div class="carte corail">{ico("urgence", "i", b1)}<h3>Urgences</h3>{"".join(f"<p><strong>{e(u['nom'])}</strong> : {e(u['detail'])}</p>" for u in v["urgences"])}{(lambda k: f'<p><a href="{b1}sante/{k}/"><strong>Enfant malade : médicaments, numéros de garde, phrases utiles</strong></a></p>' if k else "")(pays_de_ville(vid)[0])}</div>
+    <div class="carte">{ico("valise", "i", b1)}<h3>Papiers</h3><p>{e(v["papiers"])}</p><p><a href="{b1}papiers/"><strong>Quels papiers pour mon enfant ? Le questionnaire</strong></a></p><p><a href="{b1}valise/"><strong>La valise complète des enfants</strong></a></p></div>
   </div>
   <div style="margin-top:24px">{bloc_avion(b1)}</div>
 </div></section>
@@ -989,6 +989,168 @@ def pages_lieux(v, osm):
              ld=[ld_lieu(v, a)], maj=v["verification"])
 
 
+# ---------------------------------------------------------------- santé en voyage
+SANTE = {}
+PRECAUTIONS = [
+    "La concentration d'un même médicament change d'un pays à l'autre : utilisez toujours le doseur ou la pipette fournis dans la boîte, jamais ceux d'un flacon français.",
+    "Faites calculer la dose par le pharmacien selon le poids de l'enfant : notez-le avant de partir.",
+    "Pas d'aspirine chez l'enfant. Pas d'ibuprofène en cas de varicelle ou si l'enfant est déshydraté.",
+]
+
+
+def pays_de_ville(vid):
+    return next(((k, p) for k, p in SANTE.get("pays", {}).items() if vid in p["villes"]), (None, None))
+
+
+def page_sante_pays(slug, p):
+    b = rel(2)
+    villes = [v for v in VILLES if v["id"] in p["villes"]]
+    meds = "".join(f'<div class="fr">{e(fr)}</div><div><b>{e(loc)}</b></div><div>{e(marques) or "<span class=muted>—</span>"}</div>' for fr, loc, marques in p["medicaments"])
+    tableau = f'<div class="lex" style="grid-template-columns:1fr 1fr 1.2fr;margin-top:14px"><div class="t">En France</div><div class="t">Demandez</div><div class="t">Marques courantes</div>{meds}</div>'
+    alerte_conc = f'<div class="carte corail" style="margin-top:18px">{ico("urgence", "i", b)}<h3>Attention à la concentration</h3><p>{e(p["concentration"])}</p></div>' if p["concentration"] else ""
+    phrases = ""
+    if p.get("phrases"):
+        lignes = "".join(f'<div class="fr">{e(fr)}</div><div><b>{e(loc)}</b></div>' for fr, loc in zip(SANTE["phrases_fr"], p["phrases"]))
+        phrases = f'''<section><div class="wrap etroit"><h2>Les phrases <span class="hl m">chez le médecin</span></h2>
+  <p class="muted">À lire ou à montrer sur votre téléphone. Le poids de l'enfant est l'information la plus utile au pharmacien.</p>
+  <div class="lex" style="grid-template-columns:1fr 1.2fr;margin-top:14px"><div class="t">Français</div><div class="t">{e(p["langue"])}</div>{lignes}</div></div></section>'''
+    ceam = ("<p>La <strong>carte européenne d'assurance maladie</strong> fonctionne " + e(p["de"]) + " : une carte par personne, enfants compris, à demander sur ameli.fr au moins 15 jours avant le départ. Elle couvre les soins nécessaires dans le système public, aux conditions du pays.</p>") if p["ceam"] else "<p>En France, la carte Vitale et la mutuelle habituelles suffisent.</p>"
+    liens_villes = " · ".join(f'<a href="{b}{v["id"]}/">{e(v["nom"])} avec des enfants</a>' for v in villes)
+    marque_para = p["medicaments"][0][2].split(",")[0].strip()
+    faq = [(f"Comment s'appelle le Doliprane {p['de']} ?", f"Le paracétamol se dit « {p['medicaments'][0][1]} »." + (f" Marque courante : {p['medicaments'][0][2]}." if p['medicaments'][0][2] else "") + " Demandez au pharmacien la forme adaptée à l'âge et la dose selon le poids."),
+           (f"Que faire si mon enfant a de la fièvre {p['de']} ?", f"Donnez à boire, découvrez-le, et du paracétamol si besoin. Appelez le {p['urgence']} en cas de signe d'alerte. Pour un conseil : {p['avis']}"),
+           (f"Quel numéro appeler {p['de']} ?", f"Urgence : {p['urgence']}. Conseil médical : {p['avis']}")]
+    if p["medicaments"][1][2]:
+        faq.insert(1, (f"Comment s'appelle l'Advil {p['de']} ?", f"L'ibuprofène se dit « {p['medicaments'][1][1]} ». Marque courante : {p['medicaments'][1][2]}."))
+    c = f'''<section class="hero"><div class="wrap etroit">
+  <span class="etiquette"><i></i>Santé en voyage · {e(p["nom"])}</span>
+  <h1>Enfant malade <span class="hl c">{e(p["de"])}</span></h1>
+  <p class="lead">Les bons numéros, le nom des médicaments à demander en pharmacie et les phrases pour se faire comprendre. Ces informations ne remplacent pas l'avis d'un médecin ou d'un pharmacien et ne donnent volontairement aucune dose.</p>
+</div></section>
+<section style="padding-top:0"><div class="wrap etroit">
+  <div class="carte corail">{ico("urgence", "i", b)}<h2 style="font-size:1.5rem">Appelez le {e(p["urgence"])} si…</h2>
+    <ul>{"".join(f"<li>{e(x)}</li>" for x in SANTE["alertes"])}</ul></div>
+  <div class="grille g2f" style="margin-top:18px">
+    <div class="carte">{ico("parents", "i", b)}<h3>Consulter sans urgence</h3><p>{e(p["avis"])}</p></div>
+    <div class="carte">{ico("pharmacie", "i", b)}<h3>La pharmacie</h3><p>{e(p["pharmacie"])}</p></div>
+  </div>
+</div></section>
+<section class="ciel"><div class="wrap etroit">
+  <h2>Les médicaments <span class="hl">en pharmacie</span></h2>
+  <p class="muted">Le nom de la molécule est compris partout : c'est lui qu'il faut demander. Mots utiles : {e(p["formes"])}.</p>
+  {tableau}{alerte_conc}
+  <ul class="liste-ok" style="margin-top:18px">{"".join(f"<li>{e(x)}</li>" for x in PRECAUTIONS)}</ul>
+</div></section>
+{phrases}
+<section class="sable"><div class="wrap etroit">
+  <h2>Avant de partir</h2>{ceam}
+  <h3 style="margin-top:18px">La trousse de voyage</h3><ul class="check">{"".join(f"<li>{e(x)}</li>" for x in SANTE["trousse"])}</ul>
+  <p style="margin-top:16px">{liens_villes} · <a href="{b}sante/">Tous les pays</a> · <a href="{b}papiers/">Quels papiers pour mon enfant ?</a></p>
+</div></section>
+<section><div class="wrap etroit"><h2>Questions fréquentes</h2>{faq_html(faq)}
+<p class="note" style="margin-top:20px">Informations vérifiées le {date_fr(SANTE["maj"])}. Numéros et noms commerciaux peuvent changer : en cas de doute, le pharmacien est votre meilleur allié.</p></div></section>'''
+    page(f"sante/{slug}/", f"Enfant malade {p['de']} : médicaments, numéros, phrases | PetitMondo",
+         coupe(f"Votre enfant est malade {p['de']} ? Le nom du Doliprane et de l'Advil en pharmacie ({marque_para}…), les numéros d'urgence et de garde, les signes d'alerte et les phrases pour le médecin."),
+         c, 2, actif="sante", fil=[("Santé en voyage", "sante/"), (p["nom"], f"sante/{slug}/")], maj=SANTE["maj"])
+
+
+def pages_sante():
+    if not SANTE:
+        return
+    b = "../"
+    for slug, p in SANTE["pays"].items():
+        page_sante_pays(slug, p)
+    cartes = cartes_liens([(f"{slug}/", "urgence", f'Enfant malade {p["de"]}', f'{p["medicaments"][0][2].split(",")[0] or p["medicaments"][0][1]}, numéros de garde, phrases utiles.', ["corail", "ciel", "menthe", "soleil", "lilas"][i % 5])
+                           for i, (slug, p) in enumerate(SANTE["pays"].items())], b)
+    c = f'''<section class="hero"><div class="wrap etroit">
+  <span class="etiquette"><i></i>Santé en voyage</span>
+  <h1>Enfant malade <span class="hl c">en voyage</span> : que faire ?</h1>
+  <p class="lead">Fièvre, vomissements, otite : pour chaque pays, le nom des médicaments à demander, les numéros à appeler et les phrases pour le médecin. À enregistrer avant de partir, pour l'avoir même sans réseau.</p>
+</div></section>
+<section style="padding-top:0"><div class="wrap">{cartes}</div></section>
+<section class="sable"><div class="wrap etroit">
+  <div class="carte corail">{ico("urgence", "i", b)}<h2 style="font-size:1.5rem">Partout en Europe : 112 si…</h2><ul>{"".join(f"<li>{e(x)}</li>" for x in SANTE["alertes"])}</ul></div>
+  <h2 style="margin-top:30px">La trousse de voyage</h2><ul class="check">{"".join(f"<li>{e(x)}</li>" for x in SANTE["trousse"])}</ul>
+  <ul class="liste-ok" style="margin-top:18px">{"".join(f"<li>{e(x)}</li>" for x in PRECAUTIONS)}</ul>
+</div></section>'''
+    page("sante/", "Enfant malade en voyage : médicaments et numéros par pays | PetitMondo",
+         "Le nom du Doliprane et de l'Advil à l'étranger, les numéros d'urgence et de garde, les signes d'alerte et les phrases utiles chez le médecin, pour 9 pays d'Europe.",
+         c, 1, actif="sante", fil=[("Santé en voyage", "sante/")], maj=SANTE["maj"])
+
+
+def page_papiers():
+    b = "../"
+    js = r'''<script>
+(function () {
+  const f = document.getElementById('f-papiers'), out = document.getElementById('papiers-res');
+  const D = {
+    piece_ue: ['Une carte d\'identité ou un passeport en cours de validité, pour chaque enfant', 'Même pour un bébé. Les délais pour obtenir une carte ou un passeport peuvent atteindre plusieurs semaines, surtout avant l\'été : vérifiez les dates d\'expiration dès maintenant.'],
+    piece_uk: ['Un passeport en cours de validité, pour chaque enfant', 'La carte d\'identité ne suffit pas pour entrer au Royaume-Uni. Les délais pour obtenir un passeport peuvent atteindre plusieurs semaines.'],
+    piece_fr: ['Pas de pièce d\'identité obligatoire pour un mineur en France', 'Pour l\'avion, la compagnie peut en demander une : emportez la carte d\'identité ou le passeport de l\'enfant s\'il en a un.'],
+    piece_uk_scol: ['La pièce d\'identité demandée par l\'établissement', 'Pour un voyage scolaire au Royaume-Uni, suivez la liste de l\'établissement : il vous dira si un passeport est nécessaire.'],
+    eta: ['Une autorisation de voyage électronique (ETA), pour chaque voyageur, bébés compris', 'À demander sur l\'application officielle « UK ETA » ou sur gov.uk, au moins une semaine avant le départ. Elle est payante (20 £ par personne en 2026) et valable deux ans. Méfiez-vous des sites intermédiaires qui facturent plus cher.'],
+    eta_scol: ['Pas d\'ETA pour un voyage scolaire organisé', 'Les élèves de moins de 18 ans en voyage scolaire organisé depuis la France n\'en ont pas besoin. L\'établissement vous indique les documents demandés.'],
+    ast: ['Une autorisation de sortie du territoire (AST)', 'Obligatoire quand un mineur quitte la France sans un parent qui exerce l\'autorité parentale : formulaire Cerfa n° 15646*01, signé par un parent, avec la photocopie de la pièce d\'identité de ce parent. Rien à faire valider en mairie.'],
+    ast_fr: ['Pas d\'autorisation de sortie du territoire', 'Elle ne concerne que les voyages hors de France. Une autorisation parentale écrite et une copie du carnet de santé aident toutefois l\'adulte accompagnant en cas de soins.'],
+    nom: ['Le livret de famille ou un acte de naissance', 'Conseillé quand l\'enfant ne porte pas le même nom que le parent qui voyage avec lui : il prouve le lien de filiation. Certains pays peuvent aussi demander l\'accord de l\'autre parent : une lettre signée, avec la copie de sa pièce d\'identité, évite les difficultés.'],
+    ceam: ['Une carte européenne d\'assurance maladie (CEAM), pour chaque membre de la famille', 'Une carte par personne, enfants compris, à demander sur ameli.fr au moins 15 jours avant le départ. Elle est valable deux ans et fonctionne aussi au Royaume-Uni.'],
+    vitale: ['L\'attestation de carte Vitale ou de mutuelle', 'En France, les soins de l\'enfant sont pris en charge comme d\'habitude.'],
+    hors: ['Consultez la fiche du pays sur France Diplomatie', 'Hors d\'Europe, passeport, visa et vaccins dépendent du pays : la rubrique « Conseils aux voyageurs » de diplomatie.gouv.fr est la référence.'],
+    sante: ['Une copie du carnet de santé et les ordonnances en cours', 'Utile chez un médecin, surtout pour les vaccins, les allergies et les traitements réguliers.'],
+    assist: ['Vérifiez votre assistance rapatriement', 'Elle est souvent incluse dans la carte bancaire qui a servi à payer le voyage, ou dans la mutuelle : notez le numéro à appeler.'],
+  };
+  function calcul() {
+    const dest = f.dest.value, avec = f.avec.value, nom = f.nom.checked;
+    document.getElementById('l-nom').hidden = avec !== 'un';
+    const l = [];
+    if (dest === 'hors') l.push(D.hors);
+    else {
+      l.push(dest === 'uk' ? (avec === 'scolaire' ? D.piece_uk_scol : D.piece_uk) : dest === 'france' ? D.piece_fr : D.piece_ue);
+      if (dest === 'uk') l.push(avec === 'scolaire' ? D.eta_scol : D.eta);
+      if (avec === 'aucun' || avec === 'scolaire') l.push(dest === 'france' ? D.ast_fr : D.ast);
+      if (avec === 'un' && nom) l.push(D.nom);
+      l.push(dest === 'france' ? D.vitale : D.ceam);
+    }
+    l.push(D.sante);
+    if (dest !== 'france') l.push(D.assist);
+    out.innerHTML = '<h2>Votre liste</h2><ul class="papiers-liste">' + l.map(([t, d]) => `<li><label><input type="checkbox"> <strong>${t}</strong></label><p>${d}</p></li>`).join('') + '</ul>';
+  }
+  f.addEventListener('change', calcul);
+  calcul();
+})();
+</script>'''
+    pays = [("ue", "Pays de l'Union européenne (Italie, Espagne, Portugal, Belgique, Pays-Bas, Autriche, Tchéquie…)"),
+            ("uk", "Royaume-Uni"), ("france", "En France (Paris, Disneyland Paris…)"), ("hors", "Hors d'Europe")]
+    c = f'''<section class="hero"><div class="wrap etroit">
+  <span class="etiquette"><i></i>Avant de partir · 30 secondes</span>
+  <h1>Quels papiers <span class="hl">pour mon enfant ?</span></h1>
+  <p class="lead">Carte d'identité ou passeport, autorisation de sortie du territoire, ETA pour le Royaume-Uni, carte européenne d'assurance maladie : répondez à deux questions, la liste s'affiche, à cocher ou à imprimer.</p>
+</div></section>
+<section style="padding-top:0"><div class="wrap etroit">
+  <form class="form no-print" id="f-papiers">
+    <div class="champ"><label for="dest">Où partez-vous ?</label><select id="dest" name="dest">{"".join(f'<option value="{k}">{e(t)}</option>' for k, t in pays)}</select></div>
+    <div class="champ"><span class="lbl">Qui voyage avec l'enfant ?</span><div class="segment">
+      <input type="radio" id="a1" name="avec" value="deux" checked><label for="a1">Ses deux parents</label>
+      <input type="radio" id="a2" name="avec" value="un"><label for="a2">Un seul parent</label>
+      <input type="radio" id="a3" name="avec" value="aucun"><label for="a3">Un autre adulte (grands-parents, amis…)</label>
+      <input type="radio" id="a4" name="avec" value="scolaire"><label for="a4">Voyage scolaire ou colonie</label></div></div>
+    <div class="champ" id="l-nom" hidden><div class="segment"><input type="checkbox" id="nom" name="nom"><label for="nom">L'enfant ne porte pas le même nom que ce parent</label></div></div>
+  </form>
+  <div id="papiers-res" class="carte" aria-live="polite" style="margin-top:22px"></div>
+  <p class="no-print" style="margin-top:16px"><button class="btn sec" type="button" onclick="print()">Imprimer ma liste</button> <a class="btn jaune" href="{b}valise/">La valise des enfants</a> <a class="btn jaune" href="{b}sante/">Enfant malade en voyage</a></p>
+  <p class="note" style="margin-top:22px">Règles en vigueur pour des enfants résidant en France, vérifiées le 30 octobre 2026. Sources : douane.gouv.fr (autorisation de sortie du territoire), cleiss.fr (carte européenne d'assurance maladie), gov.uk (ETA). Les règles évoluent : vérifiez avant chaque départ sur service-public.fr.</p>
+</div></section>
+<section class="sable no-print"><div class="wrap etroit"><h2>Questions fréquentes</h2>
+{faq_html([("Faut-il une autorisation de sortie du territoire si l'enfant voyage avec un seul parent ?", "Non : l'autorisation de sortie du territoire n'est obligatoire que si l'enfant quitte la France sans aucun parent titulaire de l'autorité parentale. Si son nom diffère de celui du parent, emportez le livret de famille ou un acte de naissance ; certains pays peuvent demander l'accord de l'autre parent."),
+           ("Mon enfant peut-il aller au Royaume-Uni avec sa carte d'identité ?", "Non, il lui faut un passeport, ainsi qu'une autorisation de voyage électronique (ETA), bébés compris, sauf voyage scolaire organisé."),
+           ("La carte européenne d'assurance maladie est-elle valable pour les enfants ?", "Oui, mais chaque enfant doit avoir la sienne. Elle se demande sur ameli.fr au moins 15 jours avant le départ et vaut deux ans."),
+           ("Faut-il une pièce d'identité pour un enfant qui voyage en Europe ?", "Oui : une carte d'identité ou un passeport en cours de validité, même pour un bébé.")])}
+</div></section>'''
+    page("papiers/", "Quels papiers pour voyager avec un enfant ? AST, passeport, ETA | PetitMondo",
+         "Carte d'identité ou passeport, autorisation de sortie du territoire, ETA pour le Royaume-Uni, carte européenne d'assurance maladie : la liste des papiers de votre enfant en 30 secondes.",
+         c, 1, scripts=js, actif="valise", fil=[("Papiers des enfants", "papiers/")], maj="2026-10-30")
+
+
 # ---------------------------------------------------------------- pages générales
 def accueil():
     total = sum(len(v["activites"]) for v in VILLES)
@@ -1003,9 +1165,9 @@ def accueil():
     corps = f'''<section class="hero"><div class="wrap grid">
   <div>
     <span class="etiquette"><i></i>Gratuit · sans compte · utilisable en mode avion</span>
-    <h1>Votre séjour en famille, <span class="hl">prêt à partir.</span></h1>
-    <p class="lead">Choisissez la destination et l'âge de vos enfants. PetitMondo prépare un carnet complet : programme jour par jour, lieux faciles à retrouver, toilettes et aires de jeux à proximité, et des pages de jeux pour les enfants.</p>
-    <div class="cta"><a class="btn" href="carnet/">{ico_btn("pdf", "")}Créer mon carnet gratuit</a><a class="btn sec" href="#destinations">Voir les destinations</a></div>
+    <h1>Voyager avec des enfants, <span class="hl">sans stress.</span></h1>
+    <p class="lead">Les papiers à préparer, les jeux pour la route, l'enfant malade à l'étranger, et un carnet de voyage complet pour {len(VILLES)} destinations : tout ce qu'il faut, du départ au retour.</p>
+    <div class="cta"><a class="btn" href="carnet/">{ico_btn("pdf", "")}Créer mon carnet gratuit</a><a class="btn sec" href="papiers/">Quels papiers pour mon enfant ?</a></div>
   </div>
   <div class="visuel collage">
     <img src="assets/villes/paris.svg" alt="" class="c1"><img src="assets/villes/rome.svg" alt="" class="c2"><img src="assets/villes/londres.svg" alt="" class="c3">
@@ -1013,6 +1175,14 @@ def accueil():
   </div>
 </div></section>
 <div class="bandeau"><div class="wrap"><span>Adapté à l'âge de chaque enfant</span><span>Jeux et pages enfants inclus</span><span>Plan B pluie chaque jour</span><span>Fonctionne en mode avion</span></div></div>
+
+<section><div class="wrap">
+  <div class="tete-section"><div><h2>Les vraies questions <span class="hl c">avant de partir</span></h2><p>Celles qu'on se pose la veille du départ… ou à la pharmacie, à l'étranger, à 23 h.</p></div></div>
+  {cartes_liens([("papiers/", "valise", "Quels papiers pour mon enfant ?", "Carte d'identité, passeport, autorisation de sortie du territoire, ETA, carte européenne : la liste en 30 secondes.", "soleil"),
+                 ("sante/", "urgence", "Enfant malade en voyage", "Le nom du Doliprane à l'étranger, les numéros de garde, les signes d'alerte et les phrases pour le médecin.", "corail"),
+                 ("jeux-de-voiture/", "voiture", "Les jeux pour la route", "Bingo de la route, chasse aux plaques, labyrinthe et jeux sans écran pour tenir tout le trajet.", "menthe"),
+                 ("carnet/", "pdf", "Le carnet de voyage", "Programme jour par jour selon l'âge des enfants, plan B pluie, services autour, jeux : un PDF qui marche en mode avion.", "ciel")], "")}
+</div></section>
 
 <section id="destinations"><div class="wrap">
   <div class="tete-section"><div><h2>Où partez-vous <span class="hl m">en famille</span> ?</h2><p>{total} lieux choisis un par un, avec adresse, transport et services utiles autour.</p></div></div>
@@ -1084,7 +1254,7 @@ def accueil():
           {"@type": "Organization", "@id": URL + "#org", "name": "PetitMondo", "url": URL, "logo": URL + "assets/icone-512.png"},
           {"@type": "ItemList", "name": "Destinations en famille", "itemListElement": [
               {"@type": "ListItem", "position": i + 1, "name": f'{v["nom"]} avec des enfants', "url": f'{URL}{v["id"]}/'} for i, v in enumerate(VILLES)]}]
-    page("", "Carnet de voyage en famille gratuit, avec jeux enfants | PetitMondo",
+    page("", "Voyager avec des enfants : papiers, santé, jeux, carnet gratuit | PetitMondo",
          coupe(f"{noms_villes} : un carnet de voyage familial gratuit adapté à l'âge des enfants, avec programme, lieux faciles à retrouver, jeux et pages enfants, utilisable en mode avion.", 200),
          corps, 0, og_titre="PetitMondo — Le monde à découvrir en famille", ld=ld)
 
@@ -1358,6 +1528,9 @@ def sitemap():
 
 def main():
     global PHOTOS
+    fsa = ROOT / "data" / "sante.json"
+    if fsa.exists():
+        SANTE.update(json.loads(fsa.read_text(encoding="utf-8")))
     fs = ROOT / "data" / "seo.json"
     if fs.exists():
         VERIF.update(json.loads(fs.read_text(encoding="utf-8")))
@@ -1380,6 +1553,8 @@ def main():
     for v in VILLES:
         pages_ville(v, osm_par_ville[v["id"]])
         pages_lieux(v, osm_par_ville[v["id"]])
+    pages_sante()
+    page_papiers()
     hub_jeux()
     jeux_voiture()
     valise()
