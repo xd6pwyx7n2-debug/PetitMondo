@@ -66,7 +66,7 @@ def infos_commons(nom):
     # des cartes, des logos ou des schémas, qu'on ne veut pas en illustration.
     if ii.get("mime") not in ("image/jpeg", "image/webp"):
         return None
-    if re.search(r"(map|mapa|karte|carte|plan|logo|locator|location|wappen|coat.of.arms|flag|drapeau)", nom, re.I):
+    if re.search(r"(?<![a-z])(map|mapa|karte|carte|plan|logo|locator|location|wappen|coat.of.arms|flag|drapeau)(?![a-z])", nom, re.I):
         return None
     m = ii.get("extmetadata", {})
     licence = texte(m.get("LicenseShortName", {}).get("value"))
