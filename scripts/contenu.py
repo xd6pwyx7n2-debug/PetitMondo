@@ -90,6 +90,11 @@ P = {
     "pompe": ("Une station-service", '<path d="M10 42V8h18v34z" fill="#FFC93C"/><path d="M14 12h10v8H14z" fill="#DDF1FB"/><path d="M28 18h6l4 4v14a3 3 0 0 1-6 0v-8h-4"/><path d="M6 42h26"/>'),
     "train": ("Un train", '<rect x="12" y="6" width="24" height="30" rx="6" fill="#A88BEB"/><path d="M16 12h16v10H16z" fill="#DDF1FB"/><circle cx="18" cy="29" r="2" fill="#FFC93C"/><circle cx="30" cy="29" r="2" fill="#FFC93C"/><path d="M16 36l-4 6M32 36l4 6M14 40h20"/>'),
     "avion": ("Un avion dans le ciel", '<path d="M24 4c2 0 3 3 3 6v10l15 8v4l-15-4v9l5 4v3l-8-2-8 2v-3l5-4v-9L6 32v-4l15-8V10c0-3 1-6 3-6z" fill="#6EC6F0"/>'),
+    "gaufre": ("Une gaufre", '<rect x="8" y="10" width="32" height="28" rx="5" fill="#FFC93C"/><path d="M8 19h32M8 28h32M17 10v28M25 10v28M33 10v28" stroke-width="2"/><path d="M14 8c3-3 6 1 9-2" stroke="#FFF8EC" stroke-width="3"/>'),
+    "frites": ("Un cornet de frites", '<path d="M14 22l3 22h14l3-22z" fill="#FF6B4A"/><path d="M16 22V8M21 22V5M26 22V7M31 22V9M19 22v-9M29 22v-8" stroke="#FFC93C" stroke-width="3.5"/><path d="M14 22h20" />'),
+    "ours": ("L'ours de Madrid", '<circle cx="24" cy="24" r="12" fill="#C98A5A"/><circle cx="14" cy="14" r="4.5" fill="#C98A5A"/><circle cx="34" cy="14" r="4.5" fill="#C98A5A"/><ellipse cx="24" cy="29" rx="5" ry="4" fill="#FFE7A8"/><circle cx="24" cy="27" r="1.6" fill="#1B2A4A"/><circle cx="19.5" cy="22" r="1.4" fill="#1B2A4A"/><circle cx="28.5" cy="22" r="1.4" fill="#1B2A4A"/>'),
+    "drapeau-belgique": ("Le drapeau belge", '<path d="M10 44V6"/><path d="M10 8h9v20h-9z" fill="#1B2A4A"/><path d="M19 8h10v20H19z" fill="#FFC93C"/><path d="M29 8h9v20h-9z" fill="#FF6B4A"/>'),
+    "drapeau-espagne": ("Le drapeau espagnol", '<path d="M10 44V6"/><path d="M10 8h28v20H10z" fill="#FF6B4A"/><path d="M10 13h28v10H10z" fill="#FFC93C"/>'),
 }
 
 DRAPEAUX_NOMS = {"de": "Drapeau de l'Allemagne", "be": "Drapeau de la Belgique", "lu": "Drapeau du Luxembourg", "ch": "Drapeau de la Suisse", "pl": "Drapeau de la Pologne", "cz": "Drapeau de la Tchéquie", "at": "Drapeau de l'Autriche", "pt": "Drapeau du Portugal", "nl": "Drapeau des Pays-Bas", "fr": "Drapeau de la France", "it": "Drapeau de l'Italie", "es": "Drapeau de l'Espagne",
@@ -277,3 +282,5 @@ LEXIQUES = {
         ("Appelez une ambulance", "Rufen Sie bitte die Rettung"),
     ]),
 }
+# Madrid : les phrases en espagnol de la page de Barcelone, sans le catalan
+LEXIQUES["madrid"] = (["Espagnol"], [(ligne[0], ligne[1]) for ligne in LEXIQUES["barcelone"][1]])

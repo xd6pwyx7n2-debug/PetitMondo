@@ -1,0 +1,765 @@
+{
+ "id": "bruxelles",
+ "nom": "Bruxelles",
+ "pays": "Belgique",
+ "ordre": 10,
+ "accroche": "Atomium, BD géantes et gaufres",
+ "centre": [
+  50.8467,
+  4.3525
+ ],
+ "bbox": [
+  50.79,
+  4.29,
+  50.91,
+  4.44
+ ],
+ "verification": "2026-10-30",
+ "photo": [
+  "fr:Bruxelles",
+  "en:Brussels"
+ ],
+ "avertissement": "Horaires, tarifs et conditions d'accès changent souvent : vérifiez toujours sur le site officiel avant de partir.",
+ "zones": {
+  "centre": {
+   "nom": "Grand-Place et îlot Sacré",
+   "centre": [
+    50.8465,
+    4.3525
+   ]
+  },
+  "montdesarts": {
+   "nom": "Mont des Arts et parc de Bruxelles",
+   "centre": [
+    50.844,
+    4.36
+   ]
+  },
+  "heysel": {
+   "nom": "Heysel et Atomium",
+   "centre": [
+    50.8945,
+    4.34
+   ]
+  },
+  "cinquantenaire": {
+   "nom": "Cinquantenaire et quartier européen",
+   "centre": [
+    50.839,
+    4.385
+   ]
+  },
+  "schaerbeek": {
+   "nom": "Schaerbeek",
+   "centre": [
+    50.879,
+    4.379
+   ]
+  },
+  "cambre": {
+   "nom": "Bois de la Cambre",
+   "centre": [
+    50.81,
+    4.373
+   ]
+  },
+  "bruges": {
+   "nom": "Excursion à Bruges",
+   "centre": [
+    51.2085,
+    3.2247
+   ]
+  }
+ },
+ "enfants": {
+  "drapeaux": [
+   "be"
+  ],
+  "pays": "la Belgique",
+  "capitale": "Bruxelles",
+  "langue": "le français et le néerlandais (et l'allemand ailleurs dans le pays)",
+  "monnaie": "l'euro (€)",
+  "voix": "fr-BE",
+  "faits": [
+   "L'Atomium représente un tout petit morceau de fer, un cristal, agrandi des milliards de fois. Il mesure 102 mètres de haut.",
+   "Le Manneken-Pis est une statue d'à peine plus de 50 centimètres. Il possède plus de mille costumes, qu'on lui enfile pour les fêtes !",
+   "La Belgique est le pays de la bande dessinée : Tintin, les Schtroumpfs et Spirou y sont nés. Des héros de BD sont peints en grand sur les murs de la ville.",
+   "À Bruxelles, les panneaux sont écrits en deux langues : en français et en néerlandais. « Uitgang » veut dire « sortie ».",
+   "Les Belges sont célèbres pour leurs gaufres, leurs frites et leur chocolat.",
+   "Tous les deux ans, au mois d'août, un immense tapis de fleurs recouvre la Grand-Place."
+  ],
+  "mots_titre": "Parle comme un petit Bruxellois",
+  "mots_type": "definitions",
+  "mots": [
+   [
+    "Septante",
+    "Ça veut dire « soixante-dix » ! Et nonante, c'est « quatre-vingt-dix »."
+   ],
+   [
+    "Une drache",
+    "Une grosse averse de pluie. Garde ton parapluie à portée de main !"
+   ],
+   [
+    "Le dîner",
+    "En Belgique, c'est le repas de midi. Le soir, on « soupe »."
+   ],
+   [
+    "Une praline",
+    "Un bonbon au chocolat, souvent fourré."
+   ],
+   [
+    "Un ket",
+    "Un petit garçon de Bruxelles, un gamin des rues. Le Manneken-Pis est le plus célèbre !"
+   ],
+   [
+    "Une friterie",
+    "Une baraque où l'on achète des frites dans un cornet en papier."
+   ],
+   [
+    "S'il vous plaît",
+    "En Belgique, on le dit aussi en tendant quelque chose : « Voici ton gâteau, s'il vous plaît ! »"
+   ],
+   [
+    "Une gaufre de Liège",
+    "Une gaufre ronde et sucrée, avec des grains de sucre qui croquent."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Que représente l'Atomium ?",
+    "r": [
+     "Un cristal de fer agrandi",
+     "Une fusée",
+     "Un bonhomme de neige"
+    ],
+    "ok": 0,
+    "pourquoi": "C'est un minuscule morceau de fer, agrandi des milliards de fois."
+   },
+   {
+    "q": "Combien de costumes possède le Manneken-Pis ?",
+    "r": [
+     "Plus de mille",
+     "Trois",
+     "Aucun"
+    ],
+    "ok": 0,
+    "pourquoi": "On l'habille pour les fêtes et les grandes occasions."
+   },
+   {
+    "q": "Comment dit-on « quatre-vingt-dix » en Belgique ?",
+    "r": [
+     "Nonante",
+     "Dix-neuf",
+     "Cent"
+    ],
+    "ok": 0,
+    "pourquoi": "Et soixante-dix se dit « septante »."
+   },
+   {
+    "q": "Quel héros de BD à la houppe est né en Belgique ?",
+    "r": [
+     "Tintin",
+     "Astérix",
+     "Mickey"
+    ],
+    "ok": 0,
+    "pourquoi": "Tintin a été inventé par Hergé, un dessinateur belge."
+   },
+   {
+    "q": "En quelles langues sont écrits les panneaux de Bruxelles ?",
+    "r": [
+     "Français et néerlandais",
+     "Anglais et chinois",
+     "Italien et espagnol"
+    ],
+    "ok": 0,
+    "pourquoi": "Bruxelles est bilingue."
+   }
+  ]
+ },
+ "bingo": [
+  "gaufre",
+  "frites",
+  "drapeau-belgique",
+  "statue",
+  "fontaine",
+  "tour-pointue",
+  "parapluie",
+  "artiste",
+  "metro",
+  "velo",
+  "pigeon",
+  "chien",
+  "arbre",
+  "horloge",
+  "musicien",
+  "glace",
+  "eglise-dome",
+  "etoile"
+ ],
+ "urgences": [
+  {
+   "nom": "Numéro d'urgence européen",
+   "detail": "112, gratuit, depuis n'importe quel téléphone"
+  },
+  {
+   "nom": "HUDERF",
+   "detail": "Hôpital universitaire des enfants Reine Fabiola, avenue Jean-Joseph Crocq 15, à Laeken, avec urgences pédiatriques"
+  },
+  {
+   "nom": "Pharmacies",
+   "detail": "La pharmacie de garde est affichée sur la porte des pharmacies fermées, et sur le site pharmacie.be."
+  }
+ ],
+ "conseils": [
+  {
+   "titre": "Trains belges",
+   "texte": "Dans les trains belges, les moins de 12 ans voyagent gratuitement avec un adulte : idéal pour l'excursion à Bruges."
+  },
+  {
+   "titre": "La pluie",
+   "texte": "Il pleut souvent, même en été : gardez un vêtement de pluie et un plan B couvert. Les musées de Bruxelles sont nombreux et adaptés aux enfants."
+  },
+  {
+   "titre": "Réserver à l'avance",
+   "texte": "L'Atomium est très chargé le week-end et pendant les vacances : réservez un créneau en ligne et arrivez à l'ouverture."
+  },
+  {
+   "titre": "Bon appétit",
+   "texte": "Les friteries et les gaufres se trouvent partout. Beaucoup de musées et de cafés ont une chaise haute ; demandez simplement."
+  }
+ ],
+ "poussette": [
+  {
+   "titre": "Pavés du centre",
+   "texte": "Autour de la Grand-Place, les rues sont pavées et les trottoirs étroits. La poussette passe, mais doucement ; un porte-bébé est plus confortable pour les petits."
+  },
+  {
+   "titre": "Le Mont des Arts",
+   "texte": "Bruxelles monte et descend : entre le centre et le Mont des Arts, il y a de grands escaliers. Avec une poussette, contournez-les par les rues en pente."
+  },
+  {
+   "titre": "Métro et tram",
+   "texte": "Beaucoup de stations ont un ascenseur, mais pas toutes, et les pannes arrivent. La fiche poussette de chaque lieu indique la station la plus proche et son accessibilité. Les trams récents sont à plancher bas."
+  },
+  {
+   "titre": "Atomium",
+   "texte": "Les poussettes restent au vestiaire de l'Atomium ; les tout-petits se portent. On passe d'une sphère à l'autre par des escaliers et des escalators."
+  }
+ ],
+ "papiers": "Pour un séjour en Belgique, carte d'identité ou passeport en cours de validité pour chaque membre de la famille, enfants compris, et carte européenne d'assurance maladie.",
+ "essentiel": [
+  {
+   "titre": "Quand partir",
+   "texte": "Du printemps à l'automne pour les parcs et Mini-Europe, qui n'ouvre qu'en saison. En décembre, les Plaisirs d'Hiver (marché de Noël et patinoire) animent le centre."
+  },
+  {
+   "titre": "Arriver",
+   "texte": "Le train depuis Paris arrive à la gare de Bruxelles-Midi en 1 h 25 environ. Depuis l'aéroport de Zaventem, le train rejoint la gare Centrale en 20 minutes environ."
+  },
+  {
+   "titre": "Les enfants dans les transports",
+   "texte": "Les moins de 6 ans voyagent gratuitement dans le métro, les trams et les bus de Bruxelles. Dans les trains belges, c'est gratuit jusqu'à 12 ans avec un adulte."
+  }
+ ],
+ "activites": [
+  {
+   "id": "atomium",
+   "nom": "Atomium",
+   "zone": "heysel",
+   "adresse": "Place de l'Atomium 1, 1020 Bruxelles",
+   "lat": 50.8949,
+   "lon": 4.3415,
+   "site": "https://www.atomium.be",
+   "ages": [
+    4,
+    14
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 120,
+   "poussette": "difficile",
+   "reservation": true,
+   "interets": [
+    "sciences",
+    "aventure"
+   ],
+   "transport": "Métro 6, station Heysel",
+   "wiki": [
+    "fr:Atomium",
+    "en:Atomium"
+   ],
+   "conseil": "Monter dans les grosses boules d'acier, avec un ascenseur ultra-rapide jusqu'à la sphère du sommet et sa vue sur toute la ville. Gratuit pour les moins de 6 ans.",
+   "enfant": "Une molécule géante où l'on se promène dans les boules.",
+   "affluence": "Le plus calme : à l'ouverture ou un jour de semaine. Le week-end et pendant les vacances, l'attente peut dépasser une heure : réservez un créneau."
+  },
+  {
+   "id": "minieurope",
+   "nom": "Mini-Europe",
+   "zone": "heysel",
+   "adresse": "Bruparck, avenue du Football 1, 1020 Bruxelles",
+   "lat": 50.894,
+   "lon": 4.3385,
+   "site": "https://www.minieurope.com",
+   "ages": [
+    3,
+    12
+   ],
+   "interieur": false,
+   "gratuit": false,
+   "duree": 120,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "culture",
+    "aventure"
+   ],
+   "transport": "Métro 6, station Heysel",
+   "wiki": [
+    "fr:Mini-Europe",
+    "en:Mini-Europe"
+   ],
+   "conseil": "Les grands monuments d'Europe en miniature, au pied de l'Atomium. Ouvert en saison seulement : vérifiez les dates.",
+   "enfant": "Toute l'Europe en tout petit : la tour Eiffel t'arrive à l'épaule !",
+   "affluence": "Le plus calme : à l'ouverture en semaine. Ouvert en saison seulement : vérifiez les dates avant de venir."
+  },
+  {
+   "id": "grandplace",
+   "nom": "Grand-Place",
+   "zone": "centre",
+   "adresse": "Grand-Place, 1000 Bruxelles",
+   "lat": 50.8467,
+   "lon": 4.3524,
+   "site": "https://www.visit.brussels/fr",
+   "ages": [
+    0,
+    14
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 30,
+   "poussette": "moyen",
+   "reservation": false,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Métro Gare Centrale ou prémétro Bourse, puis 5 min à pied",
+   "wiki": [
+    "fr:Grand-Place de Bruxelles",
+    "en:Grand-Place"
+   ],
+   "conseil": "L'une des plus belles places du monde, entourée de maisons dorées. Le soir, en hiver, un spectacle de lumières l'illumine certains jours.",
+   "enfant": "Une place entourée de maisons dorées comme des palais.",
+   "affluence": "Le plus calme : tôt le matin. Le soir, la place illuminée est magique."
+  },
+  {
+   "id": "manneken",
+   "nom": "Manneken-Pis",
+   "zone": "centre",
+   "adresse": "Angle de la rue de l'Étuve et de la rue du Chêne, 1000 Bruxelles",
+   "lat": 50.845,
+   "lon": 4.35,
+   "site": "https://www.mannekenpis.brussels",
+   "ages": [
+    2,
+    14
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 15,
+   "poussette": "moyen",
+   "reservation": false,
+   "interets": [
+    "culture"
+   ],
+   "transport": "5 min à pied de la Grand-Place",
+   "wiki": [
+    "fr:Manneken-Pis",
+    "en:Manneken Pis"
+   ],
+   "conseil": "Il est beaucoup plus petit qu'on l'imagine. Regardez s'il porte un costume ce jour-là : le calendrier des tenues est affiché sur place.",
+   "enfant": "Une toute petite statue qui a plus de mille costumes.",
+   "affluence": "Toujours une petite foule devant la statue : venez tôt le matin pour la photo."
+  },
+  {
+   "id": "parcoursbd",
+   "nom": "Parcours BD : les fresques dans les rues",
+   "zone": "centre",
+   "adresse": "Départ conseillé : rue de l'Étuve, 1000 Bruxelles",
+   "lat": 50.8457,
+   "lon": 4.3505,
+   "site": "https://www.visit.brussels/fr",
+   "ages": [
+    4,
+    14
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 90,
+   "poussette": "moyen",
+   "reservation": false,
+   "interets": [
+    "culture",
+    "aventure"
+   ],
+   "transport": "Autour de la Grand-Place et de Manneken-Pis",
+   "wiki": [],
+   "conseil": "Des héros de bande dessinée peints en grand sur les façades : Tintin, Lucky Luke, Boule et Bill… Une chasse au trésor gratuite, en suivant le plan du parcours.",
+   "enfant": "Retrouve tes héros de BD peints en géant sur les murs."
+  },
+  {
+   "id": "galeries",
+   "nom": "Galeries royales Saint-Hubert",
+   "zone": "centre",
+   "adresse": "Galerie du Roi 5, 1000 Bruxelles",
+   "lat": 50.8478,
+   "lon": 4.3548,
+   "site": "https://www.grsh.be",
+   "ages": [
+    0,
+    14
+   ],
+   "interieur": true,
+   "gratuit": true,
+   "duree": 30,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "culture",
+    "gourmand"
+   ],
+   "transport": "Métro Gare Centrale, puis 5 min à pied",
+   "wiki": [
+    "fr:Galeries royales Saint-Hubert",
+    "en:Galeries Royales Saint-Hubert"
+   ],
+   "conseil": "De longues galeries couvertes d'une verrière, avec des chocolatiers : parfait quand il pleut, et plat pour la poussette.",
+   "enfant": "Une rue avec un toit de verre et des vitrines de chocolat."
+  },
+  {
+   "id": "choco",
+   "nom": "Choco-Story Brussels",
+   "zone": "centre",
+   "adresse": "Rue de l'Étuve 41, 1000 Bruxelles",
+   "lat": 50.8453,
+   "lon": 4.3503,
+   "site": "https://www.choco-story-brussels.be",
+   "ages": [
+    4,
+    14
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 75,
+   "poussette": "moyen",
+   "reservation": false,
+   "interets": [
+    "gourmand",
+    "culture"
+   ],
+   "transport": "À côté de Manneken-Pis",
+   "wiki": [],
+   "conseil": "L'histoire du chocolat, avec une démonstration de fabrication de pralines et une dégustation. Un bon plan B quand il pleut.",
+   "enfant": "On y voit fabriquer des pralines… et on goûte !",
+   "affluence": "Le plus calme : en matinée. Les démonstrations ont lieu à heures fixes."
+  },
+  {
+   "id": "centrebd",
+   "nom": "Centre belge de la bande dessinée",
+   "zone": "centre",
+   "adresse": "Rue des Sables 20, 1000 Bruxelles",
+   "lat": 50.851,
+   "lon": 4.3593,
+   "site": "https://www.cbbd.be",
+   "ages": [
+    6,
+    14
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 90,
+   "poussette": "moyen",
+   "reservation": false,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Métro Botanique ou Rogier, puis 5 min à pied",
+   "wiki": [
+    "fr:Centre belge de la bande dessinée",
+    "en:Belgian Comic Strip Center"
+   ],
+   "conseil": "Le musée de la BD, dans un magnifique bâtiment Art nouveau. La fusée de Tintin accueille les visiteurs.",
+   "enfant": "Le musée des héros de bande dessinée.",
+   "affluence": "Rarement bondé, sauf les jours de pluie le week-end."
+  },
+  {
+   "id": "mim",
+   "nom": "Musée des instruments de musique (MIM)",
+   "zone": "montdesarts",
+   "adresse": "Rue Montagne de la Cour 2, 1000 Bruxelles",
+   "lat": 50.8429,
+   "lon": 4.3578,
+   "site": "https://www.mim.be",
+   "ages": [
+    5,
+    14
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 90,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "culture",
+    "sciences"
+   ],
+   "transport": "Métro Gare Centrale ou Parc, puis 5 min à pied",
+   "wiki": [
+    "fr:Musée des instruments de musique de Bruxelles",
+    "en:Musical Instruments Museum (Brussels)"
+   ],
+   "conseil": "Un casque permet d'écouter les instruments devant leur vitrine. Le café du dernier étage a l'une des plus belles vues sur la ville.",
+   "enfant": "Des centaines d'instruments, et un casque pour les écouter.",
+   "ferme": [
+    1
+   ]
+  },
+  {
+   "id": "parcroyal",
+   "nom": "Parc de Bruxelles",
+   "zone": "montdesarts",
+   "adresse": "Rue Royale, 1000 Bruxelles",
+   "lat": 50.8445,
+   "lon": 4.364,
+   "site": "https://www.visit.brussels/fr",
+   "ages": [
+    0,
+    10
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 60,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "parc"
+   ],
+   "transport": "Métro Parc ou Trône",
+   "wiki": [
+    "fr:Parc de Bruxelles",
+    "en:Brussels Park"
+   ],
+   "conseil": "Le grand jardin entre le Palais royal et le Parlement, avec allées plates, fontaine et une aire de jeux. Parfait pour souffler entre deux musées.",
+   "enfant": "Un grand jardin devant le palais du roi."
+  },
+  {
+   "id": "museum",
+   "nom": "Muséum des sciences naturelles",
+   "zone": "cinquantenaire",
+   "adresse": "Rue Vautier 29, 1000 Bruxelles",
+   "lat": 50.837,
+   "lon": 4.377,
+   "site": "https://www.naturalsciences.be/fr/museum",
+   "ages": [
+    3,
+    14
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 180,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "sciences",
+    "animaux"
+   ],
+   "transport": "Métro Trône ou Maelbeek, puis 10 min à pied",
+   "wiki": [
+    "fr:Muséum des sciences naturelles de Belgique",
+    "en:Royal Belgian Institute of Natural Sciences"
+   ],
+   "conseil": "L'une des plus grandes galeries de dinosaures d'Europe, avec les célèbres iguanodons de Bernissart. Une demi-journée facile, surtout par temps de pluie.",
+   "enfant": "Une immense salle remplie de vrais squelettes de dinosaures.",
+   "ferme": [
+    1
+   ],
+   "affluence": "Le plus calme : en semaine l'après-midi ; le matin, les classes sont nombreuses."
+  },
+  {
+   "id": "cinquantenaire",
+   "nom": "Parc du Cinquantenaire",
+   "zone": "cinquantenaire",
+   "adresse": "Parc du Cinquantenaire, 1000 Bruxelles",
+   "lat": 50.84,
+   "lon": 4.3925,
+   "site": "https://www.visit.brussels/fr",
+   "ages": [
+    0,
+    14
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 60,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "parc"
+   ],
+   "transport": "Métro Merode ou Schuman",
+   "wiki": [
+    "fr:Parc du Cinquantenaire",
+    "en:Cinquantenaire"
+   ],
+   "conseil": "Un grand parc avec pelouses et grandes arcades, entouré de musées. Idéal pour un pique-nique.",
+   "enfant": "Un parc géant avec une arche de triomphe."
+  },
+  {
+   "id": "autoworld",
+   "nom": "Autoworld",
+   "zone": "cinquantenaire",
+   "adresse": "Parc du Cinquantenaire 11, 1000 Bruxelles",
+   "lat": 50.8395,
+   "lon": 4.391,
+   "site": "https://www.autoworld.be",
+   "ages": [
+    4,
+    14
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 90,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "sciences"
+   ],
+   "transport": "Métro Merode, puis 5 min à pied",
+   "wiki": [
+    "fr:Autoworld",
+    "en:Autoworld (museum)"
+   ],
+   "conseil": "Des centaines de voitures anciennes dans une immense halle, des premières automobiles aux bolides. Les petits fans de voitures adorent.",
+   "enfant": "Des voitures de toutes les époques, des plus vieilles aux plus rapides."
+  },
+  {
+   "id": "trainworld",
+   "nom": "Train World",
+   "zone": "schaerbeek",
+   "adresse": "Place Princesse Élisabeth 5, 1030 Schaerbeek",
+   "lat": 50.879,
+   "lon": 4.379,
+   "site": "https://www.trainworld.be",
+   "ages": [
+    3,
+    14
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 120,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "sciences"
+   ],
+   "transport": "Train jusqu'à la gare de Schaerbeek, ou tram 92, terminus Schaerbeek Gare",
+   "wiki": [
+    "fr:Train World",
+    "en:Train World"
+   ],
+   "conseil": "De vraies locomotives à vapeur dans une mise en scène spectaculaire, dans et autour d'une jolie gare ancienne.",
+   "enfant": "De vraies locomotives géantes, et même un simulateur de conduite.",
+   "ferme": [
+    1
+   ],
+   "affluence": "Le plus calme : un matin en semaine."
+  },
+  {
+   "id": "egouts",
+   "nom": "Musée des Égouts",
+   "zone": "centre",
+   "adresse": "Pavillon d'Octroi, Porte d'Anderlecht, 1000 Bruxelles",
+   "lat": 50.8434,
+   "lon": 4.335,
+   "site": "https://www.sewermuseum.brussels",
+   "ages": [
+    6,
+    14
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 75,
+   "poussette": "difficile",
+   "reservation": false,
+   "interets": [
+    "sciences",
+    "aventure"
+   ],
+   "transport": "Prémétro Lemonnier ou tram 51 et 82, arrêt Porte d'Anderlecht",
+   "wiki": [],
+   "conseil": "Une visite sous la ville, au bord des vrais égouts et de la Senne, la rivière cachée. Il y a des escaliers et l'odeur est parfois présente.",
+   "enfant": "Descends sous la ville, là où coule une rivière cachée.",
+   "ferme": [
+    1
+   ]
+  },
+  {
+   "id": "boiscambre",
+   "nom": "Bois de la Cambre",
+   "zone": "cambre",
+   "adresse": "Avenue Louise, 1000 Bruxelles",
+   "lat": 50.81,
+   "lon": 4.373,
+   "site": "https://www.visit.brussels/fr",
+   "ages": [
+    0,
+    14
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 150,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "parc",
+    "aventure"
+   ],
+   "transport": "Tram 8, avenue Louise, arrêts au bord du bois",
+   "wiki": [
+    "fr:Bois de la Cambre",
+    "en:Bois de la Cambre"
+   ],
+   "conseil": "Le grand parc des familles bruxelloises : lac avec une île, aires de jeux, et des allées fermées aux voitures le week-end.",
+   "enfant": "Un grand bois avec un lac et une île au milieu."
+  },
+  {
+   "id": "bruges",
+   "nom": "Bruges, ses canaux et son beffroi",
+   "zone": "bruges",
+   "adresse": "Markt, 8000 Bruges",
+   "lat": 51.2085,
+   "lon": 3.2247,
+   "site": "https://www.visitbruges.be/fr",
+   "ages": [
+    3,
+    14
+   ],
+   "interieur": false,
+   "gratuit": "partiel",
+   "duree": 360,
+   "poussette": "moyen",
+   "reservation": false,
+   "interets": [
+    "culture",
+    "aventure"
+   ],
+   "transport": "Train direct depuis Bruxelles en 1 h environ, gratuit pour les moins de 12 ans avec un adulte, puis 20 min à pied jusqu'au centre",
+   "wiki": [
+    "fr:Bruges",
+    "en:Bruges"
+   ],
+   "conseil": "Une ville de conte, sans voitures dans le centre. La promenade en bateau sur les canaux, d'avril à novembre, et les 366 marches du beffroi plaisent aux enfants ; les pavés sont nombreux.",
+   "enfant": "Une ville de conte de fées, avec des canaux et des cygnes.",
+   "excursion": true
+  }
+ ]
+}

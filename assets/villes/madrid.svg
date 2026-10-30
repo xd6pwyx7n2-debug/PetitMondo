@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" role="img" aria-label="Illustration de Madrid : l'ours et l'arbousier, l'horloge de la Puerta del Sol, une barque sur le lac du Retiro et un churro">
+  <rect width="640" height="320" rx="28" fill="#FFE7A8"/>
+  <circle cx="560" cy="64" r="34" fill="#FFC93C" stroke="#1B2A4A" stroke-width="4"/>
+  <!-- bâtiment de la Puerta del Sol avec horloge -->
+  <g stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round">
+    <path d="M40 220 V120 h200 V220z" fill="#FFF8EC"/>
+    <path d="M110 120 V90 h60 v30z" fill="#FFF8EC"/>
+    <path d="M128 90 V70 h24 v20z" fill="#FF9F8A"/>
+    <circle cx="140" cy="104" r="11" fill="#FFF"/>
+  </g>
+  <path d="M140 104 v-7 M140 104 h5" stroke="#1B2A4A" stroke-width="3" stroke-linecap="round"/>
+  <g fill="#6EC6F0" stroke="#1B2A4A" stroke-width="3"><path d="M58 140 h22 v30 h-22z M98 140 h22 v30 h-22z M160 140 h22 v30 h-22z M200 140 h22 v30 h-22z"/></g>
+  <path d="M120 220 v-36 a20 20 0 0 1 40 0 v36" fill="#FF6B4A" stroke="#1B2A4A" stroke-width="4"/>
+  <!-- arbousier et ours -->
+  <g stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round">
+    <path d="M330 222 V150" fill="none" stroke-width="7"/>
+    <circle cx="330" cy="118" r="50" fill="#2FB59A"/>
+  </g>
+  <g fill="#FF6B4A" stroke="#1B2A4A" stroke-width="2.5"><circle cx="304" cy="104" r="6"/><circle cx="350" cy="96" r="6"/><circle cx="338" cy="132" r="6"/><circle cx="312" cy="138" r="6"/><circle cx="362" cy="124" r="6"/></g>
+  <g stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round">
+    <path d="M286 222 c-6-30 4-56 22-62 c10-3 18 4 20 12 l0 50z" fill="#C98A5A"/>
+    <circle cx="296" cy="150" r="16" fill="#C98A5A"/>
+    <circle cx="284" cy="138" r="5" fill="#C98A5A"/>
+    <path d="M308 166 l20 -22" fill="none" stroke-width="7" stroke-linecap="round"/>
+  </g>
+  <circle cx="292" cy="150" r="2" fill="#1B2A4A"/>
+  <path d="M0 222 H640" stroke="#1B2A4A" stroke-width="4"/>
+  <!-- lac du Retiro -->
+  <path d="M0 222 H640 V292 a28 28 0 0 1 -28 28 H28 A28 28 0 0 1 0 292z" fill="#6EC6F0" stroke="#1B2A4A" stroke-width="4"/>
+  <g stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round">
+    <path d="M440 250 h96 l-14 22 h-68z" fill="#FF6B4A"/>
+    <path d="M470 250 l-26 -16 M506 250 l26 -16" fill="none" stroke-width="3"/>
+    <circle cx="488" cy="240" r="8" fill="#FFF8EC"/>
+  </g>
+  <!-- churro -->
+  <g stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round">
+    <path d="M60 262 c40 -10 90 -10 130 0 l-4 16 c-40 -10 -82 -10 -122 0z" fill="#E9A85A"/>
+    <path d="M80 262 v14 M100 260 v14 M120 259 v14 M140 260 v14 M160 261 v14" stroke-width="2" fill="none"/>
+  </g>
+  <path d="M260 296 q14 -10 28 0 t28 0 M560 300 q14 -10 28 0 t28 0" fill="none" stroke="#FFF8EC" stroke-width="4" stroke-linecap="round"/>
+</svg>

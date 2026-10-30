@@ -18,9 +18,32 @@ FERME = {
     "prague": {"hracky": [1], "ntm": [1], "planetarium": [1],
                "karlstejn": ([1], "de juillet à octobre ; de novembre à mars, ouverture réduite, surtout le week-end")},
     "vienne": {"nhm": [2], "zoom": [1], "wienmuseum": [1]},
+    "bruxelles": {"museum": [1], "trainworld": [1], "mim": [1], "egouts": [1]},
+    "madrid": {"naturales": [1], "debod": [1]},
 }
 
 AFFLUENCE = {
+    "bruxelles": {
+        "atomium": "Le plus calme : à l'ouverture ou un jour de semaine. Le week-end et pendant les vacances, l'attente peut dépasser une heure : réservez un créneau.",
+        "minieurope": "Le plus calme : à l'ouverture en semaine. Ouvert en saison seulement : vérifiez les dates avant de venir.",
+        "grandplace": "Le plus calme : tôt le matin. Le soir, la place illuminée est magique.",
+        "manneken": "Toujours une petite foule devant la statue : venez tôt le matin pour la photo.",
+        "museum": "Le plus calme : en semaine l'après-midi ; le matin, les classes sont nombreuses.",
+        "trainworld": "Le plus calme : un matin en semaine.",
+        "centrebd": "Rarement bondé, sauf les jours de pluie le week-end.",
+        "choco": "Le plus calme : en matinée. Les démonstrations ont lieu à heures fixes.",
+    },
+    "madrid": {
+        "prado": "Le plus calme : à l'ouverture. Les deux dernières heures sont gratuites, mais la file d'attente est alors longue.",
+        "palacio": "Le plus calme : à l'ouverture. Réservez en ligne, surtout le week-end.",
+        "retiro": "Le week-end, le parc est très animé : idéal pour les marionnettes et les musiciens. Barques plus rapides à louer le matin.",
+        "sangines": "La file est la plus longue en fin d'après-midi et le soir : venez le matin.",
+        "sanmiguel": "Le plus calme : en fin de matinée. Le soir, il est bondé.",
+        "zoo": "Le plus calme : un matin en semaine. Évitez l'après-midi en été, il fait très chaud.",
+        "naturales": "Créneaux gratuits certains après-midi : l'entrée est alors plus chargée.",
+        "bernabeu": "L'accès est modifié les jours de match : vérifiez le calendrier avant de réserver.",
+        "debod": "Le coucher du soleil attire beaucoup de monde : venez un peu avant.",
+    },
     "disneyland-paris": {
         "fantasyland": "Les files sont les plus courtes dans la première heure après l'ouverture : commencez par ici avec les petits.",
         "frozen": "L'un des secteurs les plus demandés : allez-y dès l'ouverture du parc ou en fin de journée.",

@@ -1,0 +1,709 @@
+{
+ "id": "madrid",
+ "nom": "Madrid",
+ "pays": "Espagne",
+ "ordre": 11,
+ "accroche": "Grands parcs, dinosaures et churros",
+ "centre": [
+  40.4168,
+  -3.7038
+ ],
+ "bbox": [
+  40.36,
+  -3.79,
+  40.48,
+  -3.64
+ ],
+ "verification": "2026-10-30",
+ "photo": [
+  "es:Madrid",
+  "en:Madrid"
+ ],
+ "avertissement": "Horaires, tarifs et conditions d'accès changent souvent : vérifiez toujours sur le site officiel avant de partir.",
+ "zones": {
+  "centro": {
+   "nom": "Sol, Plaza Mayor et Palais royal",
+   "centre": [
+    40.417,
+    -3.71
+   ]
+  },
+  "retiro": {
+   "nom": "Retiro et Prado",
+   "centre": [
+    40.415,
+    -3.688
+   ]
+  },
+  "norte": {
+   "nom": "Castellana",
+   "centre": [
+    40.447,
+    -3.689
+   ]
+  },
+  "oeste": {
+   "nom": "Madrid Río et Casa de Campo",
+   "centre": [
+    40.415,
+    -3.735
+   ]
+  },
+  "sur": {
+   "nom": "Delicias",
+   "centre": [
+    40.398,
+    -3.693
+   ]
+  },
+  "toledo": {
+   "nom": "Excursion à Tolède",
+   "centre": [
+    39.8628,
+    -4.0273
+   ]
+  }
+ },
+ "enfants": {
+  "drapeaux": [
+   "es"
+  ],
+  "pays": "l'Espagne",
+  "capitale": "Madrid",
+  "langue": "l'espagnol",
+  "monnaie": "l'euro (€)",
+  "voix": "es-ES",
+  "faits": [
+   "Madrid est perchée à environ 650 mètres d'altitude : c'est l'une des capitales les plus hautes d'Europe.",
+   "Le symbole de Madrid est un ours qui mange les fruits d'un arbre, l'arbousier. Sa statue t'attend à la Puerta del Sol.",
+   "À la Puerta del Sol, une plaque au sol marque le « kilomètre zéro » : c'est de là que l'on compte les distances des routes d'Espagne.",
+   "Les Madrilènes dînent très tard, souvent après 21 h. Au goûter, on trempe des churros dans un chocolat chaud épais.",
+   "Dans le grand parc du Retiro, on peut faire du bateau à rames sur un lac, devant un immense monument."
+  ],
+  "mots_titre": "Mes premiers mots en espagnol",
+  "mots": [
+   [
+    "Bonjour",
+    "Hola",
+    "o-la"
+   ],
+   [
+    "Merci",
+    "Gracias",
+    "gra-ssi-ass"
+   ],
+   [
+    "S'il te plaît",
+    "Por favor",
+    "por fa-vor"
+   ],
+   [
+    "Oui / Non",
+    "Sí / No",
+    "si / no"
+   ],
+   [
+    "Au revoir",
+    "Adiós",
+    "a-di-oss"
+   ],
+   [
+    "Une glace",
+    "Un helado",
+    "oun é-la-do"
+   ],
+   [
+    "De l'eau",
+    "Agua",
+    "a-goua"
+   ],
+   [
+    "Un ours",
+    "Un oso",
+    "oun o-sso"
+   ],
+   [
+    "J'ai faim",
+    "Tengo hambre",
+    "tén-go am-bré"
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Quel animal est le symbole de Madrid ?",
+    "r": [
+     "Un ours",
+     "Un taureau",
+     "Un lion"
+    ],
+    "ok": 0,
+    "pourquoi": "Un ours qui mange les fruits d'un arbousier."
+   },
+   {
+    "q": "Que trouve-t-on au sol à la Puerta del Sol ?",
+    "r": [
+     "Le kilomètre zéro",
+     "Un trésor",
+     "Une piscine"
+    ],
+    "ok": 0,
+    "pourquoi": "C'est le point de départ des routes d'Espagne."
+   },
+   {
+    "q": "Dans quoi trempe-t-on les churros ?",
+    "r": [
+     "Du chocolat chaud",
+     "De la soupe",
+     "Du lait froid"
+    ],
+    "ok": 0,
+    "pourquoi": "Un chocolat chaud très épais, presque comme une crème."
+   },
+   {
+    "q": "Que peut-on faire sur le lac du Retiro ?",
+    "r": [
+     "Du bateau à rames",
+     "Du ski",
+     "De la plongée"
+    ],
+    "ok": 0,
+    "pourquoi": "On loue de petites barques devant un grand monument."
+   },
+   {
+    "q": "Comment dit-on « merci » en espagnol ?",
+    "r": [
+     "Gracias",
+     "Danke",
+     "Merci"
+    ],
+    "ok": 0,
+    "pourquoi": "Ça se prononce « gra-ssi-ass »."
+   }
+  ]
+ },
+ "bingo": [
+  "ours",
+  "churros",
+  "horloge",
+  "fontaine",
+  "bateau",
+  "scooter",
+  "drapeau-espagne",
+  "statue",
+  "couronne",
+  "musicien",
+  "glace",
+  "pigeon",
+  "chien",
+  "arbre",
+  "metro",
+  "velo",
+  "eglise-dome",
+  "perruche"
+ ],
+ "urgences": [
+  {
+   "nom": "Numéro d'urgence européen",
+   "detail": "112, gratuit, depuis n'importe quel téléphone"
+  },
+  {
+   "nom": "Hôpital pour enfants Niño Jesús",
+   "detail": "Hospital Infantil Universitario Niño Jesús, avenida de Menéndez Pelayo 65, au bord du Retiro, avec urgences pédiatriques"
+  },
+  {
+   "nom": "Pharmacies",
+   "detail": "« Farmacia », croix verte. La pharmacie de garde (« de guardia ») est affichée sur la porte des pharmacies fermées."
+  }
+ ],
+ "conseils": [
+  {
+   "titre": "Le rythme espagnol",
+   "texte": "On déjeune vers 14 h et on dîne après 21 h. Beaucoup de restaurants n'ouvrent pas avant : prévoyez un goûter solide, ou des tapas en début de soirée."
+  },
+  {
+   "titre": "Chaleur",
+   "texte": "En juillet et en août, il fait souvent très chaud l'après-midi. Visites le matin, sieste et musées climatisés aux heures chaudes, parcs en fin de journée."
+  },
+  {
+   "titre": "Musées gratuits",
+   "texte": "Le Prado est gratuit pour les moins de 18 ans, et pour tous en fin de journée. Plusieurs musées ont des créneaux gratuits : la file est alors plus longue."
+  },
+  {
+   "titre": "Pickpockets",
+   "texte": "Comme dans toutes les grandes villes, surveillez sacs et poussettes à la Puerta del Sol, dans le métro et sur les marchés."
+  }
+ ],
+ "poussette": [
+  {
+   "titre": "Métro",
+   "texte": "Beaucoup de stations ont un ascenseur, mais pas toutes, surtout dans le centre ancien. La fiche poussette de chaque lieu indique la station la plus proche et son accessibilité."
+  },
+  {
+   "titre": "Centre ancien",
+   "texte": "Autour de la Plaza Mayor, ruelles et pavés, mais peu de pentes fortes. La poussette passe bien."
+  },
+  {
+   "titre": "Grands parcs",
+   "texte": "Le Retiro, Madrid Río et la Casa de Campo ont de larges allées plates : parfaits pour la poussette et la sieste à l'ombre."
+  },
+  {
+   "titre": "Bus",
+   "texte": "Tous les bus de la ville sont à plancher bas, avec un emplacement pour les poussettes."
+  }
+ ],
+ "papiers": "Pour un séjour en Espagne, carte d'identité ou passeport en cours de validité pour chaque membre de la famille, enfants compris, et carte européenne d'assurance maladie.",
+ "essentiel": [
+  {
+   "titre": "Quand partir",
+   "texte": "Le printemps et l'automne. En été, il fait souvent plus de 35 °C l'après-midi ; l'hiver est frais mais très ensoleillé."
+  },
+  {
+   "titre": "Arriver",
+   "texte": "Depuis l'aéroport de Barajas, la ligne 8 du métro rejoint Nuevos Ministerios en 15 à 20 minutes ; le bus Exprés Aeropuerto relie aussi le centre, jour et nuit."
+  },
+  {
+   "titre": "Les enfants dans les transports",
+   "texte": "Les moins de 4 ans voyagent gratuitement dans le métro et les bus."
+  }
+ ],
+ "activites": [
+  {
+   "id": "retiro",
+   "nom": "Parc du Retiro et son lac",
+   "zone": "retiro",
+   "adresse": "Plaza de la Independencia 7, 28001 Madrid",
+   "lat": 40.418,
+   "lon": -3.6835,
+   "site": "https://www.esmadrid.com/fr",
+   "ages": [
+    0,
+    14
+   ],
+   "interieur": false,
+   "gratuit": "partiel",
+   "duree": 150,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "parc",
+    "aventure"
+   ],
+   "transport": "Métro Retiro (ligne 2)",
+   "wiki": [
+    "es:Parque del Retiro",
+    "en:Buen Retiro Park"
+   ],
+   "conseil": "Le grand jardin de Madrid : bateaux à rames sur le lac, spectacles de marionnettes, aires de jeux et perruches. Le parc est gratuit, la barque payante.",
+   "enfant": "Faire du bateau à rames devant un grand monument.",
+   "affluence": "Le week-end, le parc est très animé : idéal pour les marionnettes et les musiciens. Barques plus rapides à louer le matin."
+  },
+  {
+   "id": "prado",
+   "nom": "Musée du Prado",
+   "zone": "retiro",
+   "adresse": "Paseo del Prado s/n, 28014 Madrid",
+   "lat": 40.4138,
+   "lon": -3.6921,
+   "site": "https://www.museodelprado.es",
+   "ages": [
+    6,
+    14
+   ],
+   "interieur": true,
+   "gratuit": "partiel",
+   "duree": 120,
+   "poussette": "facile",
+   "reservation": true,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Métro Atocha ou Banco de España (ligne 1 ou 2), puis 10 min à pied",
+   "wiki": [
+    "es:Museo del Prado",
+    "en:Museo del Prado"
+   ],
+   "conseil": "Un des plus grands musées de peinture du monde. Gratuit pour les moins de 18 ans, et pour tous les deux dernières heures du jour. Choisissez cinq tableaux à chercher avec les enfants.",
+   "enfant": "Un musée géant où l'on part à la chasse aux tableaux.",
+   "affluence": "Le plus calme : à l'ouverture. Les deux dernières heures sont gratuites, mais la file d'attente est alors longue."
+  },
+  {
+   "id": "botanico",
+   "nom": "Jardin botanique royal",
+   "zone": "retiro",
+   "adresse": "Plaza de Murillo 2, 28014 Madrid",
+   "lat": 40.411,
+   "lon": -3.6913,
+   "site": "https://rjb.csic.es",
+   "ages": [
+    0,
+    14
+   ],
+   "interieur": false,
+   "gratuit": false,
+   "duree": 60,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "parc",
+    "sciences"
+   ],
+   "transport": "Métro Atocha (ligne 1), puis 5 min à pied",
+   "wiki": [
+    "es:Real Jardín Botánico de Madrid",
+    "en:Real Jardín Botánico de Madrid"
+   ],
+   "conseil": "Un jardin calme et ombragé, avec serres et grands arbres, juste à côté du Prado. L'entrée est peu chère et souvent gratuite pour les enfants.",
+   "enfant": "Des plantes du monde entier et des serres tropicales."
+  },
+  {
+   "id": "palacio",
+   "nom": "Palais royal",
+   "zone": "centro",
+   "adresse": "Calle de Bailén s/n, 28071 Madrid",
+   "lat": 40.418,
+   "lon": -3.7143,
+   "site": "https://www.patrimonionacional.es",
+   "ages": [
+    6,
+    14
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 90,
+   "poussette": "moyen",
+   "reservation": true,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Métro Ópera (lignes 2 et 5), puis 5 min à pied",
+   "wiki": [
+    "es:Palacio Real de Madrid",
+    "en:Royal Palace of Madrid"
+   ],
+   "conseil": "Un palais immense aux salles dorées, avec une armurerie pleine d'armures de chevaliers. La relève de la garde a lieu le mercredi et le samedi, en fin de matinée.",
+   "enfant": "Des armures de chevaliers et des salles couvertes d'or.",
+   "affluence": "Le plus calme : à l'ouverture. Réservez en ligne, surtout le week-end."
+  },
+  {
+   "id": "plazamayor",
+   "nom": "Plaza Mayor et Puerta del Sol",
+   "zone": "centro",
+   "adresse": "Plaza Mayor, 28012 Madrid",
+   "lat": 40.4155,
+   "lon": -3.7074,
+   "site": "https://www.esmadrid.com/fr",
+   "ages": [
+    0,
+    14
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 45,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Métro Sol (lignes 1, 2 et 3)",
+   "wiki": [
+    "es:Plaza Mayor de Madrid",
+    "en:Plaza Mayor, Madrid"
+   ],
+   "conseil": "La grande place à arcades, puis la Puerta del Sol à 5 min : cherchez la statue de l'ours et la plaque du kilomètre zéro au sol.",
+   "enfant": "Trouve l'ours de Madrid et le kilomètre zéro."
+  },
+  {
+   "id": "sangines",
+   "nom": "Chocolatería San Ginés",
+   "zone": "centro",
+   "adresse": "Pasadizo de San Ginés 5, 28013 Madrid",
+   "lat": 40.4169,
+   "lon": -3.7069,
+   "site": "https://chocolateriasangines.com",
+   "ages": [
+    2,
+    14
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 45,
+   "poussette": "moyen",
+   "reservation": false,
+   "interets": [
+    "gourmand"
+   ],
+   "transport": "Métro Sol ou Ópera, puis 3 min à pied",
+   "wiki": [],
+   "conseil": "Une chocolaterie historique, réputée pour ses churros et son chocolat chaud épais. File d'attente fréquente en fin d'après-midi.",
+   "enfant": "Des churros à tremper dans un chocolat tout épais.",
+   "affluence": "La file est la plus longue en fin d'après-midi et le soir : venez le matin."
+  },
+  {
+   "id": "sanmiguel",
+   "nom": "Marché de San Miguel",
+   "zone": "centro",
+   "adresse": "Plaza de San Miguel s/n, 28005 Madrid",
+   "lat": 40.4154,
+   "lon": -3.709,
+   "site": "https://mercadodesanmiguel.es",
+   "ages": [
+    2,
+    14
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 45,
+   "poussette": "moyen",
+   "reservation": false,
+   "interets": [
+    "gourmand"
+   ],
+   "transport": "Métro Sol, puis 5 min à pied",
+   "wiki": [
+    "es:Mercado de San Miguel",
+    "en:Mercado de San Miguel"
+   ],
+   "conseil": "Un marché couvert en fer et en verre, où l'on picore des tapas debout. Très fréquenté le soir ; plus calme en fin de matinée.",
+   "enfant": "Un marché où l'on goûte plein de petites choses.",
+   "affluence": "Le plus calme : en fin de matinée. Le soir, il est bondé."
+  },
+  {
+   "id": "debod",
+   "nom": "Temple de Debod",
+   "zone": "centro",
+   "adresse": "Calle de Ferraz 1, 28008 Madrid",
+   "lat": 40.424,
+   "lon": -3.7177,
+   "site": "https://www.madrid.es",
+   "ages": [
+    4,
+    14
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 45,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "culture"
+   ],
+   "transport": "Métro Plaza de España (lignes 2, 3 et 10), puis 5 min à pied",
+   "wiki": [
+    "es:Templo de Debod",
+    "en:Temple of Debod"
+   ],
+   "conseil": "Un vrai temple égyptien, offert à l'Espagne et reconstruit pierre par pierre dans un parc. Gratuit ; la vue au coucher du soleil est magnifique.",
+   "enfant": "Un vrai temple d'Égypte au milieu de Madrid.",
+   "ferme": [
+    1
+   ],
+   "affluence": "Le coucher du soleil attire beaucoup de monde : venez un peu avant."
+  },
+  {
+   "id": "naturales",
+   "nom": "Musée national des sciences naturelles",
+   "zone": "norte",
+   "adresse": "Calle de José Gutiérrez Abascal 2, 28006 Madrid",
+   "lat": 40.441,
+   "lon": -3.6895,
+   "site": "https://www.mncn.csic.es",
+   "ages": [
+    3,
+    14
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 120,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "sciences",
+    "animaux"
+   ],
+   "transport": "Métro Gregorio Marañón (lignes 7 et 10), puis 5 min à pied",
+   "wiki": [
+    "es:Museo Nacional de Ciencias Naturales",
+    "en:National Museum of Natural Sciences (Spain)"
+   ],
+   "conseil": "Dinosaures grandeur nature, animaux naturalisés et minéraux. Gratuit pour les moins de 4 ans ; créneaux gratuits pour tous certains après-midi.",
+   "enfant": "Des dinosaures grandeur nature et des animaux du monde entier.",
+   "ferme": [
+    1
+   ],
+   "affluence": "Créneaux gratuits certains après-midi : l'entrée est alors plus chargée."
+  },
+  {
+   "id": "bernabeu",
+   "nom": "Stade Santiago-Bernabéu (visite)",
+   "zone": "norte",
+   "adresse": "Avenida de Concha Espina 1, 28036 Madrid",
+   "lat": 40.4531,
+   "lon": -3.6883,
+   "site": "https://www.realmadrid.com/es-ES/tour-bernabeu",
+   "ages": [
+    6,
+    14
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 90,
+   "poussette": "facile",
+   "reservation": true,
+   "interets": [
+    "aventure"
+   ],
+   "transport": "Métro Santiago Bernabéu (ligne 10)",
+   "wiki": [
+    "es:Estadio Santiago Bernabéu",
+    "en:Santiago Bernabéu Stadium"
+   ],
+   "conseil": "La visite du stade du Real Madrid et de son musée des trophées. Réservez en ligne ; l'accès change les jours de match.",
+   "enfant": "Le grand stade de foot et ses coupes géantes.",
+   "affluence": "L'accès est modifié les jours de match : vérifiez le calendrier avant de réserver."
+  },
+  {
+   "id": "madridrio",
+   "nom": "Madrid Río",
+   "zone": "oeste",
+   "adresse": "Paseo de la Virgen del Puerto, 28005 Madrid",
+   "lat": 40.4157,
+   "lon": -3.721,
+   "site": "https://www.esmadrid.com/fr",
+   "ages": [
+    0,
+    14
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 120,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "parc",
+    "aventure"
+   ],
+   "transport": "Métro Príncipe Pío (lignes 6 et 10), puis 10 min à pied",
+   "wiki": [
+    "es:Madrid Río",
+    "en:Madrid Río"
+   ],
+   "conseil": "Une longue promenade verte au bord du fleuve Manzanares, avec de grandes aires de jeux et, en été, des jets d'eau pour se rafraîchir.",
+   "enfant": "De grandes aires de jeux le long de la rivière."
+  },
+  {
+   "id": "zoo",
+   "nom": "Zoo Aquarium de Madrid",
+   "zone": "oeste",
+   "adresse": "Casa de Campo s/n, 28011 Madrid",
+   "lat": 40.409,
+   "lon": -3.762,
+   "site": "https://www.zoomadrid.com",
+   "ages": [
+    0,
+    14
+   ],
+   "interieur": false,
+   "gratuit": false,
+   "duree": 300,
+   "poussette": "facile",
+   "reservation": true,
+   "interets": [
+    "animaux"
+   ],
+   "transport": "Bus 33 depuis Príncipe Pío, ou métro Casa de Campo puis 15 min à pied",
+   "wiki": [
+    "es:Zoo Aquarium de Madrid",
+    "en:Zoo Aquarium de Madrid"
+   ],
+   "conseil": "Zoo, aquarium et spectacles d'oiseaux dans la Casa de Campo. Billets moins chers en ligne. Prévoyez de l'ombre et de l'eau en été.",
+   "enfant": "Des pandas géants, des dauphins et des oiseaux qui volent tout près.",
+   "affluence": "Le plus calme : un matin en semaine. Évitez l'après-midi en été, il fait très chaud."
+  },
+  {
+   "id": "lagocasa",
+   "nom": "Lac de la Casa de Campo",
+   "zone": "oeste",
+   "adresse": "Paseo de la Puerta del Ángel, 28011 Madrid",
+   "lat": 40.4183,
+   "lon": -3.7337,
+   "site": "https://www.esmadrid.com/fr",
+   "ages": [
+    0,
+    14
+   ],
+   "interieur": false,
+   "gratuit": true,
+   "duree": 90,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "parc"
+   ],
+   "transport": "Métro Lago (ligne 10)",
+   "wiki": [
+    "es:Casa de Campo",
+    "en:Casa de Campo"
+   ],
+   "conseil": "Le grand parc forestier de Madrid, avec un lac et des barques à louer en saison. Parfait pour un pique-nique loin de la foule.",
+   "enfant": "Un immense parc avec un lac et des canards."
+  },
+  {
+   "id": "ferrocarril",
+   "nom": "Musée du chemin de fer",
+   "zone": "sur",
+   "adresse": "Paseo de las Delicias 61, 28045 Madrid",
+   "lat": 40.398,
+   "lon": -3.693,
+   "site": "https://www.museodelferrocarril.org",
+   "ages": [
+    3,
+    14
+   ],
+   "interieur": true,
+   "gratuit": false,
+   "duree": 90,
+   "poussette": "facile",
+   "reservation": false,
+   "interets": [
+    "sciences"
+   ],
+   "transport": "Métro Delicias (ligne 3)",
+   "wiki": [
+    "es:Museo del Ferrocarril de Madrid",
+    "en:Railway Museum (Madrid)"
+   ],
+   "conseil": "De vieilles locomotives dans une belle gare du XIXe siècle. Gratuit pour les moins de 4 ans. Le deuxième week-end du mois, un marché remplace la visite habituelle.",
+   "enfant": "De vieilles locomotives dans une gare d'autrefois."
+  },
+  {
+   "id": "toledo",
+   "nom": "Tolède, la ville des chevaliers",
+   "zone": "toledo",
+   "adresse": "Plaza de Zocodover, 45001 Toledo",
+   "lat": 39.8586,
+   "lon": -4.0226,
+   "site": "https://turismo.toledo.es",
+   "ages": [
+    5,
+    14
+   ],
+   "interieur": false,
+   "gratuit": "partiel",
+   "duree": 360,
+   "poussette": "difficile",
+   "reservation": false,
+   "interets": [
+    "culture",
+    "aventure"
+   ],
+   "transport": "Train AVANT depuis la gare d'Atocha, environ 35 minutes, puis bus ou escaliers mécaniques jusqu'à la vieille ville",
+   "wiki": [
+    "es:Toledo",
+    "en:Toledo, Spain"
+   ],
+   "conseil": "Une ville médiévale perchée sur un rocher, avec épées, remparts et ruelles. Les ruelles sont raides et pavées : laissez la poussette pour un porte-bébé.",
+   "enfant": "Une ville de chevaliers, d'épées et de remparts.",
+   "excursion": true
+  }
+ ]
+}
