@@ -379,6 +379,156 @@
   "lien_licence": "http://creativecommons.org/licenses/by-sa/3.0/",
   "source": "https://commons.wikimedia.org/wiki/File:Barcelona.Zoologico.jpg"
  },
+ "bruxelles/_ville": {
+  "article": "https://fr.wikipedia.org/wiki/Bruxelles",
+  "auteur": "Hooiwind",
+  "fichier": "assets/photos/bruxelles/_ville.jpg",
+  "h": 756,
+  "l": 926,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Agglomeratie_Brussel.png"
+ },
+ "bruxelles/atomium": {
+  "article": "https://fr.wikipedia.org/wiki/Atomium",
+  "auteur": "Trougnouf (Benoit Brummer)",
+  "fichier": "assets/photos/bruxelles/atomium.jpg",
+  "h": 1260,
+  "l": 1000,
+  "licence": "CC BY 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:The_Atomium_during_civil_twilight_(DSCF1135).jpg"
+ },
+ "bruxelles/autoworld": {
+  "article": "https://fr.wikipedia.org/wiki/Autoworld",
+  "auteur": "Autoworld",
+  "fichier": "assets/photos/bruxelles/autoworld.jpg",
+  "h": 666,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Blue_Boulevard_2.jpg"
+ },
+ "bruxelles/boiscambre": {
+  "article": "https://fr.wikipedia.org/wiki/Bois_de_la_Cambre",
+  "auteur": "GdML",
+  "fichier": "assets/photos/bruxelles/boiscambre.jpg",
+  "h": 664,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Le_bois_de_la_Cambre_et_le_lac.JPG"
+ },
+ "bruxelles/bruges": {
+  "article": "https://fr.wikipedia.org/wiki/Bruges",
+  "auteur": "Zairon",
+  "fichier": "assets/photos/bruxelles/bruges.jpg",
+  "h": 641,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Br%C3%BCgge_Blick_vom_Belfried_4.jpg"
+ },
+ "bruxelles/centrebd": {
+  "article": "https://fr.wikipedia.org/wiki/Centre_belge_de_la_bande_dessin%C3%A9e",
+  "auteur": "Otter",
+  "fichier": "assets/photos/bruxelles/centrebd.jpg",
+  "h": 666,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Brussel_-_Zandstraat_20_-_Belgisch_Stripcentrum_in_het_voormalig_Waucquez-warenhuis_(1903_door_Victor_Horta)_20230826.jpg"
+ },
+ "bruxelles/cinquantenaire": {
+  "article": "https://fr.wikipedia.org/wiki/Parc_du_Cinquantenaire",
+  "auteur": "User:Ben2",
+  "fichier": "assets/photos/bruxelles/cinquantenaire.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Parc_du_Cinquantenaire_30-05-06.JPG"
+ },
+ "bruxelles/galeries": {
+  "article": "https://fr.wikipedia.org/wiki/Galeries_royales_Saint-Hubert",
+  "auteur": "KoS",
+  "fichier": "assets/photos/bruxelles/galeries.jpg",
+  "h": 665,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Galeries_royales_Saint-Hubert_Bruxelles.JPG"
+ },
+ "bruxelles/grandplace": {
+  "article": "https://fr.wikipedia.org/wiki/Grand-Place_de_Bruxelles",
+  "auteur": "Francisco Conde Sánchez",
+  "fichier": "assets/photos/bruxelles/grandplace.jpg",
+  "h": 600,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Grand_Place_Bruselas_2.jpg"
+ },
+ "bruxelles/manneken": {
+  "article": "https://fr.wikipedia.org/wiki/Manneken-Pis",
+  "auteur": "Bruxelles_Manneken_Pis.jpg: Myrabella derivative work: Myrabella (talk)",
+  "fichier": "assets/photos/bruxelles/manneken.jpg",
+  "h": 1505,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Bruxelles_Manneken_Pis_cropped.jpg"
+ },
+ "bruxelles/mim": {
+  "article": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_des_instruments_de_musique_de_Bruxelles",
+  "auteur": "Trougnouf (Benoit Brummer)",
+  "fichier": "assets/photos/bruxelles/mim.jpg",
+  "h": 1830,
+  "l": 1000,
+  "licence": "CC BY 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Old_England_facade,_Brussels_(DSCF7544).jpg"
+ },
+ "bruxelles/minieurope": {
+  "article": "https://en.wikipedia.org/wiki/Mini-Europe",
+  "auteur": "Zairon",
+  "fichier": "assets/photos/bruxelles/minieurope.jpg",
+  "h": 712,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Laeken_Mini_Europe_viewed_from_Atomium_3.jpg"
+ },
+ "bruxelles/museum": {
+  "article": "https://fr.wikipedia.org/wiki/Mus%C3%A9um_des_sciences_naturelles_de_Belgique",
+  "auteur": "Auteur inconnu",
+  "fichier": "assets/photos/bruxelles/museum.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Mus%C3%A9um_des_Sciences_naturelles_de_Belgique_(entr%C3%A9e).JPG"
+ },
+ "bruxelles/parcroyal": {
+  "article": "https://fr.wikipedia.org/wiki/Parc_de_Bruxelles",
+  "auteur": "No machine-readable author provided. Ben2~commonswiki assumed (based on copyright claims).",
+  "fichier": "assets/photos/bruxelles/parcroyal.jpg",
+  "h": 593,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Parc_de_Bruxelles.JPG"
+ },
+ "bruxelles/trainworld": {
+  "article": "https://fr.wikipedia.org/wiki/Train_World",
+  "auteur": "Train World",
+  "fichier": "assets/photos/bruxelles/trainworld.jpg",
+  "h": 911,
+  "l": 1000,
+  "licence": "Public domain",
+  "lien_licence": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Logo-TrainWorld.jpg"
+ },
  "lisbonne/_ville": {
   "article": "https://pt.wikipedia.org/wiki/Lisboa",
   "auteur": "Deensel",
@@ -668,6 +818,156 @@
   "licence": "CC BY 4.0",
   "lien_licence": "https://creativecommons.org/licenses/by/4.0",
   "source": "https://commons.wikimedia.org/wiki/File:Young_V%26A_2026-06-06.jpg"
+ },
+ "madrid/_ville": {
+  "article": "https://en.wikipedia.org/wiki/Madrid",
+  "auteur": "Zarateman",
+  "fichier": "assets/photos/madrid/_ville.jpg",
+  "h": 527,
+  "l": 1000,
+  "licence": "CC0",
+  "lien_licence": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:Madrid_-_Sky_Bar_360%C2%BA_(Hotel_Riu_Plaza_Espa%C3%B1a),_vistas_19.jpg"
+ },
+ "madrid/bernabeu": {
+  "article": "https://es.wikipedia.org/wiki/Estadio_Santiago_Bernab%C3%A9u",
+  "auteur": "Dr. Blofeld, insert originally by Nordnordwest",
+  "fichier": "assets/photos/madrid/bernabeu.jpg",
+  "h": 805,
+  "l": 901,
+  "licence": "CC BY-SA 2.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Location_map_Madrid.png"
+ },
+ "madrid/botanico": {
+  "article": "https://es.wikipedia.org/wiki/Real_Jard%C3%ADn_Bot%C3%A1nico_de_Madrid",
+  "auteur": "FDV",
+  "fichier": "assets/photos/madrid/botanico.jpg",
+  "h": 626,
+  "l": 800,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Jardin-Botanico-Madrid-Linneo.jpg"
+ },
+ "madrid/debod": {
+  "article": "https://es.wikipedia.org/wiki/Templo_de_Debod",
+  "auteur": "https://www.flickr.com/photos/jiuguangw",
+  "fichier": "assets/photos/madrid/debod.jpg",
+  "h": 653,
+  "l": 1000,
+  "licence": "CC BY-SA 2.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Templo_de_Debod_in_Madrid.jpg"
+ },
+ "madrid/ferrocarril": {
+  "article": "https://es.wikipedia.org/wiki/Museo_del_Ferrocarril_de_Madrid",
+  "auteur": "Barcex",
+  "fichier": "assets/photos/madrid/ferrocarril.jpg",
+  "h": 666,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Madrid_-_Estaci%C3%B3n_Delicias_-_130120_123012.jpg"
+ },
+ "madrid/lagocasa": {
+  "article": "https://es.wikipedia.org/wiki/Casa_de_Campo",
+  "auteur": "Diario de Madrid",
+  "fichier": "assets/photos/madrid/lagocasa.jpg",
+  "h": 665,
+  "l": 1000,
+  "licence": "CC BY 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:La_Casa_de_Campo,_m%C3%A1s_protegida_(01).jpg"
+ },
+ "madrid/madridrio": {
+  "article": "https://es.wikipedia.org/wiki/Madrid_R%C3%ADo",
+  "auteur": "Nicolas Vigier",
+  "fichier": "assets/photos/madrid/madridrio.jpg",
+  "h": 667,
+  "l": 1000,
+  "licence": "CC0",
+  "lien_licence": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:Madrid_in_May_2017_64_edited.jpg"
+ },
+ "madrid/naturales": {
+  "article": "https://es.wikipedia.org/wiki/Museo_Nacional_de_Ciencias_Naturales",
+  "auteur": "Luis García (Zaqarbal)",
+  "fichier": "assets/photos/madrid/naturales.jpg",
+  "h": 463,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Palacio_de_las_Artes_e_Industrias_(Madrid)_01.jpg"
+ },
+ "madrid/palacio": {
+  "article": "https://es.wikipedia.org/wiki/Palacio_Real_de_Madrid",
+  "auteur": "Tim Adams",
+  "fichier": "assets/photos/madrid/palacio.jpg",
+  "h": 755,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Palacio_Real_de_Madrid_Julio_2016_(cropped).jpg"
+ },
+ "madrid/plazamayor": {
+  "article": "https://es.wikipedia.org/wiki/Plaza_Mayor_de_Madrid",
+  "auteur": "Sebastian Dubiel",
+  "fichier": "assets/photos/madrid/plazamayor.jpg",
+  "h": 670,
+  "l": 1000,
+  "licence": "CC BY-SA 3.0 de",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:Plaza_Mayor_de_Madrid_06.jpg"
+ },
+ "madrid/prado": {
+  "article": "https://es.wikipedia.org/wiki/Museo_del_Prado",
+  "auteur": "Emilio J. Rodríguez Posada",
+  "fichier": "assets/photos/madrid/prado.jpg",
+  "h": 747,
+  "l": 1000,
+  "licence": "CC BY-SA 2.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Museo_del_Prado_2016_(25185969599).jpg"
+ },
+ "madrid/retiro": {
+  "article": "https://es.wikipedia.org/wiki/Parque_del_Retiro",
+  "auteur": "PepeZoom",
+  "fichier": "assets/photos/madrid/retiro.jpg",
+  "h": 533,
+  "l": 800,
+  "licence": "CC BY-SA 3.0 es",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/3.0/es/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:Palacio_de_Cristal.jpg"
+ },
+ "madrid/sanmiguel": {
+  "article": "https://es.wikipedia.org/wiki/Mercado_de_San_Miguel",
+  "auteur": "Fernando",
+  "fichier": "assets/photos/madrid/sanmiguel.jpg",
+  "h": 562,
+  "l": 1000,
+  "licence": "CC BY-SA 4.0",
+  "lien_licence": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Mercado_de_San_Miguel_2025.jpg"
+ },
+ "madrid/toledo": {
+  "article": "https://en.wikipedia.org/wiki/Toledo%2C_Spain",
+  "auteur": "Dmitry Dzhus from London",
+  "fichier": "assets/photos/madrid/toledo.jpg",
+  "h": 750,
+  "l": 1000,
+  "licence": "CC BY 2.0",
+  "lien_licence": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Toledo_(37737041515).jpg"
+ },
+ "madrid/zoo": {
+  "article": "https://es.wikipedia.org/wiki/Zoo_Aquarium_de_Madrid",
+  "auteur": "Sergio Cambelo",
+  "fichier": "assets/photos/madrid/zoo.jpg",
+  "h": 666,
+  "l": 1000,
+  "licence": "Public domain",
+  "lien_licence": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Giraffe.JPG"
  },
  "paris/_ville": {
   "article": "https://fr.wikipedia.org/wiki/Paris",
