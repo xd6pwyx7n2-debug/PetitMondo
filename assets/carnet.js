@@ -207,9 +207,10 @@
     const pris = new Set();
     jours.forEach((j, i) => {
       if (j.excursion) { j.planB = null; return; }
-      const cout = a => PM.distance(j.centre, a) - a.s * 300 + (pris.has(a.id) || utilises.has(a.id) ? 2500 : 0) + (fermeLe(a, p, i) ? 9e5 : 0);
+      const cout = a => PM.distance(j.centre, a) - a.s * 300 + (pris.has(a.id) || utilises.has(a.id) ? 1e5 : 0) + (fermeLe(a, p, i) ? 9e5 : 0);
       const libre = couverts.filter(a => !j.acts.some(x => x.id === a.id)).sort((a, b) => cout(a) - cout(b));
       j.planB = libre[0] || null;
+      j.planBJour = j.planB ? jours.findIndex(x => x.acts.some(y => y.id === j.planB.id)) + 1 : 0;
       if (j.planB) pris.add(j.planB.id);
     });
     return jours;
@@ -422,7 +423,7 @@
       }
       if (j.planB) {
         const jeux = osm ? PM.proches(osm.points, j.centre, 'aire_jeux', 1, 1500)[0] : null;
-        out += `<div class="planb">${PM.ico('pluie')}<div><strong>Sauver la journée</strong> (pluie, fatigue, fermeture) : <a href="${PM.lienItineraire(j.planB)}" target="_blank" rel="noopener">${esc(j.planB.nom)}</a>, lieu couvert ${PM.aPied(PM.distance(j.centre, j.planB))}. Adresse : ${esc(j.planB.adresse)}. ${esc(j.planB.transport)}.${jeux ? ` Besoin de se défouler ? Une aire de jeux est signalée ${PM.aPied(jeux.d)}.` : ''}</div></div>`;
+        out += `<div class="planb">${PM.ico('pluie')}<div><strong>Sauver la journée</strong> (pluie, fatigue, fermeture) : ${j.planBJour ? `échangez avec le jour ${j.planBJour}, qui prévoit ` : ''}<a href="${PM.lienItineraire(j.planB)}" target="_blank" rel="noopener">${esc(j.planB.nom)}</a>, lieu couvert ${PM.aPied(PM.distance(j.centre, j.planB))}. Adresse : ${esc(PM.point(j.planB.adresse))} ${esc(PM.point(j.planB.transport))}${jeux ? ` Besoin de se défouler ? Une aire de jeux est signalée ${PM.aPied(jeux.d)}.` : ''}</div></div>`;
       }
       out += `</div></article>`;
       return out;
@@ -430,7 +431,7 @@
     jours.forEach((j, i) => { h += jourHTML(j, i); });
 
     h += `<article class="jour"><div class="jour-tete" style="--c:#FFF1C9"><h3>Avant de partir</h3>${PM.ico('valise')}</div><div class="jour-corps" style="padding-top:16px"><ul class="check">${checklist(v, p, jours).map(x => `<li>${esc(x)}</li>`).join('')}</ul></div></article>`;
-    h += `<article class="jour"><div class="jour-tete" style="--c:#DDF1FB"><h3>Bon à savoir · ${esc(v.nom)}</h3>${PM.ico('loupe')}</div><div class="jour-corps" style="padding-top:12px">${v.conseils.map(c => `<p><strong>${esc(c.titre)}.</strong> ${esc(c.texte)}</p>`).join('')}${(p.poussette || Math.min(...p.ages) < 3) && v.poussette ? `<h4 style="margin-top:18px">Avec une poussette</h4>${v.poussette.map(c => `<p><strong>${esc(c.titre)}.</strong> ${esc(c.texte)}</p>`).join('')}` : ''}<h4 style="margin-top:18px">Urgences</h4>${v.urgences.map(u => `<p><strong>${esc(u.nom)}</strong> : ${esc(u.detail)}</p>`).join('')}</div></article>`;
+    h += `<article class="jour"><div class="jour-tete" style="--c:#DDF1FB"><h3>Bon à savoir · ${esc(v.nom)}</h3>${PM.ico('loupe')}</div><div class="jour-corps" style="padding-top:12px">${(v.essentiel || []).map(c => `<p><strong>${esc(c.titre)}.</strong> ${esc(c.texte)}</p>`).join('')}${v.conseils.map(c => `<p><strong>${esc(c.titre)}.</strong> ${esc(c.texte)}</p>`).join('')}${(p.poussette || Math.min(...p.ages) < 3) && v.poussette ? `<h4 style="margin-top:18px">Avec une poussette</h4>${v.poussette.map(c => `<p><strong>${esc(c.titre)}.</strong> ${esc(c.texte)}</p>`).join('')}` : ''}<h4 style="margin-top:18px">Urgences</h4>${v.urgences.map(u => `<p><strong>${esc(u.nom)}</strong> : ${esc(u.detail)}</p>`).join('')}</div></article>`;
     if (p.enfants || p.route) h += await pagesEnfants(v, jours, p);
 
     const utilisees = [...new Set(jours.flatMap(j => j.acts.concat(j.planB ? [j.planB] : [])).map(a => a.id))]

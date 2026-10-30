@@ -699,5 +699,19 @@
    "conseil": "Une ancienne réserve de chasse impériale où vivent sangliers, daims et cerfs en liberté. Gardez vos distances avec les sangliers, surtout au printemps avec leurs petits. Horaires selon la saison.",
    "enfant": "Une forêt où l'on croise de vrais sangliers."
   }
+ ],
+ "essentiel": [
+  {
+   "titre": "Quand partir",
+   "texte": "Mai, juin et septembre. Les marchés de Noël, de mi-novembre à fin décembre, sont un grand moment ; en été, l'île du Danube remplace la plage."
+  },
+  {
+   "titre": "Arriver",
+   "texte": "Depuis l'aéroport, le train CAT rejoint le centre en 16 minutes ; le train S7 et les Railjets sont moins chers."
+  },
+  {
+   "titre": "Les enfants dans les transports",
+   "texte": "Gratuit pour les moins de 6 ans, et pour les moins de 15 ans le dimanche, les jours fériés et pendant les vacances scolaires viennoises."
+  }
  ]
 }

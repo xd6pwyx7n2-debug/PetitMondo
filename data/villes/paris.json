@@ -777,5 +777,19 @@
    "titre": "Montmartre sans escaliers",
    "texte": "Le funiculaire de Montmartre évite les marches de la butte et accepte les poussettes, avec un ticket de métro."
   }
+ ],
+ "essentiel": [
+  {
+   "titre": "Quand partir",
+   "texte": "Le printemps et le début de l'automne sont les plus agréables. En été, les files s'allongent devant les grands sites ; en décembre, les vitrines et les illuminations plaisent beaucoup aux enfants."
+  },
+  {
+   "titre": "Arriver",
+   "texte": "Depuis Roissy-Charles-de-Gaulle, le RER B rejoint le centre en 30 à 40 minutes. Depuis Orly, la ligne 14 du métro relie l'aéroport au centre sans changement."
+  },
+  {
+   "titre": "Les enfants dans les transports",
+   "texte": "Gratuit pour les moins de 4 ans ; tarif réduit de 4 à 9 ans."
+  }
  ]
 }

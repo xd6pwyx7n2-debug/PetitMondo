@@ -668,5 +668,19 @@
    "enfant": "Des moulins à vent géants, et un atelier où l'on fabrique des sabots.",
    "excursion": true
   }
+ ],
+ "essentiel": [
+  {
+   "titre": "Quand partir",
+   "texte": "D'avril à mi-mai pour les tulipes, l'été pour les parcs et les canaux. Prévoyez toujours une veste de pluie."
+  },
+  {
+   "titre": "Arriver",
+   "texte": "Le train relie l'aéroport de Schiphol à la gare centrale en 15 à 20 minutes. Depuis Paris, le train direct met environ 3 h 20."
+  },
+  {
+   "titre": "Les enfants dans les transports",
+   "texte": "Les moins de 4 ans voyagent gratuitement dans les trams, bus et métros de la ville."
+  }
  ]
 }

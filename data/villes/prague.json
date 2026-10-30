@@ -365,7 +365,7 @@
    "interets": [
     "culture"
    ],
-   "transport": "Dans l'enceinte du château, au bout de la ruelle Jiřská",
+   "transport": "Dans l'enceinte du château, au bout de la ruelle Jiřská. Métro A, station Malostranská, puis montée à pied, ou tram 22, arrêt Pražský hrad",
    "wiki": [],
    "conseil": "Une heure de vitrines pleines de jouets anciens, de trains et de poupées. Peu interactif, mais parfait pour une pause au chaud pendant la visite du château.",
    "enfant": "Des jouets de toutes les époques, de l'arrière-grand-mère à aujourd'hui.",
@@ -781,6 +781,20 @@
    ],
    "ferme_note": "de juillet à octobre ; de novembre à mars, ouverture réduite, surtout le week-end",
    "affluence": "Visite guidée à heure fixe : réservez en ligne, surtout en été."
+  }
+ ],
+ "essentiel": [
+  {
+   "titre": "Quand partir",
+   "texte": "Mai, juin et septembre. Le marché de Noël de la place de la Vieille-Ville, de fin novembre à début janvier, enchante les enfants, mais il fait froid."
+  },
+  {
+   "titre": "Arriver",
+   "texte": "Depuis l'aéroport, le trolleybus 59 rejoint le métro A en 17 minutes environ. Le bus Airport Express (AE) va à la gare principale en 40 minutes environ, depuis le terminal 1 seulement."
+  },
+  {
+   "titre": "Les enfants dans les transports",
+   "texte": "Gratuit jusqu'à 15 ans dans Prague, avec une pièce d'identité à partir de 10 ans."
   }
  ]
 }

@@ -140,6 +140,17 @@ const PM = (() => {
     return { toilettes: 'Toilettes publiques', aire_jeux: 'Aire de jeux', table_langer: 'Toilettes avec table à langer', pharmacie: 'Pharmacie', resto_enfants: 'Restaurant', eau: 'Fontaine d\'eau potable', station: 'Station', ascenseur: 'Ascenseur public' }[p.c] || 'Lieu';
   }
 
+  /* Horaires OpenStreetMap en français : « Mo-Fr 09:00-18:00 » devient « lun–ven 9 h–18 h » */
+  const OSM_J = { Mo: 'lun', Tu: 'mar', We: 'mer', Th: 'jeu', Fr: 'ven', Sa: 'sam', Su: 'dim', PH: 'jours fériés' };
+  const OSM_M = { Jan: 'janv', Feb: 'févr', Mar: 'mars', Apr: 'avr', May: 'mai', Jun: 'juin', Jul: 'juil', Aug: 'août', Sep: 'sept', Oct: 'oct', Nov: 'nov', Dec: 'déc' };
+  function heuresFr(h) {
+    return h.replace(/\b(Mo|Tu|We|Th|Fr|Sa|Su|PH)\b/g, m => OSM_J[m])
+      .replace(/\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b/g, m => OSM_M[m])
+      .replace(/\b(off|closed)\b/g, 'fermé').replace('24/7', '24 h/24').replace(/;/g, ' ·')
+      .replace(/(\d{2}):(\d{2})/g, (_, hh, mm) => `${+hh} h ${mm}`.replace(' h 00', ' h')).replace(/,(?=\S)/g, ', ').replace(/(\w):\s/g, '$1 : ').replace(/-/g, '–');
+  }
+  const point = t => /[.!?…]\s*$/.test(t) ? t.trim() : t.trim() + '.';
+
   function detailPoint(p) {
     const t = p.t || {}, d = [];
     if (t.fee === 'no') d.push('gratuit'); else if (t.fee === 'yes') d.push('payant');
@@ -148,7 +159,7 @@ const PM = (() => {
     if (t.highchair === 'yes') d.push('chaise haute');
     if (t.kids_area === 'yes') d.push('coin enfants');
     if (p.c === 'station' && t.wheelchair) d.push(FAUTEUIL[t.wheelchair] || '');
-    if (t.opening_hours) d.push(t.opening_hours);
+    if (t.opening_hours) d.push(heuresFr(t.opening_hours));
     return d.join(' · ');
   }
 
@@ -197,5 +208,5 @@ const PM = (() => {
     return m;
   }
 
-  return { base, acces, autour, ico, direction, domaine, fichePoussette, FAUTEUIL, CATS, INTERETS, store, ville, osm, distance, minutesMarche, aPied, fmtDist, proches, lienMaps, lienItineraire, lienOSM, nomPoint, detailPoint, esc, kml, csv, telecharger, marqueur, fondCarte };
+  return { base, acces, autour, ico, direction, domaine, fichePoussette, FAUTEUIL, CATS, INTERETS, store, ville, osm, distance, minutesMarche, aPied, fmtDist, heuresFr, point, proches, lienMaps, lienItineraire, lienOSM, nomPoint, detailPoint, esc, kml, csv, telecharger, marqueur, fondCarte };
 })();

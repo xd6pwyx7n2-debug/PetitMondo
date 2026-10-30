@@ -152,6 +152,29 @@ def photo(cle, alt, b, cls="photo", ill=None, legende=True, prioritaire=False):
     return ""
 
 
+def point(t):
+    """Ajoute un point final s'il n'y en a pas déjà un (« U.S.A. » ne prend pas de second point)."""
+    t = t.rstrip()
+    return t if t.endswith((".", "!", "?", "…")) else t + "."
+
+
+OSM_JOURS = {"Mo": "lun", "Tu": "mar", "We": "mer", "Th": "jeu", "Fr": "ven", "Sa": "sam", "Su": "dim", "PH": "jours fériés"}
+OSM_MOIS = {"Jan": "janv", "Feb": "févr", "Mar": "mars", "Apr": "avr", "May": "mai", "Jun": "juin", "Jul": "juil",
+            "Aug": "août", "Sep": "sept", "Oct": "oct", "Nov": "nov", "Dec": "déc"}
+
+
+def heures_fr(h):
+    """Horaires OpenStreetMap (« Mo-Fr 09:00-18:00; Su off ») en français lisible."""
+    h = re.sub(r"\b(Mo|Tu|We|Th|Fr|Sa|Su|PH)\b", lambda m: OSM_JOURS[m.group(1)], h)
+    h = re.sub(r"\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b", lambda m: OSM_MOIS[m.group(1)], h)
+    h = re.sub(r"\b(off|closed)\b", "fermé", h)
+    h = h.replace("24/7", "24 h/24").replace(";", " ·").replace(" ,", ",")
+    h = re.sub(r"(\d{2}):(\d{2})", lambda m: f"{int(m.group(1))} h {m.group(2)}".replace(" h 00", " h"), h)
+    h = re.sub(r",(?=\S)", ", ", h)
+    h = re.sub(r"(\w):\s", r"\1 : ", h)
+    return h.replace("-", "–")
+
+
 def coupe(t, n=158):
     t = " ".join(t.split())
     return t if len(t) <= n else t[:n - 1].rsplit(" ", 1)[0].rstrip(",;:") + "…"
@@ -657,6 +680,12 @@ def pages_ville(v, osm):
     corps = hero(d1, f"{v['pays']} · guide famille", titre_h1,
                  f"{len(acts)} lieux choisis et décrits pour les familles, un plan B pour chaque jour de pluie, la carte des services utiles et un carnet PDF avec les jeux des enfants.")
     corps += f'<section style="padding-top:8px"><div class="wrap">{chiffres(b1)}</div></section>'
+    if v.get("essentiel"):
+        icones = ["horloge", "avion", "enfant"]
+        corps += f'''<section style="padding-top:0"><div class="wrap">
+  <h2>L'essentiel <span class="hl m">avant de partir</span></h2>
+  <div class="grille g2f" style="margin-top:18px">{"".join(f'<div class="carte">{ico(icones[i % 3], "i", b1)}<h3>{e(x["titre"])}</h3><p>{e(x["texte"])}</p></div>' for i, x in enumerate(v["essentiel"]))}</div>
+</div></section>'''
     corps += f'''<section class="sable"><div class="wrap">
   <div class="tete-section"><div><h2>Programmes <span class="hl c">prêts à partir</span></h2><p>Un clic, et le carnet complet se prépare, avec les pages de jeux pour les enfants. Vous pourrez ensuite ajuster les âges, le rythme et les envies.</p></div></div>
   {cartes_liens([(lien_carnet(q, b1), i, t, d, c) for q, i, t, d, c in programmes], b1)}
@@ -791,7 +820,7 @@ def pages_ville(v, osm):
         def resto_carte(p):
             t = p["t"]
             site = f'<a href="{e(t["website"] if t["website"].startswith("http") else "https://" + t["website"])}" target="_blank" rel="noopener">Site</a>' if t.get("website") else ""
-            heures = f'<p class="muted">{e(t["opening_hours"])}</p>' if t.get("opening_hours") else ""
+            heures = f'<p class="muted">{e(heures_fr(t["opening_hours"]))}</p>' if t.get("opening_hours") else ""
             return (f'<div class="carte act">{ico("resto", "i", b2)}<h3>{e(nom_point(p))}</h3><p>{e(detail_point(p)) or "Équipement famille signalé"}</p>{heures}'
                     f'<div class="liens"><a href="{maps("", lat=p["lat"], lon=p["lon"])}" target="_blank" rel="noopener">Voir sur la carte</a>{site}</div></div>')
         theme("restaurants-enfants", "restaurants pour enfants", f'Restaurants <span class="hl">équipés pour les enfants</span> à {e(n)}',
@@ -912,8 +941,8 @@ def pages_lieux(v, osm):
         pd = poussette_details(v, a)
         faq = [(f"{a['nom']} : à partir de quel âge ?", f"Nous le conseillons de {age}. {a['enfant']}"),
                (f"{a['nom']} : combien de temps prévoir ?", f"Environ {duree(a['duree'])} sur place, sans compter le trajet."),
-               (f"{a['nom']} : peut-on y aller avec une poussette ?", NOTE_POUSSETTE[a["poussette"]] + (". " + "; ".join(pd).capitalize() + "." if pd else ".")),
-               (f"{a['nom']} : comment y aller ?", f"{a['adresse']}. {a['transport']}.")]
+               (f"{a['nom']} : peut-on y aller avec une poussette ?", NOTE_POUSSETTE[a["poussette"]] + (". " + (lambda t: t[:1].upper() + t[1:])("; ".join(pd)) + "." if pd else ".")),
+               (f"{a['nom']} : comment y aller ?", f"{point(a['adresse'])} {point(a['transport'])}")]
         if a.get("affluence") or a.get("ferme"):
             faq.insert(2, (f"{a['nom']} : quand y aller pour éviter la foule ?", " ".join(x for x in (fermeture_txt(a), a.get("affluence", "")) if x)))
         if a["gratuit"] is not False:

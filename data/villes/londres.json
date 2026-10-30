@@ -785,5 +785,19 @@
    "titre": "Parcs royaux",
    "texte": "Hyde Park, Kensington Gardens, St James's Park et Regent's Park ont de grandes allées plates, idéales pour une sieste en poussette."
   }
+ ],
+ "essentiel": [
+  {
+   "titre": "Quand partir",
+   "texte": "De mai à septembre pour profiter des parcs. Il pleut toute l'année, mais les grands musées gratuits sauvent n'importe quelle journée. Décembre est féerique."
+  },
+  {
+   "titre": "Arriver",
+   "texte": "L'Eurostar arrive à St Pancras, en plein centre. Depuis Heathrow, prenez la ligne Elizabeth ou la ligne Piccadilly du métro ; depuis Gatwick, le Gatwick Express jusqu'à Victoria."
+  },
+  {
+   "titre": "Les enfants dans les transports",
+   "texte": "Les moins de 11 ans voyagent gratuitement dans le métro et les bus avec un adulte qui paie, jusqu'à quatre enfants par adulte."
+  }
  ]
 }

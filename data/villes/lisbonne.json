@@ -658,7 +658,7 @@
    "interets": [
     "parc"
    ],
-   "transport": "Métro Marquês de Pombal (lignes bleue et jaune)",
+   "transport": "Métro Parque (ligne bleue) ou Marquês de Pombal (lignes bleue et jaune)",
    "wiki": [
     "pt:Parque Eduardo VII",
     "en:Eduardo VII Park"
@@ -778,6 +778,20 @@
    "conseil": "Petites plages abritées et promenade en bord de mer dans une jolie ville balnéaire, à une quarantaine de minutes en train.",
    "enfant": "Une journée à la plage, dans une petite ville au bord de l'océan.",
    "excursion": true
+  }
+ ],
+ "essentiel": [
+  {
+   "titre": "Quand partir",
+   "texte": "D'avril à juin et en septembre-octobre. L'hiver est doux mais pluvieux ; en été, l'océan reste frais même quand il fait chaud."
+  },
+  {
+   "titre": "Arriver",
+   "texte": "La ligne rouge du métro part de l'aéroport et rejoint le centre en 20 à 30 minutes, avec un changement."
+  },
+  {
+   "titre": "Avec des enfants",
+   "texte": "Le tramway 28 et les funiculaires sont bondés en journée : avec une poussette, le bus et le métro sont bien plus pratiques."
   }
  ]
 }

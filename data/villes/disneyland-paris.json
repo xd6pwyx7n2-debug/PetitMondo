@@ -52,7 +52,7 @@
   "faits": [
    "Disneyland Paris a ouvert le 12 avril 1992, à Marne-la-Vallée, à l'est de Paris.",
    "Il y a deux parcs : Disneyland Park, avec son château, et Disney Adventure World.",
-   "Le château de la Belle au Bois Dormant mesure environ 50 mètres de haut.",
+   "Le château de la Belle au Bois Dormant s'élève à plus de 40 mètres de haut.",
    "Sous le château, dans une grotte, dort un grand dragon. Approche-toi doucement…",
    "C'est le parc d'attractions qui reçoit le plus de visiteurs en Europe."
   ],
@@ -568,6 +568,20 @@
   {
    "titre": "Rider Switch",
    "texte": "Pour les attractions interdites aux petits, un parent monte pendant que l'autre garde l'enfant, puis ils échangent sans refaire la file."
+  }
+ ],
+ "essentiel": [
+  {
+   "titre": "Quand partir",
+   "texte": "En semaine et hors vacances scolaires, les files sont nettement plus courtes. Les saisons d'Halloween, en octobre, et de Noël, de mi-novembre à début janvier, transforment les parcs."
+  },
+  {
+   "titre": "Arriver",
+   "texte": "La gare Marne-la-Vallée–Chessy, au pied des parcs, est desservie par le RER A depuis Paris et par le TGV depuis de nombreuses villes. Une navette, le Magical Shuttle, relie les aéroports de Roissy et d'Orly."
+  },
+  {
+   "titre": "Les enfants",
+   "texte": "Entrée gratuite pour les moins de 3 ans ; le tarif enfant s'applique de 3 à 11 ans."
   }
  ]
 }

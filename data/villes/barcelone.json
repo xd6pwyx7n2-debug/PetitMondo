@@ -927,5 +927,19 @@
    "titre": "Plages",
    "texte": "La promenade du front de mer est plate et large. Le sable reste difficile en poussette : prévoyez de la laisser près de la promenade."
   }
+ ],
+ "essentiel": [
+  {
+   "titre": "Quand partir",
+   "texte": "Mai, juin et septembre, pour la plage sans la chaleur d'août. L'hiver est doux et souvent ensoleillé, parfait pour les visites."
+  },
+  {
+   "titre": "Arriver",
+   "texte": "Depuis l'aéroport, l'Aerobús rejoint la place de Catalogne en 35 minutes environ ; la ligne L9 Sud du métro et le train R2 Nord sont d'autres options."
+  },
+  {
+   "titre": "Les enfants dans les transports",
+   "texte": "Les moins de 4 ans voyagent gratuitement."
+  }
  ]
 }
