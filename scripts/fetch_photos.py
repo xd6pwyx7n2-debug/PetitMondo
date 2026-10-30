@@ -62,7 +62,11 @@ def infos_commons(nom):
     if not pages or pages[0].get("missing") or not pages[0].get("imageinfo"):
         return None  # image non hébergée sur Commons (souvent non libre) : on l'écarte
     ii = pages[0]["imageinfo"][0]
-    if ii.get("mime") not in ("image/jpeg", "image/png", "image/webp"):
+    # Seulement des photos : les PNG et les fichiers nommés « carte », « logo »… sont presque toujours
+    # des cartes, des logos ou des schémas, qu'on ne veut pas en illustration.
+    if ii.get("mime") not in ("image/jpeg", "image/webp"):
+        return None
+    if re.search(r"(map|mapa|karte|carte|plan|logo|locator|location|wappen|coat.of.arms|flag|drapeau)", nom, re.I):
         return None
     m = ii.get("extmetadata", {})
     licence = texte(m.get("LicenseShortName", {}).get("value"))
